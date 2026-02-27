@@ -1,6 +1,12 @@
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 
 export default function Hero() {
+  const [retailerHover, setRetailerHover] = useState(false)
+  const [brandHover, setBrandHover] = useState(false)
+
   return (
     <section className="relative min-h-screen flex flex-col justify-end" style={{ backgroundColor: '#0f0f0f' }}>
       <div className="absolute inset-0 overflow-hidden">
@@ -11,6 +17,7 @@ export default function Hero() {
           priority
           className="object-cover"
           style={{ opacity: 0.45 }}
+          sizes="100vw"
         />
       </div>
 
@@ -27,19 +34,19 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium tracking-wide transition-all duration-200"
-            style={{ backgroundColor: '#b8935a', color: '#fff' }}
-            onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#a07e4a')}
-            onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#b8935a')}
+            className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium tracking-wide transition-colors duration-200"
+            style={{ backgroundColor: retailerHover ? '#a07e4a' : '#b8935a', color: '#fff' }}
+            onMouseEnter={() => setRetailerHover(true)}
+            onMouseLeave={() => setRetailerHover(false)}
           >
             Для ритейлеров
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium tracking-wide transition-all duration-200"
-            style={{ border: '1px solid rgba(255,255,255,0.5)', color: '#fff' }}
-            onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)')}
-            onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'transparent')}
+            className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium tracking-wide transition-colors duration-200"
+            style={{ border: '1px solid rgba(255,255,255,0.5)', color: '#fff', backgroundColor: brandHover ? 'rgba(255,255,255,0.1)' : 'transparent' }}
+            onMouseEnter={() => setBrandHover(true)}
+            onMouseLeave={() => setBrandHover(false)}
           >
             Для брендов
           </a>
