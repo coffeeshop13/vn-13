@@ -1,64 +1,73 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
-const portfolioItems = [
-  { id: 1, title: 'French Couture', region: 'france', image: '1' },
-  { id: 2, title: 'Italian Heritage', region: 'italy', image: '2' },
-  { id: 3, title: 'Tokyo Modern', region: 'japan', image: '3' },
-  { id: 4, title: 'Paris Elegance', region: 'france', image: '4' },
-  { id: 5, title: 'Milan Classic', region: 'italy', image: '5' },
-  { id: 6, title: 'Osaka Contemporary', region: 'japan', image: '6' },
+const brands = [
+  { id: 1, name: 'Manuelle Guibal', country: 'Франция', region: 'france', image: '/brands/manuelle-guibal.jpg' },
+  { id: 2, name: 'H+ Hannoh Wessel', country: 'Италия', region: 'italy', image: '/brands/hannoh-wessel.jpg' },
+  { id: 3, name: 'Moyuru', country: 'Япония', region: 'japan', image: '/brands/moyuru.jpg' },
+  { id: 4, name: 'Shoto', country: 'Италия', region: 'italy', image: '/brands/shoto.jpg' },
+  { id: 5, name: 'Post & Co', country: 'Италия', region: 'italy', image: '/brands/post-co.jpg' },
+  { id: 6, name: 'Aequamente', country: 'Италия', region: 'italy', image: '/brands/aequamente.jpg' },
+  { id: 7, name: 'MJ Watson', country: 'Италия', region: 'italy', image: '/brands/mj-watson.jpg' },
+  { id: 8, name: 'Sula', country: 'Великобритания', region: 'uk', image: '/brands/sula.jpg' },
+  { id: 9, name: 'SOH', country: 'Южная Корея', region: 'korea', image: '/brands/soh.jpg' },
+]
+
+const filters = [
+  { key: 'all', label: 'Все' },
+  { key: 'france', label: 'Франция' },
+  { key: 'italy', label: 'Италия' },
+  { key: 'japan', label: 'Япония' },
 ]
 
 export default function PortfolioGrid() {
-  const [activeFilter, setActiveFilter] = useState('all')
+  const [active, setActive] = useState('all')
 
-  const filtered = activeFilter === 'all' 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.region === activeFilter)
+  const filtered = active === 'all' ? brands : brands.filter(b => b.region === active)
 
   return (
-    <section id="portfolio" className="py-20 md:py-32 px-4 sm:px-6 border-t border-border">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-light mb-12">Portfolio</h2>
-        
-        <div className="flex gap-4 mb-12 flex-wrap">
-          <button
-            onClick={() => setActiveFilter('all')}
-            className={`px-6 py-2 text-sm transition ${activeFilter === 'all' ? 'bg-foreground text-background' : 'border border-border hover:border-foreground'}`}
-          >
-            All
-          </button>
-          <button
-            onClick={() => setActiveFilter('france')}
-            className={`px-6 py-2 text-sm transition ${activeFilter === 'france' ? 'bg-foreground text-background' : 'border border-border hover:border-foreground'}`}
-          >
-            France
-          </button>
-          <button
-            onClick={() => setActiveFilter('italy')}
-            className={`px-6 py-2 text-sm transition ${activeFilter === 'italy' ? 'bg-foreground text-background' : 'border border-border hover:border-foreground'}`}
-          >
-            Italy
-          </button>
-          <button
-            onClick={() => setActiveFilter('japan')}
-            className={`px-6 py-2 text-sm transition ${activeFilter === 'japan' ? 'bg-foreground text-background' : 'border border-border hover:border-foreground'}`}
-          >
-            Japan
-          </button>
+    <section id="portfolio" style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
+      <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
+          <div>
+            <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>Портфолио</p>
+            <h2 className="text-3xl md:text-4xl font-light" style={{ color: '#0f0f0f' }}>Наше Портфолио</h2>
+          </div>
+
+          <div className="flex gap-2 flex-wrap">
+            {filters.map(f => (
+              <button
+                key={f.key}
+                onClick={() => setActive(f.key)}
+                className="px-5 py-2 text-sm tracking-wide transition-all duration-200"
+                style={{
+                  backgroundColor: active === f.key ? '#0f0f0f' : 'transparent',
+                  color: active === f.key ? '#fff' : '#6b6b6b',
+                  border: `1px solid ${active === f.key ? '#0f0f0f' : '#e0ddd8'}`,
+                }}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map(item => (
-            <div key={item.id} className="group cursor-pointer">
-              <div className="bg-accent-light aspect-square mb-4 overflow-hidden hover:opacity-80 transition flex items-center justify-center text-text-secondary">
-                <span className="text-lg">{item.title}</span>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filtered.map(brand => (
+            <article key={brand.id} className="group cursor-pointer">
+              <div className="relative overflow-hidden mb-4" style={{ aspectRatio: '3/4' }}>
+                <Image
+                  src={brand.image}
+                  alt={brand.name}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
-              <h3 className="font-medium text-sm">{item.title}</h3>
-              <p className="text-xs text-text-secondary">{item.region.charAt(0).toUpperCase() + item.region.slice(1)}</p>
-            </div>
+              <h3 className="font-medium text-sm mb-1" style={{ color: '#0f0f0f' }}>{brand.name}</h3>
+              <p className="text-xs tracking-wide" style={{ color: '#b8935a' }}>{brand.country}</p>
+            </article>
           ))}
         </div>
       </div>

@@ -1,19 +1,55 @@
+'use client'
+
+import { useState } from 'react'
+
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-        <div className="text-xl font-bold tracking-wider">VN13</div>
-        <nav className="hidden md:flex items-center gap-8 text-sm">
-          <a href="#story" className="hover:text-accent transition">Our Story</a>
-          <a href="#portfolio" className="hover:text-accent transition">Portfolio</a>
-          <a href="/contact" className="hover:text-accent transition">Contact</a>
+    <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(8px)', borderBottom: '1px solid #e0ddd8' }}>
+      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <a href="/" className="text-xl font-semibold tracking-[0.2em] uppercase" style={{ color: '#0f0f0f', letterSpacing: '0.25em' }}>
+          VN13
+        </a>
+
+        <nav className="hidden md:flex items-center gap-10">
+          <a href="#story" className="text-sm tracking-wide transition-colors duration-200" style={{ color: '#6b6b6b' }}
+            onMouseEnter={e => (e.currentTarget.style.color = '#b8935a')}
+            onMouseLeave={e => (e.currentTarget.style.color = '#6b6b6b')}>
+            Наша история
+          </a>
+          <a href="#portfolio" className="text-sm tracking-wide transition-colors duration-200" style={{ color: '#6b6b6b' }}
+            onMouseEnter={e => (e.currentTarget.style.color = '#b8935a')}
+            onMouseLeave={e => (e.currentTarget.style.color = '#6b6b6b')}>
+            Портфолио
+          </a>
+          <a href="#contact" className="text-sm tracking-wide transition-colors duration-200" style={{ color: '#6b6b6b' }}
+            onMouseEnter={e => (e.currentTarget.style.color = '#b8935a')}
+            onMouseLeave={e => (e.currentTarget.style.color = '#6b6b6b')}>
+            Контакты
+          </a>
         </nav>
-        <div className="md:hidden">
-          <button className="p-2 hover:bg-accent-light rounded transition">
-            <span className="text-2xl">≡</span>
-          </button>
-        </div>
+
+        <button
+          className="md:hidden flex flex-col gap-1.5 p-2"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className="block w-6 h-px" style={{ backgroundColor: '#0f0f0f', transition: 'transform 0.2s', transform: menuOpen ? 'translateY(4px) rotate(45deg)' : 'none' }} />
+          <span className="block w-6 h-px" style={{ backgroundColor: '#0f0f0f', opacity: menuOpen ? 0 : 1, transition: 'opacity 0.2s' }} />
+          <span className="block w-6 h-px" style={{ backgroundColor: '#0f0f0f', transition: 'transform 0.2s', transform: menuOpen ? 'translateY(-4px) rotate(-45deg)' : 'none' }} />
+        </button>
       </div>
+
+      {menuOpen && (
+        <div className="md:hidden border-t" style={{ borderColor: '#e0ddd8', backgroundColor: '#fafaf8' }}>
+          <nav className="flex flex-col px-6 py-6 gap-5">
+            <a href="#story" onClick={() => setMenuOpen(false)} className="text-sm tracking-wide" style={{ color: '#0f0f0f' }}>Наша история</a>
+            <a href="#portfolio" onClick={() => setMenuOpen(false)} className="text-sm tracking-wide" style={{ color: '#0f0f0f' }}>Портфолио</a>
+            <a href="#contact" onClick={() => setMenuOpen(false)} className="text-sm tracking-wide" style={{ color: '#0f0f0f' }}>Контакты</a>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }
