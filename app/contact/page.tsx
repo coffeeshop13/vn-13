@@ -1,9 +1,8 @@
-'use client'
-
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import ContactForm from '@/components/ContactForm'
 import Footer from '@/components/Footer'
+import { ContactLink } from '@/components/ContactLink'
 
 export const metadata: Metadata = {
   title: 'Contact Us | VN13 Fashion Agency',
@@ -35,15 +34,11 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div>
                   <p className="text-sm mb-1" style={{ color: '#6b6b6b' }}>Email</p>
-                  <a href="mailto:hello@vn-13.com" className="transition-colors duration-200" style={{ color: '#0f0f0f' }}
-                    onMouseEnter={e => (e.currentTarget.style.color = '#b8935a')}
-                    onMouseLeave={e => (e.currentTarget.style.color = '#0f0f0f')}>hello@vn-13.com</a>
+                  <ContactLink href="mailto:hello@vn-13.com" label="hello@vn-13.com" />
                 </div>
                 <div>
                   <p className="text-sm mb-1" style={{ color: '#6b6b6b' }}>Phone</p>
-                  <a href="tel:+33123456789" className="transition-colors duration-200" style={{ color: '#0f0f0f' }}
-                    onMouseEnter={e => (e.currentTarget.style.color = '#b8935a')}
-                    onMouseLeave={e => (e.currentTarget.style.color = '#0f0f0f')}>+33 1 23 45 67 89</a>
+                  <ContactLink href="tel:+33123456789" label="+33 1 23 45 67 89" />
                 </div>
                 <div>
                   <p className="text-sm mb-1" style={{ color: '#6b6b6b' }}>Location</p>
@@ -55,15 +50,9 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-light mb-6" style={{ color: '#0f0f0f' }}>Follow Us</h2>
               <div className="space-y-4">
-                <a href="#" className="block transition-colors duration-200" style={{ color: '#0f0f0f' }}
-                  onMouseEnter={e => (e.currentTarget.style.color = '#b8935a')}
-                  onMouseLeave={e => (e.currentTarget.style.color = '#0f0f0f')}>Instagram</a>
-                <a href="#" className="block transition-colors duration-200" style={{ color: '#0f0f0f' }}
-                  onMouseEnter={e => (e.currentTarget.style.color = '#b8935a')}
-                  onMouseLeave={e => (e.currentTarget.style.color = '#0f0f0f')}>LinkedIn</a>
-                <a href="#" className="block transition-colors duration-200" style={{ color: '#0f0f0f' }}
-                  onMouseEnter={e => (e.currentTarget.style.color = '#b8935a')}
-                  onMouseLeave={e => (e.currentTarget.style.color = '#0f0f0f')}>Twitter</a>
+                <ContactLink href="#" label="Instagram" />
+                <ContactLink href="#" label="LinkedIn" />
+                <ContactLink href="#" label="Twitter" />
               </div>
             </div>
           </div>
