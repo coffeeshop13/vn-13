@@ -15,8 +15,6 @@ interface LanguageContextType {
   translations: Record<string, string>
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
-
 const translations: Record<Language, Record<string, string>> = {
   ru: ruTranslations,
   en: enTranslations,
@@ -24,6 +22,14 @@ const translations: Record<Language, Record<string, string>> = {
   fr: frTranslations,
   de: deTranslations,
 }
+
+const defaultContextValue: LanguageContextType = {
+  language: 'ru',
+  setLanguage: () => {},
+  translations: ruTranslations,
+}
+
+const LanguageContext = createContext<LanguageContextType>(defaultContextValue)
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>('ru')
@@ -42,12 +48,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('language', lang)
   }
 
-  if (!mounted) {
-    return <>{children}</>
+  const value: LanguageContextType = {
+    language,
+    setLanguage,
+    translations: translations[language],
   }
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, translations: translations[language] }}>
+    <LanguageContext.Provider value={value}>
       {children}
     </LanguageContext.Provider>
   )
@@ -55,8 +63,5 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
 export function useLanguage() {
   const context = useContext(LanguageContext)
-  if (!context) {
-    throw new Error('useLanguage must be used within LanguageProvider')
-  }
   return context
 }
