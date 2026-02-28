@@ -2,8 +2,10 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { useLanguage } from '@/lib/context/LanguageContext'
 
 export default function Hero() {
+  const { translations } = useLanguage()
   const [retailerHover, setRetailerHover] = useState(false)
   const [brandHover, setBrandHover] = useState(false)
 
@@ -23,13 +25,13 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 md:pb-32 pt-36 w-full">
         <p className="text-xs tracking-[0.3em] uppercase mb-6" style={{ color: '#b8935a' }}>
-          Эксклюзивная европейская дистрибьюция
+          {translations.heroSubtitle}
         </p>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-light leading-none mb-6 text-white text-balance" style={{ letterSpacing: '-0.02em' }}>
-          VN13
+          {translations.heroTitle}
         </h1>
         <p className="text-lg md:text-xl font-light max-w-xl mb-10 leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
-          Ваш операционный партнёр на европейском рынке моды
+          {translations.heroDescription}
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <a
@@ -39,7 +41,7 @@ export default function Hero() {
             onMouseEnter={() => setRetailerHover(true)}
             onMouseLeave={() => setRetailerHover(false)}
           >
-            Для ритейлеров
+            {translations.heroButtonRetailers}
           </a>
           <a
             href="#contact"
@@ -48,7 +50,7 @@ export default function Hero() {
             onMouseEnter={() => setBrandHover(true)}
             onMouseLeave={() => setBrandHover(false)}
           >
-            Для брендов
+            {translations.heroButtonBrands}
           </a>
         </div>
       </div>

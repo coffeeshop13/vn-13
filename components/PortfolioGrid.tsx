@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { useLanguage } from '@/lib/context/LanguageContext'
 
 const brands = [
   { id: 1, name: 'Manuelle Guibal', country: 'Франция', region: 'france', image: '/brands/manuelle-guibal.jpg' },
@@ -15,15 +16,16 @@ const brands = [
   { id: 9, name: 'SOH', country: 'Южная Корея', region: 'korea', image: '/brands/soh.jpg' },
 ]
 
-const filters = [
-  { key: 'all', label: 'Все' },
-  { key: 'france', label: 'Франция' },
-  { key: 'italy', label: 'Италия' },
-  { key: 'japan', label: 'Япония' },
-]
-
 export default function PortfolioGrid() {
+  const { translations } = useLanguage()
   const [active, setActive] = useState('all')
+
+  const filters = [
+    { key: 'all', label: translations.filterAll },
+    { key: 'france', label: translations.filterFrance },
+    { key: 'italy', label: translations.filterItaly },
+    { key: 'japan', label: translations.filterJapan },
+  ]
 
   const filtered = active === 'all' ? brands : brands.filter(b => b.region === active)
 
@@ -32,8 +34,8 @@ export default function PortfolioGrid() {
       <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
           <div>
-            <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>Портфолио</p>
-            <h2 className="text-3xl md:text-4xl font-light" style={{ color: '#0f0f0f' }}>Наше Портфолио</h2>
+            <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>{translations.portfolioTitle}</p>
+            <h2 className="text-3xl md:text-4xl font-light" style={{ color: '#0f0f0f' }}>{translations.portfolioSubtitle}</h2>
           </div>
 
           <div className="flex gap-2 flex-wrap">

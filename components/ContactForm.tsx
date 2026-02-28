@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useLanguage } from '@/lib/context/LanguageContext'
 
 const inputStyle = {
   width: '100%',
@@ -14,6 +15,7 @@ const inputStyle = {
 }
 
 export default function ContactForm() {
+  const { translations } = useLanguage()
   const [formData, setFormData] = useState({ name: '', email: '', company: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
 
@@ -34,14 +36,14 @@ export default function ContactForm() {
       <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
         <div className="grid md:grid-cols-2 gap-16 md:gap-24">
           <div>
-            <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>Связаться</p>
-            <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>Стать партнёром</h2>
+            <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>Contact</p>
+            <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>{translations.contactTitle}</h2>
             <p className="text-base leading-relaxed mb-10" style={{ color: '#6b6b6b' }}>
-              Если вы ритейлер или бренд, заинтересованный в сотрудничестве, мы будем рады услышать вас. Заполните форму и мы свяжемся с вами в ближайшее время.
+              {translations.contactDescription}
             </p>
             <div className="space-y-4 text-sm" style={{ color: '#6b6b6b' }}>
-              <p className="font-medium" style={{ color: '#0f0f0f' }}>VN13</p>
-              <p>info@vn-13.com</p>
+              <p className="font-medium" style={{ color: '#0f0f0f' }}>{translations.contactCompany}</p>
+              <p>{translations.contactEmail}</p>
             </div>
           </div>
 
@@ -54,26 +56,26 @@ export default function ContactForm() {
                       <path d="M4 10l4 4 8-8" stroke="#b8935a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <p className="text-lg font-light" style={{ color: '#0f0f0f' }}>Спасибо за обращение</p>
-                  <p className="text-sm mt-2" style={{ color: '#6b6b6b' }}>Мы свяжемся с вами в ближайшее время.</p>
+                  <p className="text-lg font-light" style={{ color: '#0f0f0f' }}>{translations.formSuccess}</p>
+                  <p className="text-sm mt-2" style={{ color: '#6b6b6b' }}>{translations.formSuccessDescription}</p>
                 </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label className="block text-xs tracking-wide uppercase mb-2" style={{ color: '#6b6b6b' }}>Имя *</label>
+                  <label className="block text-xs tracking-wide uppercase mb-2" style={{ color: '#6b6b6b' }}>{translations.formName} *</label>
                   <input type="text" name="name" value={formData.name} onChange={handleChange} style={inputStyle} required />
                 </div>
                 <div>
-                  <label className="block text-xs tracking-wide uppercase mb-2" style={{ color: '#6b6b6b' }}>Email *</label>
+                  <label className="block text-xs tracking-wide uppercase mb-2" style={{ color: '#6b6b6b' }}>{translations.formEmail} *</label>
                   <input type="email" name="email" value={formData.email} onChange={handleChange} style={inputStyle} required />
                 </div>
                 <div>
-                  <label className="block text-xs tracking-wide uppercase mb-2" style={{ color: '#6b6b6b' }}>Компания</label>
+                  <label className="block text-xs tracking-wide uppercase mb-2" style={{ color: '#6b6b6b' }}>{translations.formCompany}</label>
                   <input type="text" name="company" value={formData.company} onChange={handleChange} style={inputStyle} />
                 </div>
                 <div>
-                  <label className="block text-xs tracking-wide uppercase mb-2" style={{ color: '#6b6b6b' }}>Сообщение *</label>
+                  <label className="block text-xs tracking-wide uppercase mb-2" style={{ color: '#6b6b6b' }}>{translations.formMessage} *</label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -90,7 +92,7 @@ export default function ContactForm() {
                   onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#b8935a')}
                   onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#0f0f0f')}
                 >
-                  Отправить сообщение
+                  {translations.formSubmit}
                 </button>
               </form>
             )}
