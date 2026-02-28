@@ -10,9 +10,12 @@ export default function Header() {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null)
 
   const navLinks = [
-    { key: 'story', label: translations.navStory, href: '#story' },
-    { key: 'portfolio', label: translations.navPortfolio, href: '#portfolio' },
-    { key: 'contact', label: translations.navContact, href: '#contact' },
+    { key: 'story', label: translations.navStory, href: '/#story' },
+    { key: 'portfolio', label: translations.navPortfolio, href: '/#portfolio' },
+    { key: 'sustainability', label: translations.navSustainability, href: '/sustainability' },
+    { key: 'preorder', label: translations.navPreorder, href: '/preorder' },
+    { key: 'manufacturing', label: translations.navManufacturing, href: '/manufacturing' },
+    { key: 'contact', label: translations.navContact, href: '/#contact' },
   ]
 
   return (
