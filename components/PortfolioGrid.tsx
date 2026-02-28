@@ -1,0 +1,76 @@
+'use client'
+
+import { useState } from 'react'
+import Image from 'next/image'
+
+const brands = [
+  { id: 1, name: 'Manuelle Guibal', country: 'Франция', region: 'france', image: '/brands/manuelle-guibal.jpg' },
+  { id: 2, name: 'H+ Hannoh Wessel', country: 'Италия', region: 'italy', image: '/brands/hannoh-wessel.jpg' },
+  { id: 3, name: 'Moyuru', country: 'Япония', region: 'japan', image: '/brands/moyuru.jpg' },
+  { id: 4, name: 'Shoto', country: 'Италия', region: 'italy', image: '/brands/shoto.jpg' },
+  { id: 5, name: 'Post & Co', country: 'Италия', region: 'italy', image: '/brands/post-co.jpg' },
+  { id: 6, name: 'Aequamente', country: 'Италия', region: 'italy', image: '/brands/aequamente.jpg' },
+  { id: 7, name: 'MJ Watson', country: 'Италия', region: 'italy', image: '/brands/mj-watson.jpg' },
+  { id: 8, name: 'Sula', country: 'Великобритания', region: 'uk', image: '/brands/sula.jpg' },
+  { id: 9, name: 'SOH', country: 'Южная Корея', region: 'korea', image: '/brands/soh.jpg' },
+]
+
+const filters = [
+  { key: 'all', label: 'Все' },
+  { key: 'france', label: 'Франция' },
+  { key: 'italy', label: 'Италия' },
+  { key: 'japan', label: 'Япония' },
+]
+
+export default function PortfolioGrid() {
+  const [active, setActive] = useState('all')
+
+  const filtered = active === 'all' ? brands : brands.filter(b => b.region === active)
+
+  return (
+    <section id="portfolio" style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
+      <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
+          <div>
+            <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>Портфолио</p>
+            <h2 className="text-3xl md:text-4xl font-light" style={{ color: '#0f0f0f' }}>Наше Портфолио</h2>
+          </div>
+
+          <div className="flex gap-2 flex-wrap">
+            {filters.map(f => (
+              <button
+                key={f.key}
+                onClick={() => setActive(f.key)}
+                className="px-5 py-2 text-sm tracking-wide transition-all duration-200"
+                style={{
+                  backgroundColor: active === f.key ? '#0f0f0f' : 'transparent',
+                  color: active === f.key ? '#fff' : '#6b6b6b',
+                  border: `1px solid ${active === f.key ? '#0f0f0f' : '#e0ddd8'}`,
+                }}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filtered.map(brand => (
+            <article key={brand.id} className="group cursor-pointer">
+              <div className="relative overflow-hidden mb-4" style={{ aspectRatio: '3/4' }}>
+                <Image
+                  src={brand.image}
+                  alt={brand.name}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <h3 className="font-medium text-sm mb-1" style={{ color: '#0f0f0f' }}>{brand.name}</h3>
+              <p className="text-xs tracking-wide" style={{ color: '#b8935a' }}>{brand.country}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
