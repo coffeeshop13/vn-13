@@ -1,10 +1,22 @@
 'use client'
 
 import { useState } from 'react'
+import { useLanguage } from '@/lib/context/LanguageContext'
+import LanguageSelector from './LanguageSelector'
 
 export default function Header() {
+  const { translations } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
   const [hoveredLink, setHoveredLink] = useState<string | null>(null)
+
+  const navLinks = [
+    { key: 'story', label: translations.navStory, href: '/#story' },
+    { key: 'portfolio', label: translations.navPortfolio, href: '/#portfolio' },
+    { key: 'sustainability', label: translations.navSustainability, href: '/sustainability' },
+    { key: 'preorder', label: translations.navPreorder, href: '/preorder' },
+    { key: 'manufacturing', label: translations.navManufacturing, href: '/manufacturing' },
+    { key: 'contact', label: translations.navContact, href: '/#contact' },
+  ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(8px)', borderBottom: '1px solid #e0ddd8' }}>
@@ -14,11 +26,7 @@ export default function Header() {
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
-          {[
-            { key: 'story', label: 'Наша история', href: '#story' },
-            { key: 'portfolio', label: 'Портфолио', href: '#portfolio' },
-            { key: 'contact', label: 'Контакты', href: '#contact' },
-          ].map(link => (
+          {navLinks.map(link => (
             <a
               key={link.key}
               href={link.href}
@@ -31,6 +39,10 @@ export default function Header() {
             </a>
           ))}
         </nav>
+
+        <div className="hidden md:flex items-center gap-4">
+          <LanguageSelector />
+        </div>
 
         <button
           className="md:hidden flex flex-col gap-1.5 p-2"
@@ -46,9 +58,14 @@ export default function Header() {
       {menuOpen && (
         <div className="md:hidden border-t" style={{ borderColor: '#e0ddd8', backgroundColor: '#fafaf8' }}>
           <nav className="flex flex-col px-6 py-6 gap-5">
-            <a href="#story" onClick={() => setMenuOpen(false)} className="text-sm tracking-wide" style={{ color: '#0f0f0f' }}>Наша история</a>
-            <a href="#portfolio" onClick={() => setMenuOpen(false)} className="text-sm tracking-wide" style={{ color: '#0f0f0f' }}>Портфолио</a>
-            <a href="#contact" onClick={() => setMenuOpen(false)} className="text-sm tracking-wide" style={{ color: '#0f0f0f' }}>Контакты</a>
+            {navLinks.map(link => (
+              <a key={link.key} href={link.href} onClick={() => setMenuOpen(false)} className="text-sm tracking-wide" style={{ color: '#0f0f0f' }}>
+                {link.label}
+              </a>
+            ))}
+            <div className="pt-4 border-t" style={{ borderColor: '#e0ddd8' }}>
+              <LanguageSelector />
+            </div>
           </nav>
         </div>
       )}
