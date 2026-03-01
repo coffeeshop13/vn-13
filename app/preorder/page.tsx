@@ -3,8 +3,10 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CTALink } from '@/components/CTALink'
+import { useLanguage } from '@/lib/context/LanguageContext'
 
 export default function PreorderPage() {
+  const { translations } = useLanguage()
   return (
     <main>
       <Header />
@@ -12,12 +14,12 @@ export default function PreorderPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-6" style={{ backgroundColor: '#fafaf8' }}>
         <div className="max-w-4xl mx-auto">
-          <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>Pre-Order</p>
+          <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>{translations.navPreorder}</p>
           <h1 className="text-5xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>
-            First Access to Exclusive Collections
+            {translations.preorderTitle}
           </h1>
           <p className="text-lg md:text-xl max-w-2xl" style={{ color: '#6b6b6b' }}>
-            Secure your pieces before the official market release and maximize your competitive advantage with VN13 pre-order access.
+            {translations.preorderSubtitle}
           </p>
         </div>
       </section>
@@ -29,118 +31,118 @@ export default function PreorderPage() {
           {/* Two Column Section */}
           <div className="grid md:grid-cols-2 gap-16 mb-20">
             <div>
-              <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>Exclusive Access for Retailers</h2>
+              <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>{translations.preorderExclusiveAccessTitle}</h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: '#6b6b6b' }}>
-                Through VN13, retailers gain early access to upcoming collections before official market release. Pre-order periods allow for strategic inventory planning and securing the most sought-after pieces before they sell out.
+                {translations.preorderExclusiveAccessDesc1}
               </p>
               <p className="text-base leading-relaxed mb-4" style={{ color: '#6b6b6b' }}>
-                Our pre-order process is streamlined and transparent, with detailed specifications, sizing information, pricing, and guaranteed delivery timelines for each collection.
+                {translations.preorderExclusiveAccessDesc2}
               </p>
               <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
-                Benefit from competitive pre-order pricing and secure your stock before competitors gain access to the collection.
+                {translations.preorderExclusiveAccessDesc3}
               </p>
             </div>
             
             <div>
-              <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>Strategic Planning & Insights</h2>
+              <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>{translations.preorderStrategicPlanningTitle}</h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: '#6b6b6b' }}>
-                We provide comprehensive market insights and trend analysis to help retailers make informed pre-order decisions. Each collection comes with detailed retail recommendations, styling suggestions, and marketing materials.
+                {translations.preorderStrategicPlanningDesc1}
               </p>
               <p className="text-base leading-relaxed mb-4" style={{ color: '#6b6b6b' }}>
-                Our team works directly with retailers to understand their needs and help them select pieces that align with their customer base and market positioning.
+                {translations.preorderStrategicPlanningDesc2}
               </p>
               <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
-                Secure competitive pricing and maximize your margins with our flexible pre-order pricing structure and volume discounts.
+                {translations.preorderStrategicPlanningDesc3}
               </p>
             </div>
           </div>
 
           {/* Process Section */}
           <div className="py-16 border-t border-b" style={{ borderColor: '#e0ddd8' }}>
-            <h2 className="text-3xl md:text-4xl font-light mb-12" style={{ color: '#0f0f0f' }}>How Pre-Order Works</h2>
+            <h2 className="text-3xl md:text-4xl font-light mb-12" style={{ color: '#0f0f0f' }}>{translations.preorderProcessTitle}</h2>
             <div className="grid md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#f0e9dc' }}>
                   <span style={{ color: '#b8935a', fontSize: '28px', fontWeight: 'bold' }}>1</span>
                 </div>
-                <h3 className="text-lg font-medium mb-3" style={{ color: '#0f0f0f' }}>Browse Collections</h3>
-                <p className="text-sm" style={{ color: '#6b6b6b' }}>View detailed images, specifications, and pricing for upcoming collections</p>
+                <h3 className="text-lg font-medium mb-3" style={{ color: '#0f0f0f' }}>{translations.preorderProcessBrowse}</h3>
+                <p className="text-sm" style={{ color: '#6b6b6b' }}>{translations.preorderProcessBrowseDesc}</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#f0e9dc' }}>
                   <span style={{ color: '#b8935a', fontSize: '28px', fontWeight: 'bold' }}>2</span>
                 </div>
-                <h3 className="text-lg font-medium mb-3" style={{ color: '#0f0f0f' }}>Select Pieces</h3>
-                <p className="text-sm" style={{ color: '#6b6b6b' }}>Choose specific items, sizes, and quantities for your order</p>
+                <h3 className="text-lg font-medium mb-3" style={{ color: '#0f0f0f' }}>{translations.preorderProcessSelect}</h3>
+                <p className="text-sm" style={{ color: '#6b6b6b' }}>{translations.preorderProcessSelectDesc}</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#f0e9dc' }}>
                   <span style={{ color: '#b8935a', fontSize: '28px', fontWeight: 'bold' }}>3</span>
                 </div>
-                <h3 className="text-lg font-medium mb-3" style={{ color: '#0f0f0f' }}>Confirm Order</h3>
-                <p className="text-sm" style={{ color: '#6b6b6b' }}>Lock in your order with guaranteed pricing and delivery date</p>
+                <h3 className="text-lg font-medium mb-3" style={{ color: '#0f0f0f' }}>{translations.preorderProcessConfirm}</h3>
+                <p className="text-sm" style={{ color: '#6b6b6b' }}>{translations.preorderProcessConfirmDesc}</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#f0e9dc' }}>
                   <span style={{ color: '#b8935a', fontSize: '28px', fontWeight: 'bold' }}>4</span>
                 </div>
-                <h3 className="text-lg font-medium mb-3" style={{ color: '#0f0f0f' }}>Receive Collection</h3>
-                <p className="text-sm" style={{ color: '#6b6b6b' }}>Your pre-ordered pieces arrive at your store on the guaranteed date</p>
+                <h3 className="text-lg font-medium mb-3" style={{ color: '#0f0f0f' }}>{translations.preorderProcessDeliver}</h3>
+                <p className="text-sm" style={{ color: '#6b6b6b' }}>{translations.preorderProcessDeliverDesc}</p>
               </div>
             </div>
           </div>
 
           {/* Benefits Section */}
           <div className="mt-20">
-            <h2 className="text-3xl md:text-4xl font-light mb-12 text-balance" style={{ color: '#0f0f0f' }}>Pre-Order Benefits</h2>
+            <h2 className="text-3xl md:text-4xl font-light mb-12 text-balance" style={{ color: '#0f0f0f' }}>{translations.preorderBenefitsTitle}</h2>
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>For Your Business</h3>
+                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>{translations.preorderBenefitsBusinessTitle}</h3>
                 <ul className="space-y-3">
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>✓</span>
-                    <span style={{ color: '#6b6b6b' }}>Secure inventory before public release</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.preorderBenefitSecure}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>✓</span>
-                    <span style={{ color: '#6b6b6b' }}>Competitive pre-order pricing</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.preorderBenefitPricing}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>✓</span>
-                    <span style={{ color: '#6b6b6b' }}>Guaranteed delivery dates</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.preorderBenefitDelivery}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>✓</span>
-                    <span style={{ color: '#6b6b6b' }}>Volume discount opportunities</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.preorderBenefitVolume}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>✓</span>
-                    <span style={{ color: '#6b6b6b' }}>Direct communication with brands</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.preorderBenefitCommunication}</span>
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>For Your Customers</h3>
+                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>{translations.preorderBenefitsCustomersTitle}</h3>
                 <ul className="space-y-3">
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>✓</span>
-                    <span style={{ color: '#6b6b6b' }}>Exclusive access to limited collections</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.preorderBenefitExclusive}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>✓</span>
-                    <span style={{ color: '#6b6b6b' }}>Early ownership of new designs</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.preorderBenefitEarly}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>✓</span>
-                    <span style={{ color: '#6b6b6b' }}>Complete size and color selection</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.preorderBenefitSelection}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>✓</span>
-                    <span style={{ color: '#6b6b6b' }}>Authentic European craftsmanship</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.preorderBenefitCraftsmanship}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>✓</span>
-                    <span style={{ color: '#6b6b6b' }}>Investment in timeless pieces</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.preorderBenefitInvestment}</span>
                   </li>
                 </ul>
               </div>
@@ -149,9 +151,9 @@ export default function PreorderPage() {
 
           {/* CTA Section */}
           <div className="mt-20 pt-20 border-t text-center" style={{ borderColor: '#e0ddd8' }}>
-            <h3 className="text-2xl font-light mb-4" style={{ color: '#0f0f0f' }}>Ready to Join Our Pre-Order Program?</h3>
+            <h3 className="text-2xl font-light mb-4" style={{ color: '#0f0f0f' }}>{translations.preorderCTATitle}</h3>
             <p className="text-base mb-8 max-w-xl mx-auto" style={{ color: '#6b6b6b' }}>
-              Contact our team to discuss your pre-order needs and access our upcoming collections.
+              {translations.preorderCTADesc}
             </p>
             <CTALink href="/#contact">Get Started</CTALink>
           </div>
