@@ -2,8 +2,10 @@
 
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { useLanguage } from '@/lib/context/LanguageContext'
 
 export default function SustainabilityPage() {
+  const { translations } = useLanguage()
   return (
     <main>
       <Header />
@@ -11,12 +13,12 @@ export default function SustainabilityPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-6" style={{ backgroundColor: '#fafaf8' }}>
         <div className="max-w-4xl mx-auto">
-          <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>Sustainability</p>
+          <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>{translations.navSustainability}</p>
           <h1 className="text-5xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>
-            Fashion with Purpose
+            {translations.sustainabilityTitle}
           </h1>
           <p className="text-lg md:text-xl max-w-2xl" style={{ color: '#6b6b6b' }}>
-            Our commitment to sustainable and ethical fashion practices reflects our belief that luxury and responsibility go hand in hand.
+            {translations.sustainabilitySubtitle}
           </p>
         </div>
       </section>
@@ -28,28 +30,28 @@ export default function SustainabilityPage() {
           {/* Two Column Section */}
           <div className="grid md:grid-cols-2 gap-16 mb-20">
             <div>
-              <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>Ethical Sourcing</h2>
+              <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>{translations.sustainabilityEthicalSourcingTitle}</h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: '#6b6b6b' }}>
-                We partner exclusively with brands that prioritize ethical manufacturing and fair labor practices. Every partner in our portfolio meets rigorous sustainability standards and maintains transparent supply chains from raw materials to finished products.
+                {translations.sustainabilityEthicalSourcingDesc1}
               </p>
               <p className="text-base leading-relaxed mb-4" style={{ color: '#6b6b6b' }}>
-                Our commitment extends beyond compliance to active collaboration with artisans and manufacturers who share our values of craftsmanship and responsibility.
+                {translations.sustainabilityEthicalSourcingDesc2}
               </p>
               <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
-                We conduct regular audits and maintain direct relationships with production facilities to ensure continuous improvement and adherence to our ethical standards.
+                {translations.sustainabilityEthicalSourcingDesc3}
               </p>
             </div>
             
             <div>
-              <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>Quality Over Quantity</h2>
+              <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>{translations.sustainabilityQualityTitle}</h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: '#6b6b6b' }}>
-                We believe that true luxury is sustainable. By curating timeless pieces and supporting slow fashion, we reduce waste and promote longevity in an industry traditionally driven by seasonal trends.
+                {translations.sustainabilityQualityDesc1}
               </p>
               <p className="text-base leading-relaxed mb-4" style={{ color: '#6b6b6b' }}>
-                Each collection we represent is designed to last generations, encouraging consumers to invest in quality pieces that transcend time rather than disposable fashion.
+                {translations.sustainabilityQualityDesc2}
               </p>
               <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
-                Our partners focus on timeless designs, superior materials, and impeccable construction that ensures longevity and reduces the need for frequent replacements.
+                {translations.sustainabilityQualityDesc3}
               </p>
             </div>
           </div>
@@ -59,65 +61,65 @@ export default function SustainabilityPage() {
             <div className="grid md:grid-cols-3 gap-12">
               <div>
                 <div className="text-4xl font-light mb-3" style={{ color: '#b8935a' }}>100%</div>
-                <p className="font-medium mb-2" style={{ color: '#0f0f0f' }}>Ethical Partners</p>
-                <p className="text-sm" style={{ color: '#6b6b6b' }}>All our brands meet international sustainability standards and ethical guidelines.</p>
+                <p className="font-medium mb-2" style={{ color: '#0f0f0f' }}>{translations.sustainabilityStatsEthical}</p>
+                <p className="text-sm" style={{ color: '#6b6b6b' }}>{translations.sustainabilityStatsEthicalDesc}</p>
               </div>
               <div>
                 <div className="text-4xl font-light mb-3" style={{ color: '#b8935a' }}>0</div>
-                <p className="font-medium mb-2" style={{ color: '#0f0f0f' }}>Single-Use Materials</p>
-                <p className="text-sm" style={{ color: '#6b6b6b' }}>Committed to eliminating disposable packaging and reducing environmental impact.</p>
+                <p className="font-medium mb-2" style={{ color: '#0f0f0f' }}>{translations.sustainabilityStatsZero}</p>
+                <p className="text-sm" style={{ color: '#6b6b6b' }}>{translations.sustainabilityStatsZeroDesc}</p>
               </div>
               <div>
                 <div className="text-4xl font-light mb-3" style={{ color: '#b8935a' }}>10+</div>
-                <p className="font-medium mb-2" style={{ color: '#0f0f0f' }}>Years of Commitment</p>
-                <p className="text-sm" style={{ color: '#6b6b6b' }}>Over a decade of dedicated work in sustainable fashion distribution.</p>
+                <p className="font-medium mb-2" style={{ color: '#0f0f0f' }}>{translations.sustainabilityStatsYears}</p>
+                <p className="text-sm" style={{ color: '#6b6b6b' }}>{translations.sustainabilityStatsYearsDesc}</p>
               </div>
             </div>
           </div>
 
           {/* Additional Content */}
           <div className="mt-20">
-            <h2 className="text-3xl md:text-4xl font-light mb-12 text-balance" style={{ color: '#0f0f0f' }}>Our Sustainability Pillars</h2>
+            <h2 className="text-3xl md:text-4xl font-light mb-12 text-balance" style={{ color: '#0f0f0f' }}>{translations.sustainabilityPillarsTitle}</h2>
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>Environmental Responsibility</h3>
+                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>{translations.sustainabilityEnvironmental}</h3>
                 <ul className="space-y-3">
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>•</span>
-                    <span style={{ color: '#6b6b6b' }}>Carbon-neutral shipping and logistics</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.sustainabilityCarbon}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>•</span>
-                    <span style={{ color: '#6b6b6b' }}>Biodegradable and recycled packaging</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.sustainabilityPackaging}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>•</span>
-                    <span style={{ color: '#6b6b6b' }}>Water conservation in production</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.sustainabilityWater}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>•</span>
-                    <span style={{ color: '#6b6b6b' }}>Reduced chemical usage and waste</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.sustainabilityChemicals}</span>
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>Social Impact</h3>
+                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>{translations.sustainabilitySocial}</h3>
                 <ul className="space-y-3">
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>•</span>
-                    <span style={{ color: '#6b6b6b' }}>Fair wages and worker benefits</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.sustainabilityWages}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>•</span>
-                    <span style={{ color: '#6b6b6b' }}>Safe working conditions</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.sustainabilitySafe}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>•</span>
-                    <span style={{ color: '#6b6b6b' }}>Artisan skill preservation</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.sustainabilityArtisan}</span>
                   </li>
                   <li className="flex gap-3">
                     <span style={{ color: '#b8935a' }}>•</span>
-                    <span style={{ color: '#6b6b6b' }}>Community development support</span>
+                    <span style={{ color: '#6b6b6b' }}>{translations.sustainabilityCommunity}</span>
                   </li>
                 </ul>
               </div>
