@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { CTALink } from '@/components/CTALink'
 
 export const metadata: Metadata = {
   title: 'Pre-Order | VN13 Fashion Agency',
@@ -156,9 +157,7 @@ export default function PreorderPage() {
             <p className="text-base mb-8 max-w-xl mx-auto" style={{ color: '#6b6b6b' }}>
               Contact our team to discuss your pre-order needs and access our upcoming collections.
             </p>
-            <a href="/#contact" className="inline-block px-8 py-4 text-sm font-medium tracking-wide transition-colors duration-200" style={{ backgroundColor: '#0f0f0f', color: '#fff' }} onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#b8935a')} onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#0f0f0f')}>
-              Get Started
-            </a>
+            <CTALink href="/#contact">Get Started</CTALink>
           </div>
         </div>
       </section>
