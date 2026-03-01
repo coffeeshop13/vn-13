@@ -1,13 +1,7 @@
 'use client'
 
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-
-export const metadata: Metadata = {
-  title: 'Sustainability | VN13 Fashion Agency',
-  description: 'Our commitment to sustainable and ethical fashion practices in luxury European brands.',
-}
 
 export default function SustainabilityPage() {
   return (

@@ -1,14 +1,8 @@
 'use client'
 
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CTALink } from '@/components/CTALink'
-
-export const metadata: Metadata = {
-  title: 'Pre-Order | VN13 Fashion Agency',
-  description: 'Exclusive pre-order access to upcoming collections from our European brand partners.',
-}
 
 export default function PreorderPage() {
   return (

@@ -1,14 +1,8 @@
 'use client'
 
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CTALink } from '@/components/CTALink'
-
-export const metadata: Metadata = {
-  title: 'Manufacturing | VN13 Fashion Agency',
-  description: 'Our European manufacturing partners and commitment to quality craftsmanship.',
-}
 
 export default function ManufacturingPage() {
   return (
