@@ -4,6 +4,40 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CTALink } from '@/components/CTALink'
 import { useLanguage } from '@/lib/context/LanguageContext'
+import Image from 'next/image'
+
+const galleryImages = [
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%203-9H0xA8pMFJLvxLxNs1UEJDXp5Fzz1R.jpg',
+    alt: 'Manuelle Guibal collection on display rack',
+    aspectRatio: 3/4
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%207-SNtLOX7mtJU8MukktBVAZiZ9PHtdmI.jpg',
+    alt: 'Model wearing sage green oversized shirt',
+    aspectRatio: 3/4
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%208-83OfinjdVGj3Fmyxq0y8DWMBfwXShu.jpg',
+    alt: 'Manuelle Guibal flat lay composition',
+    aspectRatio: 3/4
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%201-huGLqPTIk8eqnL80pF4nkPXqr9Rh2c.jpg',
+    alt: 'Black blazer with sculptural collar',
+    aspectRatio: 3/4
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%209-vQESspFPAkWp3ZZwe2FsTjXo8qinP2.jpg',
+    alt: 'Artistic watercolor fabric detail',
+    aspectRatio: 3/4
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%206-DzxP9lJxeXfem1r2NtOc1tYQ7UyHUg.webp',
+    alt: 'Navy tiered ruffle dress',
+    aspectRatio: 3/4
+  }
+]
 
 export default function ManuelleGuibalPage() {
   const { translations } = useLanguage()
@@ -96,6 +130,26 @@ export default function ManuelleGuibalPage() {
                   {translations.brandManuelleGuibalInnovationDesc}
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Gallery Section */}
+          <div className="mt-20 pt-20 border-t" style={{ borderColor: '#e0ddd8' }}>
+            <h2 className="text-3xl md:text-4xl font-light mb-12" style={{ color: '#0f0f0f' }}>
+              Collection
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {galleryImages.map((image, index) => (
+                <div key={index} className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
