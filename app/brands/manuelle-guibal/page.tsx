@@ -17,8 +17,8 @@ const galleryImages = [
     aspectRatio: 3/4
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%208-83OfinjdVGj3Fmyxq0y8DWMBfwXShu.jpg',
-    alt: 'Manuelle Guibal flat lay composition',
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%204-aJqkhYlf76ScqqRoZ1RS8OgvBxnsw5.jpg',
+    alt: 'Model in oversized sage shirt and black skirt',
     aspectRatio: 3/4
   },
   {
@@ -35,6 +35,16 @@ const galleryImages = [
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%206-DzxP9lJxeXfem1r2NtOc1tYQ7UyHUg.webp',
     alt: 'Navy tiered ruffle dress',
     aspectRatio: 3/4
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%205-jaOpPB2pVOvmKLd0KifraQvYde77D5.jpg',
+    alt: 'Model in sage green oversized shirt',
+    aspectRatio: 3/4
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%202-T5nDPwGEumRMlpKISgweNskB29cjZr.jpg',
+    alt: 'Model in sage green oversized shirt with hands folded',
+    aspectRatio: 3/4
   }
 ]
 
@@ -44,6 +54,16 @@ export default function ManuelleGuibalPage() {
   return (
     <main>
       <Header />
+      
+      {/* Hero Cover Section */}
+      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%208-83OfinjdVGj3Fmyxq0y8DWMBfwXShu.jpg"
+          alt="Manuelle Guibal Brand Cover"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/20"></div>
+      </section>
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-6" style={{ backgroundColor: '#fafaf8' }}>
