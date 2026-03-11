@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={geistSans.className}>
+    <html lang="en" className={geistSans.className} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
