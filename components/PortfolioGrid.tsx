@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { useLanguage } from '@/lib/context/LanguageContext'
 
 const brands = [
-  { id: 1, name: 'Manuelle Guibal', country: 'Франция', region: 'france', image: '/brands/manuelle-guibal.jpg', slug: 'manuelle-guibal' },
+  { id: 1, name: 'Manuelle Guibal', country: 'Франция', region: 'france', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%208-83OfinjdVGj3Fmyxq0y8DWMBfwXShu.jpg', slug: 'manuelle-guibal', isExternal: true },
   { id: 2, name: 'H+ Hannoh Wessel', country: 'Италия', region: 'italy', image: '/brands/hannoh-wessel.jpg', slug: null },
   { id: 3, name: 'Moyuru', country: 'Япония', region: 'japan', image: '/brands/moyuru.jpg', slug: null },
   { id: 4, name: 'Shoto', country: 'Италия', region: 'italy', image: '/brands/shoto.jpg', slug: null },
@@ -62,15 +62,23 @@ export default function PortfolioGrid() {
             const BrandCard = (
               <article className="group cursor-pointer">
                 <div className="relative overflow-hidden mb-4" style={{ aspectRatio: '3/4' }}>
-                  <Image
-                    src={brand.image}
-                    alt={brand.name}
-                    fill
-                    priority={index === 0}
-                    loading={index === 0 ? 'eager' : 'lazy'}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  {brand.isExternal ? (
+                    <img
+                      src={brand.image}
+                      alt={brand.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <Image
+                      src={brand.image}
+                      alt={brand.name}
+                      fill
+                      priority={index === 0}
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  )}
                 </div>
                 <h3 className="font-medium text-sm mb-1" style={{ color: '#0f0f0f' }}>{brand.name}</h3>
                 <p className="text-xs tracking-wide" style={{ color: '#b8935a' }}>{brand.country}</p>
