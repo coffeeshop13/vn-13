@@ -2,18 +2,19 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useLanguage } from '@/lib/context/LanguageContext'
 
 const brands = [
-  { id: 1, name: 'Manuelle Guibal', country: 'Франция', region: 'france', image: '/brands/manuelle-guibal.jpg' },
-  { id: 2, name: 'H+ Hannoh Wessel', country: 'Италия', region: 'italy', image: '/brands/hannoh-wessel.jpg' },
-  { id: 3, name: 'Moyuru', country: 'Япония', region: 'japan', image: '/brands/moyuru.jpg' },
-  { id: 4, name: 'Shoto', country: 'Италия', region: 'italy', image: '/brands/shoto.jpg' },
-  { id: 5, name: 'Post & Co', country: 'Италия', region: 'italy', image: '/brands/post-co.jpg' },
-  { id: 6, name: 'Aequamente', country: 'Италия', region: 'italy', image: '/brands/aequamente.jpg' },
-  { id: 7, name: 'MJ Watson', country: 'Италия', region: 'italy', image: '/brands/mj-watson.jpg' },
-  { id: 8, name: 'Sula', country: 'Великобритания', region: 'uk', image: '/brands/sula.jpg' },
-  { id: 9, name: 'SOH', country: 'Южная Корея', region: 'korea', image: '/brands/soh.jpg' },
+  { id: 1, name: 'Manuelle Guibal', country: 'Франция', region: 'france', image: '/brands/manuelle-guibal.jpg', slug: 'manuelle-guibal' },
+  { id: 2, name: 'H+ Hannoh Wessel', country: 'Италия', region: 'italy', image: '/brands/hannoh-wessel.jpg', slug: null },
+  { id: 3, name: 'Moyuru', country: 'Япония', region: 'japan', image: '/brands/moyuru.jpg', slug: null },
+  { id: 4, name: 'Shoto', country: 'Италия', region: 'italy', image: '/brands/shoto.jpg', slug: null },
+  { id: 5, name: 'Post & Co', country: 'Италия', region: 'italy', image: '/brands/post-co.jpg', slug: null },
+  { id: 6, name: 'Aequamente', country: 'Италия', region: 'italy', image: '/brands/aequamente.jpg', slug: null },
+  { id: 7, name: 'MJ Watson', country: 'Италия', region: 'italy', image: '/brands/mj-watson.jpg', slug: null },
+  { id: 8, name: 'Sula', country: 'Великобритания', region: 'uk', image: '/brands/sula.jpg', slug: null },
+  { id: 9, name: 'SOH', country: 'Южная Корея', region: 'korea', image: '/brands/soh.jpg', slug: null },
 ]
 
 export default function PortfolioGrid() {
@@ -57,23 +58,35 @@ export default function PortfolioGrid() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((brand, index) => (
-            <article key={brand.id} className="group cursor-pointer">
-              <div className="relative overflow-hidden mb-4" style={{ aspectRatio: '3/4' }}>
-                <Image
-                  src={brand.image}
-                  alt={brand.name}
-                  fill
-                  priority={index === 0}
-                  loading={index === 0 ? 'eager' : 'lazy'}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <h3 className="font-medium text-sm mb-1" style={{ color: '#0f0f0f' }}>{brand.name}</h3>
-              <p className="text-xs tracking-wide" style={{ color: '#b8935a' }}>{brand.country}</p>
-            </article>
-          ))}
+          {filtered.map((brand, index) => {
+            const BrandCard = (
+              <article className="group cursor-pointer">
+                <div className="relative overflow-hidden mb-4" style={{ aspectRatio: '3/4' }}>
+                  <Image
+                    src={brand.image}
+                    alt={brand.name}
+                    fill
+                    priority={index === 0}
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <h3 className="font-medium text-sm mb-1" style={{ color: '#0f0f0f' }}>{brand.name}</h3>
+                <p className="text-xs tracking-wide" style={{ color: '#b8935a' }}>{brand.country}</p>
+              </article>
+            )
+
+            if (brand.slug) {
+              return (
+                <Link key={brand.id} href={`/brands/${brand.slug}`}>
+                  {BrandCard}
+                </Link>
+              )
+            }
+
+            return <div key={brand.id}>{BrandCard}</div>
+          })}
         </div>
       </div>
     </section>
