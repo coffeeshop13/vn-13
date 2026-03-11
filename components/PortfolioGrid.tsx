@@ -57,13 +57,15 @@ export default function PortfolioGrid() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map(brand => (
+          {filtered.map((brand, index) => (
             <article key={brand.id} className="group cursor-pointer">
               <div className="relative overflow-hidden mb-4" style={{ aspectRatio: '3/4' }}>
                 <Image
                   src={brand.image}
                   alt={brand.name}
                   fill
+                  priority={index === 0}
+                  loading={index === 0 ? 'eager' : 'lazy'}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
