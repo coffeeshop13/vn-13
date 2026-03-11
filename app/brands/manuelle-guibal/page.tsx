@@ -4,7 +4,6 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CTALink } from '@/components/CTALink'
 import { useLanguage } from '@/lib/context/LanguageContext'
-import Image from 'next/image'
 
 const galleryImages = [
   {
@@ -141,12 +140,10 @@ export default function ManuelleGuibalPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {galleryImages.map((image, index) => (
                 <div key={index} className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
-                  <Image
+                  <img
                     src={image.src}
                     alt={image.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               ))}
