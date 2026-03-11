@@ -35,16 +35,6 @@ const galleryImages = [
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%206-DzxP9lJxeXfem1r2NtOc1tYQ7UyHUg.webp',
     alt: 'Navy tiered ruffle dress',
     aspectRatio: 3/4
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%205-jaOpPB2pVOvmKLd0KifraQvYde77D5.jpg',
-    alt: 'Model in sage green oversized shirt',
-    aspectRatio: 3/4
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%202-T5nDPwGEumRMlpKISgweNskB29cjZr.jpg',
-    alt: 'Model in sage green oversized shirt with hands folded',
-    aspectRatio: 3/4
   }
 ]
 
