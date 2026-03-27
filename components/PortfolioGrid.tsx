@@ -8,7 +8,7 @@ import { useLanguage } from '@/lib/context/LanguageContext'
 const brands = [
   { id: 1, name: 'Manuelle Guibal', country: 'Франция', region: 'france', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%208-83OfinjdVGj3Fmyxq0y8DWMBfwXShu.jpg', slug: 'manuelle-guibal', isExternal: true },
   { id: 2, name: 'H+ Hannoh Wessel', country: 'Италия', region: 'italy', image: 'https://houseofvalerie.com/cdn/shop/files/FE611AAD-35D2-45B2-BFD6-09C735088A5B.jpg?v=1769788318', slug: null, isExternal: true },
-  { id: 3, name: 'Moyuru', country: 'Япония', region: 'japan', image: '/brands/moyuru.jpg', slug: null },
+  { id: 3, name: 'Moyuru', country: 'Япония', region: 'japan', image: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-7.jpg?crop=center&height=3000&v=1773184096&width=2100', slug: null, isExternal: true },
   { id: 4, name: 'Shoto', country: 'Италия', region: 'italy', image: '/brands/shoto.jpg', slug: null },
   { id: 5, name: 'Post & Co', country: 'Италия', region: 'italy', image: '/brands/post-co.jpg', slug: null },
   { id: 6, name: 'Aequamente', country: 'Италия', region: 'italy', image: '/brands/aequamente.jpg', slug: null },
