@@ -7,7 +7,7 @@ import { useLanguage } from '@/lib/context/LanguageContext'
 
 const brands = [
   { id: 1, name: 'Manuelle Guibal', country: 'Франция', region: 'france', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%208-83OfinjdVGj3Fmyxq0y8DWMBfwXShu.jpg', slug: 'manuelle-guibal', isExternal: true },
-  { id: 2, name: 'H+ Hannoh Wessel', country: 'Италия', region: 'italy', image: '/brands/hannoh-wessel.jpg', slug: null },
+  { id: 2, name: 'H+ Hannoh Wessel', country: 'Италия', region: 'italy', image: 'https://houseofvalerie.com/cdn/shop/files/FE611AAD-35D2-45B2-BFD6-09C735088A5B.jpg?v=1769788318', slug: null, isExternal: true },
   { id: 3, name: 'Moyuru', country: 'Япония', region: 'japan', image: '/brands/moyuru.jpg', slug: null },
   { id: 4, name: 'Shoto', country: 'Италия', region: 'italy', image: '/brands/shoto.jpg', slug: null },
   { id: 5, name: 'Post & Co', country: 'Италия', region: 'italy', image: '/brands/post-co.jpg', slug: null },
