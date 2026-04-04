@@ -11,10 +11,10 @@ const brands = [
   { id: 3, name: 'Moyuru', country: 'Япония', region: 'japan', image: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-7.jpg?crop=center&height=3000&v=1773184096&width=2100', slug: null, isExternal: true },
   { id: 4, name: 'Shoto', country: 'Италия', region: 'italy', image: 'https://cdn.shopify.com/s/files/1/0672/5510/7848/files/193A3762.jpg?v=1771570514', slug: null, isExternal: true },
   { id: 5, name: 'Post & Co', country: 'Италия', region: 'italy', image: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_COGNAC_12520.jpg?v=1739745633', slug: null, isExternal: true },
-  { id: 6, name: 'Aequamente', country: 'Италия', region: 'italy', image: 'https://thedesign.pt/cdn/shop/files/03_1c5c14c7-9e5b-4c64-b7c2-effa5e0a5bca.jpg?v=1706535696', slug: null, isExternal: true },
-  { id: 7, name: 'MJ Watson', country: 'Италия', region: 'italy', image: 'https://cdn.shopify.com/s/files/1/0626/9829/2171/files/MJW_SHOP_1.jpg?v=1716278400', slug: null, isExternal: true },
-  { id: 8, name: 'Sula', country: 'Великобритания', region: 'uk', image: 'https://cordeliajames.com/cdn/shop/files/sula_ss25_5.jpg?v=1728402672', slug: null, isExternal: true },
-  { id: 9, name: 'SOH', country: 'Южная Корея', region: 'korea', image: 'https://thedesign.pt/cdn/shop/files/SOH_LONG_COAT_OLIVE_1.jpg?v=1708700400', slug: null, isExternal: true },
+  { id: 6, name: 'Aequamente', country: 'Италия', region: 'italy', image: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_1874.jpg?v=1765207413', slug: null, isExternal: true },
+  { id: 7, name: 'MJ Watson', country: 'Италия', region: 'italy', image: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_7362.jpg?v=1770045296', slug: null, isExternal: true },
+  { id: 8, name: 'Sula', country: 'Великобритания', region: 'uk', image: 'https://www.sulaclothing.com/cdn/shop/files/SS25_CARDIGANS_1.jpg?v=1726745600', slug: null, isExternal: true },
+  { id: 9, name: 'SOH', country: 'Южная Корея', region: 'korea', image: 'https://www.sohstores.com/cdn/shop/files/SOH_COLLECTION_HERO.jpg?v=1715847200', slug: null, isExternal: true },
 ]
 
 export default function PortfolioGrid() {
