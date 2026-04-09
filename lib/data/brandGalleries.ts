@@ -62,12 +62,12 @@ export const brandGalleries: Record<number, BrandGalleryImage[]> = {
   // H+ Hannoh Wessel - Italy
   2: [
     {
-      src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/hannoh-wessel-photo-1.jpg?v=1770000000',
+      src: '/placeholder.svg?height=600&width=450',
       alt: 'H+ Hannoh Wessel minimalist design 2026',
       aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/hannoh-wessel-photo-2.jpg?v=1770000000',
+      src: '/placeholder.svg?height=600&width=450',
       alt: 'H+ Hannoh Wessel contemporary fashion',
       aspectRatio: 3/4
     },
