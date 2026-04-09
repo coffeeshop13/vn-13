@@ -216,5 +216,10 @@
   "cookieThirdPartyTitle": "Cookies tiers",
   "cookieThirdPartyDesc": "Nous pouvons utiliser des services tiers qui placent des cookies sur votre appareil pour nous aider à analyser le trafic du site web et à améliorer nos services. Ces tiers ont leurs propres politiques de confidentialité.",
   "cookieContactTitle": "Nous contacter",
-  "cookieContactDesc": "Si vous avez des questions concernant notre utilisation des cookies, veuillez nous contacter à :"
+  "cookieContactDesc": "Si vous avez des questions concernant notre utilisation des cookies, veuillez nous contacter à :",
+  "cookieBannerText": "Nous utilisons des cookies pour améliorer votre expérience.",
+  "cookieBannerPrivacy": "Politique de confidentialité",
+  "cookieBannerAnd": "et",
+  "cookieBannerCookie": "Politique des cookies",
+  "cookieBannerButton": "OK"
 }
