@@ -1,188 +1,163 @@
-'use client'
+import type { Metadata } from 'next'
+import { ManuelleGuibalContent } from './ManuelleGuibalContent'
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import { CTALink } from '@/components/CTALink'
-import { Breadcrumbs } from '@/components/Breadcrumbs'
-import { useLanguage } from '@/lib/context/LanguageContext'
+export const metadata: Metadata = {
+  title: 'Manuelle Guibal | VN13 Fashion Agency - French Designer Brand',
+  description: 'Manuelle Guibal - French designer brand known for artisanal craftsmanship, natural fabrics, and timeless silhouettes. Official distributor VN13. Exclusive collections for retailers.',
+  keywords: [
+    'Manuelle Guibal',
+    'Manuelle Guibal brand',
+    'Manuelle Guibal clothing',
+    'Manuelle Guibal collection',
+    'French fashion designer',
+    'artisanal fashion',
+    'sustainable fashion France',
+    'natural fabrics clothing',
+    'VN13 brands',
+    'European fashion wholesale',
+    'designer clothing distributor'
+  ],
+  openGraph: {
+    type: 'website',
+    url: 'https://vn-13.com/brands/manuelle-guibal',
+    title: 'Manuelle Guibal | VN13 Fashion Agency',
+    description: 'French designer brand. Artisanal craftsmanship, natural fabrics, timeless silhouettes. Official distributor VN13.',
+    siteName: 'VN13',
+    images: [
+      {
+        url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%208-83OfinjdVGj3Fmyxq0y8DWMBfwXShu.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Manuelle Guibal Collection - VN13',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Manuelle Guibal | VN13 Fashion Agency',
+    description: 'French designer brand. Artisanal craftsmanship, natural fabrics, timeless silhouettes.',
+    images: ['https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%208-83OfinjdVGj3Fmyxq0y8DWMBfwXShu.jpg'],
+  },
+  alternates: {
+    canonical: 'https://vn-13.com/brands/manuelle-guibal',
+    languages: {
+      'en': 'https://vn-13.com/brands/manuelle-guibal',
+      'ru': 'https://vn-13.com/brands/manuelle-guibal',
+      'fr': 'https://vn-13.com/brands/manuelle-guibal',
+      'de': 'https://vn-13.com/brands/manuelle-guibal',
+      'it': 'https://vn-13.com/brands/manuelle-guibal',
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
 
-const galleryImages = [
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%203-9H0xA8pMFJLvxLxNs1UEJDXp5Fzz1R.jpg',
-    alt: 'Manuelle Guibal collection on display rack',
-    aspectRatio: 3/4
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%207-SNtLOX7mtJU8MukktBVAZiZ9PHtdmI.jpg',
-    alt: 'Model wearing sage green oversized shirt',
-    aspectRatio: 3/4
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%204-aJqkhYlf76ScqqRoZ1RS8OgvBxnsw5.jpg',
-    alt: 'Model in oversized sage shirt and black skirt',
-    aspectRatio: 3/4
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%201-huGLqPTIk8eqnL80pF4nkPXqr9Rh2c.jpg',
-    alt: 'Black blazer with sculptural collar',
-    aspectRatio: 3/4
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%209-vQESspFPAkWp3ZZwe2FsTjXo8qinP2.jpg',
-    alt: 'Artistic watercolor fabric detail',
-    aspectRatio: 3/4
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%206-DzxP9lJxeXfem1r2NtOc1tYQ7UyHUg.webp',
-    alt: 'Navy tiered ruffle dress',
-    aspectRatio: 3/4
-  }
-]
+// JSON-LD structured data for SEO
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Brand',
+      '@id': 'https://vn-13.com/brands/manuelle-guibal#brand',
+      name: 'Manuelle Guibal',
+      description: 'French designer brand known for artisanal craftsmanship, natural fabrics, and timeless silhouettes.',
+      logo: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%208-83OfinjdVGj3Fmyxq0y8DWMBfwXShu.jpg',
+      url: 'https://vn-13.com/brands/manuelle-guibal',
+      foundingLocation: {
+        '@type': 'Place',
+        name: 'France',
+      },
+      slogan: 'Artisanal craftsmanship meets contemporary design',
+    },
+    {
+      '@type': 'WebPage',
+      '@id': 'https://vn-13.com/brands/manuelle-guibal#webpage',
+      url: 'https://vn-13.com/brands/manuelle-guibal',
+      name: 'Manuelle Guibal | VN13 Fashion Agency',
+      description: 'Manuelle Guibal - French designer brand. Official distributor VN13.',
+      isPartOf: {
+        '@id': 'https://vn-13.com/#website',
+      },
+      about: {
+        '@id': 'https://vn-13.com/brands/manuelle-guibal#brand',
+      },
+      breadcrumb: {
+        '@id': 'https://vn-13.com/brands/manuelle-guibal#breadcrumb',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://vn-13.com/brands/manuelle-guibal#breadcrumb',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://vn-13.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Portfolio',
+          item: 'https://vn-13.com/#portfolio',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Manuelle Guibal',
+          item: 'https://vn-13.com/brands/manuelle-guibal',
+        },
+      ],
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://vn-13.com/#organization',
+      name: 'VN13',
+      url: 'https://vn-13.com',
+      description: 'Fashion agency connecting European fashion masters with retailers worldwide.',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'Sales',
+        email: 'info@vn-13.com',
+      },
+    },
+    {
+      '@type': 'Product',
+      name: 'Manuelle Guibal Collection',
+      description: 'Designer clothing collection featuring artisanal craftsmanship and natural fabrics',
+      brand: {
+        '@id': 'https://vn-13.com/brands/manuelle-guibal#brand',
+      },
+      category: 'Designer Clothing',
+      manufacturer: {
+        '@type': 'Organization',
+        name: 'Manuelle Guibal',
+        address: {
+          '@type': 'PostalAddress',
+          addressCountry: 'FR',
+        },
+      },
+    },
+  ],
+}
 
 export default function ManuelleGuibalPage() {
-  const { translations } = useLanguage()
-
   return (
-    <main>
-      <Header />
-      
-      {/* Hero Cover Section */}
-      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
-        <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%208-83OfinjdVGj3Fmyxq0y8DWMBfwXShu.jpg"
-          alt="Manuelle Guibal Brand Cover"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/20"></div>
-      </section>
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-6" style={{ backgroundColor: '#fafaf8' }}>
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>Brand</p>
-          <h1 className="text-5xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>
-            {translations.brandManuelleGuibalTitle}
-          </h1>
-          <p className="text-lg md:text-xl max-w-2xl" style={{ color: '#6b6b6b' }}>
-            {translations.brandManuelleGuibalSubtitle}
-          </p>
-        </div>
-      </section>
-
-      {/* Content Sections */}
-      <section style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
-        <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
-          
-          {/* About Section */}
-          <div className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-light mb-8" style={{ color: '#0f0f0f' }}>{translations.brandManuelleGuibalAboutTitle}</h2>
-            
-            <p className="text-base leading-relaxed mb-6" style={{ color: '#6b6b6b', maxWidth: '900px' }}>
-              {translations.brandManuelleGuibalHeroDesc}
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-12 mt-12">
-              <div>
-                <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
-                  {translations.brandManuelleGuibalAboutDesc1}
-                </p>
-              </div>
-              <div>
-                <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
-                  {translations.brandManuelleGuibalAboutDesc2}
-                </p>
-              </div>
-              <div>
-                <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
-                  {translations.brandManuelleGuibalAboutDesc3}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Philosophy Section */}
-          <div className="py-16 border-t border-b" style={{ borderColor: '#e0ddd8' }}>
-            <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>
-              {translations.brandManuelleGuibalPhilosophyTitle}
-            </h2>
-            <p className="text-base leading-relaxed max-w-2xl" style={{ color: '#6b6b6b' }}>
-              {translations.brandManuelleGuibalPhilosophyDesc}
-            </p>
-          </div>
-
-          {/* Core Values Section */}
-          <div className="mt-20">
-            <h2 className="text-3xl md:text-4xl font-light mb-12 text-balance" style={{ color: '#0f0f0f' }}>
-              {translations.brandManuelleGuibalHeritage}
-            </h2>
-            <div className="grid md:grid-cols-3 gap-12">
-              <div>
-                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>
-                  {translations.brandManuelleGuibalCraft}
-                </h3>
-                <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
-                  {translations.brandManuelleGuibalCraftDesc}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>
-                  {translations.brandManuelleGuibalSustainability}
-                </h3>
-                <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
-                  {translations.brandManuelleGuibalSustainabilityDesc}
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>
-                  {translations.brandManuelleGuibalInnovation}
-                </h3>
-                <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
-                  {translations.brandManuelleGuibalInnovationDesc}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Gallery Section */}
-          <div className="mt-20 pt-20 border-t" style={{ borderColor: '#e0ddd8' }}>
-            <h2 className="text-3xl md:text-4xl font-light mb-12" style={{ color: '#0f0f0f' }}>
-              Collection
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {galleryImages.map((image, index) => (
-                <div key={index} className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="mt-20 pt-20 border-t text-center" style={{ borderColor: '#e0ddd8' }}>
-            <h3 className="text-2xl font-light mb-4" style={{ color: '#0f0f0f' }}>
-              {translations.brandManuelleGuibalCTATitle}
-            </h3>
-            <p className="text-base mb-8 max-w-xl mx-auto" style={{ color: '#6b6b6b' }}>
-              {translations.brandManuelleGuibalCTADesc}
-            </p>
-            <CTALink href="/#contact">Get in Touch</CTALink>
-          </div>
-
-          {/* Breadcrumbs */}
-          <Breadcrumbs 
-            items={[
-              { label: translations.navPortfolio || 'Portfolio', href: '/#portfolio' },
-              { label: 'Manuelle Guibal' }
-            ]} 
-          />
-        </div>
-      </section>
-      
-      <Footer />
-    </main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ManuelleGuibalContent />
+    </>
   )
 }
