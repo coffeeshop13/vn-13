@@ -79,10 +79,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8" style={{ borderTop: '1px solid #1f1f1f' }}>
           <p className="text-xs" style={{ color: '#555' }}>&copy; {translations.footerCopyright}</p>
           <div className="flex gap-6">
-            <a href="#" className="text-xs transition-colors duration-200" style={{ color: '#555' }}
+            <a href="/privacy" className="text-xs transition-colors duration-200" style={{ color: '#555' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#999')}
               onMouseLeave={e => (e.currentTarget.style.color = '#555')}>{translations.footerPrivacy}</a>
-            <a href="#" className="text-xs transition-colors duration-200" style={{ color: '#555' }}
+            <a href="/cookie-policy" className="text-xs transition-colors duration-200" style={{ color: '#555' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#999')}
               onMouseLeave={e => (e.currentTarget.style.color = '#555')}>{translations.footerCookies}</a>
           </div>
