@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { useLanguage } from '@/contexts/LanguageContext'
+import { useLanguage } from '@/lib/context/LanguageContext'
 
 export function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false)
