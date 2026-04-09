@@ -3,6 +3,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CTALink } from '@/components/CTALink'
+import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLanguage } from '@/lib/context/LanguageContext'
 
 const galleryImages = [
@@ -170,6 +171,14 @@ export default function ManuelleGuibalPage() {
             </p>
             <CTALink href="/#contact">Get in Touch</CTALink>
           </div>
+
+          {/* Breadcrumbs */}
+          <Breadcrumbs 
+            items={[
+              { label: translations.navPortfolio || 'Portfolio', href: '/#portfolio' },
+              { label: 'Manuelle Guibal' }
+            ]} 
+          />
         </div>
       </section>
       
