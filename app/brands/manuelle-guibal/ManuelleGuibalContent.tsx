@@ -5,39 +5,9 @@ import Footer from '@/components/Footer'
 import { CTALink } from '@/components/CTALink'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { useLanguage } from '@/lib/context/LanguageContext'
+import { brandGalleries } from '@/lib/data/brandGalleries'
 
-const galleryImages = [
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%203-9H0xA8pMFJLvxLxNs1UEJDXp5Fzz1R.jpg',
-    alt: 'Manuelle Guibal collection on display rack - artisanal French fashion',
-    aspectRatio: 3/4
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%207-SNtLOX7mtJU8MukktBVAZiZ9PHtdmI.jpg',
-    alt: 'Manuelle Guibal sage green oversized shirt - natural fabrics',
-    aspectRatio: 3/4
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%204-aJqkhYlf76ScqqRoZ1RS8OgvBxnsw5.jpg',
-    alt: 'Manuelle Guibal oversized sage shirt and black skirt - timeless silhouettes',
-    aspectRatio: 3/4
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%201-huGLqPTIk8eqnL80pF4nkPXqr9Rh2c.jpg',
-    alt: 'Manuelle Guibal black blazer with sculptural collar - designer fashion',
-    aspectRatio: 3/4
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%209-vQESspFPAkWp3ZZwe2FsTjXo8qinP2.jpg',
-    alt: 'Manuelle Guibal artistic watercolor fabric detail - handcrafted textiles',
-    aspectRatio: 3/4
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%206-DzxP9lJxeXfem1r2NtOc1tYQ7UyHUg.webp',
-    alt: 'Manuelle Guibal navy tiered ruffle dress - French designer collection',
-    aspectRatio: 3/4
-  }
-]
+const galleryImages = brandGalleries[1] // Manuelle Guibal brand ID is 1
 
 export function ManuelleGuibalContent() {
   const { translations } = useLanguage()
