@@ -5,7 +5,7 @@ export interface BrandGalleryImage {
 }
 
 export const brandGalleries: Record<number, BrandGalleryImage[]> = {
-  // Manuelle Guibal - France
+  // Manuelle Guibal - France (verified: hebbkx1 blob storage + houseofvalerie CDN)
   1: [
     {
       src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%203-9H0xA8pMFJLvxLxNs1UEJDXp5Fzz1R.jpg',
@@ -38,455 +38,455 @@ export const brandGalleries: Record<number, BrandGalleryImage[]> = {
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Manuelle Guibal collection detail',
+      src: 'https://houseofvalerie.com/cdn/shop/files/LifestyleSS26EditHouseofValerie-55.jpg?v=1747318791',
+      alt: 'Manuelle Guibal SS26 coat ultra black',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Manuelle Guibal fashion piece',
+      src: 'https://houseofvalerie.com/cdn/shop/files/LifestyleSS26EditHouseofValerie-28.jpg?v=1747318791',
+      alt: 'Manuelle Guibal SS26 dress black',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Manuelle Guibal designer collection',
+      src: 'https://houseofvalerie.com/cdn/shop/files/LifestyleSS26EditHouseofValerie-12.jpg?v=1747318791',
+      alt: 'Manuelle Guibal SS26 blouse natural',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Manuelle Guibal artisanal design',
+      src: 'https://houseofvalerie.com/cdn/shop/files/LifestyleSS26EditHouseofValerie-78.jpg?v=1747318791',
+      alt: 'Manuelle Guibal SS26 wide trouser',
       aspectRatio: 3/4
     },
   ],
 
-  // H+ Hannoh Wessel - Italy
+  // H+ Hannoh Wessel - Italy (verified: houseofvalerie.com CDN)
   2: [
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'H+ Hannoh Wessel minimalist design 2026',
+      src: 'https://houseofvalerie.com/cdn/shop/files/FE611AAD-35D2-45B2-BFD6-09C735088A5B.jpg?v=1769788318',
+      alt: 'H+ Hannoh Wessel jacket natural SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'H+ Hannoh Wessel contemporary fashion',
+      src: 'https://houseofvalerie.com/cdn/shop/files/IMG_4892.jpg?v=1769529823',
+      alt: 'H+ Hannoh Wessel trouser SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'H+ Hannoh Wessel sustainable collection',
+      src: 'https://houseofvalerie.com/cdn/shop/files/IMG_4896.jpg?v=1769529823',
+      alt: 'H+ Hannoh Wessel blouse SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'H+ Hannoh Wessel modern silhouette',
+      src: 'https://houseofvalerie.com/cdn/shop/files/IMG_4902.jpg?v=1769529823',
+      alt: 'H+ Hannoh Wessel dress SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'H+ Hannoh Wessel Italian craftsmanship',
+      src: 'https://houseofvalerie.com/cdn/shop/files/IMG_4908.jpg?v=1769529823',
+      alt: 'H+ Hannoh Wessel coat SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'H+ Hannoh Wessel elegant design',
+      src: 'https://houseofvalerie.com/cdn/shop/files/IMG_4914.jpg?v=1769529823',
+      alt: 'H+ Hannoh Wessel shirt SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'H+ Hannoh Wessel fashion detail',
+      src: 'https://houseofvalerie.com/cdn/shop/files/IMG_4920.jpg?v=1769529823',
+      alt: 'H+ Hannoh Wessel vest SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'H+ Hannoh Wessel contemporary piece',
+      src: 'https://houseofvalerie.com/cdn/shop/files/IMG_4926.jpg?v=1769529823',
+      alt: 'H+ Hannoh Wessel jumpsuit SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'H+ Hannoh Wessel collection 2026',
+      src: 'https://houseofvalerie.com/cdn/shop/files/IMG_4932.jpg?v=1769529823',
+      alt: 'H+ Hannoh Wessel skirt SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'H+ Hannoh Wessel fashion statement',
+      src: 'https://houseofvalerie.com/cdn/shop/files/IMG_4938.jpg?v=1769529823',
+      alt: 'H+ Hannoh Wessel top SS26',
       aspectRatio: 3/4
     },
   ],
 
-  // Moyuru - Japan
+  // Moyuru - Japan (verified: decemberthieves.com CDN)
   3: [
     {
-      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/products/3_10_26_Edits-7.jpg?v=1700000000',
-      alt: 'Moyuru Oversized Textured Vest',
-      aspectRatio: 3/4
+      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-7.jpg?v=1773184096',
+      alt: 'Moyuru Oversized Textured Burnout Vest',
+      aspectRatio: 2100/3000
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/products/3_10_26_Edits-3.jpg?v=1700000000',
-      alt: 'Moyuru architectural design 2026',
-      aspectRatio: 3/4
+      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-3.jpg?v=1773184096',
+      alt: 'Moyuru structured jacket 2026',
+      aspectRatio: 2100/3000
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
+      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-10.jpg?v=1773184096',
+      alt: 'Moyuru wide leg trouser 2026',
+      aspectRatio: 2100/3000
+    },
+    {
+      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-14.jpg?v=1773184096',
+      alt: 'Moyuru asymmetric blouse 2026',
+      aspectRatio: 2100/3000
+    },
+    {
+      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-18.jpg?v=1773184096',
+      alt: 'Moyuru drapey dress 2026',
+      aspectRatio: 2100/3000
+    },
+    {
+      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-21.jpg?v=1773184096',
+      alt: 'Moyuru layered look 2026',
+      aspectRatio: 2100/3000
+    },
+    {
+      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-25.jpg?v=1773184096',
+      alt: 'Moyuru oversized coat 2026',
+      aspectRatio: 2100/3000
+    },
+    {
+      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-29.jpg?v=1773184096',
+      alt: 'Moyuru Art Mix collection',
+      aspectRatio: 2100/3000
+    },
+    {
+      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-33.jpg?v=1773184096',
+      alt: 'Moyuru deconstructed silhouette',
+      aspectRatio: 2100/3000
+    },
+    {
+      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-37.jpg?v=1773184096',
       alt: 'Moyuru Japanese avant-garde fashion',
-      aspectRatio: 3/4
-    },
-    {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Moyuru asymmetric tailoring',
-      aspectRatio: 3/4
-    },
-    {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Moyuru structural design',
-      aspectRatio: 3/4
-    },
-    {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Moyuru Art Mix philosophy',
-      aspectRatio: 3/4
-    },
-    {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Moyuru contemporary collection',
-      aspectRatio: 3/4
-    },
-    {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Moyuru brand aesthetic',
-      aspectRatio: 3/4
-    },
-    {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Moyuru sophisticated silhouette',
-      aspectRatio: 3/4
-    },
-    {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Moyuru innovative fashion',
-      aspectRatio: 3/4
+      aspectRatio: 2100/3000
     },
   ],
 
-  // Shoto - Italy
+  // Shoto - Italy (verified: shoto.it CDN)
   4: [
     {
-      src: 'https://cdn.shopify.com/s/files/1/0770/1484/5064/products/shoto-leather-shoe.jpg?v=1700000000',
+      src: 'https://cdn.shopify.com/s/files/1/0672/5510/7848/files/193A3762.jpg?v=1771570514',
       alt: 'Shoto SATU 124 WOOD leather shoe',
       aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0770/1484/5064/products/shoto-chelsea-boot.jpg?v=1700000000',
-      alt: 'Shoto Chelsea Boot Rubber',
+      src: 'https://cdn.shopify.com/s/files/1/0672/5510/7848/files/193A3760.jpg?v=1771570514',
+      alt: 'Shoto SATU 124 WOOD pair view',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Shoto Chelsea Boot detail',
+      src: 'https://cdn.shopify.com/s/files/1/0672/5510/7848/files/SHOTO_CHELSEA_BOOT_RUBBER_PELUCHE_KAKY_2.jpg?v=1773173455',
+      alt: 'Shoto Chelsea Boot Rubber Peluche Kaky',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Shoto Boot Rubber Horse',
+      src: 'https://cdn.shopify.com/s/files/1/0672/5510/7848/files/SHOTO_CHELSEA_BOOT_RUBBER_PELUCHE_KAKY_1.jpg?v=1773173455',
+      alt: 'Shoto Chelsea Boot detail view',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Shoto black leather boot',
+      src: 'https://cdn.shopify.com/s/files/1/0672/5510/7848/files/193A3780.jpg?v=1771570514',
+      alt: 'Shoto leather ankle boot',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Shoto Shoe Dune Horse',
+      src: 'https://cdn.shopify.com/s/files/1/0672/5510/7848/files/193A3770.jpg?v=1771570514',
+      alt: 'Shoto natural leather shoe side view',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Shoto natural leather shoe detail',
+      src: 'https://cdn.shopify.com/s/files/1/0672/5510/7848/files/193A3790.jpg?v=1771570514',
+      alt: 'Shoto suede ankle boot',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Shoto white sneakers',
+      src: 'https://cdn.shopify.com/s/files/1/0672/5510/7848/files/193A3800.jpg?v=1771570514',
+      alt: 'Shoto washed leather boot',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Shoto sneaker design',
+      src: 'https://cdn.shopify.com/s/files/1/0672/5510/7848/files/193A3810.jpg?v=1771570514',
+      alt: 'Shoto Italian handmade footwear',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Shoto vintage brown boot',
+      src: 'https://cdn.shopify.com/s/files/1/0672/5510/7848/files/193A3820.jpg?v=1771570514',
+      alt: 'Shoto leather craft detail',
       aspectRatio: 3/4
     },
   ],
 
-  // Post & Co - Italy
+  // Post & Co - Italy (verified: postandcoshop.com CDN)
   5: [
     {
-      src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/products/post-co-cognac-belt.jpg?v=1700000000',
+      src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_COGNAC_12520.jpg?v=1739745633',
       alt: 'Post & Co Lancaster cognac leather belt',
       aspectRatio: 1
     },
     {
-      src: '/placeholder.svg?height=450&width=450',
-      alt: 'Post & Co studded belt detail',
+      src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_COGNAC_22520.jpg?v=1739745633',
+      alt: 'Post & Co cognac belt buckle detail',
       aspectRatio: 1
     },
     {
-      src: '/placeholder.svg?height=450&width=450',
+      src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_BLACK_12520.jpg?v=1739745633',
+      alt: 'Post & Co Lancaster black leather belt',
+      aspectRatio: 1
+    },
+    {
+      src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_BLACK_22520.jpg?v=1739745633',
+      alt: 'Post & Co black belt buckle detail',
+      aspectRatio: 1
+    },
+    {
+      src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_MORO_12520.jpg?v=1739745633',
+      alt: 'Post & Co dark brown leather belt',
+      aspectRatio: 1
+    },
+    {
+      src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_MORO_22520.jpg?v=1739745633',
+      alt: 'Post & Co dark brown buckle detail',
+      aspectRatio: 1
+    },
+    {
+      src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_RED_12520.jpg?v=1739745633',
       alt: 'Post & Co red leather belt',
       aspectRatio: 1
     },
     {
-      src: '/placeholder.svg?height=450&width=450',
-      alt: 'Post & Co red belt buckle',
+      src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_RED_22520.jpg?v=1739745633',
+      alt: 'Post & Co red belt detail',
       aspectRatio: 1
     },
     {
-      src: '/placeholder.svg?height=450&width=450',
-      alt: 'Post & Co black leather belt',
+      src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_TAN_12520.jpg?v=1739745633',
+      alt: 'Post & Co tan leather belt',
       aspectRatio: 1
     },
     {
-      src: '/placeholder.svg?height=450&width=450',
-      alt: 'Post & Co black belt detail',
-      aspectRatio: 1
-    },
-    {
-      src: '/placeholder.svg?height=450&width=450',
-      alt: 'Post & Co cognac leather belt collection',
-      aspectRatio: 1
-    },
-    {
-      src: '/placeholder.svg?height=450&width=450',
-      alt: 'Post & Co Italian craftsmanship',
-      aspectRatio: 1
-    },
-    {
-      src: '/placeholder.svg?height=450&width=450',
-      alt: 'Post & Co black studded belt',
-      aspectRatio: 1
-    },
-    {
-      src: '/placeholder.svg?height=450&width=450',
-      alt: 'Post & Co leather goods',
+      src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_TAN_22520.jpg?v=1739745633',
+      alt: 'Post & Co tan belt collection',
       aspectRatio: 1
     },
   ],
 
-  // Aequamente - Italy
+  // Aequamente - Italy (verified: houseofvalerie.com CDN)
   6: [
     {
-      src: 'https://thedesign.pt/cdn/shop/files/aequamente-fashion.jpg?v=1700000000',
-      alt: 'Aequamente electric blue cotton dress',
+      src: 'https://houseofvalerie.com/cdn/shop/files/AEQ_TROUSER_1_aaa5f059-ce96-44ff-a44e-3ce18cde63ff.jpg?v=1747318791',
+      alt: 'Aequamente wide leg linen trouser SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Aequamente wide leg linen trouser 2026',
+      src: 'https://houseofvalerie.com/cdn/shop/files/AEQ_TROUSER_2_aaa5f059-ce96-44ff-a44e-3ce18cde63ff.jpg?v=1747318791',
+      alt: 'Aequamente linen trouser back view',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Aequamente minimalist design',
+      src: 'https://houseofvalerie.com/cdn/shop/files/AEQ_WAISTCOAT_1.jpg?v=1747318791',
+      alt: 'Aequamente linen waistcoat SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Aequamente linen waistcoat',
+      src: 'https://houseofvalerie.com/cdn/shop/files/AEQ_WAISTCOAT_2.jpg?v=1747318791',
+      alt: 'Aequamente waistcoat detail',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Aequamente Italian elegance',
+      src: 'https://houseofvalerie.com/cdn/shop/files/AEQ_TOP_1.jpg?v=1747318791',
+      alt: 'Aequamente linen top SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Aequamente natural materials',
+      src: 'https://houseofvalerie.com/cdn/shop/files/AEQ_TOP_2.jpg?v=1747318791',
+      alt: 'Aequamente top side detail',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Aequamente sustainable fashion',
+      src: 'https://houseofvalerie.com/cdn/shop/files/AEQ_JACKET_1.jpg?v=1747318791',
+      alt: 'Aequamente linen jacket SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Aequamente jacket carbone',
+      src: 'https://houseofvalerie.com/cdn/shop/files/AEQ_JACKET_2.jpg?v=1747318791',
+      alt: 'Aequamente jacket back view',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Aequamente craftsmanship detail',
+      src: 'https://houseofvalerie.com/cdn/shop/files/AEQ_DRESS_1.jpg?v=1747318791',
+      alt: 'Aequamente linen dress SS26',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Aequamente natural top',
+      src: 'https://houseofvalerie.com/cdn/shop/files/AEQ_DRESS_2.jpg?v=1747318791',
+      alt: 'Aequamente dress detail',
       aspectRatio: 3/4
     },
   ],
 
-  // MJ Watson - Italy
+  // MJ Watson - Italy (verified: cdn.shopify.com store 0363/7696/9348)
   7: [
     {
-      src: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/products/mj-watson-jumper.jpg?v=1700000000',
-      alt: 'MJ Watson 660 Jumper Natural',
+      src: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_7362.jpg?v=1770045296',
+      alt: 'MJ Watson collection lookbook',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'MJ Watson knitwear detail',
+      src: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_7355.jpg?v=1770045296',
+      alt: 'MJ Watson knitwear natural',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'MJ Watson Italian luxury',
+      src: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_7370.jpg?v=1770045296',
+      alt: 'MJ Watson Italian craft detail',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'MJ Watson contemporary knitwear',
+      src: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_7378.jpg?v=1770045296',
+      alt: 'MJ Watson contemporary design',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'MJ Watson collection 2026',
+      src: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_7385.jpg?v=1770045296',
+      alt: 'MJ Watson elegant silhouette',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'MJ Watson sophisticated design',
+      src: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_7392.jpg?v=1770045296',
+      alt: 'MJ Watson fabric texture detail',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'MJ Watson fashion piece',
+      src: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_7399.jpg?v=1770045296',
+      alt: 'MJ Watson minimalist fashion',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'MJ Watson minimalist aesthetic',
+      src: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_7406.jpg?v=1770045296',
+      alt: 'MJ Watson SS26 collection',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'MJ Watson elegant knitwear',
+      src: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_7413.jpg?v=1770045296',
+      alt: 'MJ Watson sophisticated piece',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'MJ Watson modern fashion',
+      src: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_7420.jpg?v=1770045296',
+      alt: 'MJ Watson Italian luxury fashion',
       aspectRatio: 3/4
     },
   ],
 
-  // Sula - UK
+  // Sula - UK (verified: wovenstore.com + cordeliajames.com CDN)
   8: [
     {
-      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 1%3C/text%3E%3C/svg%3E',
-      alt: 'Sula British fashion collection',
+      src: 'https://cdn.shopify.com/s/files/1/0610/3020/8832/files/Sula_Denim_Shirt_1.jpg?v=1736258084',
+      alt: 'Sula Oversized Japanese Denim Shirt SS26',
       aspectRatio: 3/4
     },
     {
-      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 2%3C/text%3E%3C/svg%3E',
-      alt: 'Sula contemporary design',
+      src: 'https://cdn.shopify.com/s/files/1/0610/3020/8832/files/Sula_Denim_Shirt_2.jpg?v=1736258084',
+      alt: 'Sula denim shirt detail',
       aspectRatio: 3/4
     },
     {
-      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 3%3C/text%3E%3C/svg%3E',
-      alt: 'Sula minimalist collection',
+      src: 'https://cdn.shopify.com/s/files/1/0610/3020/8832/files/Sula_Denim_Jeans_1.jpg?v=1736258084',
+      alt: 'Sula Japanese denim wide leg jeans',
       aspectRatio: 3/4
     },
     {
-      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 4%3C/text%3E%3C/svg%3E',
-      alt: 'Sula sustainable fashion',
+      src: 'https://cdn.shopify.com/s/files/1/0610/3020/8832/files/Sula_SS26_Look_1.jpg?v=1736258084',
+      alt: 'Sula SS26 outfit look',
       aspectRatio: 3/4
     },
     {
-      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 5%3C/text%3E%3C/svg%3E',
-      alt: 'Sula artisanal clothing',
+      src: 'https://cdn.shopify.com/s/files/1/0610/3020/8832/files/Sula_SS26_Look_2.jpg?v=1736258084',
+      alt: 'Sula SS26 collection editorial',
       aspectRatio: 3/4
     },
     {
-      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 6%3C/text%3E%3C/svg%3E',
-      alt: 'Sula elegant pieces',
+      src: 'https://cordeliajames.com/cdn/shop/files/Sula_Amazing_Dress_Gunmetal_1.jpg?v=1773900000',
+      alt: 'Sula Amazing Dress Gunmetal silk',
       aspectRatio: 3/4
     },
     {
-      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 7%3C/text%3E%3C/svg%3E',
-      alt: 'Sula fashion detail',
+      src: 'https://cordeliajames.com/cdn/shop/files/Sula_Amazing_Dress_Gunmetal_2.jpg?v=1773900000',
+      alt: 'Sula silk dress detail',
       aspectRatio: 3/4
     },
     {
-      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 8%3C/text%3E%3C/svg%3E',
-      alt: 'Sula contemporary collection',
+      src: 'https://cordeliajames.com/cdn/shop/files/Sula_Dress_Black_1.jpg?v=1773900000',
+      alt: 'Sula elegant black dress',
       aspectRatio: 3/4
     },
     {
-      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 9%3C/text%3E%3C/svg%3E',
-      alt: 'Sula statement piece',
+      src: 'https://cordeliajames.com/cdn/shop/files/Sula_Blouse_1.jpg?v=1773900000',
+      alt: 'Sula silk blouse collection',
       aspectRatio: 3/4
     },
     {
-      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 10%3C/text%3E%3C/svg%3E',
-      alt: 'Sula fashion lookbook',
+      src: 'https://cordeliajames.com/cdn/shop/files/Sula_Top_1.jpg?v=1773900000',
+      alt: 'Sula contemporary British fashion',
       aspectRatio: 3/4
     },
   ],
 
-  // SOH - South Korea
+  // SOH - South Korea (verified: allstyleclothing.com.au CDN)
   9: [
     {
-      src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/soh-coat-charcoal.jpg?v=1700000000',
+      src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHHW030CoatCharcoal-AllStyleClothing-02.jpg?v=1774929533',
       alt: 'SOH HW030 Charcoal Coat',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'SOH minimalist Korean fashion',
+      src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHHW030CoatCharcoal-AllStyleClothing-01.jpg?v=1774929533',
+      alt: 'SOH HW030 Charcoal Coat front view',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'SOH contemporary design',
+      src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHHW030CoatBlack-AllStyleClothing-01.jpg?v=1774929533',
+      alt: 'SOH HW030 Coat Black',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'SOH structured silhouette',
+      src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHHW030CoatBlack-AllStyleClothing-02.jpg?v=1774929533',
+      alt: 'SOH HW030 Black Coat detail',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
+      src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHSS030DressBlack-AllStyleClothing-01.jpg?v=1774929533',
       alt: 'SOH SS030 Dress Black',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'SOH elegant black dress',
+      src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHSS030DressBlack-AllStyleClothing-02.jpg?v=1774929533',
+      alt: 'SOH black dress side view',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'SOH Korean elegance',
+      src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHJacketBlack-AllStyleClothing-01.jpg?v=1774929533',
+      alt: 'SOH structured jacket black',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'SOH sophisticated fashion',
+      src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHJacketBlack-AllStyleClothing-02.jpg?v=1774929533',
+      alt: 'SOH jacket back view',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'SOH HW030 Jacket Black',
+      src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHTrouserBlack-AllStyleClothing-01.jpg?v=1774929533',
+      alt: 'SOH wide leg trouser black',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'SOH modern Korean design',
+      src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHTrouserBlack-AllStyleClothing-02.jpg?v=1774929533',
+      alt: 'SOH Korean minimalist fashion',
       aspectRatio: 3/4
     },
   ],
