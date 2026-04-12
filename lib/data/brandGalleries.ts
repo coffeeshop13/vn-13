@@ -383,56 +383,56 @@ export const brandGalleries: Record<number, BrandGalleryImage[]> = {
     },
   ],
 
-  // Sula - UK (verified: wovenstore.com + cordeliajames.com CDN)
+  // Sula - UK (verified: blob.vercel-storage.com - real Sula collection photos)
   8: [
     {
-      src: 'https://cdn.shopify.com/s/files/1/0610/3020/8832/files/Sula_Denim_Shirt_1.jpg?v=1736258084',
-      alt: 'Sula Oversized Japanese Denim Shirt SS26',
+      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/655237071_18578015749015371_4400222591321659963_n.webp-jSP6A4rtzvct6e5iqWYhXUkNY9aIid.jpeg',
+      alt: 'Sula red poofy sleeve shirt and dark denim pants',
       aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0610/3020/8832/files/Sula_Denim_Shirt_2.jpg?v=1736258084',
-      alt: 'Sula denim shirt detail',
+      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Poofy-sleeve-tee-Flare-Pants-denim-1-Hgc7IEjwnLJAu7S6GL64CwIIkfsaTj.webp',
+      alt: 'Sula blue t-shirt and wide leg denim flare pants',
       aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0610/3020/8832/files/Sula_Denim_Jeans_1.jpg?v=1736258084',
-      alt: 'Sula Japanese denim wide leg jeans',
+      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/657394440_18579896020015371_7627617628776540976_n.webp-1zFDY8GIFz7RKSMbnw5MTjnRTfHhKv.jpeg',
+      alt: 'Sula white shirt with pink details and black wide pants',
       aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0610/3020/8832/files/Sula_SS26_Look_1.jpg?v=1736258084',
-      alt: 'Sula SS26 outfit look',
+      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/658375114_18581447305015371_4861123518290867082_n.webp-s7jq4j306Q1iamXjMpHU9XS4Tl8U8A.jpeg',
+      alt: 'Sula white pleated top and dark wide leg denim',
       aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0610/3020/8832/files/Sula_SS26_Look_2.jpg?v=1736258084',
-      alt: 'Sula SS26 collection editorial',
+      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SnapInsta.to_654580832_18577651879015371_1587989272940542505_n.jpg-heKLQbw3PG720rfcTdhWoONu2ZCwFp.webp',
+      alt: 'Sula light blue button-up shirt and gray wide trousers',
       aspectRatio: 3/4
     },
     {
-      src: 'https://cordeliajames.com/cdn/shop/files/Sula_Amazing_Dress_Gunmetal_1.jpg?v=1773900000',
-      alt: 'Sula Amazing Dress Gunmetal silk',
+      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SnapInsta.to_654551362_18577651861015371_4307223384628335008_n.jpg-bpPLvJ7b4QS43dZds17MLq9wYAF0xK.webp',
+      alt: 'Sula sage green flowing midi dress - minimalist design',
       aspectRatio: 3/4
     },
     {
-      src: 'https://cordeliajames.com/cdn/shop/files/Sula_Amazing_Dress_Gunmetal_2.jpg?v=1773900000',
-      alt: 'Sula silk dress detail',
+      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SnapInsta.to_654027401_18577651843015371_7243999386867340300_n.jpg-u30MHT2O5QgQdNRfSYFl61ce17CEfZ.webp',
+      alt: 'Sula blue denim jacket and dark long skirt - layered look',
       aspectRatio: 3/4
     },
     {
-      src: 'https://cordeliajames.com/cdn/shop/files/Sula_Dress_Black_1.jpg?v=1773900000',
-      alt: 'Sula elegant black dress',
+      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SnapInsta.to_654035108_18577651852015371_7916669860452637883_n.jpg-DRpsox7ZTv4bRE18YOt1HROufTv8o5.webp',
+      alt: 'Sula white oversized shirt with embroidery and black skirt',
       aspectRatio: 3/4
     },
     {
-      src: 'https://cordeliajames.com/cdn/shop/files/Sula_Blouse_1.jpg?v=1773900000',
-      alt: 'Sula silk blouse collection',
+      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SnapInsta.to_655411871_18577651870015371_7674667633669347673_n.jpg-pFLI7ZPte4pXuAHm6WAMyVNGLh0URN.webp',
+      alt: 'Sula blue t-shirt and wide leg indigo denim pants',
       aspectRatio: 3/4
     },
     {
-      src: 'https://cordeliajames.com/cdn/shop/files/Sula_Top_1.jpg?v=1773900000',
-      alt: 'Sula contemporary British fashion',
+      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Poofy-sleeve-tee-Flare-Pants-denim-1-Hgc7IEjwnLJAu7S6GL64CwIIkfsaTj.webp',
+      alt: 'Sula contemporary collection - blue tee and denim styling',
       aspectRatio: 3/4
     },
   ],
