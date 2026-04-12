@@ -386,53 +386,53 @@ export const brandGalleries: Record<number, BrandGalleryImage[]> = {
   // Sula - UK
   8: [
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Sula British fashion',
+      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 1%3C/text%3E%3C/svg%3E',
+      alt: 'Sula British fashion collection',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
+      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 2%3C/text%3E%3C/svg%3E',
       alt: 'Sula contemporary design',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
+      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 3%3C/text%3E%3C/svg%3E',
       alt: 'Sula minimalist collection',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
+      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 4%3C/text%3E%3C/svg%3E',
       alt: 'Sula sustainable fashion',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
+      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 5%3C/text%3E%3C/svg%3E',
       alt: 'Sula artisanal clothing',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
+      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 6%3C/text%3E%3C/svg%3E',
       alt: 'Sula elegant pieces',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Sula modern silhouettes',
-      aspectRatio: 3/4
-    },
-    {
-      src: '/placeholder.svg?height=600&width=450',
+      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 7%3C/text%3E%3C/svg%3E',
       alt: 'Sula fashion detail',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Sula collection 2026',
+      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 8%3C/text%3E%3C/svg%3E',
+      alt: 'Sula contemporary collection',
       aspectRatio: 3/4
     },
     {
-      src: '/placeholder.svg?height=600&width=450',
-      alt: 'Sula British craftsmanship',
+      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 9%3C/text%3E%3C/svg%3E',
+      alt: 'Sula statement piece',
+      aspectRatio: 3/4
+    },
+    {
+      src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="450" height="600"%3E%3Crect fill="%23f0f0f0" width="450" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23999"%3ESula 10%3C/text%3E%3C/svg%3E',
+      alt: 'Sula fashion lookbook',
       aspectRatio: 3/4
     },
   ],
