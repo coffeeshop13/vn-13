@@ -25,29 +25,29 @@ export function SulaContent() {
         <div className="max-w-4xl mx-auto">
           <Breadcrumbs items={breadcrumbItems} />
           <p className="text-xs tracking-[0.2em] uppercase mb-4 mt-8" style={{ color: '#b8935a' }}>Brand</p>
-          <h1 className="text-5xl md:text-6xl font-light leading-tight mb-6" style={{ color: '#0f0f0f' }}>Sula</h1>
-          <p className="text-lg md:text-xl max-w-2xl" style={{ color: '#6b6b6b' }}>British contemporary fashion with conscious design</p>
+          <h1 className="text-5xl md:text-6xl font-light leading-tight mb-6" style={{ color: '#0f0f0f' }}>{translations.brandSulaTitle}</h1>
+          <p className="text-lg md:text-xl max-w-2xl" style={{ color: '#6b6b6b' }}>{translations.brandSulaSubtitle}</p>
         </div>
       </section>
 
       <section style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
           <article className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-light mb-8" style={{ color: '#0f0f0f' }}>About the Brand</h2>
+            <h2 className="text-3xl md:text-4xl font-light mb-8" style={{ color: '#0f0f0f' }}>{translations.brandSulaAboutTitle}</h2>
             <div className="grid md:grid-cols-3 gap-12">
-              <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>Sula represents the best of British contemporary fashion - clean lines, thoughtful construction, and a commitment to sustainable practices.</p></div>
-              <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>Each piece is designed in the UK with a focus on longevity, using quality materials that stand the test of time.</p></div>
-              <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>The brand&apos;s minimalist aesthetic appeals to those who value simplicity and understated elegance in their wardrobe.</p></div>
+              <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>{translations.brandSulaAbout1}</p></div>
+              <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>{translations.brandSulaAbout2}</p></div>
+              <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>{translations.brandSulaAbout3}</p></div>
             </div>
           </article>
 
           <article className="py-16 border-t border-b" style={{ borderColor: '#e0ddd8' }}>
-            <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>Conscious Design</h2>
-            <p className="text-base leading-relaxed max-w-2xl" style={{ color: '#6b6b6b' }}>Sula is committed to reducing fashion&apos;s environmental impact through careful material selection, ethical production, and timeless designs that discourage disposable fashion.</p>
+            <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>{translations.brandSulaConsciousTitle}</h2>
+            <p className="text-base leading-relaxed max-w-2xl" style={{ color: '#6b6b6b' }}>{translations.brandSulaConsciousDesc}</p>
           </article>
 
           <section className="mt-20 pt-20 border-t" style={{ borderColor: '#e0ddd8' }}>
-            <h2 className="text-3xl md:text-4xl font-light mb-12" style={{ color: '#0f0f0f' }}>Collection</h2>
+            <h2 className="text-3xl md:text-4xl font-light mb-12" style={{ color: '#0f0f0f' }}>{translations.brandSulaCollectionTitle}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {galleryImages.map((image, index) => (
                 <figure key={index} className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
@@ -58,8 +58,8 @@ export function SulaContent() {
           </section>
 
           <section className="mt-20 pt-20 border-t text-center" style={{ borderColor: '#e0ddd8' }}>
-            <h3 className="text-2xl font-light mb-4" style={{ color: '#0f0f0f' }}>Discover Sula</h3>
-            <p className="text-base mb-8 max-w-xl mx-auto" style={{ color: '#6b6b6b' }}>Contact our team to learn more about Sula collections and partnership opportunities.</p>
+            <h3 className="text-2xl font-light mb-4" style={{ color: '#0f0f0f' }}>{translations.brandSulaDiscoverTitle}</h3>
+            <p className="text-base mb-8 max-w-xl mx-auto" style={{ color: '#6b6b6b' }}>{translations.brandSulaDiscoverDesc}</p>
             <CTALink href="/#contact">Get in Touch</CTALink>
           </section>
           <Breadcrumbs items={breadcrumbItems} />
