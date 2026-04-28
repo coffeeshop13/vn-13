@@ -30,8 +30,8 @@ export function MoyuruContent() {
         <div className="max-w-4xl mx-auto">
           <Breadcrumbs items={breadcrumbItems} />
           <p className="text-xs tracking-[0.2em] uppercase mb-4 mt-8" style={{ color: '#b8935a' }}>Brand</p>
-          <h1 className="text-5xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>Moyuru</h1>
-          <p className="text-lg md:text-xl max-w-2xl" style={{ color: '#6b6b6b' }}>Japanese avant-garde meets architectural precision</p>
+          <h1 className="text-5xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>{translations.brandMoyuruTitle}</h1>
+          <p className="text-lg md:text-xl max-w-2xl" style={{ color: '#6b6b6b' }}>{translations.brandMoyuruSubtitle}</p>
         </div>
       </section>
 
@@ -39,21 +39,21 @@ export function MoyuruContent() {
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
           
           <article className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-light mb-8" style={{ color: '#0f0f0f' }}>About the Brand</h2>
+            <h2 className="text-3xl md:text-4xl font-light mb-8" style={{ color: '#0f0f0f' }}>{translations.brandMoyuruAboutTitle}</h2>
             <div className="grid md:grid-cols-3 gap-12">
-              <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>Moyuru embodies the essence of Japanese avant-garde fashion, where architectural precision meets artistic expression. Each collection tells a story of innovation and craftsmanship.</p></div>
-              <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>The brand&apos;s Art Mix philosophy combines traditional Japanese aesthetics with contemporary design elements, creating pieces that are both timeless and forward-thinking.</p></div>
-              <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>Known for their signature asymmetric cuts and structural silhouettes, Moyuru garments are designed for those who appreciate the intersection of art and fashion.</p></div>
+              <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>{translations.brandMoyuruAbout1}</p></div>
+              <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>{translations.brandMoyuruAbout2}</p></div>
+              <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>{translations.brandMoyuruAbout3}</p></div>
             </div>
           </article>
 
           <article className="py-16 border-t border-b" style={{ borderColor: '#e0ddd8' }}>
-            <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>Art Mix Philosophy</h2>
-            <p className="text-base leading-relaxed max-w-2xl" style={{ color: '#6b6b6b' }}>Moyuru&apos;s Art Mix philosophy represents a unique approach to fashion design - blending artistic concepts with wearable garments. Each piece is conceived as a work of art that can be integrated into everyday life.</p>
+            <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>{translations.brandMoyuruPhilosophyTitle}</h2>
+            <p className="text-base leading-relaxed max-w-2xl" style={{ color: '#6b6b6b' }}>{translations.brandMoyuruPhilosophyDesc}</p>
           </article>
 
           <section className="mt-20 pt-20 border-t" style={{ borderColor: '#e0ddd8' }}>
-            <h2 className="text-3xl md:text-4xl font-light mb-12" style={{ color: '#0f0f0f' }}>Collection</h2>
+            <h2 className="text-3xl md:text-4xl font-light mb-12" style={{ color: '#0f0f0f' }}>{translations.brandMoyuruCollectionTitle}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {galleryImages.map((image, index) => (
                 <figure key={index} className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
@@ -64,9 +64,9 @@ export function MoyuruContent() {
           </section>
 
           <section className="mt-20 pt-20 border-t text-center" style={{ borderColor: '#e0ddd8' }}>
-            <h3 className="text-2xl font-light mb-4" style={{ color: '#0f0f0f' }}>Discover Moyuru</h3>
-            <p className="text-base mb-8 max-w-xl mx-auto" style={{ color: '#6b6b6b' }}>Contact our team to learn more about Moyuru collections and partnership opportunities.</p>
-            <CTALink href="/#contact">Get in Touch</CTALink>
+            <h3 className="text-2xl font-light mb-4" style={{ color: '#0f0f0f' }}>{translations.brandMoyuruDiscoverTitle}</h3>
+            <p className="text-base mb-8 max-w-xl mx-auto" style={{ color: '#6b6b6b' }}>{translations.brandMoyuruDiscoverDesc}</p>
+            <CTALink href="/#contact">{translations.formSubmit}</CTALink>
           </section>
 
           <Breadcrumbs items={breadcrumbItems} />
