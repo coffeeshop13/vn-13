@@ -113,57 +113,57 @@ export const brandGalleries: Record<number, BrandGalleryImage[]> = {
     },
   ],
 
-  // Moyuru - Japan (verified: decemberthieves.com CDN)
+  // Moyuru - Japan (verified: decemberthieves.com Shopify CDN - real product images)
   3: [
     {
-      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-7.jpg?v=1773184096',
+      src: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-7.jpg?v=1773184096&width=1200',
       alt: 'Moyuru Oversized Textured Burnout Vest',
-      aspectRatio: 2100/3000
+      aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-3.jpg?v=1773184096',
+      src: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-3.jpg?v=1773184096&width=1200',
       alt: 'Moyuru structured jacket 2026',
-      aspectRatio: 2100/3000
+      aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-10.jpg?v=1773184096',
+      src: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-10.jpg?v=1773184096&width=1200',
       alt: 'Moyuru wide leg trouser 2026',
-      aspectRatio: 2100/3000
+      aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-14.jpg?v=1773184096',
+      src: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-14.jpg?v=1773184096&width=1200',
       alt: 'Moyuru asymmetric blouse 2026',
-      aspectRatio: 2100/3000
+      aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-18.jpg?v=1773184096',
+      src: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-18.jpg?v=1773184096&width=1200',
       alt: 'Moyuru drapey dress 2026',
-      aspectRatio: 2100/3000
+      aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-21.jpg?v=1773184096',
+      src: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-21.jpg?v=1773184096&width=1200',
       alt: 'Moyuru layered look 2026',
-      aspectRatio: 2100/3000
+      aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-25.jpg?v=1773184096',
+      src: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-25.jpg?v=1773184096&width=1200',
       alt: 'Moyuru oversized coat 2026',
-      aspectRatio: 2100/3000
+      aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-29.jpg?v=1773184096',
+      src: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-29.jpg?v=1773184096&width=1200',
       alt: 'Moyuru Art Mix collection',
-      aspectRatio: 2100/3000
+      aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-33.jpg?v=1773184096',
+      src: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-33.jpg?v=1773184096&width=1200',
       alt: 'Moyuru deconstructed silhouette',
-      aspectRatio: 2100/3000
+      aspectRatio: 3/4
     },
     {
-      src: 'https://cdn.shopify.com/s/files/1/0043/5952/0330/files/3_10_26_Edits-37.jpg?v=1773184096',
+      src: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-37.jpg?v=1773184096&width=1200',
       alt: 'Moyuru Japanese avant-garde fashion',
-      aspectRatio: 2100/3000
+      aspectRatio: 3/4
     },
   ],
 
