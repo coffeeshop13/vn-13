@@ -33,6 +33,6 @@ jobs:
         with:
           accessKeyId: ${{ secrets.YC_S3_KEY_ID }}
           secretAccessKey: ${{ secrets.YC_S3_SECRET_KEY }}
-          bucketName: '://vn-13.com'
+          bucketName: 'shop.vn-13.com'
           sourceDir: './out'
           clear: true
