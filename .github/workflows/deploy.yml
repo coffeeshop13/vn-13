@@ -3,7 +3,7 @@ name: Deploy to Yandex Cloud S3
 on:
   push:
     branches:
-      - main  # или master — смотри как называется твоя ветка
+      - main
 
 jobs:
   deploy:
@@ -31,8 +31,8 @@ jobs:
           args: --delete
         env:
           AWS_S3_BUCKET: shop.vn-13.com
-          AWS_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_KEY }}
           AWS_S3_ENDPOINT: https://storage.yandexcloud.net
           AWS_REGION: ru-central1
-          SOURCE_DIR: dist  # или build — зависит от твоего проекта (Vite → dist, CRA → build)
+          SOURCE_DIR: dist
