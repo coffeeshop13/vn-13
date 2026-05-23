@@ -1,0 +1,39 @@
+name: Deploy Next.js to Yandex S3
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-level: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Включаем экспорт статики для Next.js "на лету" перед сборкой
+      - name: Configure Next.js Static Export
+        run: |
+          sed -i 's/const nextConfig: NextConfig = {/const nextConfig: NextConfig = { output: "export", images: { unoptimized: true },/' next.config.ts
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Upload to Yandex S3
+        uses: MrMeison/yc-object-storage-action@main
+        with:
+          accessKeyId: ${{ secrets.YC_S3_KEY_ID }}
+          secretAccessKey: ${{ secrets.YC_S3_SECRET_KEY }}
+          bucketName: '://vn-13.com' # Замените на точное имя вашего бакета, если оно другое
+          sourceDir: './out'           # Next.js собирает статический сайт именно в папку ./out
+          clear: true
