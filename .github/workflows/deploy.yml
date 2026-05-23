@@ -21,10 +21,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Configure Next.js Static Export
-        run: |
-          sed -i 's/const nextConfig: NextConfig = {/const nextConfig: NextConfig = { output: "export", images: { unoptimized: true },/' next.config.ts
-
       - name: Build Project
         run: npm run build
 
