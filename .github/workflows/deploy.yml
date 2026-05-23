@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Исправлено: теперь используется корректный параметр node-version
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
@@ -33,6 +33,6 @@ jobs:
         with:
           accessKeyId: ${{ secrets.YC_S3_KEY_ID }}
           secretAccessKey: ${{ secrets.YC_S3_SECRET_KEY }}
-          bucketName: '://vn-13.com' # Убедитесь, что здесь написаны только буквы и точки, БЕЗ http:// или слэшей
+          bucketName: '://vn-13.com'
           sourceDir: './out'
           clear: true
