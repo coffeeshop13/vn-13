@@ -1,19 +1,38 @@
-name: Manual Test Deploy to Yandex S3
+name: Deploy to Yandex Cloud S3
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main  # или master — смотри как называется твоя ветка
 
 jobs:
-  test-upload:
+  deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Configure AWS Credentials
-        run: |
-          aws configure set aws_access_key_id ${{ secrets.YC_S3_KEY_ID }}
-          aws configure set aws_secret_access_key ${{ secrets.YC_S3_SECRET_KEY }}
-          aws configure set default.region ru-central1
 
-      - name: Upload Test File
-        run: |
-          echo "Привет! Тест деплоя прошел успешно!" > test.txt
-          aws --endpoint-url=https://yandexcloud.net s3 cp test.txt s3://://vn-13.com --acl public-read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --delete
+        env:
+          AWS_S3_BUCKET: shop.vn-13.com
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
+          AWS_S3_ENDPOINT: https://storage.yandexcloud.net
+          AWS_REGION: ru-central1
+          SOURCE_DIR: dist  # или build — зависит от твоего проекта (Vite → dist, CRA → build)
