@@ -1,7 +1,7 @@
 name: Manual Test Deploy to Yandex S3
 
 on:
-  workflow_dispatch: # Это магия, которая добавляет кнопку ручного запуска в интерфейс!
+  workflow_dispatch:
 
 jobs:
   test-upload:
@@ -13,8 +13,7 @@ jobs:
           aws configure set aws_secret_access_key ${{ secrets.YC_S3_SECRET_KEY }}
           aws configure set default.region ru-central1
 
-      # Создаем простой текстовый файл и сразу отправляем его в бакет
       - name: Upload Test File
         run: |
-          echo "Привет! Тест деплоя прошел успешно в 2026 году!" > test.txt
+          echo "Привет! Тест деплоя прошел успешно!" > test.txt
           aws --endpoint-url=https://yandexcloud.net s3 cp test.txt s3://://vn-13.com --acl public-read
