@@ -1,11 +1,14 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Our Story | VN13 Fashion Agency',
-  description: 'Discover how VN13 has been bridging European fashion masters with global retailers for over a decade.',
-}
+export const metadata: Metadata = createPageMetadata({
+  title: 'Our Story',
+  description:
+    'Learn how VN13 built long-term partnerships between European fashion brands and premium retail partners.',
+  path: '/story',
+})
 
 export default function StoryPage() {
   return (

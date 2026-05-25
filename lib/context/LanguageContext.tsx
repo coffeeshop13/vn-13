@@ -24,23 +24,21 @@ const translations: Record<Language, Record<string, string>> = {
 }
 
 const defaultContextValue: LanguageContextType = {
-  language: 'ru',
+  language: 'en',
   setLanguage: () => {},
-  translations: ruTranslations,
+  translations: enTranslations,
 }
 
 const LanguageContext = createContext<LanguageContextType>(defaultContextValue)
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('ru')
-  const [mounted, setMounted] = useState(false)
+  const [language, setLanguageState] = useState<Language>('en')
 
   useEffect(() => {
     const saved = localStorage.getItem('language') as Language | null
     if (saved && ['ru', 'en', 'it', 'fr', 'de'].includes(saved)) {
       setLanguageState(saved)
     }
-    setMounted(true)
   }, [])
 
   const setLanguage = (lang: Language) => {

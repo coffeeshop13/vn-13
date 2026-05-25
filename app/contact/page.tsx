@@ -3,11 +3,14 @@ import Header from '@/components/Header'
 import ContactForm from '@/components/ContactForm'
 import Footer from '@/components/Footer'
 import { ContactLink } from '@/components/ContactLink'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Contact Us | VN13 Fashion Agency',
-  description: 'Get in touch with VN13. We\'d love to discuss your fashion partnership needs.',
-}
+export const metadata: Metadata = createPageMetadata({
+  title: 'Contact VN13',
+  description:
+    'Contact VN13 to discuss European fashion distribution, pre-order access, and manufacturing partnerships.',
+  path: '/contact',
+})
 
 export default function ContactPage() {
   return (
@@ -34,7 +37,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div>
                   <p className="text-sm mb-1" style={{ color: '#6b6b6b' }}>Email</p>
-                  <ContactLink href="mailto:hello@vn-13.com" label="hello@vn-13.com" />
+                  <ContactLink href="mailto:info@vn-13.com" label="info@vn-13.com" />
                 </div>
                 <div>
                   <p className="text-sm mb-1" style={{ color: '#6b6b6b' }}>Phone</p>
@@ -50,9 +53,9 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-light mb-6" style={{ color: '#0f0f0f' }}>Follow Us</h2>
               <div className="space-y-4">
-                <ContactLink href="#" label="Instagram" />
-                <ContactLink href="#" label="LinkedIn" />
-                <ContactLink href="#" label="Twitter" />
+                <p style={{ color: '#6b6b6b' }}>
+                  Social profiles will be published here once the brand accounts are finalized.
+                </p>
               </div>
             </div>
           </div>
