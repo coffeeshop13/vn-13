@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { LanguageProvider } from '@/lib/context/LanguageContext'
+import { rootMetadata, siteConfig } from '@/lib/seo'
 import './globals.css'
 
 const geistSans = Geist({
@@ -12,18 +13,37 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'VN13 | Fashion Agency - European Masters & Retail',
-  description: 'Strategic partnership connecting European fashion masters with retailers. Over 10 years of experience in France, Italy, and Japan.',
-  keywords: ['fashion agency', 'retail', 'european fashion', 'brands', 'fashion partnership'],
-  openGraph: {
-    type: 'website',
-    url: 'https://vn-13.com',
-    title: 'VN13 | Fashion Agency',
-    description: 'Strategic partnership connecting European fashion masters with retailers',
-    siteName: 'VN13',
+  metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.name,
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
   },
-  twitter: {
-    card: 'summary_large_image',
+  description: siteConfig.description,
+  keywords: [
+    'fashion distribution agency',
+    'European fashion wholesale',
+    'fashion brand representation',
+    'pre-order fashion collections',
+    'European manufacturing partners',
+  ],
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  category: 'fashion',
+  alternates: rootMetadata.alternates,
+  openGraph: rootMetadata.openGraph,
+  twitter: rootMetadata.twitter,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 }
 
@@ -49,12 +69,32 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
-              name: 'VN13',
-              description: 'Fashion agency connecting European masters with retailers',
-              url: 'https://vn-13.com',
+              name: siteConfig.name,
+              description: siteConfig.description,
+              url: siteConfig.url,
+              logo: `${siteConfig.url}/favicon.ico`,
+              image: `${siteConfig.url}${siteConfig.ogImage}`,
+              email: 'info@vn-13.com',
+              telephone: '+33 1 23 45 67 89',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Paris',
+                addressCountry: 'FR',
+              },
+              areaServed: ['France', 'Italy', 'Germany', 'Russia', 'CIS'],
+              knowsAbout: [
+                'fashion wholesale',
+                'brand distribution',
+                'pre-order fashion programs',
+                'European apparel manufacturing',
+              ],
               contactPoint: {
                 '@type': 'ContactPoint',
-                contactType: 'Customer Service',
+                contactType: 'sales',
+                email: 'info@vn-13.com',
+                telephone: '+33 1 23 45 67 89',
+                areaServed: ['FR', 'IT', 'DE', 'RU'],
+                availableLanguage: ['en', 'fr', 'it', 'de', 'ru'],
               },
             }),
           }}
