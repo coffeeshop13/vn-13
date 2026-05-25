@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { useLanguage } from '@/lib/context/LanguageContext'
 import LanguageSelector from './LanguageSelector'
 
@@ -21,9 +22,9 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(8px)', borderBottom: '1px solid #e0ddd8' }}>
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-        <a href="/" className="text-xl font-semibold tracking-[0.2em] uppercase" style={{ color: '#0f0f0f', letterSpacing: '0.25em' }}>
+        <Link href="/" className="text-xl font-semibold tracking-[0.2em] uppercase" style={{ color: '#0f0f0f', letterSpacing: '0.25em' }}>
           VN13
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-10">
           {navLinks.map(link => (

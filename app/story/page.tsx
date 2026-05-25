@@ -1,11 +1,15 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { createMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Our Story | VN13 Fashion Agency',
-  description: 'Discover how VN13 has been bridging European fashion masters with global retailers for over a decade.',
-}
+export const metadata: Metadata = createMetadata({
+  title: 'Our Story | VN13 European Fashion Distributor',
+  description:
+    'Learn how VN13 builds long-term fashion distribution partnerships between European designers, manufacturers, and retailers across Russia and CIS markets.',
+  path: '/story',
+  keywords: ['VN13 story', 'European fashion distributor', 'designer brand representation'],
+})
 
 export default function StoryPage() {
   return (
@@ -19,7 +23,7 @@ export default function StoryPage() {
           
           <div className="space-y-8 text-lg leading-relaxed text-text-secondary">
             <p>
-              VN13 was founded on a simple belief: exceptional European fashion deserves a global platform. For over a decade, we've been the trusted bridge between master craftspeople and visionary retailers across France, Italy, Japan, and beyond.
+              VN13 was founded on a simple belief: exceptional European fashion deserves a global platform. For over a decade, we&apos;ve been the trusted bridge between master craftspeople and visionary retailers across France, Italy, Japan, and beyond.
             </p>
             
             <p>
@@ -27,12 +31,12 @@ export default function StoryPage() {
             </p>
             
             <p>
-              What sets us apart is our deep network and intimate knowledge of regional markets. We don't just connect brands with retailers; we cultivate relationships built on trust, quality, and shared vision.
+              What sets us apart is our deep network and intimate knowledge of regional markets. We don&apos;t just connect brands with retailers; we cultivate relationships built on trust, quality, and shared vision.
             </p>
             
             <div className="border-l-4 border-accent pl-6 py-6">
               <p className="text-foreground text-xl font-light">
-                "Every partnership we facilitate tells a story of cultural exchange, craftsmanship, and mutual growth."
+                &quot;Every partnership we facilitate tells a story of cultural exchange, craftsmanship, and mutual growth.&quot;
               </p>
             </div>
             

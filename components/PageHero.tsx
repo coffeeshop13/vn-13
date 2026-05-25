@@ -1,5 +1,3 @@
-import { useLanguage } from '@/lib/context/LanguageContext'
-
 export function PageHero({ title, subtitle }: { title: string; subtitle: string }) {
   return (
     <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-6 relative" style={{ backgroundColor: '#fafaf8', borderTop: '1px solid #e0ddd8' }}>

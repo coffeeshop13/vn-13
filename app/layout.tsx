@@ -1,30 +1,45 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import { LanguageProvider } from '@/lib/context/LanguageContext'
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL, createMetadata, organizationJsonLd } from '@/lib/seo'
 import './globals.css'
 
-const geistSans = Geist({
-  subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-})
-
 export const metadata: Metadata = {
-  title: 'VN13 | Fashion Agency - European Masters & Retail',
-  description: 'Strategic partnership connecting European fashion masters with retailers. Over 10 years of experience in France, Italy, and Japan.',
-  keywords: ['fashion agency', 'retail', 'european fashion', 'brands', 'fashion partnership'],
-  openGraph: {
-    type: 'website',
-    url: 'https://vn-13.com',
-    title: 'VN13 | Fashion Agency',
-    description: 'Strategic partnership connecting European fashion masters with retailers',
-    siteName: 'VN13',
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  generator: 'Next.js',
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: 'Fashion distribution',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
-  twitter: {
-    card: 'summary_large_image',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
   },
+  manifest: '/manifest.webmanifest',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  ...createMetadata({
+    title: 'VN13 | European Fashion Distributor & Own Brand VN-13',
+    description:
+      'VN13 is a European fashion distributor and own brand connecting designer labels, manufacturers, and retail partners across Russia and CIS markets.',
+    path: '/',
+    image: DEFAULT_OG_IMAGE,
+    keywords: ['own fashion brand VN-13', 'fashion distributor Europe', 'designer wholesale fashion'],
+  }),
 }
 
 export const viewport: Viewport = {
@@ -41,26 +56,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={geistSans.className} suppressHydrationWarning data-scroll-behavior="smooth">
-      <head>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
+      <body className="antialiased">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'VN13',
-              description: 'Fashion agency connecting European masters with retailers',
-              url: 'https://vn-13.com',
-              contactPoint: {
-                '@type': 'ContactPoint',
-                contactType: 'Customer Service',
-              },
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-      </head>
-      <body className="antialiased">
         <LanguageProvider>
           {children}
         </LanguageProvider>
