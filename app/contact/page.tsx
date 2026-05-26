@@ -6,11 +6,11 @@ import { ContactLink } from '@/components/ContactLink'
 import { createMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Contact VN13 | Fashion Distribution Partnerships',
+  title: 'Контакты VN13 | Женская одежда, производство и дистрибуция',
   description:
-    'Contact VN13 to discuss European designer brand distribution, retail partnerships, pre-order access, and VN-13 brand opportunities.',
+    'Свяжитесь с VN13, чтобы обсудить женскую одежду VN-13, производство коллекций, оптовые поставки, предзаказ и дистрибуцию европейских брендов.',
   path: '/contact',
-  keywords: ['contact fashion distributor', 'fashion partnership VN13', 'European brand distribution contact'],
+  keywords: ['контакты VN13', 'женская одежда VN-13', 'производство женской одежды', 'дистрибуция одежды'],
 })
 
 export default function ContactPage() {

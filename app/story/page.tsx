@@ -4,11 +4,11 @@ import Footer from '@/components/Footer'
 import { createMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Our Story | VN13 European Fashion Distributor',
+  title: 'История VN13 | Дистрибуция и бренд женской одежды VN-13',
   description:
-    'Learn how VN13 builds long-term fashion distribution partnerships between European designers, manufacturers, and retailers across Russia and CIS markets.',
+    'История VN13: дистрибуция европейских дизайнерских брендов, развитие собственного бренда женской одежды VN-13 и партнерства с бутиками.',
   path: '/story',
-  keywords: ['VN13 story', 'European fashion distributor', 'designer brand representation'],
+  keywords: ['история VN13', 'бренд женской одежды VN-13', 'дистрибуция женской одежды'],
 })
 
 export default function StoryPage() {

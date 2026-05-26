@@ -3,9 +3,9 @@ import PreorderPageContent from '@/components/PreorderPageContent'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Pre-Order Fashion Collections',
+  title: 'Предзаказ женской одежды | VN13 и VN-13',
   description:
-    'Access upcoming European fashion collections early through VN13 pre-order programs for premium retailers.',
+    'Предзаказ женской одежды VN-13 и европейских дизайнерских коллекций для бутиков, шоурумов и розничных партнеров.',
   path: '/preorder',
 })
 

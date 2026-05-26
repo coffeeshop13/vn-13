@@ -3,9 +3,9 @@ import SustainabilityPageContent from '@/components/SustainabilityPageContent'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Sustainable Fashion Partnerships',
+  title: 'Устойчивая женская одежда | VN-13 и ответственные партнерства',
   description:
-    'Explore how VN13 works with ethical European fashion partners focused on responsible sourcing and long-lasting quality.',
+    'VN13 и VN-13 развивают устойчивую женскую одежду: качественные материалы, долговечные коллекции, ответственные производственные партнеры.',
   path: '/sustainability',
 })
 
