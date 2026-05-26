@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 export const SITE_URL = 'https://vn-13.com'
 export const SITE_NAME = 'VN13'
 export const DEFAULT_OG_IMAGE = '/hero-bg.jpg'
+export const SITE_LOCALE = 'en_US'
 
 type SeoConfig = {
   title: string
@@ -43,13 +44,12 @@ export function createMetadata({
     title,
     description,
     keywords: [...defaultKeywords, ...keywords],
-    alternates: {
-      canonical: url,
-    },
+    alternates: { canonical: url },
     openGraph: {
       type: 'website',
       url,
       siteName: SITE_NAME,
+      locale: SITE_LOCALE,
       title,
       description,
       images: [
@@ -69,6 +69,31 @@ export function createMetadata({
     },
   }
 }
+
+type PageMetadataOptions = {
+  title: string
+  description: string
+  path?: string
+}
+
+export function createPageMetadata({ title, description, path = '/' }: PageMetadataOptions): Metadata {
+  return createMetadata({ title, description, path })
+}
+
+export const siteConfig = {
+  name: SITE_NAME,
+  url: SITE_URL,
+  title: 'VN13 | European Fashion Distribution Agency',
+  description:
+    'VN13 connects European fashion brands with retailers through wholesale distribution, pre-order access, and manufacturing partnerships.',
+  ogImage: DEFAULT_OG_IMAGE,
+  locale: SITE_LOCALE,
+}
+
+export const rootMetadata = createPageMetadata({
+  title: siteConfig.title,
+  description: siteConfig.description,
+})
 
 export const organizationJsonLd = {
   '@context': 'https://schema.org',

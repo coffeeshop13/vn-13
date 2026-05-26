@@ -24,9 +24,9 @@ const translations: Record<Language, Record<string, string>> = {
 }
 
 const defaultContextValue: LanguageContextType = {
-  language: 'ru',
+  language: 'en',
   setLanguage: () => {},
-  translations: ruTranslations,
+  translations: enTranslations,
 }
 
 const LanguageContext = createContext<LanguageContextType>(defaultContextValue)

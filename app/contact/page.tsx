@@ -54,9 +54,9 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-light mb-6" style={{ color: '#0f0f0f' }}>Follow Us</h2>
               <div className="space-y-4">
-                <ContactLink href="#" label="Instagram" />
-                <ContactLink href="#" label="LinkedIn" />
-                <ContactLink href="#" label="Twitter" />
+                <p style={{ color: '#6b6b6b' }}>
+                  Social profiles will be published here once the brand accounts are finalized.
+                </p>
               </div>
             </div>
           </div>
