@@ -8,6 +8,7 @@ export default function Footer() {
   const footerLinks = [
     { label: translations.navStory, href: '/#story' },
     { label: translations.navPortfolio, href: '/#portfolio' },
+    { label: 'Журнал', href: '/journal' },
     { label: translations.navContact, href: '/#contact' },
   ]
 
@@ -17,6 +18,8 @@ export default function Footer() {
   ]
 
   const womenswearLinks = [
+    { label: 'Бренд VN-13', href: '/vn-13-brand' },
+    { label: 'Lookbook', href: '/lookbook' },
     { label: 'Женская одежда', href: '/zhenskaya-odezhda' },
     { label: 'Эксклюзивная одежда', href: '/eksklyuzivnaya-zhenskaya-odezhda' },
     { label: 'Производитель VN-13', href: '/proizvoditel-zhenskoy-odezhdy' },
