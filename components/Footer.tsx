@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { useLanguage } from '@/lib/context/LanguageContext'
 
 export default function Footer() {

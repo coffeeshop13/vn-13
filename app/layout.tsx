@@ -1,39 +1,26 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import { LanguageProvider } from '@/lib/context/LanguageContext'
-import { rootMetadata, siteConfig } from '@/lib/seo'
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL, createMetadata, organizationJsonLd } from '@/lib/seo'
 import './globals.css'
 
-const geistSans = Geist({
-  subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-})
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  applicationName: siteConfig.name,
-  title: {
-    default: siteConfig.title,
-    template: `%s | ${siteConfig.name}`,
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  generator: 'Next.js',
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: 'Fashion distribution',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
-  description: siteConfig.description,
-  keywords: [
-    'fashion distribution agency',
-    'European fashion wholesale',
-    'fashion brand representation',
-    'pre-order fashion collections',
-    'European manufacturing partners',
-  ],
-  authors: [{ name: siteConfig.name }],
-  creator: siteConfig.name,
-  publisher: siteConfig.name,
-  category: 'fashion',
-  alternates: rootMetadata.alternates,
-  openGraph: rootMetadata.openGraph,
-  twitter: rootMetadata.twitter,
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
+  manifest: '/manifest.webmanifest',
   robots: {
     index: true,
     follow: true,
@@ -45,6 +32,14 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
+  ...createMetadata({
+    title: 'VN13 | European Fashion Distributor & Own Brand VN-13',
+    description:
+      'VN13 is a European fashion distributor and own brand connecting designer labels, manufacturers, and retail partners across Russia and CIS markets.',
+    path: '/',
+    image: DEFAULT_OG_IMAGE,
+    keywords: ['own fashion brand VN-13', 'fashion distributor Europe', 'designer wholesale fashion'],
+  }),
 }
 
 export const viewport: Viewport = {
@@ -61,46 +56,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={geistSans.className} suppressHydrationWarning data-scroll-behavior="smooth">
-      <head>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
+      <body className="antialiased">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: siteConfig.name,
-              description: siteConfig.description,
-              url: siteConfig.url,
-              logo: `${siteConfig.url}/favicon.ico`,
-              image: `${siteConfig.url}${siteConfig.ogImage}`,
-              email: 'info@vn-13.com',
-              telephone: '+33 1 23 45 67 89',
-              address: {
-                '@type': 'PostalAddress',
-                addressLocality: 'Paris',
-                addressCountry: 'FR',
-              },
-              areaServed: ['France', 'Italy', 'Germany', 'Russia', 'CIS'],
-              knowsAbout: [
-                'fashion wholesale',
-                'brand distribution',
-                'pre-order fashion programs',
-                'European apparel manufacturing',
-              ],
-              contactPoint: {
-                '@type': 'ContactPoint',
-                contactType: 'sales',
-                email: 'info@vn-13.com',
-                telephone: '+33 1 23 45 67 89',
-                areaServed: ['FR', 'IT', 'DE', 'RU'],
-                availableLanguage: ['en', 'fr', 'it', 'de', 'ru'],
-              },
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-      </head>
-      <body className="antialiased">
         <LanguageProvider>
           {children}
         </LanguageProvider>
