@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { journalArticles } from '@/lib/journal'
 import { SITE_URL, absoluteUrl } from '@/lib/seo'
 
 export const dynamic = 'force-static'
@@ -7,9 +8,12 @@ const routes = [
   { path: '/', priority: 1 },
   { path: '/zhenskaya-odezhda', priority: 0.95 },
   { path: '/eksklyuzivnaya-zhenskaya-odezhda', priority: 0.95 },
+  { path: '/vn-13-brand', priority: 0.95 },
+  { path: '/lookbook', priority: 0.85 },
   { path: '/proizvoditel-zhenskoy-odezhdy', priority: 0.9 },
   { path: '/optovaya-zhenskaya-odezhda', priority: 0.9 },
   { path: '/distributsiya-zhenskoy-odezhdy', priority: 0.9 },
+  { path: '/journal', priority: 0.8 },
   { path: '/story', priority: 0.8 },
   { path: '/sustainability', priority: 0.75 },
   { path: '/preorder', priority: 0.85 },
@@ -21,7 +25,12 @@ const routes = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date('2026-05-25')
 
-  return routes.map((route) => ({
+  const journalRoutes = journalArticles.map((article) => ({
+    path: `/journal/${article.slug}`,
+    priority: 0.75,
+  }))
+
+  return [...routes, ...journalRoutes].map((route) => ({
     url: route.path === '/' ? SITE_URL : absoluteUrl(route.path),
     lastModified,
     changeFrequency: route.priority >= 0.9 ? 'weekly' : 'monthly',
