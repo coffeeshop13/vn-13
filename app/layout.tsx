@@ -33,12 +33,19 @@ export const metadata: Metadata = {
     },
   },
   ...createMetadata({
-    title: 'VN13 | European Fashion Distributor & Own Brand VN-13',
+    title: 'VN13 | Женская одежда VN-13, производство и дистрибуция',
     description:
-      'VN13 is a European fashion distributor and own brand connecting designer labels, manufacturers, and retail partners across Russia and CIS markets.',
+      'VN13 развивает собственный бренд женской одежды VN-13 и дистрибуцию европейских дизайнерских брендов для бутиков, шоурумов и розничных партнеров.',
     path: '/',
     image: DEFAULT_OG_IMAGE,
-    keywords: ['own fashion brand VN-13', 'fashion distributor Europe', 'designer wholesale fashion'],
+    keywords: [
+      'own fashion brand VN-13',
+      'fashion distributor Europe',
+      'designer wholesale fashion',
+      'женская одежда VN-13',
+      'эксклюзивная женская одежда',
+      'производитель женской одежды',
+    ],
   }),
 }
 
@@ -56,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
+    <html lang="ru" suppressHydrationWarning data-scroll-behavior="smooth">
       <body className="antialiased">
         <script
           type="application/ld+json"

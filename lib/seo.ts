@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
-export const SITE_URL = 'https://vn-13.com'
+export const SITE_URL = 'https://www.vn-13.com'
 export const SITE_NAME = 'VN13'
 export const DEFAULT_OG_IMAGE = '/hero-bg.jpg'
-export const SITE_LOCALE = 'en_US'
+export const SITE_LOCALE = 'ru_RU'
 
 type SeoConfig = {
   title: string
@@ -24,6 +24,11 @@ const defaultKeywords = [
   'Russia CIS fashion distribution',
   'fashion pre-order',
   'European manufacturing',
+  'женская одежда',
+  'эксклюзивная женская одежда',
+  'производитель женской одежды',
+  'оптовая женская одежда',
+  'дизайнерская женская одежда',
 ]
 
 export function absoluteUrl(path = '/') {
@@ -57,7 +62,7 @@ export function createMetadata({
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: `${SITE_NAME} European fashion distribution`,
+          alt: `${SITE_NAME} женская одежда и дистрибуция`,
         },
       ],
     },
@@ -85,7 +90,7 @@ export const siteConfig = {
   url: SITE_URL,
   title: 'VN13 | European Fashion Distribution Agency',
   description:
-    'VN13 connects European fashion brands with retailers through wholesale distribution, pre-order access, and manufacturing partnerships.',
+    'VN13 connects European fashion brands with retailers and develops VN-13, an own womenswear brand focused on exclusive women clothing and European manufacturing.',
   ogImage: DEFAULT_OG_IMAGE,
   locale: SITE_LOCALE,
 }
@@ -107,7 +112,7 @@ export const organizationJsonLd = {
       logo: `${SITE_URL}/hero-bg.jpg`,
       image: `${SITE_URL}/hero-bg.jpg`,
       description:
-        'VN13 is a fashion distributor and own brand connecting European designer labels, manufacturers, and retail partners across Russia and CIS markets.',
+        'VN13 is a fashion distributor and own VN-13 womenswear brand connecting European designer labels, manufacturers, and retail partners across Russia and CIS markets.',
       email: 'info@vn-13.com',
       telephone: '+79266022089',
       areaServed: ['Europe', 'Russia', 'CIS countries'],
@@ -118,6 +123,12 @@ export const organizationJsonLd = {
         'retail partnerships',
         'pre-order collections',
         'European garment manufacturing',
+        'exclusive women clothing',
+        'womenswear manufacturing',
+        'designer womenswear',
+        'женская одежда',
+        'эксклюзивная женская одежда',
+        'производство женской одежды',
       ],
       brand: {
         '@id': `${SITE_URL}/#brand`,
@@ -138,7 +149,7 @@ export const organizationJsonLd = {
       alternateName: 'VN13',
       url: SITE_URL,
       description:
-        'VN-13 is the own fashion brand and distribution platform of VN13, focused on European craftsmanship, responsible production, and curated retail partnerships.',
+        'VN-13 is the own womenswear brand and distribution platform of VN13, focused on exclusive women clothing, European craftsmanship, responsible production, and curated retail partnerships.',
     },
     {
       '@type': 'WebSite',
@@ -148,7 +159,7 @@ export const organizationJsonLd = {
       publisher: {
         '@id': `${SITE_URL}/#organization`,
       },
-      inLanguage: 'en',
+      inLanguage: 'ru',
     },
     {
       '@type': 'Service',

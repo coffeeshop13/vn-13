@@ -5,6 +5,11 @@ export const dynamic = 'force-static'
 
 const routes = [
   { path: '/', priority: 1 },
+  { path: '/zhenskaya-odezhda', priority: 0.95 },
+  { path: '/eksklyuzivnaya-zhenskaya-odezhda', priority: 0.95 },
+  { path: '/proizvoditel-zhenskoy-odezhdy', priority: 0.9 },
+  { path: '/optovaya-zhenskaya-odezhda', priority: 0.9 },
+  { path: '/distributsiya-zhenskoy-odezhdy', priority: 0.9 },
   { path: '/story', priority: 0.8 },
   { path: '/sustainability', priority: 0.75 },
   { path: '/preorder', priority: 0.85 },
@@ -19,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: route.path === '/' ? SITE_URL : absoluteUrl(route.path),
     lastModified,
-    changeFrequency: route.path === '/' ? 'weekly' : 'monthly',
+    changeFrequency: route.priority >= 0.9 ? 'weekly' : 'monthly',
     priority: route.priority,
   }))
 }

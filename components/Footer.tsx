@@ -6,14 +6,20 @@ export default function Footer() {
   const { translations } = useLanguage()
 
   const footerLinks = [
-    { label: translations.navStory, href: '#story' },
-    { label: translations.navPortfolio, href: '#portfolio' },
-    { label: translations.navContact, href: '#contact' },
+    { label: translations.navStory, href: '/#story' },
+    { label: translations.navPortfolio, href: '/#portfolio' },
+    { label: translations.navContact, href: '/#contact' },
   ]
 
   const partnerLinks = [
-    { label: translations.footerRetailers, href: '#contact' },
-    { label: translations.footerBrands, href: '#contact' },
+    { label: translations.footerRetailers, href: '/optovaya-zhenskaya-odezhda' },
+    { label: translations.footerBrands, href: '/distributsiya-zhenskoy-odezhdy' },
+  ]
+
+  const womenswearLinks = [
+    { label: 'Женская одежда', href: '/zhenskaya-odezhda' },
+    { label: 'Эксклюзивная одежда', href: '/eksklyuzivnaya-zhenskaya-odezhda' },
+    { label: 'Производитель VN-13', href: '/proizvoditel-zhenskoy-odezhdy' },
   ]
 
   const socialLinks = [
@@ -24,7 +30,7 @@ export default function Footer() {
   return (
     <footer style={{ backgroundColor: '#0f0f0f', borderTop: '1px solid #1f1f1f' }}>
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-14">
           <div className="col-span-2 md:col-span-1">
             <p className="text-xl font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: '#fff' }}>VN13</p>
             <p className="text-sm leading-relaxed" style={{ color: '#6b6b6b' }}>
@@ -49,6 +55,20 @@ export default function Footer() {
             <p className="text-xs tracking-[0.15em] uppercase mb-4" style={{ color: '#b8935a' }}>{translations.footerPartnership}</p>
             <ul className="space-y-3">
               {partnerLinks.map(link => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-sm transition-colors duration-200" style={{ color: '#999' }}
+                    onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+                    onMouseLeave={e => (e.currentTarget.style.color = '#999')}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="text-xs tracking-[0.15em] uppercase mb-4" style={{ color: '#b8935a' }}>VN-13</p>
+            <ul className="space-y-3">
+              {womenswearLinks.map(link => (
                 <li key={link.label}>
                   <a href={link.href} className="text-sm transition-colors duration-200" style={{ color: '#999' }}
                     onMouseEnter={e => (e.currentTarget.style.color = '#fff')}

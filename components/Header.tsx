@@ -12,6 +12,8 @@ export default function Header() {
 
   const navLinks = [
     { key: 'story', label: translations.navStory, href: '/#story' },
+    { key: 'womenswear', label: 'Женская одежда', href: '/zhenskaya-odezhda' },
+    { key: 'brand', label: 'VN-13', href: '/proizvoditel-zhenskoy-odezhdy' },
     { key: 'portfolio', label: translations.navPortfolio, href: '/#portfolio' },
     { key: 'sustainability', label: translations.navSustainability, href: '/sustainability' },
     { key: 'preorder', label: translations.navPreorder, href: '/preorder' },
@@ -26,7 +28,7 @@ export default function Header() {
           VN13
         </Link>
 
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map(link => (
             <a
               key={link.key}

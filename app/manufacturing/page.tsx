@@ -3,9 +3,9 @@ import ManufacturingPageContent from '@/components/ManufacturingPageContent'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'European Fashion Manufacturing',
+  title: 'Производство женской одежды | VN-13 и европейские партнеры',
   description:
-    'Discover VN13 manufacturing partnerships across Europe, with a focus on quality control, artisan production, and premium materials.',
+    'Производство женской одежды VN-13: европейские производственные партнеры, качественные материалы, капсульные коллекции и контроль качества.',
   path: '/manufacturing',
 })
 
