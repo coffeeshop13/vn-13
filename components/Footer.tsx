@@ -21,6 +21,9 @@ export default function Footer() {
     { label: 'Бренд VN-13', href: '/vn-13-brand' },
     { label: 'Lookbook', href: '/lookbook' },
     { label: 'Женская одежда', href: '/zhenskaya-odezhda' },
+    { label: 'Дизайнерская одежда', href: '/dizaynerskaya-zhenskaya-odezhda' },
+    { label: 'Премиальная одежда', href: '/premium-zhenskaya-odezhda' },
+    { label: 'Капсульная одежда', href: '/kapsulnaya-zhenskaya-odezhda' },
     { label: 'Эксклюзивная одежда', href: '/eksklyuzivnaya-zhenskaya-odezhda' },
     { label: 'Производитель VN-13', href: '/proizvoditel-zhenskoy-odezhdy' },
   ]
