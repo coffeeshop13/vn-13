@@ -6,7 +6,7 @@ export const siteConfig = {
   title: 'VN13 | European Fashion Distribution Agency',
   description:
     'VN13 connects European fashion brands with retailers through wholesale distribution, pre-order access, and manufacturing partnerships.',
-  ogImage: '/hero-bg.jpg',
+  ogImage: '/hero-vn13-showroom.jpg',
   locale: 'en_US',
 }
 
