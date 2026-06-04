@@ -3,9 +3,9 @@ import ManuelleGuibalPageContent from '@/components/ManuelleGuibalPageContent'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Manuelle Guibal Brand Profile',
+  title: 'Manuelle Guibal | Дизайнерская женская одежда через VN13',
   description:
-    'View the VN13 brand profile for Manuelle Guibal, including design philosophy, craftsmanship, and collection positioning.',
+    'Manuelle Guibal в портфеле VN13: французская дизайнерская женская одежда, европейское мастерство и возможности для розничных партнеров.',
   path: '/brands/manuelle-guibal',
 })
 

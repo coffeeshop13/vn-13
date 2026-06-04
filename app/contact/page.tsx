@@ -3,13 +3,14 @@ import Header from '@/components/Header'
 import ContactForm from '@/components/ContactForm'
 import Footer from '@/components/Footer'
 import { ContactLink } from '@/components/ContactLink'
-import { createPageMetadata } from '@/lib/seo'
+import { createMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = createPageMetadata({
-  title: 'Contact VN13',
+export const metadata: Metadata = createMetadata({
+  title: 'Контакты VN13 | Женская одежда, производство и дистрибуция',
   description:
-    'Contact VN13 to discuss European fashion distribution, pre-order access, and manufacturing partnerships.',
+    'Свяжитесь с VN13, чтобы обсудить женскую одежду VN-13, производство коллекций, оптовые поставки, предзаказ и дистрибуцию европейских брендов.',
   path: '/contact',
+  keywords: ['контакты VN13', 'женская одежда VN-13', 'производство женской одежды', 'дистрибуция одежды'],
 })
 
 export default function ContactPage() {
@@ -19,10 +20,10 @@ export default function ContactPage() {
       <section className="pt-32 pb-16 md:pt-48 md:pb-16 px-6" style={{ backgroundColor: '#fafaf8' }}>
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>
-            Let's Connect
+            Let&apos;s Connect
           </h1>
           <p className="text-lg md:text-xl max-w-2xl" style={{ color: '#6b6b6b' }}>
-            Whether you're a retailer looking for exclusive European brands or a designer ready to expand globally, we'd love to hear from you.
+            Whether you&apos;re a retailer looking for exclusive European brands or a designer ready to expand globally, we&apos;d love to hear from you.
           </p>
         </div>
       </section>
@@ -41,7 +42,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-sm mb-1" style={{ color: '#6b6b6b' }}>Phone</p>
-                  <ContactLink href="tel:+33123456789" label="+33 1 23 45 67 89" />
+                  <ContactLink href="tel:+79266022089" label="+7 926 602 20 89" />
                 </div>
                 <div>
                   <p className="text-sm mb-1" style={{ color: '#6b6b6b' }}>Location</p>
