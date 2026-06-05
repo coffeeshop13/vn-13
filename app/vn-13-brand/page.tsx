@@ -99,6 +99,25 @@ export default function VN13BrandPage() {
           </div>
         </div>
       </section>
+
+      <section style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          <h2 className="text-2xl font-light mb-6" style={{ color: '#0f0f0f' }}>
+            Связанные страницы
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/zhenskaya-odezhda" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
+              Женская одежда VN-13
+            </Link>
+            <Link href="/lookbook" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
+              Lookbook VN-13
+            </Link>
+            <Link href="/proizvoditel-zhenskoy-odezhdy" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
+              Производство VN-13
+            </Link>
+          </div>
+        </div>
+      </section>
       <Footer />
     </main>
   )

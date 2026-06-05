@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'VN13',
     short_name: 'VN13',
     description:
-      'European fashion distributor and own brand connecting designer labels, manufacturers, and retail partners.',
+      'Премиальная женская одежда, лимитированные серии и работа с бутиками, клиентами и розничными партнерами.',
     start_url: '/',
     display: 'standalone',
     background_color: '#fafaf8',

@@ -69,6 +69,11 @@ export default function WholesaleWomensClothingPage() {
             'Мы делаем акцент на дизайнерском ассортименте, контролируемой дистрибуции, предзаказе и долгосрочном партнерстве с ритейлером.',
         },
       ]}
+      relatedLinks={[
+        { href: '/zhenskaya-odezhda', label: 'Женская одежда VN-13' },
+        { href: '/preorder', label: 'Предзаказ коллекций' },
+        { href: '/journal', label: 'Материалы для бутиков' },
+      ]}
     />
   )
 }

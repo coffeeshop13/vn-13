@@ -4,7 +4,13 @@ import { SITE_URL, absoluteUrl } from '@/lib/seo'
 
 export const dynamic = 'force-static'
 
-const routes = [
+type SitemapRoute = {
+  path: string
+  priority: number
+  lastModified?: Date
+}
+
+const routes: SitemapRoute[] = [
   { path: '/', priority: 1 },
   { path: '/zhenskaya-odezhda', priority: 0.95 },
   { path: '/dizaynerskaya-zhenskaya-odezhda', priority: 0.95 },
@@ -29,16 +35,15 @@ const routes = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date('2026-05-25')
-
-  const journalRoutes = journalArticles.map((article) => ({
+  const journalRoutes: SitemapRoute[] = journalArticles.map((article) => ({
     path: `/journal/${article.slug}`,
     priority: 0.75,
+    lastModified: new Date(article.publishedAt),
   }))
 
   return [...routes, ...journalRoutes].map((route) => ({
     url: route.path === '/' ? SITE_URL : absoluteUrl(route.path),
-    lastModified,
+    lastModified: route.lastModified ?? new Date('2026-06-05'),
     changeFrequency: route.priority >= 0.9 ? 'weekly' : 'monthly',
     priority: route.priority,
   }))
