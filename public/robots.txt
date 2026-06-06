@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.vn-13.com/sitemap.xml
+
+AI-Content-Declaration: https://www.vn-13.com/llms.txt

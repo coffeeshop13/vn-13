@@ -1,9 +1,8 @@
-'use client'
-
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import Stats from '@/components/Stats'
 import PortfolioGrid from '@/components/PortfolioGrid'
+import SeoHub from '@/components/SeoHub'
 import ContactForm from '@/components/ContactForm'
 import Footer from '@/components/Footer'
 
@@ -13,6 +12,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Stats />
+      <SeoHub />
       <PortfolioGrid />
       <ContactForm />
       <Footer />

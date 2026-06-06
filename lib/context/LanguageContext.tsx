@@ -24,23 +24,23 @@ const translations: Record<Language, Record<string, string>> = {
 }
 
 const defaultContextValue: LanguageContextType = {
-  language: 'ru',
+  language: 'en',
   setLanguage: () => {},
-  translations: ruTranslations,
+  translations: enTranslations,
 }
 
 const LanguageContext = createContext<LanguageContextType>(defaultContextValue)
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>('ru')
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     const saved = localStorage.getItem('language') as Language | null
     if (saved && ['ru', 'en', 'it', 'fr', 'de'].includes(saved)) {
+      // Hydrate persisted language after localStorage is available.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLanguageState(saved)
     }
-    setMounted(true)
   }, [])
 
   const setLanguage = (lang: Language) => {

@@ -13,7 +13,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex flex-col justify-end" style={{ backgroundColor: '#0f0f0f' }}>
       <div className="absolute inset-0 overflow-hidden">
         <Image
-          src="/hero-bg.jpg"
+          src="/hero-vn13-showroom.jpg"
           alt="VN13 Fashion Agency"
           fill
           priority

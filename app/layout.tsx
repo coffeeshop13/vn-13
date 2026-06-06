@@ -1,30 +1,54 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import Script from 'next/script'
 import { LanguageProvider } from '@/lib/context/LanguageContext'
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL, createMetadata, organizationJsonLd } from '@/lib/seo'
 import './globals.css'
 
-const geistSans = Geist({
-  subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-})
-
 export const metadata: Metadata = {
-  title: 'VN13 | Fashion Agency - European Masters & Retail',
-  description: 'Strategic partnership connecting European fashion masters with retailers. Over 10 years of experience in France, Italy, and Japan.',
-  keywords: ['fashion agency', 'retail', 'european fashion', 'brands', 'fashion partnership'],
-  openGraph: {
-    type: 'website',
-    url: 'https://vn-13.com',
-    title: 'VN13 | Fashion Agency',
-    description: 'Strategic partnership connecting European fashion masters with retailers',
-    siteName: 'VN13',
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  generator: 'Next.js',
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: 'Fashion distribution',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
-  twitter: {
-    card: 'summary_large_image',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
   },
+  manifest: '/manifest.webmanifest',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  ...createMetadata({
+    title: 'VN13 | Женская одежда VN-13, производство и дистрибуция',
+    description:
+      'VN13 развивает собственный бренд женской одежды VN-13 и дистрибуцию европейских дизайнерских брендов для бутиков, шоурумов и розничных партнеров.',
+    path: '/',
+    image: DEFAULT_OG_IMAGE,
+    keywords: [
+      'премиальная женская одежда',
+      'лимитированные серии одежды',
+      'женская одежда VN-13',
+      'эксклюзивная женская одежда',
+      'производитель женской одежды',
+      'оптовая женская одежда',
+      'дизайнерская женская одежда',
+    ],
+  }),
 }
 
 export const viewport: Viewport = {
@@ -40,27 +64,43 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const yandexMetrikaInit = `
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) { return; }
+      }
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(70368979, 'init', {
+      webvisor:true,
+      clickmap:true,
+      referrer: document.referrer,
+      url: location.href,
+      accurateTrackBounce:true,
+      trackLinks:true
+    });
+  `
+
   return (
-    <html lang="en" className={geistSans.className} suppressHydrationWarning data-scroll-behavior="smooth">
-      <head>
+    <html lang="ru" suppressHydrationWarning data-scroll-behavior="smooth">
+      <body className="antialiased">
+        <Script id="yandex-metrika" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: yandexMetrikaInit }} />
+        <noscript>
+          <div>
+            <img
+              src="https://mc.yandex.ru/watch/70368979"
+              style={{ position: 'absolute', left: '-9999px' }}
+              alt=""
+            />
+          </div>
+        </noscript>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'VN13',
-              description: 'Fashion agency connecting European masters with retailers',
-              url: 'https://vn-13.com',
-              contactPoint: {
-                '@type': 'ContactPoint',
-                contactType: 'Customer Service',
-              },
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-      </head>
-      <body className="antialiased">
         <LanguageProvider>
           {children}
         </LanguageProvider>
