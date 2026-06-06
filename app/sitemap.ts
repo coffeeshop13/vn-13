@@ -31,6 +31,14 @@ const routes: SitemapRoute[] = [
   { path: '/preorder', priority: 0.85 },
   { path: '/manufacturing', priority: 0.8 },
   { path: '/brands/manuelle-guibal', priority: 0.7 },
+  { path: '/brands/hannoh-wessel', priority: 0.7 },
+  { path: '/brands/moyuru', priority: 0.7 },
+  { path: '/brands/shoto', priority: 0.7 },
+  { path: '/brands/post-and-co', priority: 0.7 },
+  { path: '/brands/aequamente', priority: 0.7 },
+  { path: '/brands/mj-watson', priority: 0.7 },
+  { path: '/brands/sula', priority: 0.7 },
+  { path: '/brands/soh', priority: 0.7 },
   { path: '/contact', priority: 0.7 },
 ]
 

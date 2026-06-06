@@ -7,14 +7,14 @@ import { useLanguage } from '@/lib/context/LanguageContext'
 
 const brands = [
   { id: 1, name: 'Manuelle Guibal', country: 'Франция', region: 'france', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%208-83OfinjdVGj3Fmyxq0y8DWMBfwXShu.jpg', slug: 'manuelle-guibal', isExternal: true },
-  { id: 2, name: 'H+ Hannoh Wessel', country: 'Италия', region: 'italy', image: 'https://houseofvalerie.com/cdn/shop/files/FE611AAD-35D2-45B2-BFD6-09C735088A5B.jpg?v=1769788318', slug: null, isExternal: true },
-  { id: 3, name: 'Moyuru', country: 'Япония', region: 'japan', image: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-7.jpg?crop=center&height=3000&v=1773184096&width=2100', slug: null, isExternal: true },
-  { id: 4, name: 'Shoto', country: 'Италия', region: 'italy', image: 'https://cdn.shopify.com/s/files/1/0672/5510/7848/files/193A3762.jpg?v=1771570514', slug: null, isExternal: true },
-  { id: 5, name: 'Post & Co', country: 'Италия', region: 'italy', image: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_COGNAC_12520.jpg?v=1739745633', slug: null, isExternal: true },
-  { id: 6, name: 'Aequamente', country: 'Италия', region: 'italy', image: 'https://thedesign.pt/cdn/shop/files/03_1c5c14c7-9e5b-4c64-b7c2-effa5e0a5bca.jpg?v=1706535696&width=800', slug: null, isExternal: true },
-  { id: 7, name: 'MJ Watson', country: 'Италия', region: 'italy', image: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_7362.jpg?v=1770045296&width=800', slug: null, isExternal: true },
-  { id: 8, name: 'Sula', country: 'Великобритания', region: 'uk', image: '/brands/sula.jpg', slug: null },
-  { id: 9, name: 'SOH', country: 'Южная Корея', region: 'korea', image: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHHW030CoatCharcoal-AllStyleClothing-02.jpg?v=1774929533', slug: null, isExternal: true },
+  { id: 2, name: 'H+ Hannoh Wessel', country: 'Италия', region: 'italy', image: 'https://houseofvalerie.com/cdn/shop/files/FE611AAD-35D2-45B2-BFD6-09C735088A5B.jpg?v=1769788318', slug: 'hannoh-wessel', isExternal: true },
+  { id: 3, name: 'Moyuru', country: 'Япония', region: 'japan', image: 'https://decemberthieves.com/cdn/shop/files/3_10_26_Edits-7.jpg?crop=center&height=3000&v=1773184096&width=2100', slug: 'moyuru', isExternal: true },
+  { id: 4, name: 'Shoto', country: 'Италия', region: 'italy', image: 'https://cdn.shopify.com/s/files/1/0672/5510/7848/files/193A3762.jpg?v=1771570514', slug: 'shoto', isExternal: true },
+  { id: 5, name: 'Post & Co', country: 'Италия', region: 'italy', image: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_COGNAC_12520.jpg?v=1739745633', slug: 'post-and-co', isExternal: true },
+  { id: 6, name: 'Aequamente', country: 'Италия', region: 'italy', image: 'https://thedesign.pt/cdn/shop/files/03_1c5c14c7-9e5b-4c64-b7c2-effa5e0a5bca.jpg?v=1706535696&width=800', slug: 'aequamente', isExternal: true },
+  { id: 7, name: 'MJ Watson', country: 'Италия', region: 'italy', image: 'https://cdn.shopify.com/s/files/1/0363/7696/9348/files/IMG_7362.jpg?v=1770045296&width=800', slug: 'mj-watson', isExternal: true },
+  { id: 8, name: 'Sula', country: 'Великобритания', region: 'uk', image: '/brands/sula.jpg', slug: 'sula' },
+  { id: 9, name: 'SOH', country: 'Южная Корея', region: 'korea', image: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHHW030CoatCharcoal-AllStyleClothing-02.jpg?v=1774929533', slug: 'soh', isExternal: true },
 ]
 
 export default function PortfolioGrid() {
