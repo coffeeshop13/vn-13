@@ -39,12 +39,13 @@ export const metadata: Metadata = {
     path: '/',
     image: DEFAULT_OG_IMAGE,
     keywords: [
-      'own fashion brand VN-13',
-      'fashion distributor Europe',
-      'designer wholesale fashion',
+      'премиальная женская одежда',
+      'лимитированные серии одежды',
       'женская одежда VN-13',
       'эксклюзивная женская одежда',
       'производитель женской одежды',
+      'оптовая женская одежда',
+      'дизайнерская женская одежда',
     ],
   }),
 }

@@ -53,6 +53,26 @@ export default function JournalPage() {
               </Link>
             ))}
           </div>
+
+          <div className="mt-20 pt-16 border-t" style={{ borderColor: '#e0ddd8' }}>
+            <h2 className="text-2xl font-light mb-6" style={{ color: '#0f0f0f' }}>
+              Связанные направления
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Link href="/zhenskaya-odezhda" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                Женская одежда VN-13
+              </Link>
+              <Link href="/optovaya-zhenskaya-odezhda" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                Оптовая женская одежда
+              </Link>
+              <Link href="/preorder" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                Предзаказ
+              </Link>
+              <Link href="/manufacturing" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                Производство
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
       <Footer />

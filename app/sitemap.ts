@@ -4,7 +4,13 @@ import { SITE_URL, absoluteUrl } from '@/lib/seo'
 
 export const dynamic = 'force-static'
 
-const routes = [
+type SitemapRoute = {
+  path: string
+  priority: number
+  lastModified?: Date
+}
+
+const routes: SitemapRoute[] = [
   { path: '/', priority: 1 },
   { path: '/zhenskaya-odezhda', priority: 0.95 },
   { path: '/dizaynerskaya-zhenskaya-odezhda', priority: 0.95 },
@@ -25,20 +31,27 @@ const routes = [
   { path: '/preorder', priority: 0.85 },
   { path: '/manufacturing', priority: 0.8 },
   { path: '/brands/manuelle-guibal', priority: 0.7 },
+  { path: '/brands/hannoh-wessel', priority: 0.7 },
+  { path: '/brands/moyuru', priority: 0.7 },
+  { path: '/brands/shoto', priority: 0.7 },
+  { path: '/brands/post-and-co', priority: 0.7 },
+  { path: '/brands/aequamente', priority: 0.7 },
+  { path: '/brands/mj-watson', priority: 0.7 },
+  { path: '/brands/sula', priority: 0.7 },
+  { path: '/brands/soh', priority: 0.7 },
   { path: '/contact', priority: 0.7 },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date('2026-05-25')
-
-  const journalRoutes = journalArticles.map((article) => ({
+  const journalRoutes: SitemapRoute[] = journalArticles.map((article) => ({
     path: `/journal/${article.slug}`,
     priority: 0.75,
+    lastModified: new Date(article.publishedAt),
   }))
 
   return [...routes, ...journalRoutes].map((route) => ({
     url: route.path === '/' ? SITE_URL : absoluteUrl(route.path),
-    lastModified,
+    lastModified: route.lastModified ?? new Date('2026-06-05'),
     changeFrequency: route.priority >= 0.9 ? 'weekly' : 'monthly',
     priority: route.priority,
   }))

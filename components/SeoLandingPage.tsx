@@ -18,6 +18,10 @@ type LandingPageProps = {
     answer: string
   }>
   path: string
+  relatedLinks?: Array<{
+    href: string
+    label: string
+  }>
 }
 
 export default function SeoLandingPage({
@@ -29,6 +33,7 @@ export default function SeoLandingPage({
   bullets,
   faq,
   path,
+  relatedLinks = [],
 }: LandingPageProps) {
   const pageUrl = absoluteUrl(path)
   const jsonLd = {
@@ -155,6 +160,26 @@ export default function SeoLandingPage({
             </p>
             <CTALink href="/#contact">Связаться с VN13</CTALink>
           </div>
+
+          {relatedLinks.length > 0 ? (
+            <div className="mt-20 pt-20 border-t" style={{ borderColor: '#e0ddd8' }}>
+              <h2 className="text-2xl font-light mb-6" style={{ color: '#0f0f0f' }}>
+                Связанные страницы
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {relatedLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="block p-5 transition-colors duration-200"
+                    style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8', color: '#0f0f0f' }}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </div>
       </section>
 
