@@ -8,6 +8,7 @@ export type BrandPortfolioItem = {
   slug: string
   country: string
   region: 'france' | 'italy' | 'japan' | 'uk' | 'korea'
+  officialWebsite?: string
   title: string
   description: string
   intro: string
@@ -38,6 +39,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'усиливает позиционирование VN13 как куратора, а не просто поставщика',
     ],
     keywords: ['Manuelle Guibal', 'французская женская одежда', 'дизайнерская женская одежда', 'лимитированные серии'],
+    officialWebsite: 'https://shop.manuelleguibal.fr/',
     cardImage: '/brands/real/manuelle-guibal-1.jpg',
     heroImage: {
       src: '/brands/real/manuelle-guibal-1.jpg',
@@ -67,6 +69,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'естественно усиливает тему limited series и pre-order',
     ],
     keywords: ['Hannoh Wessel', 'итальянская женская одежда', 'премиальная женская одежда', 'бутики'],
+    officialWebsite: 'https://www.hannoh.net/',
     cardImage: '/brands/hannoh-lookbook/hannoh-11.jpg',
     heroImage: {
       src: '/brands/hannoh-lookbook/hannoh-07.jpg',
@@ -121,6 +124,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'добавляет разнообразие в портфель брендов',
     ],
     keywords: ['Moyuru', 'японская женская одежда', 'дизайнерская одежда', 'премиальный womenswear'],
+    officialWebsite: 'https://www.moyuru.com/',
     cardImage: '/brands/moyuru.jpg',
     heroImage: {
       src: '/brands/moyuru.jpg',
@@ -149,6 +153,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'усиливает тему craftsmanship и limited availability',
     ],
     keywords: ['Shoto', 'итальянский premium fashion', 'бутик fashion', 'лимитированные серии'],
+    officialWebsite: 'https://shoto.it/',
     cardImage: '/brands/shoto.jpg',
     heroImage: {
       src: '/brands/shoto.jpg',
@@ -177,6 +182,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'естественно связывается с premium womenswear pages',
     ],
     keywords: ['Post & Co', 'итальянские аксессуары', 'премиальные аксессуары', 'бутик'],
+    officialWebsite: 'https://postandcoshop.com/',
     cardImage: '/brands/post-co.jpg',
     heroImage: {
       src: '/brands/post-co.jpg',
@@ -205,6 +211,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'усиливает доверие к селекции VN13',
     ],
     keywords: ['Aequamente', 'итальянская женская одежда', 'премиальная одежда', 'бутики'],
+    officialWebsite: 'https://www.aequamente.it/',
     cardImage: '/brands/aequamente.jpg',
     heroImage: {
       src: '/brands/aequamente-lookbook/aequamente-01.jpg',

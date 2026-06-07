@@ -1,9 +1,11 @@
 'use client'
 
 import Image from 'next/image'
+import Script from 'next/script'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CTALink } from '@/components/CTALink'
+import { absoluteUrl } from '@/lib/seo'
 import type { BrandPortfolioItem } from '@/lib/brand-portfolio'
 
 type BrandPortfolioPageProps = {
@@ -13,9 +15,34 @@ type BrandPortfolioPageProps = {
 export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
   const gallery = brand.gallery
   const hasEditorialGrid = gallery.length > 1
+  const pageUrl = absoluteUrl(`/brands/${brand.slug}`)
+  const brandJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Brand',
+    '@id': `${pageUrl}#brand`,
+    name: brand.name,
+    description: brand.description,
+    url: pageUrl,
+    slogan: brand.positioning,
+    foundingLocation: brand.country,
+    knowsAbout: brand.keywords,
+    brand: {
+      '@id': `${pageUrl}#brand`,
+    },
+    ...(brand.officialWebsite
+      ? {
+          sameAs: [brand.officialWebsite],
+        }
+      : {}),
+  }
 
   return (
     <main>
+      <Script
+        id={`brand-jsonld-${brand.slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(brandJsonLd) }}
+      />
       <Header />
 
       <section className="border-b" style={{ borderColor: '#e0ddd8', backgroundColor: '#f8f5ef' }}>
@@ -51,6 +78,22 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                   <p className="text-base" style={{ color: '#0f0f0f' }}>Бутики и клиенты</p>
                 </div>
               </div>
+              {brand.officialWebsite ? (
+                <div className="mt-6 inline-flex flex-col gap-2 rounded-2xl border px-5 py-4" style={{ borderColor: '#e0ddd8', backgroundColor: '#fff' }}>
+                  <p className="text-xs tracking-[0.16em] uppercase" style={{ color: '#b8935a' }}>
+                    Official site
+                  </p>
+                  <a
+                    href={brand.officialWebsite}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-base underline underline-offset-4"
+                    style={{ color: '#0f0f0f' }}
+                  >
+                    {brand.officialWebsite.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                  </a>
+                </div>
+              ) : null}
             </div>
 
             <div className="relative overflow-hidden rounded-[28px] min-h-[420px]">
@@ -189,4 +232,3 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
     </main>
   )
 }
-
