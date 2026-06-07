@@ -1,34 +1,71 @@
 'use client'
 
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CTALink } from '@/components/CTALink'
 import { useLanguage } from '@/lib/context/LanguageContext'
 
-const galleryImages = [
+const lookbookImages = [
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%203-9H0xA8pMFJLvxLxNs1UEJDXp5Fzz1R.jpg',
-    alt: 'Manuelle Guibal collection on display rack',
+    src: '/brands/manuelle-lookbook/lookbook-01.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 1',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%207-SNtLOX7mtJU8MukktBVAZiZ9PHtdmI.jpg',
-    alt: 'Model wearing sage green oversized shirt',
+    src: '/brands/manuelle-lookbook/lookbook-02.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 2',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%204-aJqkhYlf76ScqqRoZ1RS8OgvBxnsw5.jpg',
-    alt: 'Model in oversized sage shirt and black skirt',
+    src: '/brands/manuelle-lookbook/lookbook-03.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 3',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%201-huGLqPTIk8eqnL80pF4nkPXqr9Rh2c.jpg',
-    alt: 'Black blazer with sculptural collar',
+    src: '/brands/manuelle-lookbook/lookbook-04.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 4',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%209-vQESspFPAkWp3ZZwe2FsTjXo8qinP2.jpg',
-    alt: 'Artistic watercolor fabric detail',
+    src: '/brands/manuelle-lookbook/lookbook-05.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 5',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%206-DzxP9lJxeXfem1r2NtOc1tYQ7UyHUg.webp',
-    alt: 'Navy tiered ruffle dress',
+    src: '/brands/manuelle-lookbook/lookbook-06.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 6',
+  },
+  {
+    src: '/brands/manuelle-lookbook/lookbook-07.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 7',
+  },
+  {
+    src: '/brands/manuelle-lookbook/lookbook-08.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 8',
+  },
+  {
+    src: '/brands/manuelle-lookbook/lookbook-09.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 9',
+  },
+  {
+    src: '/brands/manuelle-lookbook/lookbook-10.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 10',
+  },
+  {
+    src: '/brands/manuelle-lookbook/lookbook-11.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 11',
+  },
+  {
+    src: '/brands/manuelle-lookbook/lookbook-12.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 12',
+  },
+  {
+    src: '/brands/manuelle-lookbook/lookbook-13.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 13',
+  },
+  {
+    src: '/brands/manuelle-lookbook/lookbook-14.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 14',
+  },
+  {
+    src: '/brands/manuelle-lookbook/lookbook-15.jpg',
+    alt: 'Manuelle Guibal summer lookbook image 15',
   },
 ]
 
@@ -40,9 +77,12 @@ export default function ManuelleGuibalPageContent() {
       <Header />
 
       <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
-        <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Manuelle%20Guibal%2C%20VN13%208-83OfinjdVGj3Fmyxq0y8DWMBfwXShu.jpg"
-          alt="Manuelle Guibal Brand Cover"
+        <Image
+          src="/brands/manuelle-lookbook/lookbook-03.jpg"
+          alt="Manuelle Guibal summer lookbook cover"
+          fill
+          priority
+          sizes="100vw"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/20"></div>
@@ -96,16 +136,15 @@ export default function ManuelleGuibalPageContent() {
 
           <div className="mt-20 pt-20 border-t" style={{ borderColor: '#e0ddd8' }}>
             <h2 className="text-3xl md:text-4xl font-light mb-12" style={{ color: '#0f0f0f' }}>
-              Collection
+              Lookbook Eté
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {galleryImages.map((image) => (
-                <div key={image.src} className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover"
-                  />
+            <p className="text-base leading-relaxed max-w-3xl mb-10" style={{ color: '#6b6b6b' }}>
+              Подборка из официального летнего lookbook Manuelle Guibal. Здесь собраны реальные редакционные кадры бренда, чтобы страница показывала фактическую эстетику коллекции, а не ограничивалась несколькими повторяющимися изображениями.
+            </p>
+            <div className="columns-1 sm:columns-2 xl:columns-3 gap-6 [column-fill:_balance]">
+              {lookbookImages.map((image, index) => (
+                <div key={image.src} className={`mb-6 break-inside-avoid overflow-hidden ${index < 2 ? 'rounded-[28px]' : 'rounded-[22px]'}`}>
+                  <img src={image.src} alt={image.alt} className="w-full h-auto object-cover" />
                 </div>
               ))}
             </div>
