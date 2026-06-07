@@ -121,12 +121,15 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'добавляет разнообразие в портфель брендов',
     ],
     keywords: ['Moyuru', 'японская женская одежда', 'дизайнерская одежда', 'премиальный womenswear'],
-    cardImage: '/brands/real/moyuru-1.jpg',
+    cardImage: '/brands/moyuru.jpg',
     heroImage: {
-      src: '/brands/real/moyuru-1.jpg',
-      alt: 'Moyuru sculptural cream outfit',
+      src: '/brands/moyuru.jpg',
+      alt: 'Moyuru sculptural editorial look',
     },
-    gallery: [{ src: '/brands/real/moyuru-1.jpg', alt: 'Moyuru sculptural draped silhouette' }],
+    gallery: [
+      { src: '/brands/moyuru.jpg', alt: 'Moyuru sculptural editorial look' },
+      { src: '/brands/real/moyuru-1.jpg', alt: 'Moyuru cream draped silhouette' },
+    ],
   },
   {
     name: 'Shoto',
@@ -146,12 +149,15 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'усиливает тему craftsmanship и limited availability',
     ],
     keywords: ['Shoto', 'итальянский premium fashion', 'бутик fashion', 'лимитированные серии'],
-    cardImage: '/brands/real/shoto-1.jpg',
+    cardImage: '/brands/shoto.jpg',
     heroImage: {
-      src: '/brands/real/shoto-1.jpg',
-      alt: 'Shoto artisanal leather boot',
+      src: '/brands/shoto.jpg',
+      alt: 'Shoto artisanal leather accessory image',
     },
-    gallery: [{ src: '/brands/real/shoto-1.jpg', alt: 'Shoto leather boot close-up' }],
+    gallery: [
+      { src: '/brands/shoto.jpg', alt: 'Shoto artisanal leather detail' },
+      { src: '/brands/real/shoto-1.jpg', alt: 'Shoto leather boot close-up' },
+    ],
   },
   {
     name: 'Post & Co',
@@ -171,12 +177,15 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'естественно связывается с premium womenswear pages',
     ],
     keywords: ['Post & Co', 'итальянские аксессуары', 'премиальные аксессуары', 'бутик'],
-    cardImage: '/brands/real/post-and-co-1.png',
+    cardImage: '/brands/post-co.jpg',
     heroImage: {
-      src: '/brands/real/post-and-co-1.png',
-      alt: 'Post & Co accessories campaign visual',
+      src: '/brands/post-co.jpg',
+      alt: 'Post & Co leather accessory image',
     },
-    gallery: [{ src: '/brands/real/post-and-co-1.png', alt: 'Post & Co campaign accessory image' }],
+    gallery: [
+      { src: '/brands/post-co.jpg', alt: 'Post & Co accessory campaign image' },
+      { src: '/brands/real/post-and-co-1.png', alt: 'Post & Co leather bag campaign visual' },
+    ],
   },
   {
     name: 'Aequamente',
@@ -196,12 +205,16 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'усиливает доверие к селекции VN13',
     ],
     keywords: ['Aequamente', 'итальянская женская одежда', 'премиальная одежда', 'бутики'],
-    cardImage: '/brands/real/aequamente-1.jpg',
+    cardImage: '/brands/aequamente.jpg',
     heroImage: {
-      src: '/brands/real/aequamente-1.jpg',
-      alt: 'Aequamente editorial image',
+      src: '/brands/aequamente-lookbook/aequamente-01.jpg',
+      alt: 'Aequamente editorial look in a chair',
     },
     gallery: [
+      { src: '/brands/aequamente-lookbook/aequamente-01.jpg', alt: 'Aequamente editorial look in a chair' },
+      { src: '/brands/aequamente-lookbook/aequamente-02.jpg', alt: 'Aequamente vertical editorial portrait' },
+      { src: '/brands/aequamente-lookbook/aequamente-03.jpg', alt: 'Aequamente garden portrait' },
+      { src: '/brands/aequamente-lookbook/aequamente-04.jpg', alt: 'Aequamente tonal fashion portrait' },
       { src: '/brands/real/aequamente-1.jpg', alt: 'Aequamente first editorial look' },
       { src: '/brands/real/aequamente-2.jpg', alt: 'Aequamente second editorial look' },
     ],
@@ -224,12 +237,15 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'поддерживает limited series narrative',
     ],
     keywords: ['MJ Watson', 'итальянская женская одежда', 'дизайнерский womenswear', 'премиум'],
-    cardImage: '/brands/real/mj-watson-1.jpg',
+    cardImage: '/brands/mj-watson.jpg',
     heroImage: {
-      src: '/brands/real/mj-watson-1.jpg',
-      alt: 'MJ Watson knitwear look',
+      src: '/brands/mj-watson.jpg',
+      alt: 'MJ Watson tailored fashion image',
     },
-    gallery: [{ src: '/brands/real/mj-watson-1.jpg', alt: 'MJ Watson minimalist knitwear' }],
+    gallery: [
+      { src: '/brands/mj-watson.jpg', alt: 'MJ Watson tailored fashion image' },
+      { src: '/brands/real/mj-watson-1.jpg', alt: 'MJ Watson minimalist knitwear' },
+    ],
   },
   {
     name: 'Sula',
@@ -274,12 +290,15 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'поддерживает editorial and search visibility',
     ],
     keywords: ['SOH', 'корейская женская одежда', 'премиальная женская одежда', 'дизайнерская одежда'],
-    cardImage: '/brands/real/soh-1.jpg',
+    cardImage: '/brands/soh.jpg',
     heroImage: {
-      src: '/brands/real/soh-1.jpg',
-      alt: 'SOH charcoal coat look',
+      src: '/brands/soh.jpg',
+      alt: 'SOH directional fashion portrait',
     },
-    gallery: [{ src: '/brands/real/soh-1.jpg', alt: 'SOH modern directional coat' }],
+    gallery: [
+      { src: '/brands/soh.jpg', alt: 'SOH directional fashion portrait' },
+      { src: '/brands/real/soh-1.jpg', alt: 'SOH modern directional coat' },
+    ],
   },
 ]
 
