@@ -29,8 +29,7 @@ export default function Footer() {
   ]
 
   const socialLinks = [
-    { label: 'Instagram', href: '#' },
-    { label: 'LinkedIn', href: '#' },
+    { label: '@vn13agency', href: 'https://t.me/vn13agency' },
   ]
 
   return (
