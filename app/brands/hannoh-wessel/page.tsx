@@ -12,16 +12,5 @@ export const metadata: Metadata = createPageMetadata({
 })
 
 export default function HannohWesselPage() {
-  return (
-    <BrandPortfolioPage
-      brand={brand}
-      heroImage="https://houseofvalerie.com/cdn/shop/files/FE611AAD-35D2-45B2-BFD6-09C735088A5B.jpg?v=1769788318"
-      gallery={[
-        { src: 'https://houseofvalerie.com/cdn/shop/files/FE611AAD-35D2-45B2-BFD6-09C735088A5B.jpg?v=1769788318', alt: 'H+ Hannoh Wessel look' },
-        { src: 'https://houseofvalerie.com/cdn/shop/files/FE611AAD-35D2-45B2-BFD6-09C735088A5B.jpg?v=1769788318', alt: 'H+ Hannoh Wessel close-up' },
-        { src: 'https://houseofvalerie.com/cdn/shop/files/FE611AAD-35D2-45B2-BFD6-09C735088A5B.jpg?v=1769788318', alt: 'H+ Hannoh Wessel editorial image' },
-      ]}
-    />
-  )
+  return <BrandPortfolioPage brand={brand} />
 }
-

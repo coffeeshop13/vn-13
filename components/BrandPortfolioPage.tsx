@@ -1,108 +1,186 @@
 'use client'
 
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CTALink } from '@/components/CTALink'
-import { useLanguage } from '@/lib/context/LanguageContext'
 import type { BrandPortfolioItem } from '@/lib/brand-portfolio'
 
 type BrandPortfolioPageProps = {
   brand: BrandPortfolioItem
-  heroImage: string
-  gallery: Array<{ src: string; alt: string }>
 }
 
-export default function BrandPortfolioPage({ brand, heroImage, gallery }: BrandPortfolioPageProps) {
-  const { translations } = useLanguage()
+export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
+  const gallery = brand.gallery
+  const hasEditorialGrid = gallery.length > 1
 
   return (
     <main>
       <Header />
 
-      <section className="relative w-full h-[80vh] min-h-[640px] flex items-end overflow-hidden">
-        <img src={heroImage} alt={brand.name} className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-black/10" />
-        <div className="relative z-10 max-w-5xl mx-auto w-full px-6 pb-16 md:pb-20 text-white">
-          <p className="text-xs tracking-[0.22em] uppercase mb-3 opacity-80">Brand portfolio</p>
-          <h1 className="text-4xl md:text-6xl font-light leading-tight max-w-3xl">{brand.title}</h1>
-        </div>
-      </section>
-
-      <section className="pt-24 pb-16 px-6" style={{ backgroundColor: '#fafaf8' }}>
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>
-            {brand.country}
-          </p>
-          <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>
-            {brand.name}
-          </h2>
-          <p className="text-lg md:text-xl leading-relaxed max-w-3xl" style={{ color: '#6b6b6b' }}>
-            {brand.description}
-          </p>
-        </div>
-      </section>
-
-      <section style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
-        <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
-          <div className="grid md:grid-cols-3 gap-12 mb-20">
+      <section className="border-b" style={{ borderColor: '#e0ddd8', backgroundColor: '#f8f5ef' }}>
+        <div className="max-w-7xl mx-auto px-6 py-14 md:py-20">
+          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 md:gap-14 items-center">
             <div>
-              <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>
-                Позиционирование
-              </h3>
-              <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
-                {brand.positioning}
+              <p className="text-xs tracking-[0.22em] uppercase mb-4" style={{ color: '#b8935a' }}>
+                Brand portfolio
               </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>
-                Почему это важно для VN13
-              </h3>
-              <ul className="space-y-3 text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
-                {brand.whyItFits.map((item) => (
-                  <li key={item}>• {item}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>
-                Поисковые акценты
-              </h3>
-              <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
-                {brand.keywords.join(', ')}
+              <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6" style={{ color: '#0f0f0f' }}>
+                {brand.name}
+              </h1>
+              <p className="text-lg md:text-xl leading-relaxed max-w-2xl mb-8" style={{ color: '#5f5b55' }}>
+                {brand.description}
               </p>
-            </div>
-          </div>
-
-          <div className="py-16 border-t border-b" style={{ borderColor: '#e0ddd8' }}>
-            <h3 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>
-              {translations.brandManuelleGuibalAboutTitle}
-            </h3>
-            <p className="text-base leading-relaxed max-w-3xl" style={{ color: '#6b6b6b' }}>
-              {brand.intro}
-            </p>
-          </div>
-
-          <div className="mt-20">
-            <h3 className="text-3xl md:text-4xl font-light mb-12" style={{ color: '#0f0f0f' }}>
-              Collection
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {gallery.map((image) => (
-                <div key={image.src} className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
-                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
+              <div className="grid sm:grid-cols-3 gap-4">
+                <div className="rounded-2xl p-5" style={{ backgroundColor: '#fff' }}>
+                  <p className="text-xs tracking-[0.16em] uppercase mb-2" style={{ color: '#b8935a' }}>
+                    Страна
+                  </p>
+                  <p className="text-base" style={{ color: '#0f0f0f' }}>{brand.country}</p>
                 </div>
-              ))}
+                <div className="rounded-2xl p-5" style={{ backgroundColor: '#fff' }}>
+                  <p className="text-xs tracking-[0.16em] uppercase mb-2" style={{ color: '#b8935a' }}>
+                    Формат
+                  </p>
+                  <p className="text-base" style={{ color: '#0f0f0f' }}>Премиальный отбор</p>
+                </div>
+                <div className="rounded-2xl p-5" style={{ backgroundColor: '#fff' }}>
+                  <p className="text-xs tracking-[0.16em] uppercase mb-2" style={{ color: '#b8935a' }}>
+                    Для кого
+                  </p>
+                  <p className="text-base" style={{ color: '#0f0f0f' }}>Бутики и клиенты</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative overflow-hidden rounded-[28px] min-h-[420px]">
+              <Image
+                src={brand.heroImage.src}
+                alt={brand.heroImage.alt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ backgroundColor: '#fff' }}>
+        <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 md:gap-16 items-start">
+            <div>
+              <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>
+                Почему бренд работает
+              </p>
+              <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>
+                Позиционирование и коммерческий смысл
+              </h2>
+              <p className="text-base leading-8" style={{ color: '#5f5b55' }}>
+                {brand.intro}
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-5">
+              <div className="rounded-[24px] p-6" style={{ backgroundColor: '#f6f1ea' }}>
+                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>
+                  Позиционирование
+                </h3>
+                <p className="text-base leading-7" style={{ color: '#5f5b55' }}>
+                  {brand.positioning}
+                </p>
+              </div>
+              <div className="rounded-[24px] p-6" style={{ backgroundColor: '#f3f3f0' }}>
+                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>
+                  Поисковые акценты
+                </h3>
+                <p className="text-base leading-7" style={{ color: '#5f5b55' }}>
+                  {brand.keywords.join(', ')}
+                </p>
+              </div>
+              <div className="rounded-[24px] p-6 md:col-span-2" style={{ backgroundColor: '#faf8f4' }}>
+                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>
+                  Почему это важно для VN13
+                </h3>
+                <div className="grid md:grid-cols-3 gap-4">
+                  {brand.whyItFits.map((item) => (
+                    <div key={item} className="rounded-2xl p-5" style={{ backgroundColor: '#fff' }}>
+                      <p className="text-base leading-7" style={{ color: '#5f5b55' }}>{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="mt-20 pt-20 border-t text-center" style={{ borderColor: '#e0ddd8' }}>
-            <h3 className="text-2xl font-light mb-4" style={{ color: '#0f0f0f' }}>
-              {translations.brandManuelleGuibalCTATitle}
+          <div className="mt-20 pt-16 border-t" style={{ borderColor: '#e0ddd8' }}>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+              <div>
+                <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>
+                  Visual selection
+                </p>
+                <h2 className="text-3xl md:text-4xl font-light" style={{ color: '#0f0f0f' }}>
+                  Реальные материалы бренда
+                </h2>
+              </div>
+              <p className="text-base max-w-2xl" style={{ color: '#6b6b6b' }}>
+                Вместо повторяющихся плейсхолдеров здесь используются реальные визуалы бренда или партнерских stockist-источников.
+              </p>
+            </div>
+
+            {hasEditorialGrid ? (
+              <div className="grid lg:grid-cols-3 gap-6">
+                {gallery.map((image, index) => (
+                  <div
+                    key={`${image.src}-${index}`}
+                    className={index === 0 ? 'lg:col-span-2 relative overflow-hidden rounded-[28px] min-h-[640px]' : 'relative overflow-hidden rounded-[28px] min-h-[420px]'}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      sizes={index === 0 ? '(max-width: 1024px) 100vw, 60vw' : '(max-width: 1024px) 100vw, 30vw'}
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
+                <div className="relative overflow-hidden rounded-[28px] min-h-[680px]">
+                  <Image
+                    src={gallery[0].src}
+                    alt={gallery[0].alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 58vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="rounded-[28px] p-8 md:p-10" style={{ backgroundColor: '#f7f4ee' }}>
+                  <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>
+                    Отбор VN13
+                  </p>
+                  <h3 className="text-2xl md:text-3xl font-light mb-5" style={{ color: '#0f0f0f' }}>
+                    Один сильный образ лучше, чем три дубликата
+                  </h3>
+                  <p className="text-base leading-8 mb-8" style={{ color: '#5f5b55' }}>
+                    Для этих страниц важнее показать один убедительный реальный кадр и связать его с коммерческим предложением, чем имитировать lookbook повтором одной и той же фотографии.
+                  </p>
+                  <CTALink href="/contact">Обсудить бренд</CTALink>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="mt-20 pt-16 border-t text-center" style={{ borderColor: '#e0ddd8' }}>
+            <h3 className="text-2xl md:text-3xl font-light mb-4" style={{ color: '#0f0f0f' }}>
+              Откройте для себя {brand.name}
             </h3>
-            <p className="text-base mb-8 max-w-xl mx-auto" style={{ color: '#6b6b6b' }}>
-              {translations.brandManuelleGuibalCTADesc}
+            <p className="text-base mb-8 max-w-2xl mx-auto" style={{ color: '#6b6b6b' }}>
+              Свяжитесь с командой VN13, если вам нужен бренд для бутика, шоурума или частной клиентской подборки.
             </p>
-            <CTALink href="/#contact">Связаться</CTALink>
+            <CTALink href="/contact">Связаться</CTALink>
           </div>
         </div>
       </section>

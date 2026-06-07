@@ -12,16 +12,5 @@ export const metadata: Metadata = createPageMetadata({
 })
 
 export default function SulaPage() {
-  return (
-    <BrandPortfolioPage
-      brand={brand}
-      heroImage="/brands/sula.jpg"
-      gallery={[
-        { src: '/brands/sula.jpg', alt: 'Sula editorial look' },
-        { src: '/brands/sula.jpg', alt: 'Sula product detail' },
-        { src: '/brands/sula.jpg', alt: 'Sula silhouette' },
-      ]}
-    />
-  )
+  return <BrandPortfolioPage brand={brand} />
 }
-

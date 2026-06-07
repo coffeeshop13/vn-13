@@ -12,16 +12,5 @@ export const metadata: Metadata = createPageMetadata({
 })
 
 export default function PostAndCoPage() {
-  return (
-    <BrandPortfolioPage
-      brand={brand}
-      heroImage="https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_COGNAC_12520.jpg?v=1739745633"
-      gallery={[
-        { src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_COGNAC_12520.jpg?v=1739745633', alt: 'Post & Co accessory image' },
-        { src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_COGNAC_12520.jpg?v=1739745633', alt: 'Post & Co material detail' },
-        { src: 'https://cdn.shopify.com/s/files/1/0650/7495/4506/files/10026_COGNAC_12520.jpg?v=1739745633', alt: 'Post & Co editorial accessory' },
-      ]}
-    />
-  )
+  return <BrandPortfolioPage brand={brand} />
 }
-

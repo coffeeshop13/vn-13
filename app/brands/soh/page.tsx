@@ -12,16 +12,5 @@ export const metadata: Metadata = createPageMetadata({
 })
 
 export default function SohPage() {
-  return (
-    <BrandPortfolioPage
-      brand={brand}
-      heroImage="https://cdn.shopify.com/s/files/1/0191/6390/files/SOHHW030CoatCharcoal-AllStyleClothing-02.jpg?v=1774929533"
-      gallery={[
-        { src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHHW030CoatCharcoal-AllStyleClothing-02.jpg?v=1774929533', alt: 'SOH editorial look' },
-        { src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHHW030CoatCharcoal-AllStyleClothing-02.jpg?v=1774929533', alt: 'SOH detail' },
-        { src: 'https://cdn.shopify.com/s/files/1/0191/6390/files/SOHHW030CoatCharcoal-AllStyleClothing-02.jpg?v=1774929533', alt: 'SOH silhouette' },
-      ]}
-    />
-  )
+  return <BrandPortfolioPage brand={brand} />
 }
-
