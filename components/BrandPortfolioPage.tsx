@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Script from 'next/script'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CTALink } from '@/components/CTALink'
@@ -123,6 +124,25 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
               <p className="text-base leading-8" style={{ color: '#5f5b55' }}>
                 {brand.intro}
               </p>
+              {brand.officialWebsite ? (
+                <div className="mt-6 rounded-[24px] p-6" style={{ backgroundColor: '#faf8f4' }}>
+                  <h3 className="text-xl font-medium mb-3" style={{ color: '#0f0f0f' }}>
+                    Официальный сайт бренда
+                  </h3>
+                  <p className="text-base leading-7 mb-4" style={{ color: '#5f5b55' }}>
+                    Мы связываем страницу VN13 с официальным источником бренда, чтобы упростить проверку коллекций, ассортимента и визуального языка.
+                  </p>
+                  <a
+                    href={brand.officialWebsite}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm uppercase tracking-[0.16em] underline underline-offset-4"
+                    style={{ color: '#0f0f0f' }}
+                  >
+                    Перейти на официальный сайт
+                  </a>
+                </div>
+              ) : null}
             </div>
 
             <div className="grid md:grid-cols-2 gap-5">
@@ -152,6 +172,31 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                       <p className="text-base leading-7" style={{ color: '#5f5b55' }}>{item}</p>
                     </div>
                   ))}
+                </div>
+              </div>
+              <div className="rounded-[24px] p-6 md:col-span-2" style={{ backgroundColor: '#f3f3f0' }}>
+                <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>
+                  Связанные страницы VN13
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  <Link href="/zhenskaya-odezhda" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                    Женская одежда
+                  </Link>
+                  <Link href="/premium-zhenskaya-odezhda" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                    Премиальная женская одежда
+                  </Link>
+                  <Link href="/eksklyuzivnaya-zhenskaya-odezhda" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                    Эксклюзивная одежда
+                  </Link>
+                  <Link href="/optovaya-zhenskaya-odezhda" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                    Опт
+                  </Link>
+                  <Link href="/preorder" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                    Предзаказ
+                  </Link>
+                  <Link href="/distributsiya-zhenskoy-odezhdy" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                    Дистрибуция
+                  </Link>
                 </div>
               </div>
             </div>
