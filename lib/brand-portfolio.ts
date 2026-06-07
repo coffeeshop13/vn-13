@@ -67,12 +67,41 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'естественно усиливает тему limited series и pre-order',
     ],
     keywords: ['Hannoh Wessel', 'итальянская женская одежда', 'премиальная женская одежда', 'бутики'],
-    cardImage: '/brands/real/hannoh-wessel-1.jpg',
+    cardImage: '/brands/hannoh-lookbook/hannoh-11.jpg',
     heroImage: {
-      src: '/brands/real/hannoh-wessel-1.jpg',
-      alt: 'H+ Hannoh Wessel tailored neutral look',
+      src: '/brands/hannoh-lookbook/hannoh-07.jpg',
+      alt: 'H+ Hannoh Wessel full-length neutral knit look',
     },
-    gallery: [{ src: '/brands/real/hannoh-wessel-1.jpg', alt: 'H+ Hannoh Wessel light tailoring' }],
+    gallery: [
+      {
+        src: '/brands/hannoh-lookbook/hannoh-03.jpg',
+        alt: 'H+ Hannoh Wessel lookbook flat lay with colorful pieces',
+      },
+      {
+        src: '/brands/hannoh-lookbook/hannoh-05.jpg',
+        alt: 'H+ Hannoh Wessel back view in a dark knit sweater',
+      },
+      {
+        src: '/brands/hannoh-lookbook/hannoh-06.jpg',
+        alt: 'H+ Hannoh Wessel hanging black sweater on a white wall',
+      },
+      {
+        src: '/brands/hannoh-lookbook/hannoh-07.jpg',
+        alt: 'H+ Hannoh Wessel full-length neutral knit styling',
+      },
+      {
+        src: '/brands/hannoh-lookbook/hannoh-10.jpg',
+        alt: 'H+ Hannoh Wessel hanging neutral sweater on a white wall',
+      },
+      {
+        src: '/brands/hannoh-lookbook/hannoh-11.jpg',
+        alt: 'H+ Hannoh Wessel front portrait in a navy knit sweater',
+      },
+      {
+        src: '/brands/hannoh-lookbook/hannoh-14.jpg',
+        alt: 'H+ Hannoh Wessel side view in a navy knit sweater',
+      },
+    ],
   },
   {
     name: 'Moyuru',
@@ -257,4 +286,3 @@ export const brandPortfolio: BrandPortfolioItem[] = [
 export function getBrandPortfolioItem(slug: string) {
   return brandPortfolio.find((brand) => brand.slug === slug)
 }
-
