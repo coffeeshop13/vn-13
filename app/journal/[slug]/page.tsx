@@ -136,6 +136,23 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 </Link>
               </div>
             </div>
+
+            <div className="mt-16 pt-12 border-t" style={{ borderColor: '#e0ddd8' }}>
+              <h2 className="text-2xl font-light mb-6" style={{ color: '#0f0f0f' }}>
+                Кластеры VN13
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <Link href="/sravnenie-premialnykh-rynkov" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                  Премиальные рынки женской одежды
+                </Link>
+                <Link href="/kak-vn13-vybirayet-brendy" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                  Как VN13 выбирает бренды
+                </Link>
+                <Link href="/limited-series-dlya-butikov" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                  Лимитированные серии для бутиков
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
       </article>
