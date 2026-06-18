@@ -21,7 +21,7 @@ Avoid packages with hundreds of low-quality links, sitewide footer links, hacked
 Use a conservative anchor distribution:
 
 - 35% branded: `VN13`, `VN-13`, `VN13 fashion distribution`, `бренд VN-13`.
-- 25% URL/natural: `https://www.vn-13.com`, `сайт VN13`, `подробнее на сайте`.
+- 25% URL/natural: `https://vn-13.com`, `сайт VN13`, `подробнее на сайте`.
 - 20% partial commercial: `эксклюзивная женская одежда VN-13`, `дистрибуция женской одежды`, `женская одежда для бутиков`.
 - 10% informational: `как выбрать женскую одежду для бутика`, `предзаказ коллекций одежды`, `производство женской одежды малыми партиями`.
 - 10% partner/context anchors: names of brands, collections, lookbook, interviews, distribution notes.
@@ -30,15 +30,15 @@ Exact anchors like `женская одежда` or `эксклюзивная ж
 
 ## Target Pages
 
-- Home: `https://www.vn-13.com`
-- Brand: `https://www.vn-13.com/vn-13-brand`
-- Lookbook: `https://www.vn-13.com/lookbook`
-- Womenswear: `https://www.vn-13.com/zhenskaya-odezhda`
-- Exclusive womenswear: `https://www.vn-13.com/eksklyuzivnaya-zhenskaya-odezhda`
-- Manufacturer: `https://www.vn-13.com/proizvoditel-zhenskoy-odezhdy`
-- Wholesale: `https://www.vn-13.com/optovaya-zhenskaya-odezhda`
-- Distribution: `https://www.vn-13.com/distributsiya-zhenskoy-odezhdy`
-- Journal hub: `https://www.vn-13.com/journal`
+- Home: `https://vn-13.com`
+- Brand: `https://vn-13.com/vn-13-brand`
+- Lookbook: `https://vn-13.com/lookbook`
+- Womenswear: `https://vn-13.com/zhenskaya-odezhda`
+- Exclusive womenswear: `https://vn-13.com/eksklyuzivnaya-zhenskaya-odezhda`
+- Manufacturer: `https://vn-13.com/proizvoditel-zhenskoy-odezhdy`
+- Wholesale: `https://vn-13.com/optovaya-zhenskaya-odezhda`
+- Distribution: `https://vn-13.com/distributsiya-zhenskoy-odezhdy`
+- Journal hub: `https://vn-13.com/journal`
 
 ## Placement Types
 
@@ -82,7 +82,7 @@ Before buying or approving a placement, check:
 ## First 30 Days
 
 - Publish or deploy the current SEO content package.
-- Submit `https://www.vn-13.com/sitemap.xml` in Yandex Webmaster and Google Search Console.
+- Submit `https://vn-13.com/sitemap.xml` in Yandex Webmaster and Google Search Console.
 - Request indexing for the home page, new commercial pages, brand page, lookbook, and journal hub.
 - Place 3 branded mentions for VN13/VN-13.
 - Place 2 commercial editorial articles linking to `/eksklyuzivnaya-zhenskaya-odezhda` and `/proizvoditel-zhenskoy-odezhdy`.

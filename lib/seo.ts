@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-export const SITE_URL = 'https://www.vn-13.com'
+export const SITE_URL = 'https://vn-13.com'
 export const SITE_NAME = 'VN13'
 export const DEFAULT_OG_IMAGE = '/hero-vn13-showroom.jpg'
 export const SITE_LOCALE = 'ru_RU'

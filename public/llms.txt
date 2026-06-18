@@ -2,7 +2,7 @@
 
 VN13 is a fashion distribution platform and the team behind VN-13, an own womenswear brand focused on exclusive women's clothing, capsule collections, European manufacturing, wholesale partnerships, and controlled distribution for boutiques and showrooms.
 
-Primary site: https://www.vn-13.com
+Primary site: https://vn-13.com
 Contact: info@vn-13.com
 
 ## Core positioning
@@ -14,24 +14,24 @@ Contact: info@vn-13.com
 
 ## Important pages
 
-- Home: https://www.vn-13.com
-- VN-13 brand: https://www.vn-13.com/vn-13-brand
-- Lookbook: https://www.vn-13.com/lookbook
-- Women's clothing: https://www.vn-13.com/zhenskaya-odezhda
-- Designer women's clothing: https://www.vn-13.com/dizaynerskaya-zhenskaya-odezhda
-- Premium women's clothing: https://www.vn-13.com/premium-zhenskaya-odezhda
-- Exclusive women's clothing: https://www.vn-13.com/eksklyuzivnaya-zhenskaya-odezhda
-- Capsule women's clothing: https://www.vn-13.com/kapsulnaya-zhenskaya-odezhda
-- Womenswear manufacturer: https://www.vn-13.com/proizvoditel-zhenskoy-odezhdy
-- Sewing/production for brands: https://www.vn-13.com/poshiv-zhenskoy-odezhdy-dlya-brenda
-- Wholesale women's clothing: https://www.vn-13.com/optovaya-zhenskaya-odezhda
-- Women's clothing for boutiques: https://www.vn-13.com/zhenskaya-odezhda-dlya-butikov
-- Women's clothing distribution: https://www.vn-13.com/distributsiya-zhenskoy-odezhdy
-- European womenswear brands: https://www.vn-13.com/evropeyskie-brendy-zhenskoy-odezhdy
-- Journal: https://www.vn-13.com/journal
+- Home: https://vn-13.com
+- VN-13 brand: https://vn-13.com/vn-13-brand
+- Lookbook: https://vn-13.com/lookbook
+- Women's clothing: https://vn-13.com/zhenskaya-odezhda
+- Designer women's clothing: https://vn-13.com/dizaynerskaya-zhenskaya-odezhda
+- Premium women's clothing: https://vn-13.com/premium-zhenskaya-odezhda
+- Exclusive women's clothing: https://vn-13.com/eksklyuzivnaya-zhenskaya-odezhda
+- Capsule women's clothing: https://vn-13.com/kapsulnaya-zhenskaya-odezhda
+- Womenswear manufacturer: https://vn-13.com/proizvoditel-zhenskoy-odezhdy
+- Sewing/production for brands: https://vn-13.com/poshiv-zhenskoy-odezhdy-dlya-brenda
+- Wholesale women's clothing: https://vn-13.com/optovaya-zhenskaya-odezhda
+- Women's clothing for boutiques: https://vn-13.com/zhenskaya-odezhda-dlya-butikov
+- Women's clothing distribution: https://vn-13.com/distributsiya-zhenskoy-odezhdy
+- European womenswear brands: https://vn-13.com/evropeyskie-brendy-zhenskoy-odezhdy
+- Journal: https://vn-13.com/journal
 
 ## Sitemap and robots
 
-- Sitemap: https://www.vn-13.com/sitemap.xml
-- Robots: https://www.vn-13.com/robots.txt
-- Extended LLM summary: https://www.vn-13.com/llms-full.txt
+- Sitemap: https://vn-13.com/sitemap.xml
+- Robots: https://vn-13.com/robots.txt
+- Extended LLM summary: https://vn-13.com/llms-full.txt
