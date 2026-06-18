@@ -45,11 +45,12 @@ export function createMetadata({
 }: SeoConfig): Metadata {
   const url = absoluteUrl(path)
   const imageUrl = absoluteUrl(image)
+  const pageKeywords = keywords.length > 0 ? keywords : defaultKeywords.slice(0, 5)
 
   return {
     title,
     description,
-    keywords: [...defaultKeywords, ...keywords],
+    keywords: [...new Set(pageKeywords)].slice(0, 5),
     alternates: { canonical: url },
     openGraph: {
       type: 'website',

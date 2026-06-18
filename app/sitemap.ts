@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { journalArticles } from '@/lib/journal'
+import { extendedSeoPages } from '@/lib/extended-seo-pages'
 import { SITE_URL, absoluteUrl } from '@/lib/seo'
 
 export const dynamic = 'force-static'
@@ -46,15 +47,20 @@ const routes: SitemapRoute[] = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const extendedRoutes: SitemapRoute[] = extendedSeoPages.map((page) => ({
+    path: page.path,
+    priority: page.category ? 0.86 : 0.88,
+  }))
+
   const journalRoutes: SitemapRoute[] = journalArticles.map((article) => ({
     path: `/journal/${article.slug}`,
     priority: 0.75,
     lastModified: new Date(article.publishedAt),
   }))
 
-  return [...routes, ...journalRoutes].map((route) => ({
+  return [...routes, ...extendedRoutes, ...journalRoutes].map((route) => ({
     url: route.path === '/' ? SITE_URL : absoluteUrl(route.path),
-    lastModified: route.lastModified ?? new Date('2026-06-05'),
+    lastModified: route.lastModified ?? new Date('2026-06-18'),
     changeFrequency: route.priority >= 0.9 ? 'weekly' : 'monthly',
     priority: route.priority,
   }))
