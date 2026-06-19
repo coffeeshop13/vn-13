@@ -179,8 +179,8 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                   Связанные страницы VN13
                 </h3>
                 <div className="flex flex-wrap gap-3">
-                  <Link href="/zhenskaya-odezhda" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
-                    Женская одежда
+                  <Link href="/vn-13-brand" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                    Каталог VN-13
                   </Link>
                   <Link href="/premium-zhenskaya-odezhda" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
                     Премиальная женская одежда

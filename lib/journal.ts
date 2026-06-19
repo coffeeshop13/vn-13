@@ -259,8 +259,8 @@ export const journalArticles: JournalArticle[] = [
         ],
       },
     ],
-    ctaHref: '/zhenskaya-odezhda',
-    ctaText: 'Перейти к женской одежде VN-13',
+    ctaHref: '/vn-13-brand',
+    ctaText: 'Перейти к каталогу VN-13',
   },
   {
     slug: 'premium-rynki-zhenskoy-odezhdy-france-italy-japan-korea',

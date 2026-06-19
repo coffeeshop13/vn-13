@@ -122,8 +122,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 Связанные страницы
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <Link href="/zhenskaya-odezhda" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
-                  Женская одежда VN-13
+                <Link href="/vn-13-brand" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                  Каталог VN-13
                 </Link>
                 <Link href="/optovaya-zhenskaya-odezhda" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
                   Оптовая женская одежда

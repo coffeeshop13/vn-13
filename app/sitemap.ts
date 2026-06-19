@@ -13,7 +13,6 @@ type SitemapRoute = {
 
 const routes: SitemapRoute[] = [
   { path: '/', priority: 1 },
-  { path: '/zhenskaya-odezhda', priority: 0.95 },
   { path: '/dizaynerskaya-zhenskaya-odezhda', priority: 0.95 },
   { path: '/premium-zhenskaya-odezhda', priority: 0.95 },
   { path: '/eksklyuzivnaya-zhenskaya-odezhda', priority: 0.95 },
@@ -60,7 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...routes, ...extendedRoutes, ...journalRoutes].map((route) => ({
     url: route.path === '/' ? SITE_URL : absoluteUrl(route.path),
-    lastModified: route.lastModified ?? new Date('2026-06-18'),
+    lastModified: route.lastModified ?? new Date('2026-06-20'),
     changeFrequency: route.priority >= 0.9 ? 'weekly' : 'monthly',
     priority: route.priority,
   }))

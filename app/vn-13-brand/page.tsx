@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { extendedSeoPages } from '@/lib/extended-seo-pages'
 import { absoluteUrl, createMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createMetadata({
@@ -25,6 +26,29 @@ const values = [
   'Капсульный подход: вещи должны работать вместе, а не существовать отдельно.',
   'Ограниченные партии и контролируемая дистрибуция для сохранения ценности бренда.',
   'Производственная логика, основанная на европейских партнерах и строгом контроле качества.',
+]
+
+const faq = [
+  {
+    question: 'Какая женская одежда представлена в каталоге VN-13?',
+    answer:
+      'В каталоге представлены дизайнерские платья, жакеты, рубашки, брюки, жилеты и верхняя одежда свободного и архитектурного кроя.',
+  },
+  {
+    question: 'Как узнать наличие и размер модели?',
+    answer:
+      'Напишите команде VN13 в Telegram @vn13agency, приложив фотографию или название категории. Мы уточним актуальное наличие, размеры и состав.',
+  },
+  {
+    question: 'Коллекции VN-13 выпускаются ограниченными сериями?',
+    answer:
+      'Да. VN-13 делает акцент на небольших партиях и контролируемом ассортименте, поэтому отдельные модели и размеры могут быть доступны ограниченное время.',
+  },
+  {
+    question: 'Можно ли получить консультацию по подбору образа?',
+    answer:
+      'Да. Команда поможет подобрать совместимые модели, материалы и силуэты из доступной коллекции VN-13.',
+  },
 ]
 
 const catalogImages = [
@@ -169,6 +193,7 @@ const detailImages = [
 ]
 
 export default function VN13BrandPage() {
+  const categoryPages = extendedSeoPages.filter((page) => page.category)
   const allImages = [
     {
       src: '/brands/vn13-catalog/vn13-designer-womenswear-collection.webp',
@@ -198,11 +223,51 @@ export default function VN13BrandPage() {
     })),
   }
 
+  const catalogJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': `${absoluteUrl('/vn-13-brand')}#collection`,
+        url: absoluteUrl('/vn-13-brand'),
+        name: 'Каталог дизайнерской женской одежды VN-13',
+        description:
+          'Каталог собственного бренда VN-13: дизайнерские платья, жакеты, рубашки, брюки, жилеты и верхняя одежда ограниченных серий.',
+        inLanguage: 'ru',
+        mainEntity: {
+          '@type': 'ItemList',
+          numberOfItems: categoryPages.length,
+          itemListElement: categoryPages.map((page, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: page.cluster,
+            url: absoluteUrl(page.path),
+          })),
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: faq.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
+      },
+    ],
+  }
+
   return (
     <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(imageGalleryJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(catalogJsonLd) }}
       />
       <Header />
       <section className="relative min-h-screen flex items-end" style={{ backgroundColor: '#0f0f0f' }}>
@@ -304,6 +369,37 @@ export default function VN13BrandPage() {
         </div>
       </section>
 
+      <section className="border-t border-[#e0ddd8] bg-[#fafaf8]">
+        <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
+          <div className="max-w-3xl mb-12">
+            <p className="text-xs tracking-[0.2em] uppercase mb-3 text-[#b8935a]">
+              Категории
+            </p>
+            <h2 className="text-3xl md:text-5xl font-light mb-5 text-[#0f0f0f]">
+              Смотреть женскую одежду VN-13
+            </h2>
+            <p className="text-base md:text-lg leading-relaxed text-[#686868]">
+              Перейдите к нужной категории, чтобы посмотреть характерные силуэты, материалы и рекомендации по выбору. Актуальное наличие конкретных моделей уточняется у команды VN13.
+            </p>
+          </div>
+
+          <nav aria-label="Категории женской одежды VN-13" className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {categoryPages.map((page) => (
+              <Link
+                key={page.path}
+                href={page.path}
+                className="group flex min-h-32 items-end justify-between gap-6 border border-[#ded9d1] bg-white p-6 transition-colors hover:bg-[#f2ede5]"
+              >
+                <span className="text-xl font-light text-[#171717]">{page.cluster}</span>
+                <span aria-hidden="true" className="text-[#b8935a] transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </section>
+
       <section style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
           <div className="grid md:grid-cols-2 gap-16 mb-20">
@@ -346,6 +442,33 @@ export default function VN13BrandPage() {
               ))}
             </div>
           </div>
+
+          <div className="pt-20">
+            <h2 className="text-3xl md:text-4xl font-light mb-10" style={{ color: '#0f0f0f' }}>
+              Частые вопросы о коллекции VN-13
+            </h2>
+            <div className="grid md:grid-cols-2 gap-x-14 gap-y-10">
+              {faq.map((item) => (
+                <article key={item.question}>
+                  <h3 className="text-xl font-medium mb-3" style={{ color: '#0f0f0f' }}>
+                    {item.question}
+                  </h3>
+                  <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
+                    {item.answer}
+                  </p>
+                </article>
+              ))}
+            </div>
+            <div className="mt-14">
+              <a
+                href="https://t.me/vn13agency"
+                className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium tracking-wide"
+                style={{ backgroundColor: '#0f0f0f', color: '#fff' }}
+              >
+                Уточнить наличие в Telegram
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -355,8 +478,8 @@ export default function VN13BrandPage() {
             Связанные страницы
           </h2>
           <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/zhenskaya-odezhda" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
-              Женская одежда VN-13
+            <Link href="/платья" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
+              Дизайнерские платья
             </Link>
             <Link href="/lookbook" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
               Lookbook VN-13

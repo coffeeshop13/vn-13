@@ -12,8 +12,7 @@ export default function Header() {
 
   const navLinks = [
     { key: 'story', label: translations.navStory, href: '/#story' },
-    { key: 'womenswear', label: 'Женская одежда', href: '/zhenskaya-odezhda' },
-    { key: 'brand', label: 'VN-13', href: '/vn-13-brand' },
+    { key: 'brand', label: 'VN-13 / Каталог', href: '/vn-13-brand' },
     { key: 'journal', label: 'Журнал', href: '/journal' },
     { key: 'portfolio', label: translations.navPortfolio, href: '/#portfolio' },
     { key: 'sustainability', label: translations.navSustainability, href: '/sustainability' },

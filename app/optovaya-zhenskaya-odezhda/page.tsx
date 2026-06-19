@@ -70,7 +70,7 @@ export default function WholesaleWomensClothingPage() {
         },
       ]}
       relatedLinks={[
-        { href: '/zhenskaya-odezhda', label: 'Женская одежда VN-13' },
+        { href: '/vn-13-brand', label: 'Каталог женской одежды VN-13' },
         { href: '/preorder', label: 'Предзаказ коллекций' },
         { href: '/journal', label: 'Материалы для бутиков' },
       ]}

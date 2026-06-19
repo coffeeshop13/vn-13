@@ -18,9 +18,8 @@ export default function Footer() {
   ]
 
   const womenswearLinks = [
-    { label: 'Бренд VN-13', href: '/vn-13-brand' },
+    { label: 'Каталог VN-13', href: '/vn-13-brand' },
     { label: 'Lookbook', href: '/lookbook' },
-    { label: 'Женская одежда', href: '/zhenskaya-odezhda' },
     { label: 'Дизайнерская одежда', href: '/dizaynerskaya-zhenskaya-odezhda' },
     { label: 'Премиальная одежда', href: '/premium-zhenskaya-odezhda' },
     { label: 'Тихая роскошь', href: '/quiet-luxury' },

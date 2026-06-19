@@ -2,9 +2,9 @@ import Link from 'next/link'
 
 const links = [
   {
-    href: '/zhenskaya-odezhda',
-    title: 'Женская одежда VN-13',
-    text: 'Премиальные модели, лимитированные серии, европейские дизайнеры и работа с бутиками.',
+    href: '/vn-13-brand',
+    title: 'Каталог женской одежды VN-13',
+    text: 'Платья, жакеты, рубашки, брюки и верхняя одежда собственного бренда VN-13.',
   },
   {
     href: '/dizaynerskaya-zhenskaya-odezhda',
@@ -45,11 +45,6 @@ const links = [
     href: '/evropeyskie-brendy-zhenskoy-odezhdy',
     title: 'Европейские бренды',
     text: 'Дистрибуция европейских дизайнерских марок и подбор коллекций для розницы.',
-  },
-  {
-    href: '/vn-13-brand',
-    title: 'Собственный бренд VN-13',
-    text: 'Собственный бренд внутри платформы VN13: эстетика, принципы и производственный подход.',
   },
   {
     href: '/lookbook',
