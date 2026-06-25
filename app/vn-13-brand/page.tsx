@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import ProductImageGallery from '@/components/ProductImageGallery'
 import { extendedSeoPages } from '@/lib/extended-seo-pages'
 import { absoluteUrl, createMetadata } from '@/lib/seo'
 
@@ -316,24 +317,11 @@ export default function VN13BrandPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
-            {catalogImages.map((image) => (
-              <figure key={image.src}>
-                <div className="relative aspect-[2/3] overflow-hidden bg-[#efede8]">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover"
-                  />
-                </div>
-                <figcaption className="mt-4 text-sm leading-relaxed text-[#5f5f5f]">
-                  {image.caption}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          <ProductImageGallery
+            images={catalogImages}
+            gridClassName="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12"
+            imageSizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
         </div>
       </section>
 
@@ -348,24 +336,12 @@ export default function VN13BrandPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-10">
-            {detailImages.map((image) => (
-              <figure key={image.src}>
-                <div className="relative aspect-[2/3] overflow-hidden bg-[#efede8]">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                    className="object-cover"
-                  />
-                </div>
-                <figcaption className="mt-3 text-xs leading-relaxed text-[#686868]">
-                  {image.caption}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          <ProductImageGallery
+            images={detailImages}
+            gridClassName="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-10"
+            imageSizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
+            captionClassName="mt-3 text-xs leading-relaxed text-[#686868]"
+          />
         </div>
       </section>
 
