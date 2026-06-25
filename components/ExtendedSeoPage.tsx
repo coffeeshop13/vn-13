@@ -22,10 +22,24 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
         url: pageUrl,
         name: page.h1,
         description: page.description,
+        keywords: page.keywords.join(', '),
         inLanguage: 'ru',
         isPartOf: {
           '@id': `${absoluteUrl('/')}#website`,
         },
+        mainEntity: page.category
+          ? {
+              '@type': 'ItemList',
+              name: page.h1,
+              numberOfItems: brands.length,
+              itemListElement: brands.map((brand, index) => ({
+                '@type': 'ListItem',
+                position: index + 1,
+                url: absoluteUrl(`/brands/${brand.slug}`),
+                name: brand.name,
+              })),
+            }
+          : undefined,
       },
       {
         '@type': 'BreadcrumbList',
