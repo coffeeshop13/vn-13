@@ -154,14 +154,92 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     ],
     keywords: ['Shoto', 'итальянский premium fashion', 'бутик fashion', 'лимитированные серии'],
     officialWebsite: 'https://shoto.it/',
-    cardImage: '/brands/shoto.jpg',
+    cardImage: '/brands/shoto/659033416_18583709092038082_3052003841669754962_n.jpg',
     heroImage: {
-      src: '/brands/shoto.jpg',
-      alt: 'Shoto artisanal leather accessory image',
+      src: '/brands/shoto/659033416_18583709092038082_3052003841669754962_n.jpg',
+      alt: 'Shoto white sneaker with gum sole campaign image',
     },
     gallery: [
-      { src: '/brands/shoto.jpg', alt: 'Shoto artisanal leather detail' },
-      { src: '/brands/real/shoto-1.jpg', alt: 'Shoto leather boot close-up' },
+      {
+        src: '/brands/shoto/SnapInsta.to_541539407_18531228808038082_6066990912907420491_n.jpg',
+        alt: 'Shoto soft leather shoulder bag in pale yellow',
+      },
+      {
+        src: '/brands/shoto/615076494_18558357934038082_6389260614900632214_n.jpg',
+        alt: 'Shoto distressed dark leather ankle boot close-up',
+      },
+      {
+        src: '/brands/shoto/616232137_18559012153038082_3633954830721466232_n.jpg',
+        alt: 'Shoto textured brown hiking boot with lug sole',
+      },
+      {
+        src: '/brands/shoto/669718219_18585084271038082_837904584658068667_n.jpg',
+        alt: 'Shoto tan square-toe shoe worn in a styling shot',
+      },
+      {
+        src: '/brands/shoto/670985693_18588234931038082_7378609284391052632_n.jpg',
+        alt: 'Shoto black square-toe flats with wide trousers',
+      },
+      {
+        src: '/brands/shoto/712783413_18600317155038082_3330356221178560842_n.jpg',
+        alt: 'Shoto woven dark slip-ons styled with light denim',
+      },
+      {
+        src: '/brands/shoto/SnapInsta.to_569048135_18542711938038082_7995947979296624523_n.jpg',
+        alt: 'Shoto black lace-up boot photographed on wet metal steps',
+      },
+      {
+        src: '/brands/shoto/586693224_18552939847038082_1240825861893496768_n.jpg',
+        alt: 'Shoto white low-top sneaker on a styled tabletop',
+      },
+      {
+        src: '/brands/shoto/703461601_18596272012038082_6547306615233869090_n.jpg',
+        alt: 'Shoto brown leather ballet flats placed on grass',
+      },
+      {
+        src: '/brands/shoto/688366447_18593159884038082_7356684868757243262_n.jpg',
+        alt: 'Shoto cream sneaker with studded outsole detail',
+      },
+      {
+        src: '/brands/shoto/609529989_18556325866038082_3864551140701178461_n.jpg',
+        alt: 'Shoto burnished brown zip boot close-up',
+      },
+      {
+        src: '/brands/shoto/670956103_18595146640038082_1908520894200912985_n.jpg',
+        alt: 'Shoto white sneaker leaning against a textured wall',
+      },
+      {
+        src: '/brands/shoto/659033416_18583709092038082_3052003841669754962_n.jpg',
+        alt: 'Shoto white sneaker with gum sole campaign image',
+      },
+      {
+        src: '/brands/shoto/626301927_18565931677038082_7612540125183476155_n.jpg',
+        alt: 'Shoto black low heel leather shoe on a red floor',
+      },
+      {
+        src: '/brands/shoto/655985593_18579610105038082_7749392370293070382_n.jpg',
+        alt: 'Shoto brown derby shoes styled outdoors near a tree',
+      },
+      {
+        src: '/brands/shoto/651236470_18578166544038082_7311788769899891371_n.jpg',
+        alt: 'Shoto tan derby shoe close-up on pine needles',
+      },
+      {
+        src: '/brands/shoto/669758350_18586356370038082_1367804636948255350_n.jpg',
+        alt: 'Shoto cream sneaker with orange studded outsole detail',
+      },
+      {
+        src: '/brands/shoto/587287039_18551237389038082_4095073901099379027_n.jpg',
+        alt: 'Shoto taupe suede Chelsea boot on linen fabric',
+      },
+      {
+        src: '/brands/shoto/582106099_18554923330038082_3366956147583184308_n.jpg',
+        alt: 'Shoto black polished lace-less shoe with distressed toe',
+      },
+      {
+        src: '/brands/shoto/625054647_18564637405038082_3567024032595400609_n.jpg',
+        alt: 'Shoto black lace-less shoe photographed on grass',
+      },
     ],
   },
   {
