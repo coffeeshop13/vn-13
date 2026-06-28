@@ -38,8 +38,8 @@ export default function Footer() {
 
   return (
     <footer style={{ backgroundColor: '#0f0f0f', borderTop: '1px solid #1f1f1f' }}>
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-14">
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-10">
           <div className="col-span-2 md:col-span-1">
             <p className="text-xl font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: '#fff' }}>VN13</p>
             <p className="text-sm leading-relaxed" style={{ color: '#6b6b6b' }}>
@@ -104,7 +104,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8" style={{ borderTop: '1px solid #1f1f1f' }}>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-6" style={{ borderTop: '1px solid #1f1f1f' }}>
           <p className="text-xs" style={{ color: '#555' }}>&copy; {translations.footerCopyright}</p>
           <div className="flex gap-6">
             <a href="#" className="text-xs transition-colors duration-200" style={{ color: '#555' }}

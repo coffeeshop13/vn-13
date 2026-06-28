@@ -28,16 +28,16 @@ export default function VN13Showcase() {
 
   return (
     <section style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
-      <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
-        <div className="grid lg:grid-cols-[1.05fr_1.4fr] gap-10 lg:gap-14 items-end">
+      <div className="max-w-7xl mx-auto px-6 py-14 md:py-18">
+        <div className="grid lg:grid-cols-[0.9fr_1.45fr] gap-8 lg:gap-10 items-end">
           <div className="max-w-xl">
             <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>
               {translations.vn13ShowcaseEyebrow}
             </p>
-            <h2 className="text-3xl md:text-4xl font-light mb-5 text-balance" style={{ color: '#0f0f0f' }}>
+            <h2 className="text-3xl md:text-4xl font-light mb-4 text-balance" style={{ color: '#0f0f0f' }}>
               {translations.vn13ShowcaseTitle}
             </h2>
-            <p className="text-base leading-relaxed mb-8" style={{ color: '#6b6b6b' }}>
+            <p className="text-base leading-relaxed mb-6" style={{ color: '#6b6b6b' }}>
               {translations.vn13ShowcaseDescription}
             </p>
             <Link
@@ -49,7 +49,7 @@ export default function VN13Showcase() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:gap-5">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <Link href="/vn-13-brand" className="group col-span-2 block">
               <div className="relative overflow-hidden bg-[#f6f2ec]" style={{ aspectRatio: '16 / 9' }}>
                 <Image

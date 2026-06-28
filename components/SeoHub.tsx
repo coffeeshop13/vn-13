@@ -91,12 +91,12 @@ const links = [
 export default function SeoHub() {
   return (
     <section style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
-      <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
-        <div className="max-w-3xl mb-12">
+      <div className="max-w-7xl mx-auto px-6 py-14 md:py-18">
+        <div className="max-w-3xl mb-8">
           <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>
             VN-13 Womenswear
           </p>
-          <h2 className="text-3xl md:text-4xl font-light mb-6 text-balance" style={{ color: '#0f0f0f' }}>
+          <h2 className="text-3xl md:text-4xl font-light mb-4 text-balance" style={{ color: '#0f0f0f' }}>
             Премиальная женская одежда, лимитированные серии и работа с партнерами
           </h2>
           <p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
@@ -104,15 +104,15 @@ export default function SeoHub() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="block p-6 transition-colors duration-200"
+              className="block p-5 transition-colors duration-200"
               style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}
             >
-              <h3 className="text-xl font-medium mb-3" style={{ color: '#0f0f0f' }}>
+              <h3 className="text-lg font-medium mb-2" style={{ color: '#0f0f0f' }}>
                 {link.title}
               </h3>
               <p className="text-sm leading-relaxed" style={{ color: '#6b6b6b' }}>
