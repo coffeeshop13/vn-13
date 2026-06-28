@@ -3,6 +3,8 @@ export type JournalArticle = {
   title: string
   description: string
   category: string
+  imageSrc: string
+  imageAlt: string
   publishedAt: string
   readingTime: string
   keywords: string[]
@@ -22,6 +24,8 @@ export const journalArticles: JournalArticle[] = [
     description:
       'Практический гид для бутиков: как отбирать эксклюзивную женскую одежду, оценивать коллекции, тираж, материалы и коммерческий риск закупки.',
     category: 'Байинг',
+    imageSrc: '/brands/vn13-catalog/vn13-black-jacket-white-layered-dress.webp',
+    imageAlt: 'Черный жакет VN-13 и белое многослойное платье на рейле',
     publishedAt: '2026-05-26',
     readingTime: '6 минут',
     keywords: [
@@ -63,6 +67,8 @@ export const journalArticles: JournalArticle[] = [
     description:
       'Как бутику закупать женскую одежду оптом: предзаказ, капсульный ассортимент, размеры, повторные поставки и работа с дистрибьютором.',
     category: 'Опт',
+    imageSrc: '/brands/vn13-catalog/vn13-designer-womenswear-collection.webp',
+    imageAlt: 'Ассортимент дизайнерской женской одежды VN-13 на рейле',
     publishedAt: '2026-05-26',
     readingTime: '7 минут',
     keywords: [
@@ -104,6 +110,8 @@ export const journalArticles: JournalArticle[] = [
     description:
       'Что важно знать при производстве женской одежды малыми партиями: дизайн, ткани, лекала, образцы, контроль качества и экономика капсулы.',
     category: 'Производство',
+    imageSrc: '/brands/vn13-catalog/vn13-black-jacket-natural-buttons-detail.webp',
+    imageAlt: 'Деталь черного жакета VN-13 с натуральными пуговицами',
     publishedAt: '2026-05-26',
     readingTime: '8 минут',
     keywords: [
@@ -145,6 +153,8 @@ export const journalArticles: JournalArticle[] = [
     description:
       'Как работает предзаказ коллекций женской одежды для бутиков: сроки, выбор моделей, размеры, поставка и преимущества для розницы.',
     category: 'Предзаказ',
+    imageSrc: '/brands/manuelle-lookbook/lookbook-08.jpg',
+    imageAlt: 'Lookbook-образ Manuelle Guibal для предзаказа коллекции',
     publishedAt: '2026-05-26',
     readingTime: '6 минут',
     keywords: [
@@ -186,6 +196,8 @@ export const journalArticles: JournalArticle[] = [
     description:
       'Как бутику выбирать европейские бренды женской одежды: качество, позиционирование, производство, дистрибуция и долгосрочная работа.',
     category: 'Дистрибуция',
+    imageSrc: '/brands/hannoh-lookbook/hannoh-03.jpg',
+    imageAlt: 'Европейская дизайнерская женская одежда в спокойной эстетике',
     publishedAt: '2026-05-26',
     readingTime: '7 минут',
     keywords: [
@@ -227,6 +239,8 @@ export const journalArticles: JournalArticle[] = [
     description:
       'Как формируется капсульная коллекция женской одежды: категории, цвета, ткани, сезонность, оптовый заказ и производство.',
     category: 'Коллекция',
+    imageSrc: '/brands/vn13-catalog/vn13-blue-floral-designer-dress.webp',
+    imageAlt: 'Синее цветочное платье VN-13 как часть капсульной коллекции',
     publishedAt: '2026-05-26',
     readingTime: '6 минут',
     keywords: [
@@ -268,6 +282,8 @@ export const journalArticles: JournalArticle[] = [
     description:
       'Разбираем, чем отличаются ключевые рынки премиальной женской одежды и как VN13 использует эту разницу при подборе брендов.',
     category: 'Стратегия',
+    imageSrc: '/brands/aequamente-lookbook/aequamente-04.jpg',
+    imageAlt: 'Европейский lookbook-образ для сравнения премиальных рынков',
     publishedAt: '2026-06-07',
     readingTime: '6 минут',
     keywords: [
@@ -303,6 +319,8 @@ export const journalArticles: JournalArticle[] = [
     description:
       'Поясняем, почему одни бренды попадают в портфель VN13, а другие нет: эстетика, коммерческая логика, роль в ассортименте и дистрибуция.',
     category: 'Портфель',
+    imageSrc: '/brands/real/manuelle-guibal-3.webp',
+    imageAlt: 'Дизайнерская вещь Manuelle Guibal из портфеля VN13',
     publishedAt: '2026-06-07',
     readingTime: '5 минут',
     keywords: ['как VN13 выбирает бренды', 'премиальные бренды', 'дистрибуция женской одежды'],
@@ -333,6 +351,8 @@ export const journalArticles: JournalArticle[] = [
     description:
       'Как limited series помогает бутикам снижать риск склада, удерживать ценность и продавать премиальную женскую одежду точнее.',
     category: 'Розница',
+    imageSrc: '/brands/vn13-catalog/vn13-black-textured-designer-coat.webp',
+    imageAlt: 'Черное фактурное пальто VN-13 из лимитированной серии',
     publishedAt: '2026-06-07',
     readingTime: '5 минут',
     keywords: ['лимитированные серии', 'бутики', 'оптовая женская одежда', 'предзаказ'],

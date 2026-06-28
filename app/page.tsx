@@ -16,8 +16,8 @@ export default function Home() {
       <Stats />
       <VN13Showcase />
       <SeoHub />
-      <CategorySeoLinks />
       <PortfolioGrid />
+      <CategorySeoLinks />
       <ContactForm />
       <Footer />
     </main>

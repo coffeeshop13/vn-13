@@ -29,7 +29,7 @@ export default function VN13Showcase() {
   return (
     <section style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
       <div className="max-w-7xl mx-auto px-6 py-14 md:py-18">
-        <div className="grid lg:grid-cols-[0.9fr_1.45fr] gap-8 lg:gap-10 items-end">
+        <div className="grid lg:grid-cols-[0.9fr_1.45fr] gap-8 lg:gap-10 items-start">
           <div className="max-w-xl">
             <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>
               {translations.vn13ShowcaseEyebrow}

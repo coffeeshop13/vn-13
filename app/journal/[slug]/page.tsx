@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Header from '@/components/Header'
@@ -57,6 +58,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       url: absoluteUrl('/'),
     },
     mainEntityOfPage: url,
+    image: absoluteUrl(article.imageSrc),
     inLanguage: 'ru',
     keywords: article.keywords,
     about: [
@@ -76,26 +78,39 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <Header />
 
       <article>
-        <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-6" style={{ backgroundColor: '#fafaf8' }}>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>
-              {article.category} · {article.readingTime}
-            </p>
-            <h1 className="text-5xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>
-              {article.title}
-            </h1>
-            <p className="text-lg md:text-xl max-w-2xl leading-relaxed" style={{ color: '#6b6b6b' }}>
-              {article.intro}
-            </p>
+        <section className="pt-28 pb-12 md:pt-40 md:pb-16 px-6" style={{ backgroundColor: '#fafaf8' }}>
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-end">
+            <div>
+              <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>
+                {article.category} · {article.readingTime}
+              </p>
+              <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>
+                {article.title}
+              </h1>
+              <p className="text-base md:text-lg max-w-2xl leading-relaxed" style={{ color: '#6b6b6b' }}>
+                {article.intro}
+              </p>
+            </div>
+
+            <div className="relative overflow-hidden bg-[#f6f2ec] min-h-[360px] md:min-h-[520px]">
+              <Image
+                src={article.imageSrc}
+                alt={article.imageAlt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 46vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </section>
 
         <section style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
-          <div className="max-w-4xl mx-auto px-6 py-20 md:py-28">
-            <div className="space-y-14">
+          <div className="max-w-4xl mx-auto px-6 py-14 md:py-18">
+            <div className="space-y-12">
               {article.sections.map((section) => (
                 <section key={section.title}>
-                  <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: '#0f0f0f' }}>
+                  <h2 className="text-3xl md:text-4xl font-light mb-5 text-balance" style={{ color: '#0f0f0f' }}>
                     {section.title}
                   </h2>
                   {section.body.map((paragraph) => (
