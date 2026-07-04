@@ -23,8 +23,13 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     return {}
   }
 
+  const title =
+    article.slug === 'premium-rynki-zhenskoy-odezhdy-france-italy-japan-korea'
+      ? 'Премиальные рынки женской одежды | VN13'
+      : `${article.title} | Журнал VN13`
+
   return createMetadata({
-    title: article.title,
+    title,
     description: article.description,
     path: `/journal/${article.slug}`,
     keywords: article.keywords,

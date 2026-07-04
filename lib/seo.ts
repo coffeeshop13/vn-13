@@ -33,7 +33,14 @@ const defaultKeywords = [
 ]
 
 export function absoluteUrl(path = '/') {
-  return new URL(path, SITE_URL).toString()
+  const url = new URL(path, SITE_URL)
+  const hasExtension = /\.[a-z0-9]+$/i.test(url.pathname)
+
+  if (!hasExtension && !url.pathname.endsWith('/')) {
+    url.pathname = `${url.pathname}/`
+  }
+
+  return url.toString()
 }
 
 export function createMetadata({

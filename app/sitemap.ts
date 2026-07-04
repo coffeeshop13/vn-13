@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { journalArticles } from '@/lib/journal'
 import { extendedSeoPages } from '@/lib/extended-seo-pages'
-import { SITE_URL, absoluteUrl } from '@/lib/seo'
+import { absoluteUrl } from '@/lib/seo'
 
 export const dynamic = 'force-static'
 
@@ -55,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   return [...routes, ...extendedRoutes, ...journalRoutes].map((route) => ({
-    url: route.path === '/' ? SITE_URL : absoluteUrl(route.path),
+    url: absoluteUrl(route.path),
     lastModified: route.lastModified ?? new Date('2026-06-25'),
   }))
 }
