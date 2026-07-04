@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next'
-import Script from 'next/script'
 import { LanguageProvider } from '@/lib/context/LanguageContext'
 import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL, createMetadata, organizationJsonLd } from '@/lib/seo'
+import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -81,11 +81,17 @@ export default function RootLayout({
       trackLinks:true
     });
   `
-
   return (
     <html lang="ru" suppressHydrationWarning data-scroll-behavior="smooth">
       <body className="antialiased">
         <Script id="yandex-metrika" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: yandexMetrikaInit }} />
+        <Script
+          id="ahrefs-analytics"
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="mDPfeqj8ml95p5yYpS/6bQ"
+          strategy="beforeInteractive"
+          async
+        />
         <noscript>
           <div>
             <img
