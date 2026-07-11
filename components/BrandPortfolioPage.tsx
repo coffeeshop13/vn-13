@@ -1,5 +1,6 @@
 'use client'
 
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import Image from 'next/image'
 import Script from 'next/script'
 import Link from 'next/link'
@@ -16,6 +17,12 @@ type BrandPortfolioPageProps = {
 export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
   const gallery = brand.gallery
   const hasEditorialGrid = gallery.length > 1
+  const lightboxImages = useMemo(
+    () => [brand.heroImage, ...gallery].filter((image, index, images) => images.findIndex((item) => item.src === image.src) === index),
+    [brand.heroImage, gallery]
+  )
+  const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null)
+  const activeImage = activeImageIndex === null ? null : lightboxImages[activeImageIndex]
   const pageUrl = absoluteUrl(`/brands/${brand.slug}`)
   const brandJsonLd = {
     '@context': 'https://schema.org',
@@ -36,6 +43,38 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
         }
       : {}),
   }
+  const closeLightbox = useCallback(() => setActiveImageIndex(null), [])
+  const showPreviousImage = useCallback(() => {
+    setActiveImageIndex((current) => (current === null ? current : (current - 1 + lightboxImages.length) % lightboxImages.length))
+  }, [lightboxImages.length])
+  const showNextImage = useCallback(() => {
+    setActiveImageIndex((current) => (current === null ? current : (current + 1) % lightboxImages.length))
+  }, [lightboxImages.length])
+  const openLightbox = useCallback(
+    (src: string) => {
+      const imageIndex = lightboxImages.findIndex((image) => image.src === src)
+      if (imageIndex >= 0) setActiveImageIndex(imageIndex)
+    },
+    [lightboxImages]
+  )
+
+  useEffect(() => {
+    if (activeImageIndex === null) return
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') closeLightbox()
+      if (event.key === 'ArrowLeft') showPreviousImage()
+      if (event.key === 'ArrowRight') showNextImage()
+    }
+
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [activeImageIndex, closeLightbox, showNextImage, showPreviousImage])
 
   return (
     <main>
@@ -97,16 +136,24 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
               ) : null}
             </div>
 
-            <div className="relative overflow-hidden rounded-[28px] min-h-[420px]">
+            <button
+              type="button"
+              onClick={() => openLightbox(brand.heroImage.src)}
+              className="group relative block overflow-hidden rounded-[28px] min-h-[420px] w-full text-left"
+              aria-label={`Открыть увеличенное фото: ${brand.heroImage.alt}`}
+            >
               <Image
                 src={brand.heroImage.src}
                 alt={brand.heroImage.alt}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover"
+                className="object-cover transition duration-500 group-hover:scale-[1.02]"
               />
-            </div>
+              <span className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/55 text-2xl leading-none text-white transition group-hover:bg-white group-hover:text-black" aria-hidden="true">
+                +
+              </span>
+            </button>
           </div>
         </div>
       </section>
@@ -220,31 +267,45 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
             {hasEditorialGrid ? (
               <div className="grid lg:grid-cols-3 gap-6">
                 {gallery.map((image, index) => (
-                  <div
+                  <button
                     key={`${image.src}-${index}`}
+                    type="button"
+                    onClick={() => openLightbox(image.src)}
                     className={index === 0 ? 'lg:col-span-2 relative overflow-hidden rounded-[28px] min-h-[640px]' : 'relative overflow-hidden rounded-[28px] min-h-[420px]'}
+                    aria-label={`Открыть увеличенное фото: ${image.alt}`}
                   >
                     <Image
                       src={image.src}
                       alt={image.alt}
                       fill
                       sizes={index === 0 ? '(max-width: 1024px) 100vw, 60vw' : '(max-width: 1024px) 100vw, 30vw'}
-                      className="object-cover"
+                      className="object-cover transition duration-500 hover:scale-[1.02]"
                     />
-                  </div>
+                    <span className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/55 text-2xl leading-none text-white transition hover:bg-white hover:text-black" aria-hidden="true">
+                      +
+                    </span>
+                  </button>
                 ))}
               </div>
             ) : (
               <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
-                <div className="relative overflow-hidden rounded-[28px] min-h-[680px]">
+                <button
+                  type="button"
+                  onClick={() => openLightbox(gallery[0].src)}
+                  className="group relative block overflow-hidden rounded-[28px] min-h-[680px] w-full text-left"
+                  aria-label={`Открыть увеличенное фото: ${gallery[0].alt}`}
+                >
                   <Image
                     src={gallery[0].src}
                     alt={gallery[0].alt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 58vw"
-                    className="object-cover"
+                    className="object-cover transition duration-500 group-hover:scale-[1.02]"
                   />
-                </div>
+                  <span className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/55 text-2xl leading-none text-white transition group-hover:bg-white group-hover:text-black" aria-hidden="true">
+                    +
+                  </span>
+                </button>
                 <div className="rounded-[28px] p-8 md:p-10" style={{ backgroundColor: '#f7f4ee' }}>
                   <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>
                     Отбор VN13
@@ -272,6 +333,63 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
           </div>
         </div>
       </section>
+
+      {activeImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 px-4 py-6 md:px-8"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Увеличенное фото VN13"
+          onClick={closeLightbox}
+        >
+          <button
+            type="button"
+            onClick={closeLightbox}
+            className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-black/45 text-2xl leading-none text-white transition hover:bg-white hover:text-black md:right-8 md:top-8"
+            aria-label="Закрыть увеличенное фото"
+          >
+            ×
+          </button>
+
+          {lightboxImages.length > 1 && (
+            <>
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation()
+                  showPreviousImage()
+                }}
+                className="absolute left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/45 text-3xl leading-none text-white transition hover:bg-white hover:text-black md:left-8"
+                aria-label="Предыдущее фото"
+              >
+                ‹
+              </button>
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation()
+                  showNextImage()
+                }}
+                className="absolute right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/45 text-3xl leading-none text-white transition hover:bg-white hover:text-black md:right-8"
+                aria-label="Следующее фото"
+              >
+                ›
+              </button>
+            </>
+          )}
+
+          <div className="relative h-full w-full max-w-6xl" onClick={(event) => event.stopPropagation()}>
+            <Image
+              src={activeImage.src}
+              alt={activeImage.alt}
+              fill
+              sizes="100vw"
+              className="object-contain"
+              priority
+            />
+          </div>
+        </div>
+      )}
 
       <Footer />
     </main>

@@ -15,10 +15,10 @@ export default function Home() {
       <Hero />
       <Stats />
       <VN13Showcase />
-      <SeoHub />
       <PortfolioGrid />
       <CategorySeoLinks />
       <ContactForm />
+      <SeoHub />
       <Footer />
     </main>
   )

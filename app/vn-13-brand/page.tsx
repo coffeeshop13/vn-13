@@ -319,8 +319,9 @@ export default function VN13BrandPage() {
 
           <ProductImageGallery
             images={catalogImages}
-            gridClassName="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12"
+            gridClassName="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-0 md:gap-x-6 gap-y-12"
             imageSizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            mobileFullBleed
           />
         </div>
       </section>
@@ -338,41 +339,11 @@ export default function VN13BrandPage() {
 
           <ProductImageGallery
             images={detailImages}
-            gridClassName="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-10"
+            gridClassName="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-0 md:gap-x-4 gap-y-10"
             imageSizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
             captionClassName="mt-3 text-xs leading-relaxed text-[#686868]"
+            mobileFullBleed
           />
-        </div>
-      </section>
-
-      <section className="border-t border-[#e0ddd8] bg-[#fafaf8]">
-        <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
-          <div className="max-w-3xl mb-12">
-            <p className="text-xs tracking-[0.2em] uppercase mb-3 text-[#b8935a]">
-              Категории
-            </p>
-            <h2 className="text-3xl md:text-5xl font-light mb-5 text-[#0f0f0f]">
-              Смотреть женскую одежду VN-13
-            </h2>
-            <p className="text-base md:text-lg leading-relaxed text-[#686868]">
-              Перейдите к нужной категории, чтобы посмотреть характерные силуэты, материалы и рекомендации по выбору. Актуальное наличие конкретных моделей уточняется у команды VN13.
-            </p>
-          </div>
-
-          <nav aria-label="Категории женской одежды VN-13" className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {categoryPages.map((page) => (
-              <Link
-                key={page.path}
-                href={page.path}
-                className="group flex min-h-32 items-end justify-between gap-6 border border-[#ded9d1] bg-white p-6 transition-colors hover:bg-[#f2ede5]"
-              >
-                <span className="text-xl font-light text-[#171717]">{page.cluster}</span>
-                <span aria-hidden="true" className="text-[#b8935a] transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </Link>
-            ))}
-          </nav>
         </div>
       </section>
 
@@ -464,6 +435,37 @@ export default function VN13BrandPage() {
               Производство VN-13
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-[#e0ddd8] bg-[#fafaf8]">
+        <div className="max-w-7xl mx-auto px-6 py-8 md:py-20">
+          <div className="max-w-3xl mb-6 md:mb-12">
+            <p className="text-[10px] md:text-xs tracking-[0.2em] uppercase mb-2 md:mb-3 text-[#b8935a]">
+              Категории
+            </p>
+            <h2 className="text-2xl md:text-5xl font-light mb-3 md:mb-5 text-[#0f0f0f]">
+              Смотреть женскую одежду VN-13
+            </h2>
+            <p className="text-sm md:text-lg leading-relaxed text-[#686868]">
+              Перейдите к нужной категории, чтобы посмотреть характерные силуэты, материалы и рекомендации по выбору. Актуальное наличие конкретных моделей уточняется у команды VN13.
+            </p>
+          </div>
+
+          <nav aria-label="Категории женской одежды VN-13" className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4">
+            {categoryPages.map((page) => (
+              <Link
+                key={page.path}
+                href={page.path}
+                className="group flex min-h-20 md:min-h-32 items-end justify-between gap-4 md:gap-6 border border-[#ded9d1] bg-white p-4 md:p-6 transition-colors hover:bg-[#f2ede5]"
+              >
+                <span className="text-base md:text-xl font-light text-[#171717]">{page.cluster}</span>
+                <span aria-hidden="true" className="text-[#b8935a] transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </Link>
+            ))}
+          </nav>
         </div>
       </section>
       <Footer />

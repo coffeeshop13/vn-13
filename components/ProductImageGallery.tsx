@@ -15,6 +15,7 @@ type ProductImageGalleryProps = {
   gridClassName?: string
   imageSizes?: string
   captionClassName?: string
+  mobileFullBleed?: boolean
 }
 
 export default function ProductImageGallery({
@@ -22,6 +23,7 @@ export default function ProductImageGallery({
   gridClassName = 'grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6',
   imageSizes = '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw',
   captionClassName = 'mt-4 text-sm leading-relaxed text-[#5f5f5f]',
+  mobileFullBleed = false,
 }: ProductImageGalleryProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const activeImage = activeIndex === null ? null : images[activeIndex]
@@ -55,7 +57,7 @@ export default function ProductImageGallery({
 
   return (
     <>
-      <div className={gridClassName}>
+      <div className={`${gridClassName} ${mobileFullBleed ? '-mx-6 sm:mx-0' : ''}`}>
         {images.map((image, index) => (
           <figure key={image.src}>
             <button
@@ -78,7 +80,7 @@ export default function ProductImageGallery({
               </span>
             </button>
             {(image.caption || image.title) && (
-              <figcaption className={captionClassName}>
+              <figcaption className={`${captionClassName} ${mobileFullBleed ? 'px-6 sm:px-0' : ''}`}>
                 {image.caption ?? image.title}
               </figcaption>
             )}

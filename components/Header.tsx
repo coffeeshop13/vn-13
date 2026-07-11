@@ -14,6 +14,7 @@ export default function Header() {
     { key: 'story', label: translations.navStory, href: '/#story' },
     { key: 'brand', label: 'VN-13 / Каталог', href: '/vn-13-brand' },
     { key: 'journal', label: 'Журнал', href: '/journal' },
+    { key: 'brands', label: translations.navBrands, href: '/brands' },
     { key: 'portfolio', label: translations.navPortfolio, href: '/#portfolio' },
     { key: 'sustainability', label: translations.navSustainability, href: '/sustainability' },
     { key: 'preorder', label: translations.navPreorder, href: '/preorder' },

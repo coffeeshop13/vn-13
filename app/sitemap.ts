@@ -32,6 +32,7 @@ const routes: SitemapRoute[] = [
   { path: '/sustainability' },
   { path: '/preorder' },
   { path: '/manufacturing' },
+  { path: '/brands' },
   { path: '/brands/manuelle-guibal' },
   { path: '/brands/hannoh-wessel' },
   { path: '/brands/moyuru' },
