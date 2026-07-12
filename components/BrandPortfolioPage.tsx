@@ -88,7 +88,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
       <section className="border-b" style={{ borderColor: '#e0ddd8', backgroundColor: '#f8f5ef' }}>
         <div className="max-w-7xl mx-auto px-4 py-8 md:px-6 md:py-16">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-6 md:gap-12 items-center">
-            <div>
+            <div className="order-2 lg:order-1">
               <p className="text-[10px] md:text-xs tracking-[0.22em] uppercase mb-2 md:mb-4" style={{ color: '#b8935a' }}>
                 Brand portfolio
               </p>
@@ -139,7 +139,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
             <button
               type="button"
               onClick={() => openLightbox(brand.heroImage.src)}
-              className="group relative block overflow-hidden rounded-[24px] md:rounded-[28px] min-h-[280px] md:min-h-[420px] w-full text-left"
+              className="group relative order-1 lg:order-2 block overflow-hidden rounded-[24px] md:rounded-[28px] min-h-[280px] md:min-h-[420px] w-full bg-white text-left"
               aria-label={`Открыть увеличенное фото: ${brand.heroImage.alt}`}
             >
               <Image
@@ -148,7 +148,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover transition duration-500 group-hover:scale-[1.02]"
+                className="object-contain transition duration-500 group-hover:scale-[1.02]"
               />
               <span className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/55 text-2xl leading-none text-white transition group-hover:bg-white group-hover:text-black" aria-hidden="true">
                 +
@@ -160,7 +160,8 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
 
       <section style={{ backgroundColor: '#fff' }}>
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
-          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 md:gap-16 items-start">
+          <div className="flex flex-col">
+          <div className="order-2 md:order-1 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 md:gap-16 items-start">
             <div>
               <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>
                 Почему бренд работает
@@ -249,7 +250,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
             </div>
           </div>
 
-          <div className="mt-20 pt-16 border-t" style={{ borderColor: '#e0ddd8' }}>
+          <div className="order-1 md:order-2 mt-20 pt-16 border-t" style={{ borderColor: '#e0ddd8' }}>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
               <div>
                 <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>
@@ -279,7 +280,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                       alt={image.alt}
                       fill
                       sizes={index === 0 ? '(max-width: 1024px) 100vw, 60vw' : '(max-width: 1024px) 100vw, 30vw'}
-                      className="object-cover transition duration-500 hover:scale-[1.02]"
+                      className="object-contain bg-[#f8f5ef] transition duration-500 hover:scale-[1.02]"
                     />
                     <span className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/55 text-2xl leading-none text-white transition hover:bg-white hover:text-black" aria-hidden="true">
                       +
@@ -300,7 +301,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                     alt={gallery[0].alt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 58vw"
-                    className="object-cover transition duration-500 group-hover:scale-[1.02]"
+                    className="object-contain bg-[#f8f5ef] transition duration-500 group-hover:scale-[1.02]"
                   />
                   <span className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/55 text-2xl leading-none text-white transition group-hover:bg-white group-hover:text-black" aria-hidden="true">
                     +
@@ -320,6 +321,8 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                 </div>
               </div>
             )}
+          </div>
+
           </div>
 
           <div className="mt-20 pt-16 border-t text-center" style={{ borderColor: '#e0ddd8' }}>
