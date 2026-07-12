@@ -297,13 +297,13 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     ],
     keywords: ['Aequamente', 'итальянская женская одежда', 'премиальная одежда', 'бутики'],
     officialWebsite: 'https://www.aequamente.it/',
-    cardImage: '/brands/aequamente-lookbook/aequamente-main.png',
+    cardImage: '/brands/aequamente-lookbook/aequamente-main.jpg',
     heroImage: {
-      src: '/brands/aequamente-lookbook/aequamente-main.png',
+      src: '/brands/aequamente-lookbook/aequamente-main.jpg',
       alt: 'Aequamente model wearing a white dress outdoors',
     },
     gallery: [
-      { src: '/brands/aequamente-lookbook/aequamente-main.png', alt: 'Aequamente model wearing a white dress outdoors' },
+      { src: '/brands/aequamente-lookbook/aequamente-main.jpg', alt: 'Aequamente model wearing a white dress outdoors' },
       { src: '/brands/aequamente-lookbook/aequamente-02.jpg', alt: 'Aequamente vertical editorial portrait' },
       { src: '/brands/aequamente-lookbook/aequamente-03.jpg', alt: 'Aequamente garden portrait' },
       { src: '/brands/aequamente-lookbook/aequamente-04.jpg', alt: 'Aequamente tonal fashion portrait' },
