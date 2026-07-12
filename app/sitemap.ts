@@ -40,6 +40,7 @@ const routes: SitemapRoute[] = [
   { path: '/brands/post-and-co' },
   { path: '/brands/aequamente' },
   { path: '/brands/mj-watson' },
+  { path: '/brands/isabella-clementini' },
   { path: '/brands/sula' },
   { path: '/brands/soh' },
   { path: '/contact' },
