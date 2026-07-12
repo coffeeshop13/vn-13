@@ -85,6 +85,34 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
       />
       <Header />
 
+      <section className="lg:hidden bg-white" aria-label={`Фотографии бренда ${brand.name}`}>
+        <div className="w-full">
+          {[brand.heroImage, ...gallery]
+            .filter((image, index, images) => images.findIndex((item) => item.src === image.src) === index)
+            .map((image, index) => (
+              <button
+                key={`mobile-${image.src}-${index}`}
+                type="button"
+                onClick={() => openLightbox(image.src)}
+                className="relative block aspect-[4/5] w-full overflow-hidden bg-[#f8f5ef] text-left"
+                aria-label={`Открыть увеличенное фото: ${image.alt}`}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  priority={index === 0}
+                  sizes="100vw"
+                  className="object-contain"
+                />
+                <span className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/55 text-2xl leading-none text-white" aria-hidden="true">
+                  +
+                </span>
+              </button>
+            ))}
+        </div>
+      </section>
+
       <section className="border-b" style={{ borderColor: '#e0ddd8', backgroundColor: '#f8f5ef' }}>
         <div className="max-w-7xl mx-auto px-4 py-8 md:px-6 md:py-16">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-6 md:gap-12 items-center">
@@ -139,7 +167,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
             <button
               type="button"
               onClick={() => openLightbox(brand.heroImage.src)}
-              className="group relative order-1 lg:order-2 block overflow-hidden rounded-[24px] md:rounded-[28px] min-h-[280px] md:min-h-[420px] w-full bg-white text-left"
+              className="group relative order-1 hidden overflow-hidden rounded-[24px] md:rounded-[28px] min-h-[280px] md:min-h-[420px] w-full bg-white text-left lg:order-2 lg:block"
               aria-label={`Открыть увеличенное фото: ${brand.heroImage.alt}`}
             >
               <Image
@@ -250,7 +278,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
             </div>
           </div>
 
-          <div className="order-1 md:order-2 mt-20 pt-16 border-t" style={{ borderColor: '#e0ddd8' }}>
+          <div className="order-1 mt-20 hidden border-t pt-16 lg:order-2 lg:block" style={{ borderColor: '#e0ddd8' }}>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
               <div>
                 <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>
