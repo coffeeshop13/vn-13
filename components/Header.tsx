@@ -11,14 +11,13 @@ export default function Header() {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null)
 
   const navLinks = [
-    { key: 'story', label: translations.navStory, href: '/#story' },
     { key: 'brand', label: 'VN-13 / Каталог', href: '/vn-13-brand' },
-    { key: 'journal', label: 'Журнал', href: '/journal' },
     { key: 'brands', label: translations.navBrands, href: '/brands' },
-    { key: 'portfolio', label: translations.navPortfolio, href: '/#portfolio' },
-    { key: 'sustainability', label: translations.navSustainability, href: '/sustainability' },
+    { key: 'journal', label: 'Журнал', href: '/journal' },
     { key: 'preorder', label: translations.navPreorder, href: '/preorder' },
     { key: 'manufacturing', label: translations.navManufacturing, href: '/manufacturing' },
+    { key: 'story', label: translations.navStory, href: '/#story' },
+    { key: 'sustainability', label: translations.navSustainability, href: '/sustainability' },
     { key: 'contact', label: translations.navContact, href: '/#contact' },
   ]
 

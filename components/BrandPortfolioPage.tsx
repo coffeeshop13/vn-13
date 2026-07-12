@@ -103,16 +103,14 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                 key={`mobile-${image.src}-${index}`}
                 type="button"
                 onClick={() => openLightbox(image.src)}
-                className="relative block aspect-[2/3] w-full overflow-hidden bg-[#f8f5ef] text-left"
+                className="relative block w-full overflow-hidden bg-[#f8f5ef] text-left"
                 aria-label={`Открыть увеличенное фото: ${image.alt}`}
               >
-                <Image
+                <img
                   src={image.src}
                   alt={image.alt}
-                  fill
-                  priority={index === 0}
-                  sizes="100vw"
-                  className="object-contain"
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  className="block h-auto w-full"
                 />
                 <span className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/55 text-2xl leading-none text-white" aria-hidden="true">
                   +

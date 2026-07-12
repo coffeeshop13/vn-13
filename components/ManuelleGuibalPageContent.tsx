@@ -76,7 +76,21 @@ export default function ManuelleGuibalPageContent() {
     <main>
       <Header />
 
-      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+      <section className="lg:hidden bg-[#fafaf8] px-2 pb-0 pt-[88px]" aria-label="Manuelle Guibal lookbook">
+        <h1 className="text-4xl font-light leading-tight" style={{ color: '#0f0f0f' }}>
+          {translations.brandManuelleGuibalTitle}
+        </h1>
+        <p className="mt-4 pb-6 text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
+          {translations.brandManuelleGuibalSubtitle}
+        </p>
+        <div className="-mx-2">
+          {lookbookImages.map((image) => (
+            <img key={`mobile-${image.src}`} src={image.src} alt={image.alt} className="block w-full h-auto" />
+          ))}
+        </div>
+      </section>
+
+      <section className="relative hidden w-full h-screen items-center justify-center overflow-hidden lg:flex">
         <Image
           src="/brands/manuelle-lookbook/lookbook-03.jpg"
           alt="Manuelle Guibal summer lookbook cover"
@@ -88,7 +102,7 @@ export default function ManuelleGuibalPageContent() {
         <div className="absolute inset-0 bg-black/20"></div>
       </section>
 
-      <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-6" style={{ backgroundColor: '#fafaf8' }}>
+      <section className="hidden pt-32 pb-16 md:pt-48 md:pb-24 px-6 lg:block" style={{ backgroundColor: '#fafaf8' }}>
         <div className="max-w-4xl mx-auto">
           <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>Brand</p>
           <h1 className="text-5xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>
@@ -134,7 +148,7 @@ export default function ManuelleGuibalPageContent() {
             </div>
           </div>
 
-          <div className="mt-20 pt-20 border-t" style={{ borderColor: '#e0ddd8' }}>
+          <div className="mt-20 hidden border-t pt-20 lg:block" style={{ borderColor: '#e0ddd8' }}>
             <h2 className="text-3xl md:text-4xl font-light mb-12" style={{ color: '#0f0f0f' }}>
               Lookbook Eté
             </h2>
