@@ -319,7 +319,7 @@ export default function VN13BrandPage() {
 
           <ProductImageGallery
             images={catalogImages}
-            gridClassName="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-0 md:gap-x-6 gap-y-12"
+            gridClassName="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-0 md:gap-x-6 gap-y-5 md:gap-y-12"
             imageSizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             mobileFullBleed
           />
@@ -339,9 +339,9 @@ export default function VN13BrandPage() {
 
           <ProductImageGallery
             images={detailImages}
-            gridClassName="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-0 md:gap-x-4 gap-y-10"
+            gridClassName="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-x-0 md:gap-x-4 gap-y-5 md:gap-y-10"
             imageSizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
-            captionClassName="mt-3 text-xs leading-relaxed text-[#686868]"
+            captionClassName="mt-2 md:mt-3 text-xs leading-relaxed text-[#686868]"
             mobileFullBleed
           />
         </div>

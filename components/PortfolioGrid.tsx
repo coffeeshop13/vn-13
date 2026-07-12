@@ -24,9 +24,6 @@ export default function PortfolioGrid() {
       <div className="max-w-7xl mx-auto px-6 py-14 md:py-18">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
           <div>
-            <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>
-              {translations.portfolioTitle}
-            </p>
             <h2 className="text-3xl md:text-4xl font-light" style={{ color: '#0f0f0f' }}>
               {translations.portfolioSubtitle}
             </h2>

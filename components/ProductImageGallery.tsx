@@ -22,7 +22,7 @@ export default function ProductImageGallery({
   images,
   gridClassName = 'grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6',
   imageSizes = '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw',
-  captionClassName = 'mt-4 text-sm leading-relaxed text-[#5f5f5f]',
+  captionClassName = 'mt-2 md:mt-4 text-sm leading-relaxed text-[#5f5f5f]',
   mobileFullBleed = false,
 }: ProductImageGalleryProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)

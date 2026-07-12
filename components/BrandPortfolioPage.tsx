@@ -85,6 +85,15 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
       />
       <Header />
 
+      <section className="lg:hidden bg-[#f8f5ef] px-2 pb-6 pt-[88px]" aria-label={`Описание бренда ${brand.name}`}>
+        <h1 className="text-4xl font-light leading-tight" style={{ color: '#0f0f0f' }}>
+          {brand.name}
+        </h1>
+        <p className="mt-4 text-base leading-relaxed" style={{ color: '#5f5b55' }}>
+          {brand.description}
+        </p>
+      </section>
+
       <section className="lg:hidden bg-white" aria-label={`Фотографии бренда ${brand.name}`}>
         <div className="w-full">
           {[brand.heroImage, ...gallery]
@@ -94,7 +103,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                 key={`mobile-${image.src}-${index}`}
                 type="button"
                 onClick={() => openLightbox(image.src)}
-                className="relative block aspect-[4/5] w-full overflow-hidden bg-[#f8f5ef] text-left"
+                className="relative block aspect-[2/3] w-full overflow-hidden bg-[#f8f5ef] text-left"
                 aria-label={`Открыть увеличенное фото: ${image.alt}`}
               >
                 <Image
@@ -113,7 +122,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
         </div>
       </section>
 
-      <section className="border-b" style={{ borderColor: '#e0ddd8', backgroundColor: '#f8f5ef' }}>
+      <section className="hidden border-b lg:mt-4 lg:block" style={{ borderColor: '#e0ddd8', backgroundColor: '#f8f5ef' }}>
         <div className="max-w-7xl mx-auto px-4 py-8 md:px-6 md:py-16">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-6 md:gap-12 items-center">
             <div className="order-2 lg:order-1">
@@ -137,7 +146,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                   <p className="text-[10px] md:text-xs tracking-[0.16em] uppercase mb-1 md:mb-2" style={{ color: '#b8935a' }}>
                     Формат
                   </p>
-                  <p className="text-sm md:text-base" style={{ color: '#0f0f0f' }}>Премиальный отбор</p>
+                  <p className="text-sm md:text-base" style={{ color: '#0f0f0f' }}>Премиальный сегмент</p>
                 </div>
                 <div className="rounded-2xl p-4 md:p-5" style={{ backgroundColor: '#fff' }}>
                   <p className="text-[10px] md:text-xs tracking-[0.16em] uppercase mb-1 md:mb-2" style={{ color: '#b8935a' }}>
@@ -167,7 +176,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
             <button
               type="button"
               onClick={() => openLightbox(brand.heroImage.src)}
-              className="group relative order-1 hidden overflow-hidden rounded-[24px] md:rounded-[28px] min-h-[280px] md:min-h-[420px] w-full bg-white text-left lg:order-2 lg:block"
+              className="group relative order-1 hidden aspect-[2/3] overflow-hidden rounded-[24px] md:rounded-[28px] w-full bg-white text-left lg:order-2 lg:block"
               aria-label={`Открыть увеличенное фото: ${brand.heroImage.alt}`}
             >
               <Image
@@ -238,7 +247,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                   {brand.keywords.join(', ')}
                 </p>
               </div>
-              <div className="rounded-[24px] p-6 md:col-span-2" style={{ backgroundColor: '#faf8f4' }}>
+              <div className="hidden rounded-[24px] p-6 md:col-span-2 lg:block" style={{ backgroundColor: '#faf8f4' }}>
                 <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>
                   Почему это важно для VN13
                 </h3>
@@ -300,7 +309,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                     key={`${image.src}-${index}`}
                     type="button"
                     onClick={() => openLightbox(image.src)}
-                    className={index === 0 ? 'lg:col-span-2 relative overflow-hidden rounded-[28px] min-h-[640px]' : 'relative overflow-hidden rounded-[28px] min-h-[420px]'}
+                    className={index === 0 ? 'lg:col-span-2 relative aspect-[2/3] overflow-hidden rounded-[28px]' : 'relative aspect-[2/3] overflow-hidden rounded-[28px]'}
                     aria-label={`Открыть увеличенное фото: ${image.alt}`}
                   >
                     <Image
@@ -321,7 +330,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                 <button
                   type="button"
                   onClick={() => openLightbox(gallery[0].src)}
-                  className="group relative block overflow-hidden rounded-[28px] min-h-[680px] w-full text-left"
+                  className="group relative block aspect-[2/3] overflow-hidden rounded-[28px] w-full text-left"
                   aria-label={`Открыть увеличенное фото: ${gallery[0].alt}`}
                 >
                   <Image
