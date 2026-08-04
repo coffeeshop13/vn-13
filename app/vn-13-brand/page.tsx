@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
   description:
     'Каталог собственного бренда VN-13: дизайнерские платья, жакеты, рубашки, брюки и верхняя одежда ограниченных серий для клиентов и бутиков России и СНГ.',
   path: '/vn-13-brand',
-  image: '/brands/vn13-catalog/vn13-designer-womenswear-collection.webp',
+  image: '/brands/vn13-catalog/vn13-sand-textured-jacket-front.png',
   keywords: [
     'VN-13 бренд',
     'бренд женской одежды VN-13',
@@ -53,6 +53,21 @@ const faq = [
 ]
 
 const catalogImages = [
+  {
+    src: '/brands/vn13-catalog/vn13-sand-textured-jacket-front.png',
+    alt: 'Песочный фактурный жакет собственного бренда VN13, вид спереди',
+    caption: 'Фактурный песочный жакет VN13',
+  },
+  {
+    src: '/brands/vn13-catalog/vn13-sand-textured-jacket-three-quarter.png',
+    alt: 'Песочный фактурный жакет собственного бренда VN13, ракурс три четверти',
+    caption: 'Жакет VN13: застёжка и объёмный рукав',
+  },
+  {
+    src: '/brands/vn13-catalog/vn13-sand-textured-jacket-back.png',
+    alt: 'Песочный фактурный жакет собственного бренда VN13, вид со спины',
+    caption: 'Жакет VN13: вид со спины',
+  },
   {
     src: '/brands/vn13-catalog/vn13-black-jacket-white-layered-dress.webp',
     alt: 'Черный дизайнерский жакет VN-13 с белым многослойным платьем',
@@ -313,7 +328,7 @@ export default function VN13BrandPage() {
               Дизайнерская женская одежда ограниченной серии
             </h2>
             <p className="text-base md:text-lg leading-relaxed text-[#686868]">
-              В коллекции VN-13 соединяются свободный архитектурный крой, черно-белая палитра, цветочные акценты и выразительные фактуры. Представлены дизайнерские платья, жакеты, рубашки, брюки, жилеты и пальто.
+              В коллекции VN-13 соединяются свободный архитектурный крой, черно-белая палитра, цветочные акценты и выразительные фактуры. Новинка каталога — песочный фактурный жакет с высокой стойкой и объёмными рукавами. Также представлены дизайнерские платья, жакеты, рубашки, брюки, жилеты и пальто.
             </p>
           </div>
 
