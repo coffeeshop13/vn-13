@@ -12,6 +12,7 @@ type SitemapRoute = {
 
 const routes: SitemapRoute[] = [
   { path: '/' },
+  { path: '/zhenskaya-odezhda' },
   { path: '/dizaynerskaya-zhenskaya-odezhda' },
   { path: '/premium-zhenskaya-odezhda' },
   { path: '/eksklyuzivnaya-zhenskaya-odezhda' },
