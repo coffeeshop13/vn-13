@@ -6,6 +6,15 @@ import Footer from '@/components/Footer'
 import { journalArticles } from '@/lib/journal'
 import { createMetadata } from '@/lib/seo'
 
+function formatArticleDate(date: string) {
+  return new Intl.DateTimeFormat('ru-RU', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(new Date(`${date}T00:00:00Z`))
+}
+
 export const metadata: Metadata = createMetadata({
   title: 'Журнал VN13 | Женская одежда, дистрибуция и производство',
   description:
@@ -49,7 +58,7 @@ export default function JournalPage() {
                 </div>
                 <div className="p-6 md:p-8 flex flex-col justify-end">
                   <p className="text-xs tracking-[0.15em] uppercase mb-4" style={{ color: '#b8935a' }}>
-                    {featuredArticle.category} · {featuredArticle.readingTime}
+                    {featuredArticle.category} · <time dateTime={featuredArticle.publishedAt}>{formatArticleDate(featuredArticle.publishedAt)}</time> · {featuredArticle.readingTime}
                   </p>
                   <h2 className="text-2xl md:text-3xl font-light leading-tight mb-4 text-balance" style={{ color: '#0f0f0f' }}>
                     {featuredArticle.title}
@@ -101,7 +110,7 @@ export default function JournalPage() {
                   </div>
                   <div className="p-5">
                     <p className="text-xs tracking-[0.15em] uppercase mb-3" style={{ color: '#b8935a' }}>
-                      {article.category} · {article.readingTime}
+                      {article.category} · <time dateTime={article.publishedAt}>{formatArticleDate(article.publishedAt)}</time> · {article.readingTime}
                     </p>
                     <h3 className="text-xl font-light leading-tight mb-3 text-balance" style={{ color: '#0f0f0f' }}>
                       {article.title}

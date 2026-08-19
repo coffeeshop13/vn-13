@@ -10,6 +10,10 @@ type SitemapRoute = {
   lastModified?: Date
 }
 
+const latestJournalDate = new Date(
+  Math.max(...journalArticles.map((article) => new Date(article.publishedAt).getTime())),
+)
+
 const routes: SitemapRoute[] = [
   { path: '/' },
   { path: '/zhenskaya-odezhda' },
@@ -25,7 +29,7 @@ const routes: SitemapRoute[] = [
   { path: '/evropeyskie-brendy-zhenskoy-odezhdy' },
   { path: '/optovaya-zhenskaya-odezhda' },
   { path: '/distributsiya-zhenskoy-odezhdy' },
-  { path: '/journal' },
+  { path: '/journal', lastModified: latestJournalDate },
   { path: '/sravnenie-premialnykh-rynkov' },
   { path: '/kak-vn13-vybirayet-brendy' },
   { path: '/limited-series-dlya-butikov' },
@@ -59,6 +63,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...routes, ...extendedRoutes, ...journalRoutes].map((route) => ({
     url: absoluteUrl(route.path),
-    lastModified: route.lastModified ?? new Date('2026-06-25'),
+    ...(route.lastModified ? { lastModified: route.lastModified } : {}),
   }))
 }

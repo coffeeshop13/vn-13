@@ -10,7 +10,11 @@ type SeoConfig = {
   description: string
   path?: string
   image?: string
+  imageAlt?: string
   keywords?: string[]
+  contentType?: 'website' | 'article'
+  publishedTime?: string
+  modifiedTime?: string
 }
 
 const defaultKeywords = [
@@ -48,33 +52,58 @@ export function createMetadata({
   description,
   path = '/',
   image = DEFAULT_OG_IMAGE,
+  imageAlt = `${SITE_NAME} женская одежда и дистрибуция`,
   keywords = [],
+  contentType = 'website',
+  publishedTime,
+  modifiedTime,
 }: SeoConfig): Metadata {
   const url = absoluteUrl(path)
   const imageUrl = absoluteUrl(image)
   const pageKeywords = keywords.length > 0 ? keywords : defaultKeywords.slice(0, 5)
+  const openGraph: Metadata['openGraph'] =
+    contentType === 'article'
+      ? {
+          type: 'article',
+          url,
+          siteName: SITE_NAME,
+          locale: SITE_LOCALE,
+          title,
+          description,
+          publishedTime,
+          modifiedTime,
+          images: [
+            {
+              url: imageUrl,
+              width: 1200,
+              height: 630,
+              alt: imageAlt,
+            },
+          ],
+        }
+      : {
+          type: 'website',
+          url,
+          siteName: SITE_NAME,
+          locale: SITE_LOCALE,
+          title,
+          description,
+          images: [
+            {
+              url: imageUrl,
+              width: 1200,
+              height: 630,
+              alt: imageAlt,
+            },
+          ],
+        }
 
   return {
     title,
     description,
     keywords: [...new Set(pageKeywords)].slice(0, 5),
     alternates: { canonical: url },
-    openGraph: {
-      type: 'website',
-      url,
-      siteName: SITE_NAME,
-      locale: SITE_LOCALE,
-      title,
-      description,
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 630,
-          alt: `${SITE_NAME} женская одежда и дистрибуция`,
-        },
-      ],
-    },
+    openGraph,
     twitter: {
       card: 'summary_large_image',
       title,

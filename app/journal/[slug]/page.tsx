@@ -11,6 +11,15 @@ type ArticlePageProps = {
   params: Promise<{ slug: string }>
 }
 
+function formatArticleDate(date: string) {
+  return new Intl.DateTimeFormat('ru-RU', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(new Date(`${date}T00:00:00Z`))
+}
+
 export function generateStaticParams() {
   return journalArticles.map((article) => ({ slug: article.slug }))
 }
@@ -23,16 +32,21 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     return {}
   }
 
-  const title =
-    article.slug === 'premium-rynki-zhenskoy-odezhdy-france-italy-japan-korea'
+  const title = article.seoTitle
+    ?? (article.slug === 'premium-rynki-zhenskoy-odezhdy-france-italy-japan-korea'
       ? 'Премиальные рынки женской одежды | VN13'
-      : `${article.title} | Журнал VN13`
+      : `${article.title} | Журнал VN13`)
 
   return createMetadata({
     title,
     description: article.description,
     path: `/journal/${article.slug}`,
+    image: article.ogImageSrc ?? article.imageSrc,
+    imageAlt: article.imageAlt,
     keywords: article.keywords,
+    contentType: 'article',
+    publishedTime: article.publishedAt,
+    modifiedTime: article.updatedAt ?? article.publishedAt,
   })
 }
 
@@ -51,7 +65,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     headline: article.title,
     description: article.description,
     datePublished: article.publishedAt,
-    dateModified: article.publishedAt,
+    dateModified: article.updatedAt ?? article.publishedAt,
+    articleSection: article.category,
     author: {
       '@type': 'Organization',
       name: 'VN13',
@@ -63,15 +78,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       url: absoluteUrl('/'),
     },
     mainEntityOfPage: url,
-    image: absoluteUrl(article.imageSrc),
+    image: absoluteUrl(article.ogImageSrc ?? article.imageSrc),
     inLanguage: 'ru',
     keywords: article.keywords,
-    about: [
-      { '@type': 'Thing', name: 'женская одежда' },
-      { '@type': 'Thing', name: 'дистрибуция женской одежды' },
-      { '@type': 'Thing', name: 'предзаказ коллекций' },
-      { '@type': 'Thing', name: 'производство женской одежды' },
-    ],
+    about: article.keywords.map((keyword) => ({ '@type': 'Thing', name: keyword })),
+    ...(article.sources ? { citation: article.sources.map((source) => source.href) } : {}),
   }
 
   return (
@@ -87,7 +98,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-end">
             <div>
               <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>
-                {article.category} · {article.readingTime}
+                {article.category} · <time dateTime={article.publishedAt}>{formatArticleDate(article.publishedAt)}</time> · {article.readingTime}
               </p>
               <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>
                 {article.title}
@@ -123,9 +134,80 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                       {paragraph}
                     </p>
                   ))}
+
+                  {section.points && (
+                    <ul className="my-6 space-y-3" style={{ color: '#4f4f4f' }}>
+                      {section.points.map((point) => (
+                        <li key={point} className="flex gap-3 text-base leading-relaxed">
+                          <span aria-hidden="true" className="mt-[0.7em] h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: '#b8935a' }} />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {section.image && (
+                    <figure className="my-8">
+                      <div className="relative overflow-hidden bg-[#f6f2ec]" style={{ aspectRatio: '3 / 2' }}>
+                        <Image
+                          src={section.image.src}
+                          alt={section.image.alt}
+                          fill
+                          sizes="(max-width: 896px) 100vw, 896px"
+                          className="object-cover"
+                        />
+                      </div>
+                      {section.image.caption && (
+                        <figcaption className="mt-3 text-sm leading-relaxed" style={{ color: '#85817a' }}>
+                          {section.image.caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  )}
+
+                  {section.links && (
+                    <div className="mt-6 flex flex-wrap gap-3" aria-label="Материалы по теме">
+                      {section.links.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          className="px-4 py-3 text-sm transition-colors duration-200 hover:bg-[#f3efe9]"
+                          style={{ border: '1px solid #e0ddd8', color: '#3f3f3f' }}
+                        >
+                          {link.label} →
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </section>
               ))}
             </div>
+
+            {article.sources && (
+              <section className="mt-16 pt-12 border-t" style={{ borderColor: '#e0ddd8' }}>
+                <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>
+                  Проверено по первоисточникам
+                </p>
+                <h2 className="text-2xl font-light mb-5" style={{ color: '#0f0f0f' }}>
+                  Источники
+                </h2>
+                <ol className="space-y-3">
+                  {article.sources.map((source) => (
+                    <li key={source.href}>
+                      <a
+                        href={source.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm leading-relaxed underline underline-offset-4 decoration-[#c7b89f] hover:decoration-[#8f7040]"
+                        style={{ color: '#5f5b55' }}
+                      >
+                        {source.title} — {source.publisher}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            )}
 
             <div className="mt-16 pt-12 border-t" style={{ borderColor: '#e0ddd8' }}>
               <Link
