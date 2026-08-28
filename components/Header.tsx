@@ -28,7 +28,7 @@ export default function Header() {
           VN13
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden xl:flex items-center gap-6">
           {navLinks.map(link => (
             <a
               key={link.key}
@@ -43,12 +43,12 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden xl:flex items-center gap-4">
           <LanguageSelector />
         </div>
 
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="xl:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -59,7 +59,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden border-t" style={{ borderColor: '#e0ddd8', backgroundColor: '#fafaf8' }}>
+        <div className="xl:hidden border-t" style={{ borderColor: '#e0ddd8', backgroundColor: '#fafaf8' }}>
           <nav className="flex flex-col px-6 py-6 gap-5">
             {navLinks.map(link => (
               <a key={link.key} href={link.href} onClick={() => setMenuOpen(false)} className="text-sm tracking-wide" style={{ color: '#0f0f0f' }}>

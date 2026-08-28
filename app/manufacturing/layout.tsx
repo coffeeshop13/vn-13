@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { createMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createMetadata({
-  title: 'European Fashion Manufacturing Network | VN13',
+  title: 'Европейское производство женской одежды | VN13',
   description:
-    'VN13 connects fashion partners with European manufacturing expertise across Italy, France, and Portugal for quality, traceability, and responsible production.',
+    'VN13 соединяет бренды с европейскими производственными партнёрами в Италии, Франции и Португалии: качество, прослеживаемость и ответственное производство одежды.',
   path: '/manufacturing',
-  keywords: ['European fashion manufacturing', 'garment manufacturing Europe', 'fashion production network'],
+  keywords: ['европейское производство одежды', 'производство женской одежды', 'пошив одежды в Европе'],
 })
 
 export default function ManufacturingLayout({ children }: { children: React.ReactNode }) {

@@ -1,7 +1,9 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 import { CTALink } from '@/components/CTALink'
 import { absoluteUrl, SITE_NAME } from '@/lib/seo'
+import { mergeSeoRelatedLinks, type SeoRelatedLink } from '@/lib/seo-links'
 
 type LandingPageProps = {
   eyebrow: string
@@ -18,10 +20,7 @@ type LandingPageProps = {
     answer: string
   }>
   path: string
-  relatedLinks?: Array<{
-    href: string
-    label: string
-  }>
+  relatedLinks?: SeoRelatedLink[]
 }
 
 export default function SeoLandingPage({
@@ -36,6 +35,7 @@ export default function SeoLandingPage({
   relatedLinks = [],
 }: LandingPageProps) {
   const pageUrl = absoluteUrl(path)
+  const visibleRelatedLinks = mergeSeoRelatedLinks(path, relatedLinks)
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -74,6 +74,13 @@ export default function SeoLandingPage({
         name: title,
         description,
         inLanguage: 'ru',
+        isPartOf: {
+          '@id': `${absoluteUrl('/')}#website`,
+        },
+        about: [title, ...bullets.slice(0, 3)].map((name) => ({
+          '@type': 'Thing',
+          name,
+        })),
       },
     ],
   }
@@ -88,6 +95,11 @@ export default function SeoLandingPage({
 
       <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-6" style={{ backgroundColor: '#fafaf8' }}>
         <div className="max-w-4xl mx-auto">
+          <nav aria-label="Хлебные крошки" className="mb-7 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm" style={{ color: '#6b6b6b' }}>
+            <Link href="/" className="underline underline-offset-4">Главная</Link>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">{eyebrow}</span>
+          </nav>
           <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>
             {eyebrow}
           </p>
@@ -161,13 +173,13 @@ export default function SeoLandingPage({
             <CTALink href="/#contact">Связаться с VN13</CTALink>
           </div>
 
-          {relatedLinks.length > 0 ? (
+          {visibleRelatedLinks.length > 0 ? (
             <div className="mt-20 pt-20 border-t" style={{ borderColor: '#e0ddd8' }}>
               <h2 className="text-2xl font-light mb-6" style={{ color: '#0f0f0f' }}>
                 Связанные страницы
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {relatedLinks.map((link) => (
+                {visibleRelatedLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}

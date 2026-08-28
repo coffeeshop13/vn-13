@@ -31,12 +31,14 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
     name: brand.name,
     description: brand.description,
     url: pageUrl,
+    image: absoluteUrl(brand.heroImage.src),
     slogan: brand.positioning,
     foundingLocation: brand.country,
-    knowsAbout: brand.keywords,
-    brand: {
-      '@id': `${pageUrl}#brand`,
+    inLanguage: 'ru',
+    isPartOf: {
+      '@id': `${absoluteUrl('/')}#website`,
     },
+    knowsAbout: brand.keywords,
     ...(brand.officialWebsite
       ? {
           sameAs: [brand.officialWebsite],
@@ -239,7 +241,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
               </div>
               <div className="rounded-[24px] p-6" style={{ backgroundColor: '#f3f3f0' }}>
                 <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>
-                  Поисковые акценты
+                  Ключевые особенности
                 </h3>
                 <p className="text-base leading-7" style={{ color: '#5f5b55' }}>
                   {brand.keywords.join(', ')}

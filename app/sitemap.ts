@@ -8,6 +8,8 @@ export const dynamic = 'force-static'
 type SitemapRoute = {
   path: string
   lastModified?: Date
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority?: number
 }
 
 const latestJournalDate = new Date(
@@ -15,54 +17,60 @@ const latestJournalDate = new Date(
 )
 
 const routes: SitemapRoute[] = [
-  { path: '/' },
-  { path: '/zhenskaya-odezhda' },
-  { path: '/dizaynerskaya-zhenskaya-odezhda' },
-  { path: '/premium-zhenskaya-odezhda' },
-  { path: '/eksklyuzivnaya-zhenskaya-odezhda' },
-  { path: '/kapsulnaya-zhenskaya-odezhda' },
-  { path: '/vn-13-brand' },
-  { path: '/lookbook' },
-  { path: '/proizvoditel-zhenskoy-odezhdy' },
-  { path: '/poshiv-zhenskoy-odezhdy-dlya-brenda' },
-  { path: '/zhenskaya-odezhda-dlya-butikov' },
-  { path: '/evropeyskie-brendy-zhenskoy-odezhdy' },
-  { path: '/optovaya-zhenskaya-odezhda' },
-  { path: '/distributsiya-zhenskoy-odezhdy' },
-  { path: '/journal', lastModified: latestJournalDate },
-  { path: '/sravnenie-premialnykh-rynkov' },
-  { path: '/kak-vn13-vybirayet-brendy' },
-  { path: '/limited-series-dlya-butikov' },
-  { path: '/story' },
-  { path: '/sustainability' },
-  { path: '/preorder' },
-  { path: '/manufacturing' },
-  { path: '/brands' },
-  { path: '/brands/manuelle-guibal' },
-  { path: '/brands/hannoh-wessel' },
-  { path: '/brands/moyuru' },
-  { path: '/brands/shoto' },
-  { path: '/brands/post-and-co' },
-  { path: '/brands/aequamente' },
-  { path: '/brands/mj-watson' },
-  { path: '/brands/isabella-clementini' },
-  { path: '/brands/sula' },
-  { path: '/brands/soh' },
-  { path: '/contact' },
+  { path: '/', changeFrequency: 'weekly', priority: 1 },
+  { path: '/zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.95 },
+  { path: '/dizaynerskaya-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.92 },
+  { path: '/premium-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.92 },
+  { path: '/eksklyuzivnaya-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/kapsulnaya-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/vn-13-brand', changeFrequency: 'weekly', priority: 0.95 },
+  { path: '/lookbook', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/proizvoditel-zhenskoy-odezhdy', changeFrequency: 'monthly', priority: 0.88 },
+  { path: '/poshiv-zhenskoy-odezhdy-dlya-brenda', changeFrequency: 'monthly', priority: 0.88 },
+  { path: '/zhenskaya-odezhda-dlya-butikov', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/evropeyskie-brendy-zhenskoy-odezhdy', changeFrequency: 'monthly', priority: 0.88 },
+  { path: '/optovaya-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/distributsiya-zhenskoy-odezhdy', changeFrequency: 'monthly', priority: 0.88 },
+  { path: '/journal', lastModified: latestJournalDate, changeFrequency: 'weekly', priority: 0.82 },
+  { path: '/sravnenie-premialnykh-rynkov', changeFrequency: 'monthly', priority: 0.76 },
+  { path: '/kak-vn13-vybirayet-brendy', changeFrequency: 'monthly', priority: 0.76 },
+  { path: '/limited-series-dlya-butikov', changeFrequency: 'monthly', priority: 0.76 },
+  { path: '/story', changeFrequency: 'yearly', priority: 0.55 },
+  { path: '/sustainability', changeFrequency: 'monthly', priority: 0.6 },
+  { path: '/preorder', changeFrequency: 'monthly', priority: 0.76 },
+  { path: '/manufacturing', changeFrequency: 'monthly', priority: 0.76 },
+  { path: '/brands', changeFrequency: 'weekly', priority: 0.85 },
+  { path: '/brands/manuelle-guibal', changeFrequency: 'monthly', priority: 0.78 },
+  { path: '/brands/hannoh-wessel', changeFrequency: 'monthly', priority: 0.78 },
+  { path: '/brands/moyuru', changeFrequency: 'monthly', priority: 0.78 },
+  { path: '/brands/shoto', changeFrequency: 'monthly', priority: 0.72 },
+  { path: '/brands/post-and-co', changeFrequency: 'monthly', priority: 0.72 },
+  { path: '/brands/aequamente', changeFrequency: 'monthly', priority: 0.78 },
+  { path: '/brands/mj-watson', changeFrequency: 'monthly', priority: 0.78 },
+  { path: '/brands/isabella-clementini', changeFrequency: 'monthly', priority: 0.78 },
+  { path: '/brands/sula', changeFrequency: 'monthly', priority: 0.74 },
+  { path: '/brands/soh', changeFrequency: 'monthly', priority: 0.74 },
+  { path: '/contact', changeFrequency: 'yearly', priority: 0.6 },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const extendedRoutes: SitemapRoute[] = extendedSeoPages.map((page) => ({
     path: page.path,
+    changeFrequency: 'monthly',
+    priority: page.category ? 0.82 : 0.74,
   }))
 
   const journalRoutes: SitemapRoute[] = journalArticles.map((article) => ({
     path: `/journal/${article.slug}`,
     lastModified: new Date(article.publishedAt),
+    changeFrequency: 'monthly',
+    priority: 0.7,
   }))
 
   return [...routes, ...extendedRoutes, ...journalRoutes].map((route) => ({
     url: absoluteUrl(route.path),
     ...(route.lastModified ? { lastModified: route.lastModified } : {}),
+    ...(route.changeFrequency ? { changeFrequency: route.changeFrequency } : {}),
+    ...(route.priority ? { priority: route.priority } : {}),
   }))
 }

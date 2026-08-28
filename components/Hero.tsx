@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden">
         <Image
           src="/hero-vn13-showroom.jpg"
-          alt="VN13 Fashion Agency"
+          alt="VN13 — дизайнерская и премиальная женская одежда"
           fill
           priority
           className="object-cover"

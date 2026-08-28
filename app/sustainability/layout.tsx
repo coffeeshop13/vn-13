@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { createMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Sustainable Fashion Distribution | VN13',
+  title: 'Устойчивая мода и ответственное производство | VN13',
   description:
-    'Explore VN13 sustainability standards for ethical sourcing, slow fashion, responsible packaging, and European designer brand partnerships.',
+    'Подход VN13 к устойчивой моде: ответственное производство, долговечные коллекции, качество материалов и партнёрства с европейскими дизайнерскими брендами.',
   path: '/sustainability',
-  keywords: ['sustainable fashion distribution', 'ethical fashion sourcing', 'slow fashion wholesale'],
+  keywords: ['устойчивая мода', 'ответственное производство одежды', 'slow fashion', 'дизайнерская женская одежда'],
 })
 
 export default function SustainabilityLayout({ children }: { children: React.ReactNode }) {

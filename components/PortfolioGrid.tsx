@@ -54,7 +54,7 @@ export default function PortfolioGrid() {
                 <div className="relative overflow-hidden rounded-[16px] mb-3 bg-[#f6f2ec]" style={{ aspectRatio: '3 / 4' }}>
                   <Image
                     src={brand.cardImage}
-                    alt={brand.name}
+                    alt={`${brand.name} — ${brand.country.toLowerCase()} дизайнерская одежда в портфеле VN13`}
                     fill
                     priority={index < 2}
                     loading={index < 2 ? 'eager' : 'lazy'}

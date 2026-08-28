@@ -97,6 +97,11 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
 
       <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-6 bg-[#fafaf8]">
         <div className="max-w-5xl mx-auto">
+          <nav aria-label="Хлебные крошки" className="mb-7 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-[#686868]">
+            <Link href="/" className="underline underline-offset-4">Главная</Link>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">{page.cluster}</span>
+          </nav>
           <p className="text-xs tracking-[0.2em] uppercase mb-4 text-[#b8935a]">
             {page.cluster}
           </p>

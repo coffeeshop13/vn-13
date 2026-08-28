@@ -54,7 +54,7 @@ export default function VN13Showcase() {
               <div className="relative overflow-hidden bg-[#f6f2ec]" style={{ aspectRatio: '16 / 9' }}>
                 <Image
                   src="/brands/vn13-catalog/vn13-designer-womenswear-collection.webp"
-                  alt="VN13 designer womenswear collection"
+                  alt="Коллекция дизайнерской женской одежды VN-13"
                   fill
                   sizes="(max-width: 1024px) 100vw, 58vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"

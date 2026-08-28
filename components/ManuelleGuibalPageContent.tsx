@@ -84,8 +84,15 @@ export default function ManuelleGuibalPageContent() {
           {translations.brandManuelleGuibalSubtitle}
         </p>
         <div className="-mx-2">
-          {lookbookImages.map((image) => (
-            <img key={`mobile-${image.src}`} src={image.src} alt={image.alt} className="block w-full h-auto" />
+          {lookbookImages.map((image, index) => (
+            <img
+              key={`mobile-${image.src}`}
+              src={image.src}
+              alt={image.alt}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+              className="block w-full h-auto"
+            />
           ))}
         </div>
       </section>
@@ -158,7 +165,7 @@ export default function ManuelleGuibalPageContent() {
             <div className="columns-1 sm:columns-2 xl:columns-3 gap-6 [column-fill:_balance]">
               {lookbookImages.map((image, index) => (
                 <div key={image.src} className={`mb-6 break-inside-avoid overflow-hidden ${index < 2 ? 'rounded-[28px]' : 'rounded-[22px]'}`}>
-                  <img src={image.src} alt={image.alt} className="w-full h-auto object-cover" />
+                  <img src={image.src} alt={image.alt} loading="lazy" decoding="async" className="w-full h-auto object-cover" />
                 </div>
               ))}
             </div>
