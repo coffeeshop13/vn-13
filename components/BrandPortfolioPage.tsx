@@ -88,12 +88,21 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
       <Header />
 
       <section className="lg:hidden bg-[#f8f5ef] px-2 pb-6 pt-[88px]" aria-label={`Описание бренда ${brand.name}`}>
+        <p className="mb-2 text-base" style={{ color: '#9b7541' }}>Бренд из {brand.country}</p>
         <h1 className="text-4xl font-light leading-tight" style={{ color: '#0f0f0f' }}>
           {brand.name}
         </h1>
         <p className="mt-4 text-base leading-relaxed" style={{ color: '#5f5b55' }}>
           {brand.description}
         </p>
+        <a
+          href="https://t.me/vn13agency"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex min-h-[52px] items-center justify-center bg-[#1d1b18] px-6 text-base font-medium text-white"
+        >
+          Спросить о наличии
+        </a>
       </section>
 
       <section className="lg:hidden bg-white" aria-label={`Фотографии бренда ${brand.name}`}>
@@ -126,51 +135,37 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
         <div className="max-w-7xl mx-auto px-4 py-8 md:px-6 md:py-16">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-6 md:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <p className="text-[10px] md:text-xs tracking-[0.22em] uppercase mb-2 md:mb-4" style={{ color: '#b8935a' }}>
-                Brand portfolio
+              <p className="text-base mb-2 md:mb-4" style={{ color: '#9b7541' }}>
+                Бренд из {brand.country}
               </p>
               <h1 className="text-4xl md:text-6xl font-light leading-tight mb-3 md:mb-6" style={{ color: '#0f0f0f' }}>
                 {brand.name}
               </h1>
-              <p className="text-base md:text-xl leading-relaxed max-w-2xl mb-5 md:mb-8" style={{ color: '#5f5b55' }}>
+              <p className="text-base md:text-lg leading-relaxed max-w-2xl mb-5" style={{ color: '#5f5b55' }}>
                 {brand.description}
               </p>
-              <div className="grid sm:grid-cols-3 gap-2 md:gap-4">
+              <a
+                href="https://t.me/vn13agency"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mb-6 inline-flex min-h-[52px] items-center justify-center bg-[#1d1b18] px-6 text-base font-medium text-white"
+              >
+                Спросить о наличии
+              </a>
+              <div className="grid sm:grid-cols-2 gap-2 md:gap-4">
                 <div className="rounded-2xl p-4 md:p-5" style={{ backgroundColor: '#fff' }}>
-                  <p className="text-[10px] md:text-xs tracking-[0.16em] uppercase mb-1 md:mb-2" style={{ color: '#b8935a' }}>
+                  <p className="text-sm mb-1 md:mb-2" style={{ color: '#9b7541' }}>
                     Страна
                   </p>
-                  <p className="text-sm md:text-base" style={{ color: '#0f0f0f' }}>{brand.country}</p>
+                  <p className="text-base" style={{ color: '#0f0f0f' }}>{brand.country}</p>
                 </div>
                 <div className="rounded-2xl p-4 md:p-5" style={{ backgroundColor: '#fff' }}>
-                  <p className="text-[10px] md:text-xs tracking-[0.16em] uppercase mb-1 md:mb-2" style={{ color: '#b8935a' }}>
-                    Формат
+                  <p className="text-sm mb-1 md:mb-2" style={{ color: '#9b7541' }}>
+                    Кому подойдёт
                   </p>
-                  <p className="text-sm md:text-base" style={{ color: '#0f0f0f' }}>Премиальный сегмент</p>
-                </div>
-                <div className="rounded-2xl p-4 md:p-5" style={{ backgroundColor: '#fff' }}>
-                  <p className="text-[10px] md:text-xs tracking-[0.16em] uppercase mb-1 md:mb-2" style={{ color: '#b8935a' }}>
-                    Для кого
-                  </p>
-                  <p className="text-sm md:text-base" style={{ color: '#0f0f0f' }}>Бутики и клиенты</p>
+                  <p className="text-base" style={{ color: '#0f0f0f' }}>Бутикам и частным клиентам</p>
                 </div>
               </div>
-              {brand.officialWebsite ? (
-                <div className="mt-4 md:mt-6 inline-flex flex-col gap-1.5 md:gap-2 rounded-2xl border px-4 py-3 md:px-5 md:py-4" style={{ borderColor: '#e0ddd8', backgroundColor: '#fff' }}>
-                  <p className="text-[10px] md:text-xs tracking-[0.16em] uppercase" style={{ color: '#b8935a' }}>
-                    Official site
-                  </p>
-                  <a
-                    href={brand.officialWebsite}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm md:text-base underline underline-offset-4"
-                    style={{ color: '#0f0f0f' }}
-                  >
-                    {brand.officialWebsite.replace(/^https?:\/\//, '').replace(/\/$/, '')}
-                  </a>
-                </div>
-              ) : null}
             </div>
 
             <button

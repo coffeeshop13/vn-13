@@ -286,49 +286,45 @@ export default function VN13BrandPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(catalogJsonLd) }}
       />
       <Header />
-      <section className="relative min-h-screen flex items-end" style={{ backgroundColor: '#0f0f0f' }}>
-        <Image
-          src="/brands/vn13-catalog/vn13-designer-womenswear-collection.webp"
-          alt="Коллекция дизайнерской женской одежды собственного бренда VN-13"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-          style={{ opacity: 0.5 }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 md:pb-32 pt-36 w-full">
-          <p className="text-xs tracking-[0.3em] uppercase mb-6" style={{ color: '#b8935a' }}>
-            Собственный бренд
-          </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light leading-none mb-6 text-white text-balance">
-            VN-13
-          </h1>
-          <p className="text-lg md:text-xl font-light max-w-2xl mb-10 leading-relaxed" style={{ color: 'rgba(255,255,255,0.78)' }}>
-            Женская одежда, построенная вокруг сдержанной эстетики, качественных материалов, ограниченных коллекций и европейского производственного подхода.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/lookbook" className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium tracking-wide" style={{ backgroundColor: '#b8935a', color: '#fff' }}>
-              Смотреть lookbook
-            </Link>
-            <Link href="/proizvoditel-zhenskoy-odezhdy" className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium tracking-wide" style={{ border: '1px solid rgba(255,255,255,0.5)', color: '#fff' }}>
-              Производство VN-13
-            </Link>
+      <section className="border-b border-[#e3ddd3] bg-[#f7f4ee] pt-28 pb-10 md:pt-36 md:pb-16">
+        <div className="max-w-7xl mx-auto grid gap-9 px-6 lg:grid-cols-[1fr_0.95fr] lg:items-center">
+          <div className="max-w-2xl">
+            <p className="text-base font-medium" style={{ color: '#8a6b3f' }}>Собственный бренд VN13</p>
+            <h1 className="mt-3 text-4xl md:text-6xl font-light leading-[1.08]" style={{ color: '#1d1b18' }}>Коллекция VN-13</h1>
+            <p className="mt-5 text-lg leading-relaxed" style={{ color: '#5d5851' }}>
+              Платья, жакеты, рубашки, брюки и верхняя одежда ограниченных коллекций.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="#collection" className="inline-flex min-h-[52px] items-center justify-center rounded-sm px-6 text-base font-medium" style={{ backgroundColor: '#1d1b18', color: '#fff' }}>
+                Смотреть одежду
+              </a>
+              <a href="https://t.me/vn13agency" className="inline-flex min-h-[52px] items-center justify-center rounded-sm border border-[#b8ad9c] px-6 text-base font-medium" style={{ color: '#1d1b18' }}>
+                Спросить о наличии
+              </a>
+            </div>
+          </div>
+          <div className="relative min-h-[360px] overflow-hidden bg-[#e6ded2] md:min-h-[500px]">
+            <Image
+              src="/brands/vn13-catalog/vn13-designer-womenswear-collection.webp"
+              alt="Коллекция дизайнерской женской одежды собственного бренда VN-13"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 48vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
 
-      <section className="border-t border-[#e0ddd8] bg-[#fafaf8]">
+      <section id="collection" className="border-t border-[#e0ddd8] bg-[#fafaf8]">
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
           <div className="max-w-3xl mb-14">
-            <p className="text-xs tracking-[0.2em] uppercase mb-3 text-[#b8935a]">
-              Каталог VN-13
-            </p>
+            <p className="text-base font-medium mb-3 text-[#8a6b3f]">Каталог VN-13</p>
             <h2 className="text-3xl md:text-5xl font-light mb-6 text-[#0f0f0f]">
               Дизайнерская женская одежда ограниченной серии
             </h2>
             <p className="text-base md:text-lg leading-relaxed text-[#686868]">
-              В коллекции VN-13 соединяются свободный архитектурный крой, черно-белая палитра, цветочные акценты и выразительные фактуры. Новинка каталога — песочный фактурный жакет с высокой стойкой и объёмными рукавами. Также представлены дизайнерские платья, жакеты, рубашки, брюки, жилеты и пальто.
+              Выберите понравившуюся модель и напишите нам — уточним размер, состав, цену и наличие.
             </p>
           </div>
 

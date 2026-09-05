@@ -15,19 +15,19 @@ export default function Stats() {
   return (
     <section id="story" style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
       <div className="max-w-7xl mx-auto px-6 py-14 md:py-18">
-        <p className="text-sm tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>{translations.statsAbout}</p>
+        <p className="text-base font-medium mb-3" style={{ color: '#8a6b3f' }}>{translations.statsAbout}</p>
         <h2 className="text-3xl md:text-4xl font-light mb-4 text-balance" style={{ color: '#0f0f0f' }}>
-          {translations.statsTitle}
+          Опыт, на который можно положиться
         </h2>
-        <p className="max-w-2xl text-base leading-relaxed mb-10" style={{ color: '#6b6b6b' }}>
-          {translations.statsDescription}
+        <p className="max-w-2xl text-lg leading-relaxed mb-10" style={{ color: '#5d5851' }}>
+          Мы работаем с дизайнерскими брендами, бутиками и частными клиентами в России и СНГ.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat) => (
             <div key={stat.label}>
               <div className="text-3xl md:text-4xl font-light mb-1" style={{ color: '#b8935a' }}>{stat.value}</div>
-              <p className="text-sm tracking-wide" style={{ color: '#6b6b6b' }}>{stat.label}</p>
+              <p className="text-base" style={{ color: '#5d5851' }}>{stat.label}</p>
             </div>
           ))}
         </div>
