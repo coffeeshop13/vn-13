@@ -51,6 +51,7 @@ const routes: SitemapRoute[] = [
   { path: '/brands/sula', changeFrequency: 'monthly', priority: 0.74 },
   { path: '/brands/soh', changeFrequency: 'monthly', priority: 0.74 },
   { path: '/contact', changeFrequency: 'yearly', priority: 0.6 },
+  { path: '/partnerstvo', changeFrequency: 'monthly', priority: 0.92 },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
