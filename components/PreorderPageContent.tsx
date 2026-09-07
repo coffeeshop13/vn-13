@@ -148,7 +148,7 @@ export default function PreorderPageContent() {
             <p className="text-base mb-8 max-w-xl mx-auto" style={{ color: '#6b6b6b' }}>
               {translations.preorderCTADesc}
             </p>
-            <CTALink href="/#contact">Get Started</CTALink>
+            <CTALink href="/#contact">Обсудить предзаказ</CTALink>
           </div>
         </div>
       </section>

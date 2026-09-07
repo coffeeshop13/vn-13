@@ -69,6 +69,12 @@ export default function WomensClothingDistributionPage() {
             'Да, предзаказ является одним из ключевых форматов, потому что помогает планировать объемы, сроки и коммерческий риск.',
         },
       ]}
+      relatedLinks={[
+        { href: '/partnerstvo', label: 'Стать партнёром VN13' },
+        { href: '/evropeyskie-brendy-zhenskoy-odezhdy', label: 'Европейские бренды' },
+        { href: '/optovaya-zhenskaya-odezhda', label: 'Оптовые поставки' },
+        { href: '/poshiv-zhenskoy-odezhdy-dlya-brenda', label: 'Пошив для бренда' },
+      ]}
     />
   )
 }

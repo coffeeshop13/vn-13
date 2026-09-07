@@ -91,7 +91,7 @@ export default function ManufacturingPageContent() {
             <p className="text-base mb-8 max-w-xl mx-auto" style={{ color: '#6b6b6b' }}>
               {translations.manufacturingCTADesc}
             </p>
-            <CTALink href="/#contact">Get in Touch</CTALink>
+            <CTALink href="/#contact">Обсудить производство</CTALink>
           </div>
         </div>
       </section>
