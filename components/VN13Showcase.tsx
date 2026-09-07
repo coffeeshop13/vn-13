@@ -4,11 +4,11 @@ import Link from 'next/link'
 const featuredLooks = [
   {
     src: '/brands/vn13-catalog/vn13-black-jacket-white-layered-dress.webp',
-    alt: 'VN13 black jacket with white layered dress',
+    alt: 'Чёрный жакет VN-13 с белым многослойным платьем',
   },
   {
     src: '/brands/vn13-catalog/vn13-blue-floral-designer-dress.webp',
-    alt: 'VN13 blue floral designer dress',
+    alt: 'Синее дизайнерское платье VN-13 с цветочным принтом',
   },
   {
     src: '/brands/vn13-catalog/vn13-black-textured-designer-coat.webp',
@@ -16,7 +16,7 @@ const featuredLooks = [
   },
   {
     src: '/brands/vn13-catalog/vn13-white-oversize-designer-shirt.webp',
-    alt: 'VN13 white oversize designer shirt',
+    alt: 'Белая объёмная дизайнерская рубашка VN-13',
   },
 ]
 

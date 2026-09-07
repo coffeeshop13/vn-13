@@ -101,7 +101,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
           rel="noopener noreferrer"
           className="mt-6 inline-flex min-h-[52px] items-center justify-center bg-[#1d1b18] px-6 text-base font-medium text-white"
         >
-          Спросить о наличии
+          Запросить условия для бутика
         </a>
       </section>
 
@@ -150,7 +150,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                 rel="noopener noreferrer"
                 className="mb-6 inline-flex min-h-[52px] items-center justify-center bg-[#1d1b18] px-6 text-base font-medium text-white"
               >
-                Спросить о наличии
+                Запросить условия для бутика
               </a>
               <div className="grid sm:grid-cols-2 gap-2 md:gap-4">
                 <div className="rounded-2xl p-4 md:p-5" style={{ backgroundColor: '#fff' }}>
@@ -163,7 +163,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                   <p className="text-sm mb-1 md:mb-2" style={{ color: '#9b7541' }}>
                     Кому подойдёт
                   </p>
-                  <p className="text-base" style={{ color: '#0f0f0f' }}>Бутикам и частным клиентам</p>
+                  <p className="text-base" style={{ color: '#0f0f0f' }}>Бутикам, шоурумам и частным клиентам</p>
                 </div>
               </div>
             </div>
