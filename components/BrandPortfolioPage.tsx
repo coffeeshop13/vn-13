@@ -117,9 +117,11 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                 className="relative block w-full overflow-hidden bg-[#f8f5ef] text-left"
                 aria-label={`Открыть увеличенное фото: ${image.alt}`}
               >
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
+                  width={1200}
+                  height={1600}
                   loading={index === 0 ? 'eager' : 'lazy'}
                   className="block h-auto w-full"
                 />

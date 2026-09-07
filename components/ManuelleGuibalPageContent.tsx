@@ -85,10 +85,12 @@ export default function ManuelleGuibalPageContent() {
         </p>
         <div className="-mx-2">
           {lookbookImages.map((image, index) => (
-            <img
+            <Image
               key={`mobile-${image.src}`}
               src={image.src}
               alt={image.alt}
+              width={1200}
+              height={1600}
               loading={index === 0 ? 'eager' : 'lazy'}
               decoding="async"
               className="block w-full h-auto"
@@ -165,7 +167,7 @@ export default function ManuelleGuibalPageContent() {
             <div className="columns-1 sm:columns-2 xl:columns-3 gap-6 [column-fill:_balance]">
               {lookbookImages.map((image, index) => (
                 <div key={image.src} className={`mb-6 break-inside-avoid overflow-hidden ${index < 2 ? 'rounded-[28px]' : 'rounded-[22px]'}`}>
-                  <img src={image.src} alt={image.alt} loading="lazy" decoding="async" className="w-full h-auto object-cover" />
+                  <Image src={image.src} alt={image.alt} width={1200} height={1600} loading="lazy" className="w-full h-auto object-cover" />
                 </div>
               ))}
             </div>

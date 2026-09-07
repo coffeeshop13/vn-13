@@ -75,6 +75,7 @@ export default function RootLayout({
         />
         <noscript>
           <div>
+            {/* eslint-disable-next-line @next/next/no-img-element -- Yandex.Metrica noscript beacon must remain a plain image. */}
             <img
               src="https://mc.yandex.ru/watch/70368979"
               style={{ position: 'absolute', left: '-9999px' }}
