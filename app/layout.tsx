@@ -70,7 +70,7 @@ export default function RootLayout({
           id="ahrefs-analytics"
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="mDPfeqj8ml95p5yYpS/6bQ"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           async
         />
         <noscript>

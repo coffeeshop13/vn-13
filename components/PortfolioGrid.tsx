@@ -46,7 +46,7 @@ export default function PortfolioGrid() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((brand, index) => (
+          {filtered.map((brand) => (
             <Link key={brand.slug} href={`/brands/${brand.slug}`} className="group block">
               <article>
                 <div className="relative overflow-hidden rounded-[16px] mb-3 bg-[#f6f2ec]" style={{ aspectRatio: '3 / 4' }}>
@@ -54,8 +54,6 @@ export default function PortfolioGrid() {
                     src={brand.cardImage}
                     alt={`${brand.name} — ${brand.country.toLowerCase()} дизайнерская одежда в портфеле VN13`}
                     fill
-                    priority={index < 2}
-                    loading={index < 2 ? 'eager' : 'lazy'}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
