@@ -204,6 +204,22 @@ export const organizationJsonLd = {
       inLanguage: 'ru',
     },
     {
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}/#webpage`,
+      url: `${SITE_URL}/`,
+      name: 'Дизайнерская и премиальная женская одежда | VN13',
+      description:
+        'VN13 — дизайнерская и премиальная женская одежда: лимитированные коллекции, европейские бренды, производство и сотрудничество с бутиками.',
+      isPartOf: {
+        '@id': `${SITE_URL}/#website`,
+      },
+      about: [
+        { '@type': 'Brand', '@id': `${SITE_URL}/#brand` },
+        { '@type': 'Service', '@id': `${SITE_URL}/#distribution-service` },
+      ],
+      inLanguage: 'ru',
+    },
+    {
       '@type': 'Service',
       '@id': `${SITE_URL}/#distribution-service`,
       name: 'Дистрибуция европейских брендов женской одежды',
