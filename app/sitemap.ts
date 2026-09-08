@@ -63,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const journalRoutes: SitemapRoute[] = journalArticles.map((article) => ({
     path: `/journal/${article.slug}`,
-    lastModified: new Date(article.publishedAt),
+    lastModified: new Date(article.updatedAt ?? article.publishedAt),
     changeFrequency: 'monthly',
     priority: 0.7,
   }))
