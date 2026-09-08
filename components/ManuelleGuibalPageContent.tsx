@@ -8,55 +8,55 @@ import { useLanguage } from '@/lib/context/LanguageContext'
 
 const lookbookImages = [
   {
-    src: '/brands/manuelle-lookbook/lookbook-01.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-01.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 1',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-02.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-02.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 2',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-03.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-03.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 3',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-04.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-04.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 4',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-05.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-05.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 5',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-06.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-06.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 6',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-07.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-07.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 7',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-08.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-08.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 8',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-09.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-09.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 9',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-10.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-10.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 10',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-11.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-11.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 11',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-12.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-12.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 12',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-13.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-13.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 13',
   },
   {
