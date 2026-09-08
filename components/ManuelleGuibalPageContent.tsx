@@ -101,7 +101,7 @@ export default function ManuelleGuibalPageContent() {
 
       <section className="relative hidden w-full h-screen items-center justify-center overflow-hidden lg:flex">
         <Image
-          src="/brands/manuelle-lookbook/lookbook-03.jpg"
+          src="/brands/manuelle-lookbook/lookbook-03.seo.webp"
           alt="Manuelle Guibal summer lookbook cover"
           fill
           priority

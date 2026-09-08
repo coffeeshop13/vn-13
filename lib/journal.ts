@@ -1587,7 +1587,7 @@ export const journalArticles: JournalArticle[] = [
     description:
       'Как работает предзаказ коллекций женской одежды для бутиков: сроки, выбор моделей, размеры, поставка и преимущества для розницы.',
     category: 'Предзаказ',
-    imageSrc: '/brands/manuelle-lookbook/lookbook-08.jpg',
+    imageSrc: '/brands/manuelle-lookbook/lookbook-08.seo.webp',
     imageAlt: 'Lookbook-образ Manuelle Guibal для предзаказа коллекции',
     publishedAt: '2026-05-26',
     updatedAt: '2026-09-08',
@@ -1642,7 +1642,7 @@ export const journalArticles: JournalArticle[] = [
     description:
       'Как бутику выбирать европейские бренды женской одежды: качество, позиционирование, производство, дистрибуция и долгосрочная работа.',
     category: 'Дистрибуция',
-    imageSrc: '/brands/hannoh-lookbook/hannoh-03.jpg',
+    imageSrc: '/brands/hannoh-lookbook/hannoh-03.seo.webp',
     imageAlt: 'Европейская дизайнерская женская одежда в спокойной эстетике',
     publishedAt: '2026-05-26',
     readingTime: '7 минут',

@@ -77,7 +77,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     },
     gallery: [
       {
-        src: '/brands/hannoh-lookbook/hannoh-03.jpg',
+        src: '/brands/hannoh-lookbook/hannoh-03.seo.webp',
         alt: 'H+ Hannoh Wessel lookbook flat lay with colorful pieces',
       },
       {
@@ -307,8 +307,8 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       { src: '/brands/aequamente-lookbook/aequamente-02.jpg', alt: 'Aequamente vertical editorial portrait' },
       { src: '/brands/aequamente-lookbook/aequamente-03.jpg', alt: 'Aequamente garden portrait' },
       { src: '/brands/aequamente-lookbook/aequamente-04.jpg', alt: 'Aequamente tonal fashion portrait' },
-      { src: '/brands/real/aequamente-1.jpg', alt: 'Aequamente first editorial look' },
-      { src: '/brands/real/aequamente-2.jpg', alt: 'Aequamente second editorial look' },
+      { src: '/brands/real/aequamente-1.seo.webp', alt: 'Aequamente first editorial look' },
+      { src: '/brands/real/aequamente-2.seo.webp', alt: 'Aequamente second editorial look' },
     ],
   },
   {
@@ -329,22 +329,22 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'поддерживает идею лимитированных серий',
     ],
     keywords: ['MJ Watson', 'итальянская женская одежда', 'дизайнерская женская одежда', 'премиум'],
-    cardImage: '/brands/mj-watson/mj-watson-01.jpg',
+    cardImage: '/brands/mj-watson/mj-watson-01.seo.webp',
     heroImage: {
-      src: '/brands/mj-watson/mj-watson-01.jpg',
+      src: '/brands/mj-watson/mj-watson-01.seo.webp',
       alt: 'MJ Watson Spring Summer 2026 look',
     },
     gallery: [
-      { src: '/brands/mj-watson/mj-watson-01.jpg', alt: 'MJ Watson Spring Summer 2026 look 1' },
+      { src: '/brands/mj-watson/mj-watson-01.seo.webp', alt: 'MJ Watson Spring Summer 2026 look 1' },
       { src: '/brands/mj-watson/mj-watson-02.jpg', alt: 'MJ Watson Spring Summer 2026 look 2' },
-      { src: '/brands/mj-watson/mj-watson-03.jpg', alt: 'MJ Watson Spring Summer 2026 look 3' },
+      { src: '/brands/mj-watson/mj-watson-03.seo.webp', alt: 'MJ Watson Spring Summer 2026 look 3' },
       { src: '/brands/mj-watson/mj-watson-04.jpg', alt: 'MJ Watson Spring Summer 2026 look 4' },
       { src: '/brands/mj-watson/mj-watson-05.jpg', alt: 'MJ Watson Spring Summer 2026 look 5' },
       { src: '/brands/mj-watson/mj-watson-06.jpg', alt: 'MJ Watson Spring Summer 2026 look 6' },
       { src: '/brands/mj-watson/mj-watson-07.jpg', alt: 'MJ Watson Spring Summer 2026 look 7' },
-      { src: '/brands/mj-watson/mj-watson-08.jpg', alt: 'MJ Watson Spring Summer 2026 look 8' },
-      { src: '/brands/mj-watson/mj-watson-09.jpg', alt: 'MJ Watson Spring Summer 2026 look 9' },
-      { src: '/brands/mj-watson/mj-watson-10.jpg', alt: 'MJ Watson Spring Summer 2026 look 10' },
+      { src: '/brands/mj-watson/mj-watson-08.seo.webp', alt: 'MJ Watson Spring Summer 2026 look 8' },
+      { src: '/brands/mj-watson/mj-watson-09.seo.webp', alt: 'MJ Watson Spring Summer 2026 look 9' },
+      { src: '/brands/mj-watson/mj-watson-10.seo.webp', alt: 'MJ Watson Spring Summer 2026 look 10' },
     ],
   },
   {
