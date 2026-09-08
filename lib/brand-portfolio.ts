@@ -165,7 +165,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
         alt: 'Shoto soft leather shoulder bag in pale yellow',
       },
       {
-        src: '/brands/shoto/615076494_18558357934038082_6389260614900632214_n.jpg',
+        src: '/brands/shoto/615076494_18558357934038082_6389260614900632214_n.seo.webp',
         alt: 'Shoto distressed dark leather ankle boot close-up',
       },
       {
@@ -185,7 +185,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
         alt: 'Shoto woven dark slip-ons styled with light denim',
       },
       {
-        src: '/brands/shoto/SnapInsta.to_569048135_18542711938038082_7995947979296624523_n.jpg',
+        src: '/brands/shoto/SnapInsta.to_569048135_18542711938038082_7995947979296624523_n.seo.webp',
         alt: 'Shoto black lace-up boot photographed on wet metal steps',
       },
       {
@@ -193,7 +193,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
         alt: 'Shoto white low-top sneaker on a styled tabletop',
       },
       {
-        src: '/brands/shoto/703461601_18596272012038082_6547306615233869090_n.jpg',
+        src: '/brands/shoto/703461601_18596272012038082_6547306615233869090_n.seo.webp',
         alt: 'Shoto brown leather ballet flats placed on grass',
       },
       {
@@ -213,7 +213,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
         alt: 'Shoto white sneaker with gum sole campaign image',
       },
       {
-        src: '/brands/shoto/626301927_18565931677038082_7612540125183476155_n.jpg',
+        src: '/brands/shoto/626301927_18565931677038082_7612540125183476155_n.seo.webp',
         alt: 'Shoto black low heel leather shoe on a red floor',
       },
       {
@@ -221,7 +221,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
         alt: 'Shoto brown derby shoes styled outdoors near a tree',
       },
       {
-        src: '/brands/shoto/651236470_18578166544038082_7311788769899891371_n.jpg',
+        src: '/brands/shoto/651236470_18578166544038082_7311788769899891371_n.seo.webp',
         alt: 'Shoto tan derby shoe close-up on pine needles',
       },
       {
@@ -229,15 +229,15 @@ export const brandPortfolio: BrandPortfolioItem[] = [
         alt: 'Shoto cream sneaker with orange studded outsole detail',
       },
       {
-        src: '/brands/shoto/587287039_18551237389038082_4095073901099379027_n.jpg',
+        src: '/brands/shoto/587287039_18551237389038082_4095073901099379027_n.seo.webp',
         alt: 'Shoto taupe suede Chelsea boot on linen fabric',
       },
       {
-        src: '/brands/shoto/582106099_18554923330038082_3366956147583184308_n.jpg',
+        src: '/brands/shoto/582106099_18554923330038082_3366956147583184308_n.seo.webp',
         alt: 'Shoto black polished lace-less shoe with distressed toe',
       },
       {
-        src: '/brands/shoto/625054647_18564637405038082_3567024032595400609_n.jpg',
+        src: '/brands/shoto/625054647_18564637405038082_3567024032595400609_n.seo.webp',
         alt: 'Shoto black lace-less shoe photographed on grass',
       },
     ],
