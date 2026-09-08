@@ -77,9 +77,9 @@ export default function ManuelleGuibalPageContent() {
       <Header />
 
       <section className="lg:hidden bg-[#fafaf8] px-2 pb-0 pt-[88px]" aria-label="Manuelle Guibal lookbook">
-        <h1 className="text-4xl font-light leading-tight" style={{ color: '#0f0f0f' }}>
+        <p className="text-4xl font-light leading-tight" style={{ color: '#0f0f0f' }}>
           {translations.brandManuelleGuibalTitle}
-        </h1>
+        </p>
         <p className="mt-4 pb-6 text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
           {translations.brandManuelleGuibalSubtitle}
         </p>

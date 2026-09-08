@@ -85,9 +85,9 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
 
       <section className="lg:hidden bg-[#f8f5ef] px-2 pb-6 pt-[88px]" aria-label={`Описание бренда ${brand.name}`}>
         <p className="mb-2 text-base" style={{ color: '#9b7541' }}>Бренд из {brand.country}</p>
-        <h1 className="text-4xl font-light leading-tight" style={{ color: '#0f0f0f' }}>
+        <p className="text-4xl font-light leading-tight" style={{ color: '#0f0f0f' }}>
           {brand.name}
-        </h1>
+        </p>
         <p className="mt-4 text-base leading-relaxed" style={{ color: '#5f5b55' }}>
           {brand.description}
         </p>
