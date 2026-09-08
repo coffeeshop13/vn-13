@@ -37,6 +37,28 @@ jobs:
           AWS_REGION: ru-central1
           SOURCE_DIR: out
 
+      - name: Set cache headers for HTML and SEO files
+        env:
+          AWS_S3_BUCKET: vn-13.com
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_KEY }}
+          AWS_S3_ENDPOINT: https://storage.yandexcloud.net
+          AWS_REGION: ru-central1
+        run: |
+          while IFS= read -r page; do
+            key="${page#out/}"
+            case "$page" in
+              *.html) content_type="text/html" ;;
+              */robots.txt) content_type="text/plain" ;;
+              */sitemap.xml) content_type="application/xml" ;;
+            esac
+            aws s3 cp "$page" "s3://${AWS_S3_BUCKET}/${key}" \
+              --endpoint-url "${AWS_S3_ENDPOINT}" \
+              --content-type "${content_type}" \
+              --cache-control 'public,max-age=0,must-revalidate' \
+              --no-progress
+          done < <(find out -type f \( -name '*.html' -o -name 'robots.txt' -o -name 'sitemap.xml' \) | sort)
+
       - name: Publish slashless route objects
         env:
           AWS_S3_BUCKET: vn-13.com
