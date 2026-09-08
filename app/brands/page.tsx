@@ -74,6 +74,28 @@ export default function BrandsPage() {
         </div>
       </section>
       <PortfolioGrid />
+      <section className="border-t px-6 py-16 md:py-24" style={{ backgroundColor: '#fff', borderColor: '#e0ddd8' }}>
+        <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-2">
+          <div>
+            <p className="mb-4 text-xs uppercase tracking-[0.2em]" style={{ color: '#b8935a' }}>Как устроен портфель</p>
+            <h2 className="mb-5 text-3xl font-light md:text-4xl" style={{ color: '#0f0f0f' }}>Европейские бренды для бутиков и шоурумов</h2>
+            <p className="leading-relaxed" style={{ color: '#5f5b55' }}>
+              VN13 отбирает бренды женской одежды не по количеству моделей, а по цельности коллекции, качеству материалов и коммерческой роли в магазине. В портфеле есть французские и итальянские марки, японская дизайнерская одежда, аксессуары и независимые направления для селективной розницы.
+            </p>
+          </div>
+          <div>
+            <p className="mb-4 text-xs uppercase tracking-[0.2em]" style={{ color: '#b8935a' }}>Для партнёров</p>
+            <p className="mb-5 leading-relaxed" style={{ color: '#5f5b55' }}>
+              Бутики и шоурумы могут подобрать ассортимент под свой город, аудиторию и ценовой сегмент. Для брендов VN13 предлагает представительство, дистрибуцию, предзаказ и развитие розничных партнёрств.
+            </p>
+            <div className="flex flex-wrap gap-3 text-sm">
+              <Link href="/zhenskaya-odezhda-dlya-butikov" className="underline underline-offset-4">Одежда для бутиков</Link>
+              <Link href="/partnerstvo" className="underline underline-offset-4">Стать партнёром</Link>
+              <Link href="/contact" className="underline underline-offset-4">Связаться с VN13</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </main>
   )

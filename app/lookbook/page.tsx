@@ -74,6 +74,20 @@ export default function LookbookPage() {
           </div>
         </div>
       </section>
+      <section className="border-t px-6 py-16 md:py-24" style={{ backgroundColor: '#faf8f4', borderColor: '#e0ddd8' }}>
+        <div className="mx-auto max-w-4xl">
+          <p className="mb-4 text-xs uppercase tracking-[0.2em]" style={{ color: '#b8935a' }}>Как читать lookbook</p>
+          <h2 className="mb-5 text-3xl font-light md:text-4xl" style={{ color: '#0f0f0f' }}>Капсульная женская одежда как система</h2>
+          <p className="mb-6 max-w-3xl leading-relaxed" style={{ color: '#5f5b55' }}>
+            Lookbook VN-13 показывает не отдельные эффектные вещи, а логику капсулы: спокойную палитру, свободный силуэт, фактурные материалы и модели, которые можно соединять между собой. Такой подход помогает бутику собирать цельную витрину, а клиенту — понятный гардероб без лишнего количества позиций.
+          </p>
+          <div className="flex flex-wrap gap-4 text-sm">
+            <Link href="/kapsulnaya-zhenskaya-odezhda" className="underline underline-offset-4">О капсульной одежде</Link>
+            <Link href="/vn-13-brand" className="underline underline-offset-4">Каталог VN-13</Link>
+            <Link href="/contact" className="underline underline-offset-4">Запросить условия</Link>
+          </div>
+        </div>
+      </section>
       <Footer />
     </main>
   )
