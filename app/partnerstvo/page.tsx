@@ -93,6 +93,28 @@ export default function PartnershipPage() {
           </div>
         </div>
       </section>
+      <section className="border-t bg-white px-6 py-16 md:py-24" style={{ borderColor: '#e0ddd8' }}>
+        <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-2">
+          <article>
+            <p className="mb-4 text-xs uppercase tracking-[0.2em]" style={{ color: '#b8935a' }}>Что важно бренду</p>
+            <h2 className="mb-5 text-3xl font-light md:text-4xl" style={{ color: '#0f0f0f' }}>Партнёрство начинается с ясной задачи</h2>
+            <p className="leading-relaxed" style={{ color: '#686868' }}>
+              На первой встрече полезно обсудить эстетику бренда, производственные возможности, ценовой уровень, сезонность и желаемый рынок. Это помогает понять, нужен ли бренду дистрибьютор, агент по продажам, розничные партнёры или запуск ограниченной капсулы.
+            </p>
+          </article>
+          <article>
+            <p className="mb-4 text-xs uppercase tracking-[0.2em]" style={{ color: '#b8935a' }}>Что важно бутику</p>
+            <h2 className="mb-5 text-3xl font-light md:text-4xl" style={{ color: '#0f0f0f' }}>Ассортимент под формат магазина</h2>
+            <p className="mb-5 leading-relaxed" style={{ color: '#686868' }}>
+              Для ритейлера важны город, аудитория, бюджет закупки, размерная сетка и сроки поставки. VN13 помогает сопоставить эти параметры с коллекцией и выбрать модели, которые можно собрать в коммерческую капсулу.
+            </p>
+            <div className="flex flex-wrap gap-4 text-sm">
+              <Link href="/optovaya-zhenskaya-odezhda" className="underline underline-offset-4">Оптовые поставки</Link>
+              <Link href="/preorder" className="underline underline-offset-4">Предзаказ коллекций</Link>
+            </div>
+          </article>
+        </div>
+      </section>
       <Footer />
     </main>
   )
