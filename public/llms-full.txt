@@ -83,6 +83,12 @@ Distribution page for womenswear and brand representation.
 https://vn-13.com/evropeyskie-brendy-zhenskoy-odezhdy
 European womenswear brands page.
 
+https://vn-13.com/partnerstvo
+Partnership page for European brands, boutiques, showrooms, and retail partners. Covers brand representation, wholesale supply, pre-order planning, limited capsules, and small-batch production.
+
+https://vn-13.com/preorder
+Pre-order page for retailers selecting models, sizes, and volumes before collection delivery.
+
 ## Journal pages
 
 https://vn-13.com/journal
@@ -96,6 +102,8 @@ Published guide topics include:
 - pre-order fashion collections for retailers
 - European womenswear brands for boutiques
 - capsule womenswear collections
+- pre-order womenswear collections for retailers
+- partnership with a womenswear distributor
 
 ## Business audience
 
