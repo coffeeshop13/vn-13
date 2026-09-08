@@ -33,11 +33,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
     url: pageUrl,
     image: absoluteUrl(brand.heroImage.src),
     slogan: brand.positioning,
-    foundingLocation: brand.country,
-    inLanguage: 'ru',
-    isPartOf: {
-      '@id': `${absoluteUrl('/')}#website`,
-    },
+    mainEntityOfPage: pageUrl,
     knowsAbout: brand.keywords,
     ...(brand.officialWebsite
       ? {
