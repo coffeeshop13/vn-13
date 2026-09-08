@@ -74,6 +74,15 @@ export default function BrandsPage() {
         </div>
       </section>
       <PortfolioGrid />
+      <section className="border-t px-6 py-16 md:py-24" style={{ backgroundColor: '#faf8f4', borderColor: '#e0ddd8' }}>
+        <div className="mx-auto max-w-5xl">
+          <p className="mb-4 text-xs uppercase tracking-[0.2em]" style={{ color: '#b8935a' }}>Селекция VN13</p>
+          <h2 className="mb-5 text-3xl font-light md:text-4xl" style={{ color: '#0f0f0f' }}>Дизайнерские бренды женской одежды с разным характером</h2>
+          <p className="max-w-4xl leading-relaxed" style={{ color: '#5f5b55' }}>
+            В каталоге VN13 собраны французские, итальянские, японские, британские и корейские марки. Их объединяют качество, самостоятельный дизайн и возможность работать в селективной рознице, но каждая марка занимает собственную нишу: от мягкого минимализма и натуральных тканей до архитектурного кроя, обуви и аксессуаров. Такое сочетание помогает бутику формировать узнаваемый ассортимент, а не повторять готовую матрицу массового рынка.
+          </p>
+        </div>
+      </section>
       <section className="border-t px-6 py-16 md:py-24" style={{ backgroundColor: '#fff', borderColor: '#e0ddd8' }}>
         <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-2">
           <div>

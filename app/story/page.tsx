@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { createMetadata } from '@/lib/seo'
@@ -63,6 +64,28 @@ export default function StoryPage() {
             <div>
               <h3 className="font-medium text-lg mb-4">Партнёрство</h3>
               <p className="text-text-secondary leading-relaxed">Мы инвестируем в долгие отношения с брендами и розничными партнёрами, основанные на прозрачности и общем результате.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t px-4 py-20 sm:px-6 md:py-28">
+        <div className="mx-auto grid max-w-4xl gap-10 md:grid-cols-2">
+          <div>
+            <h2 className="mb-5 text-3xl font-light md:text-4xl">От дистрибуции к собственной капсуле</h2>
+            <p className="leading-relaxed text-text-secondary">
+              Опыт работы с европейскими дизайнерами помогает VN13 точнее формировать собственные коллекции VN-13: выбирать ткани, проверять посадку, планировать небольшие серии и понимать, какая вещь действительно нужна гардеробу клиента или ассортименту бутика.
+            </p>
+          </div>
+          <div>
+            <h2 className="mb-5 text-3xl font-light md:text-4xl">Партнёрство на долгий срок</h2>
+            <p className="mb-5 leading-relaxed text-text-secondary">
+              Сегодня VN13 соединяет селекцию брендов, оптовые поставки, предзаказ и производственные проекты. Мы оцениваем не только эстетику, но и качество процесса: сроки, коммуникацию, повторяемость и потенциал развития марки.
+            </p>
+            <div className="flex flex-wrap gap-4 text-sm">
+              <Link href="/brands" className="underline underline-offset-4">Бренды в портфеле</Link>
+              <Link href="/proizvoditel-zhenskoy-odezhdy" className="underline underline-offset-4">Производство VN-13</Link>
+              <Link href="/partnerstvo" className="underline underline-offset-4">Партнёрство</Link>
             </div>
           </div>
         </div>

@@ -75,6 +75,24 @@ export default function LookbookPage() {
           </div>
         </div>
       </section>
+      <section className="border-t px-6 py-16 md:py-24" style={{ backgroundColor: '#fff', borderColor: '#e0ddd8' }}>
+        <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-2">
+          <div>
+            <p className="mb-4 text-xs uppercase tracking-[0.2em]" style={{ color: '#b8935a' }}>Для клиента</p>
+            <h2 className="mb-5 text-3xl font-light md:text-4xl" style={{ color: '#0f0f0f' }}>Не образ на один выход, а работающий гардероб</h2>
+            <p className="leading-relaxed" style={{ color: '#5f5b55' }}>
+              Визуальный язык VN-13 строится вокруг вещей, которые соединяются между собой: свободных жакетов, платьев, рубашек, брюк и мягких верхних слоёв. Натуральные ткани, сложные нейтральные оттенки и архитектурный крой помогают собрать спокойную капсулу без ощущения униформы.
+            </p>
+          </div>
+          <div>
+            <p className="mb-4 text-xs uppercase tracking-[0.2em]" style={{ color: '#b8935a' }}>Для бутика</p>
+            <h2 className="mb-5 text-3xl font-light md:text-4xl" style={{ color: '#0f0f0f' }}>Визуальная селекция поддерживает продажи</h2>
+            <p className="leading-relaxed" style={{ color: '#5f5b55' }}>
+              Lookbook помогает закупщику увидеть не только отдельную модель, но и возможную роль коллекции в магазине: базовое ядро, сезонный акцент или лимитированная капсула. Такой взгляд упрощает байинг, мерчандайзинг и разговор с клиентом о качестве и посадке.
+            </p>
+          </div>
+        </div>
+      </section>
       <section className="border-t px-6 py-16 md:py-24" style={{ backgroundColor: '#faf8f4', borderColor: '#e0ddd8' }}>
         <div className="mx-auto max-w-4xl">
           <p className="mb-4 text-xs uppercase tracking-[0.2em]" style={{ color: '#b8935a' }}>Как читать lookbook</p>
