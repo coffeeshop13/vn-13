@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import SeoLandingPage from '@/components/SeoLandingPage'
 import { createMetadata } from '@/lib/seo'
+import { brandPortfolio } from '@/lib/brand-portfolio'
 
 export const metadata: Metadata = createMetadata({
   title: 'Европейские бренды женской одежды | Дистрибуция VN13',
@@ -15,6 +16,11 @@ export const metadata: Metadata = createMetadata({
     'дистрибуция европейских брендов одежды',
   ],
 })
+
+const europeanPortfolio = brandPortfolio
+  .filter((brand) => ['france', 'italy', 'uk'].includes(brand.region))
+  .map((brand) => `${brand.name} (${brand.country})`)
+  .join(', ')
 
 export default function EuropeanWomenswearBrandsPage() {
   return (
@@ -36,6 +42,13 @@ export default function EuropeanWomenswearBrandsPage() {
           body: [
             'Хороший список европейских брендов женской одежды начинается не с количества названий, а с соответствия аудитории, ценового уровня и эстетики магазина. Мы оцениваем силу коллекции, ключевые категории, размерный ряд, условия предзаказа и реальную производственную базу.',
             'Такой подход помогает найти поставщика европейской одежды для бутика, который отвечает не только за поставку, но и за целостность ассортимента. В портфеле VN13 представлены дизайнерские марки с разным характером — от спокойного минимализма до архитектурного авангарда.',
+          ],
+        },
+        {
+          title: 'Какие европейские бренды есть в портфеле VN13',
+          body: [
+            `Европейская часть портфеля VN13 включает ${europeanPortfolio}. Это не универсальный каталог для массовой закупки: каждая марка рассматривается с учетом эстетики, ценового уровня, производственной базы и роли в ассортименте конкретного бутика.`,
+            'Если нужен не общий список брендов одежды, а подбор европейской женской одежды под формат магазина, команда VN13 помогает сопоставить коллекции с аудиторией, размерным рядом, бюджетом закупки и планом предзаказа.',
           ],
         },
         {
@@ -76,6 +89,12 @@ export default function EuropeanWomenswearBrandsPage() {
           answer:
             'Он помогает заранее закрепить модели, размеры и сроки поставки до широкого выхода коллекции.',
         },
+      ]}
+      relatedLinks={[
+        { href: '/brands', label: 'Каталог брендов VN13' },
+        { href: '/zhenskaya-odezhda-dlya-butikov', label: 'Женская одежда для бутиков' },
+        { href: '/optovaya-zhenskaya-odezhda', label: 'Оптовая женская одежда' },
+        { href: '/partnerstvo', label: 'Стать партнёром VN13' },
       ]}
     />
   )
