@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
   description:
     'Каталог собственного бренда VN-13: дизайнерские платья, жакеты, рубашки, брюки и верхняя одежда ограниченных серий для клиентов и бутиков России и СНГ.',
   path: '/vn-13-brand',
-  image: '/brands/vn13-catalog/vn13-sand-textured-jacket-front.png',
+  image: '/brands/vn13-catalog/vn13-sand-textured-jacket-front.seo.webp',
   keywords: [
     'VN-13 бренд',
     'бренд женской одежды VN-13',
@@ -54,17 +54,17 @@ const faq = [
 
 const catalogImages = [
   {
-    src: '/brands/vn13-catalog/vn13-sand-textured-jacket-front.png',
+    src: '/brands/vn13-catalog/vn13-sand-textured-jacket-front.seo.webp',
     alt: 'Песочный фактурный жакет собственного бренда VN13, вид спереди',
     caption: 'Фактурный песочный жакет VN13',
   },
   {
-    src: '/brands/vn13-catalog/vn13-sand-textured-jacket-three-quarter.png',
+    src: '/brands/vn13-catalog/vn13-sand-textured-jacket-three-quarter.seo.webp',
     alt: 'Песочный фактурный жакет собственного бренда VN13, ракурс три четверти',
     caption: 'Жакет VN13: застёжка и объёмный рукав',
   },
   {
-    src: '/brands/vn13-catalog/vn13-sand-textured-jacket-back.png',
+    src: '/brands/vn13-catalog/vn13-sand-textured-jacket-back.seo.webp',
     alt: 'Песочный фактурный жакет собственного бренда VN13, вид со спины',
     caption: 'Жакет VN13: вид со спины',
   },

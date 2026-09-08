@@ -263,12 +263,12 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     officialWebsite: 'https://postandcoshop.com/',
     cardImage: '/brands/post-and-co/belt-collection.png',
     heroImage: {
-      src: '/brands/post-and-co/black-textured-belt.png',
+      src: '/brands/post-and-co/black-textured-belt.seo.webp',
       alt: 'Post & Co black textured leather belt',
     },
     gallery: [
       { src: '/brands/post-and-co/belt-collection.png', alt: 'Post & Co belt collection campaign image' },
-      { src: '/brands/post-and-co/black-textured-belt.png', alt: 'Post & Co black textured leather belt' },
+      { src: '/brands/post-and-co/black-textured-belt.seo.webp', alt: 'Post & Co black textured leather belt' },
       { src: '/brands/post-and-co/brown-textured-belt.png', alt: 'Post & Co brown textured leather belt' },
       { src: '/brands/post-and-co/black-belt.png', alt: 'Post & Co black leather belt with metal buckle' },
       { src: '/brands/post-and-co/light-textured-belt.png', alt: 'Post & Co light textured leather belt' },

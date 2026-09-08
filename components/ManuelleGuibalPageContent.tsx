@@ -60,11 +60,11 @@ const lookbookImages = [
     alt: 'Manuelle Guibal summer lookbook image 13',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-14.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-14.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 14',
   },
   {
-    src: '/brands/manuelle-lookbook/lookbook-15.jpg',
+    src: '/brands/manuelle-lookbook/lookbook-15.seo.webp',
     alt: 'Manuelle Guibal summer lookbook image 15',
   },
 ]
