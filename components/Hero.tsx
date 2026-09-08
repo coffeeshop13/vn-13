@@ -44,6 +44,7 @@ export default function Hero() {
             alt="Коллекция дизайнерской женской одежды VN13"
             fill
             priority
+            fetchPriority="high"
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 48vw"
           />
