@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
-import Script from 'next/script'
 import CookieConsentBar from '@/components/CookieConsentBar'
+import DeferredAhrefsAnalytics from '@/components/DeferredAhrefsAnalytics'
 import { LanguageProvider } from '@/lib/context/LanguageContext'
 import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL, createMetadata, organizationJsonLd } from '@/lib/seo'
 import './globals.css'
@@ -67,13 +67,7 @@ export default function RootLayout({
   return (
     <html lang="ru" suppressHydrationWarning data-scroll-behavior="smooth">
       <body className="antialiased">
-        <Script
-          id="ahrefs-analytics"
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="mDPfeqj8ml95p5yYpS/6bQ"
-          strategy="lazyOnload"
-          async
-        />
+        <DeferredAhrefsAnalytics />
         <noscript>
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element -- Yandex.Metrica noscript beacon must remain a plain image. */}
