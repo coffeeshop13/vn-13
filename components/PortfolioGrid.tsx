@@ -53,9 +53,10 @@ export default function PortfolioGrid() {
                   <Image
                     src={brand.cardImage}
                     alt={`${brand.name} — ${brand.country.toLowerCase()} дизайнерская одежда в портфеле VN13`}
-                    fill
+                    width={1200}
+                    height={1600}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <h3 className="font-medium text-xl mb-1" style={{ color: '#1d1b18' }}>{brand.name}</h3>

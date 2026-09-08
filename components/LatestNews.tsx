@@ -33,9 +33,10 @@ export default function LatestNews() {
                 <Image
                   src={article.imageSrc}
                   alt={article.imageAlt}
-                  fill
+                  width={1600}
+                  height={1000}
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                 />
               </div>
               <p className="mt-4 text-base" style={{ color: '#8a6b3f' }}>

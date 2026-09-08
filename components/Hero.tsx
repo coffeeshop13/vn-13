@@ -42,10 +42,11 @@ export default function Hero() {
           <Image
             src="/hero-vn13-showroom.webp"
             alt="Коллекция дизайнерской женской одежды VN13"
-            fill
+            width={1600}
+            height={900}
             priority
             fetchPriority="high"
-            className="object-cover"
+            className="h-full w-full object-cover"
             sizes="(max-width: 1024px) 100vw, 48vw"
           />
         </div>

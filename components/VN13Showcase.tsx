@@ -50,9 +50,10 @@ export default function VN13Showcase() {
                 <Image
                   src="/brands/vn13-catalog/vn13-designer-womenswear-collection.webp"
                   alt="Коллекция дизайнерской женской одежды VN-13"
-                  fill
+                  width={1600}
+                  height={900}
                   sizes="(max-width: 1024px) 100vw, 58vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
             </Link>
@@ -63,9 +64,10 @@ export default function VN13Showcase() {
                   <Image
                     src={look.src}
                     alt={look.alt}
-                    fill
+                    width={1200}
+                    height={1600}
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 45vw, 28vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
               </Link>
