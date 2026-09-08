@@ -1588,6 +1588,7 @@ export const journalArticles: JournalArticle[] = [
     imageSrc: '/brands/manuelle-lookbook/lookbook-08.jpg',
     imageAlt: 'Lookbook-образ Manuelle Guibal для предзаказа коллекции',
     publishedAt: '2026-05-26',
+    updatedAt: '2026-09-08',
     readingTime: '6 минут',
     keywords: [
       'предзаказ коллекций одежды',
