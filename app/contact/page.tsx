@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import ContactForm from '@/components/ContactForm'
 import Footer from '@/components/Footer'
@@ -29,6 +30,57 @@ export default function ContactPage() {
       </section>
       
       <ContactForm />
+
+      <section className="py-20 md:py-28 px-6" style={{ backgroundColor: '#f5f4f1' }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-light mb-6" style={{ color: '#0f0f0f' }}>
+                С какими запросами обращаются в VN13
+              </h2>
+              <p className="leading-relaxed mb-6" style={{ color: '#555' }}>
+                Команда VN13 помогает связать задачу ритейлера или бренда с подходящим форматом работы: от подбора европейских брендов для бутика до собственного направления VN-13 и производства капсульных коллекций.
+              </p>
+              <ul className="space-y-3 leading-relaxed" style={{ color: '#333' }}>
+                <li>— оптовая женская одежда для бутиков, шоурумов и концепт-сторов;</li>
+                <li>— дистрибуция и представительство дизайнерских брендов;</li>
+                <li>— предзаказ коллекций и планирование ассортимента;</li>
+                <li>— производство женской одежды и капсул малыми партиями.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="text-2xl md:text-3xl font-light mb-6" style={{ color: '#0f0f0f' }}>
+                Как проходит первый контакт
+              </h2>
+              <ol className="space-y-5 leading-relaxed" style={{ color: '#333' }}>
+                <li>
+                  <strong className="font-normal" style={{ color: '#0f0f0f' }}>1. Опишите задачу.</strong>{' '}
+                  Расскажите о формате магазина или бренда, аудитории и нужных категориях одежды.
+                </li>
+                <li>
+                  <strong className="font-normal" style={{ color: '#0f0f0f' }}>2. Обсудим подходящий формат.</strong>{' '}
+                  Уточним, нужен ли вам подбор брендов, предзаказ, дистрибуция или собственная капсула.
+                </li>
+                <li>
+                  <strong className="font-normal" style={{ color: '#0f0f0f' }}>3. Сформируем следующий шаг.</strong>{' '}
+                  Подскажем, какие материалы и сведения нужны для предметного разговора о коллекции и сотрудничестве.
+                </li>
+              </ol>
+              <p className="mt-7 leading-relaxed" style={{ color: '#555' }}>
+                Если вы пока изучаете направление, начните с материалов о{' '}
+                <Link href="/optovaya-zhenskaya-odezhda" className="underline underline-offset-4" style={{ color: '#0f0f0f' }}>
+                  оптовой женской одежде
+                </Link>{' '}
+                или{' '}
+                <Link href="/evropeyskie-brendy-zhenskoy-odezhdy" className="underline underline-offset-4" style={{ color: '#0f0f0f' }}>
+                  европейских брендах для бутика
+                </Link>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <section className="py-20 md:py-32 px-6" style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
         <div className="max-w-7xl mx-auto">
