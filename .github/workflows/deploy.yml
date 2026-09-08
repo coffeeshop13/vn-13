@@ -59,3 +59,23 @@ jobs:
                 --no-progress
             fi
           done < <(find out -mindepth 2 -type f -name index.html | sort)
+
+      - name: Notify IndexNow
+        env:
+          INDEXNOW_KEY: b74b59f1575a383a6a86c059d4e3c9bc
+        run: |
+          node <<'NODE'
+          const fs = require('fs')
+          const sitemap = fs.readFileSync('out/sitemap.xml', 'utf8')
+          const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1])
+          fs.writeFileSync('/tmp/vn13-indexnow.json', JSON.stringify({
+            host: 'vn-13.com',
+            key: process.env.INDEXNOW_KEY,
+            keyLocation: `https://vn-13.com/${process.env.INDEXNOW_KEY}.txt`,
+            urlList: [...new Set(urls)],
+          }))
+          NODE
+          curl --fail-with-body --silent --show-error --max-time 30 \
+            -X POST 'https://api.indexnow.org/indexnow' \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data-binary @/tmp/vn13-indexnow.json
