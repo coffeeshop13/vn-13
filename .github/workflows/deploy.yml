@@ -36,3 +36,26 @@ jobs:
           AWS_S3_ENDPOINT: https://storage.yandexcloud.net
           AWS_REGION: ru-central1
           SOURCE_DIR: out
+
+      - name: Publish slashless route objects
+        env:
+          AWS_S3_BUCKET: vn-13.com
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_KEY }}
+          AWS_S3_ENDPOINT: https://storage.yandexcloud.net
+          AWS_REGION: ru-central1
+        run: |
+          while IFS= read -r page; do
+            route="${page#out/}"
+            route="${route%/index.html}"
+            if [ -n "$route" ]; then
+              case "$route" in
+                404|_not-found) continue ;;
+              esac
+              aws s3 cp "$page" "s3://${AWS_S3_BUCKET}/${route}" \
+                --endpoint-url "${AWS_S3_ENDPOINT}" \
+                --content-type text/html \
+                --cache-control 'public,max-age=0,must-revalidate' \
+                --no-progress
+            fi
+          done < <(find out -mindepth 2 -type f -name index.html | sort)
