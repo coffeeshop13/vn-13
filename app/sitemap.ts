@@ -73,7 +73,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [...routes, ...extendedRoutes, ...journalRoutes].map((route) => ({
     url: absoluteUrl(route.path),
     ...(route.lastModified ? { lastModified: route.lastModified } : {}),
-    ...(route.changeFrequency ? { changeFrequency: route.changeFrequency } : {}),
-    ...(route.priority ? { priority: route.priority } : {}),
   }))
 }

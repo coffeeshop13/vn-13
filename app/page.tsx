@@ -42,6 +42,9 @@ export default function Home() {
                 <strong className="font-medium text-[#1d1b18]">Для fashion-проектов</strong>: производство и капсульные коллекции.
               </li>
             </ul>
+            <p data-author="Команда VN13" className="text-base text-[#5d5851]">
+              Команда VN13 отбирает бренды, ведёт переговоры с европейскими производителями и сопровождает партнёров после поставки.
+            </p>
           </div>
         </div>
       </section>
