@@ -36,22 +36,3 @@ jobs:
           AWS_S3_ENDPOINT: https://storage.yandexcloud.net
           AWS_REGION: ru-central1
           SOURCE_DIR: out
-
-      - name: Add permanent slash redirects
-        env:
-          AWS_S3_BUCKET: vn-13.com
-          AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_KEY }}
-          AWS_S3_ENDPOINT: https://storage.yandexcloud.net
-          AWS_REGION: ru-central1
-        run: |
-          find out -mindepth 2 -type f -name index.html -print0 | while IFS= read -r -d '' index_file; do
-            route_dir="${index_file%/index.html}"
-            object_key="${route_dir#out/}"
-            aws s3api put-object \
-              --bucket "$AWS_S3_BUCKET" \
-              --key "$object_key" \
-              --website-redirect-location "/$object_key/" \
-              --endpoint-url "$AWS_S3_ENDPOINT" \
-              --region "$AWS_REGION"
-          done
