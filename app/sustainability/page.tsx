@@ -7,6 +7,7 @@ export const metadata: Metadata = createPageMetadata({
   description:
     'VN13 и VN-13 развивают устойчивую женскую одежду: качественные материалы, долговечные коллекции, ответственные производственные партнеры.',
   path: '/sustainability',
+  keywords: ['устойчивая женская одежда', 'ответственное производство одежды', 'slow fashion', 'натуральные ткани', 'долговечная одежда'],
 })
 
 export default function SustainabilityPage() {

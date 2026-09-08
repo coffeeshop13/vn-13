@@ -247,7 +247,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     slug: 'post-and-co',
     country: 'Италия',
     region: 'italy',
-    title: 'Post & Co | Итальянские премиальные аксессуары в портфеле VN13',
+    title: 'Post & Co | Итальянские аксессуары VN13',
     description:
       'Post & Co в портфеле VN13: итальянские премиальные аксессуары, которые дополняют женский ассортимент и помогают собирать цельные образы.',
     intro:
@@ -352,7 +352,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     slug: 'isabella-clementini',
     country: 'Италия',
     region: 'italy',
-    title: 'Isabella Clementini | Итальянская дизайнерская женская одежда в VN13',
+    title: 'Isabella Clementini | Итальянская одежда VN13',
     description:
       'Isabella Clementini в портфеле VN13: итальянская дизайнерская одежда с вневременным гардеробом, натуральными фактурами и вещами, которые легко соединяются между сезонами.',
     intro:

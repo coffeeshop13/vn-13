@@ -1873,6 +1873,7 @@ export const journalArticles: JournalArticle[] = [
   {
     slug: 'limitirovannye-serii-dlya-butikov-pochemu-eto-rabotaet',
     title: 'Лимитированные серии для бутиков: почему это работает',
+    seoTitle: 'Лимитированные серии для бутиков: почему это работает',
     description:
       'Как limited series помогает бутикам снижать риск склада, удерживать ценность и продавать премиальную женскую одежду точнее.',
     category: 'Розница',

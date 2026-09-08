@@ -13,7 +13,9 @@ type SitemapRoute = {
 }
 
 const latestJournalDate = new Date(
-  Math.max(...journalArticles.map((article) => new Date(article.publishedAt).getTime())),
+  Math.max(
+    ...journalArticles.map((article) => new Date(article.updatedAt ?? article.publishedAt).getTime()),
+  ),
 )
 
 const routes: SitemapRoute[] = [

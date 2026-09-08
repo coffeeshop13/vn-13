@@ -3,7 +3,7 @@ import SeoLandingPage from '@/components/SeoLandingPage'
 import { createMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Эксклюзивная женская одежда | VN-13 и европейские дизайнерские бренды',
+  title: 'Эксклюзивная женская одежда | VN-13',
   description:
     'Эксклюзивная женская одежда VN-13: лимитированные коллекции, европейское производство, дизайнерские марки и предзаказ для бутиков.',
   path: '/eksklyuzivnaya-zhenskaya-odezhda',

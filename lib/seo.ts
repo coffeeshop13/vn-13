@@ -117,10 +117,13 @@ type PageMetadataOptions = {
   title: string
   description: string
   path?: string
+  keywords?: string[]
+  image?: string
+  imageAlt?: string
 }
 
-export function createPageMetadata({ title, description, path = '/' }: PageMetadataOptions): Metadata {
-  return createMetadata({ title, description, path })
+export function createPageMetadata({ title, description, path = '/', keywords = [], image, imageAlt }: PageMetadataOptions): Metadata {
+  return createMetadata({ title, description, path, keywords, image, imageAlt })
 }
 
 export const siteConfig = {
@@ -142,7 +145,7 @@ export const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': ['Organization', 'FashionBusiness'],
+      '@type': 'Organization',
       '@id': `${SITE_URL}/#organization`,
       name: SITE_NAME,
       alternateName: 'VN-13',
