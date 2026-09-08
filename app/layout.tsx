@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   creator: SITE_NAME,
   publisher: SITE_NAME,
   category: 'Fashion distribution',
+  referrer: 'strict-origin-when-cross-origin',
   formatDetection: {
     email: false,
     address: false,
