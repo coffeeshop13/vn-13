@@ -355,6 +355,29 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
 
           </div>
 
+          <section className="mt-20 border-t pt-16" style={{ borderColor: '#e0ddd8' }}>
+            <div className="grid gap-8 md:grid-cols-[0.85fr_1.15fr] md:items-start">
+              <div>
+                <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#b8935a' }}>
+                  Заказ и наличие
+                </p>
+                <h2 className="text-3xl md:text-4xl font-light" style={{ color: '#0f0f0f' }}>
+                  Как заказать {brand.name}
+                </h2>
+              </div>
+              <div className="text-base leading-8" style={{ color: '#5f5b55' }}>
+                <p>
+                  Если вы ищете, где купить {brand.name} в России, команда VN13 проверит актуальную коллекцию, размеры и условия заказа. Для бутиков и шоурумов отдельно обсуждаем ассортимент, предзаказ и формат поставки.
+                </p>
+                <ul className="mt-5 space-y-2" aria-label={`Варианты заказа ${brand.name}`}>
+                  <li>— частный заказ и подбор размера;</li>
+                  <li>— подбор коллекции для бутика или шоурума;</li>
+                  <li>— предзаказ и уточнение сроков поставки.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
           <div className="mt-20 pt-16 border-t text-center" style={{ borderColor: '#e0ddd8' }}>
             <h3 className="text-2xl md:text-3xl font-light mb-4" style={{ color: '#0f0f0f' }}>
               Откройте для себя {brand.name}
