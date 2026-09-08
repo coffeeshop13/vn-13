@@ -1494,6 +1494,7 @@ export const journalArticles: JournalArticle[] = [
   },
   {
     slug: 'zhenskaya-odezhda-optom-dlya-butikov-kak-zakupat',
+    seoTitle: 'Женская одежда оптом для бутиков: закупка | VN13',
     title: 'Женская одежда оптом для бутиков: как закупать без лишнего склада',
     description:
       'Как бутику закупать женскую одежду оптом: предзаказ, капсульный ассортимент, размеры, повторные поставки и работа с дистрибьютором.',
@@ -1537,6 +1538,7 @@ export const journalArticles: JournalArticle[] = [
   },
   {
     slug: 'proizvodstvo-zhenskoy-odezhdy-malymi-partiyami',
+    seoTitle: 'Производство женской одежды малыми партиями | VN13',
     title: 'Производство женской одежды малыми партиями: этапы и риски',
     description:
       'Что важно знать при производстве женской одежды малыми партиями: дизайн, ткани, лекала, образцы, контроль качества и экономика капсулы.',
@@ -1635,6 +1637,7 @@ export const journalArticles: JournalArticle[] = [
   },
   {
     slug: 'evropeyskie-brendy-zhenskoy-odezhdy-dlya-butikov',
+    seoTitle: 'Европейские бренды одежды для бутиков | VN13',
     title: 'Европейские бренды женской одежды для бутиков: как выбирать партнеров',
     description:
       'Как бутику выбирать европейские бренды женской одежды: качество, позиционирование, производство, дистрибуция и долгосрочная работа.',
@@ -1678,6 +1681,7 @@ export const journalArticles: JournalArticle[] = [
   },
   {
     slug: 'kapsulnaya-kollektsiya-zhenskoy-odezhdy',
+    seoTitle: 'Капсульная коллекция женской одежды | VN13',
     title: 'Капсульная коллекция женской одежды: как собрать сильный ассортимент',
     description:
       'Как формируется капсульная коллекция женской одежды: категории, цвета, ткани, сезонность, оптовый заказ и производство.',
