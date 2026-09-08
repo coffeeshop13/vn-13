@@ -4,19 +4,50 @@ import Header from '@/components/Header'
 import ContactForm from '@/components/ContactForm'
 import Footer from '@/components/Footer'
 import { ContactLink } from '@/components/ContactLink'
-import { createMetadata } from '@/lib/seo'
+import { absoluteUrl, createMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createMetadata({
   title: 'Контакты VN13 | Женская одежда, производство и дистрибуция',
   description:
     'Свяжитесь с VN13, чтобы обсудить женскую одежду VN-13, производство коллекций, оптовые поставки, предзаказ и дистрибуцию европейских брендов.',
   path: '/contact',
-  keywords: ['контакты VN13', 'женская одежда VN-13', 'производство женской одежды', 'дистрибуция одежды'],
+  keywords: [
+    'контакты VN13',
+    'связаться с дистрибьютором одежды',
+    'оптовый поставщик женской одежды',
+    'производство женской одежды',
+    'дистрибуция одежды',
+  ],
 })
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ContactPage',
+      '@id': `${absoluteUrl('/contact')}#contact-page`,
+      url: absoluteUrl('/contact'),
+      name: 'Контакты VN13',
+      description:
+        'Контакты VN13 для обсуждения оптовых поставок, дистрибуции, предзаказа и производства женской одежды.',
+      inLanguage: 'ru',
+      isPartOf: { '@id': `${absoluteUrl('/')}#website` },
+      mainEntity: { '@id': `${absoluteUrl('/')}#organization` },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'VN13', item: absoluteUrl('/') },
+        { '@type': 'ListItem', position: 2, name: 'Контакты', item: absoluteUrl('/contact') },
+      ],
+    },
+  ],
+}
 
 export default function ContactPage() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
       <section className="pt-32 pb-16 md:pt-48 md:pb-16 px-6" style={{ backgroundColor: '#fafaf8' }}>
         <div className="max-w-4xl mx-auto">
