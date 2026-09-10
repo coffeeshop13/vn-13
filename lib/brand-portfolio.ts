@@ -170,7 +170,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     officialWebsite: 'https://shoto.it/',
     cardImage: '/brands/shoto/659033416_18583709092038082_3052003841669754962_n.jpg',
     heroImage: {
-      src: '/brands/shoto/659033416_18583709092038082_3052003841669754962_n.jpg',
+      src: '/brands/shoto/shoto-hero.webp',
       alt: 'Shoto white sneaker with gum sole campaign image',
     },
     gallery: [
@@ -313,7 +313,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     officialWebsite: 'https://www.aequamente.it/',
     cardImage: '/brands/aequamente-lookbook/aequamente-main.jpg',
     heroImage: {
-      src: '/brands/aequamente-lookbook/aequamente-main.jpg',
+      src: '/brands/aequamente-lookbook/aequamente-main-hero.webp',
       alt: 'Aequamente model wearing a white dress outdoors',
     },
     gallery: [
