@@ -82,7 +82,7 @@ export default function JournalPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {articles.map((article, index) => (
+            {articles.map((article) => (
               <Link
                 key={article.slug}
                 href={`/journal/${article.slug}`}
