@@ -22,6 +22,8 @@ const relatedLinksByPath: Record<string, SeoRelatedLink[]> = {
     { href: '/eksklyuzivnaya-zhenskaya-odezhda', label: 'Эксклюзивная женская одежда' },
     { href: '/quiet-luxury', label: 'Одежда в стиле тихой роскоши' },
     { href: '/natural-fabrics', label: 'Одежда из натуральных тканей' },
+    { href: '/zhenskaya-odezhda-dlya-butikov', label: 'Премиальная одежда для бутиков' },
+    { href: '/preorder', label: 'Предзаказ премиальных коллекций' },
   ],
   '/eksklyuzivnaya-zhenskaya-odezhda': [
     { href: '/premium-zhenskaya-odezhda', label: 'Премиальная женская одежда' },
@@ -34,6 +36,8 @@ const relatedLinksByPath: Record<string, SeoRelatedLink[]> = {
     { href: '/платья', label: 'Платья для капсульного гардероба' },
     { href: '/жакеты-и-жилеты', label: 'Жакеты и жилеты' },
     { href: '/брюки-и-джинсы', label: 'Брюки и джинсы' },
+    { href: '/zhenskaya-odezhda-dlya-butikov', label: 'Капсульный ассортимент для бутиков' },
+    { href: '/preorder', label: 'Предзаказ капсульной коллекции' },
   ],
   '/proizvoditel-zhenskoy-odezhdy': [
     { href: '/poshiv-zhenskoy-odezhdy-dlya-brenda', label: 'Пошив женской одежды для бренда' },
