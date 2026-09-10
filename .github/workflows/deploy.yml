@@ -55,7 +55,7 @@ jobs:
             aws s3 cp "$page" "s3://${AWS_S3_BUCKET}/${key}" \
               --endpoint-url "${AWS_S3_ENDPOINT}" \
               --content-type "${content_type}" \
-              --cache-control 'public,max-age=0,must-revalidate' \
+              --cache-control 'public,max-age=300,stale-while-revalidate=86400' \
               --no-progress
           done < <(find out -type f \( -name '*.html' -o -name 'robots.txt' -o -name 'sitemap.xml' \) | sort)
 
@@ -77,7 +77,7 @@ jobs:
               aws s3 cp "$page" "s3://${AWS_S3_BUCKET}/${route}" \
                 --endpoint-url "${AWS_S3_ENDPOINT}" \
                 --content-type text/html \
-                --cache-control 'public,max-age=0,must-revalidate' \
+                --cache-control 'public,max-age=300,stale-while-revalidate=86400' \
                 --no-progress
             fi
           done < <(find out -mindepth 2 -type f -name index.html | sort)
