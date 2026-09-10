@@ -277,7 +277,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     officialWebsite: 'https://postandcoshop.com/',
     cardImage: '/brands/post-and-co/belt-collection.seo.webp',
     heroImage: {
-      src: '/brands/post-and-co/black-textured-belt.seo.webp',
+      src: '/brands/post-and-co/black-textured-belt-hero.webp',
       alt: 'Post & Co black textured leather belt',
     },
     gallery: [
