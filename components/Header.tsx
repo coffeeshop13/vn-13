@@ -6,7 +6,6 @@ import LanguageSelector from './LanguageSelector'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [hoveredLink, setHoveredLink] = useState<string | null>(null)
 
   const navLinks = [
     { key: 'brand', label: 'Каталог VN-13', href: '/vn-13-brand' },
@@ -28,10 +27,7 @@ export default function Header() {
             <a
               key={link.key}
               href={link.href}
-              className="text-base transition-colors duration-200"
-              style={{ color: hoveredLink === link.key ? '#8a6b3f' : '#4e4942' }}
-              onMouseEnter={() => setHoveredLink(link.key)}
-              onMouseLeave={() => setHoveredLink(null)}
+              className="text-base text-[#4e4942] transition-colors duration-200 hover:text-[#8a6b3f]"
             >
               {link.label}
             </a>

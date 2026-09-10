@@ -23,17 +23,11 @@ export default function LanguageSelector() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="inline-flex items-center gap-2 px-4 py-2 text-sm tracking-wide transition-colors duration-200"
+        className={`inline-flex items-center gap-2 px-4 py-2 text-sm tracking-wide transition-colors duration-200 ${isOpen ? '' : 'hover:bg-[#f0e9dc]'}`}
         style={{
-          backgroundColor: isOpen ? '#f0e9dc' : 'transparent',
+          backgroundColor: isOpen ? '#f0e9dc' : undefined,
           color: '#0f0f0f',
           border: '1px solid #e0ddd8',
-        }}
-        onMouseEnter={e => {
-          if (!isOpen) (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#f0e9dc'
-        }}
-        onMouseLeave={e => {
-          if (!isOpen) (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'transparent'
         }}
       >
         <span>{currentLang?.nativeName}</span>
@@ -54,14 +48,8 @@ export default function LanguageSelector() {
               }}
               className="block w-full text-left px-4 py-2.5 text-sm hover:bg-accent-light transition-colors"
               style={{
-                backgroundColor: language === lang.code ? '#f0e9dc' : 'transparent',
+                backgroundColor: language === lang.code ? '#f0e9dc' : undefined,
                 color: '#0f0f0f',
-              }}
-              onMouseEnter={e => {
-                if (language !== lang.code) (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#f0e9dc'
-              }}
-              onMouseLeave={e => {
-                if (language !== lang.code) (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'transparent'
               }}
             >
               {lang.nativeName}
