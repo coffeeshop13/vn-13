@@ -26,20 +26,36 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
   const pageUrl = absoluteUrl(`/brands/${brand.slug}`)
   const brandJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Brand',
-    '@id': `${pageUrl}#brand`,
-    name: brand.name,
-    description: brand.description,
-    url: pageUrl,
-    image: absoluteUrl(brand.heroImage.src),
-    slogan: brand.positioning,
-    mainEntityOfPage: pageUrl,
-    knowsAbout: brand.keywords,
-    ...(brand.officialWebsite
-      ? {
-          sameAs: [brand.officialWebsite],
-        }
-      : {}),
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'VN13', item: absoluteUrl('/') },
+          { '@type': 'ListItem', position: 2, name: 'Бренды', item: absoluteUrl('/brands') },
+          { '@type': 'ListItem', position: 3, name: brand.name, item: pageUrl },
+        ],
+      },
+      {
+        '@type': 'WebPage',
+        '@id': pageUrl,
+        url: pageUrl,
+        name: brand.title,
+        description: brand.description,
+        about: { '@id': `${pageUrl}#brand` },
+      },
+      {
+        '@type': 'Brand',
+        '@id': `${pageUrl}#brand`,
+        name: brand.name,
+        description: brand.description,
+        url: pageUrl,
+        image: absoluteUrl(brand.heroImage.src),
+        slogan: brand.positioning,
+        mainEntityOfPage: pageUrl,
+        knowsAbout: brand.keywords,
+        ...(brand.officialWebsite ? { sameAs: [brand.officialWebsite] } : {}),
+      },
+    ],
   }
   const closeLightbox = useCallback(() => setActiveImageIndex(null), [])
   const showPreviousImage = useCallback(() => {
@@ -85,9 +101,9 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
 
       <section className="lg:hidden bg-[#f8f5ef] px-2 pb-6 pt-[88px]" aria-label={`Описание бренда ${brand.name}`}>
         <p className="mb-2 text-base" style={{ color: '#9b7541' }}>Бренд из {brand.country}</p>
-        <p className="text-4xl font-light leading-tight" style={{ color: '#0f0f0f' }}>
+        <h1 className="text-4xl font-light leading-tight" style={{ color: '#0f0f0f' }}>
           {brand.name}
-        </p>
+        </h1>
         <p className="mt-4 text-base leading-relaxed" style={{ color: '#5f5b55' }}>
           {brand.description}
         </p>
