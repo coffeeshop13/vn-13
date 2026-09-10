@@ -77,9 +77,9 @@ export default function ManuelleGuibalPageContent() {
       <Header />
 
       <section className="lg:hidden bg-[#fafaf8] px-2 pb-0 pt-[88px]" aria-label="Manuelle Guibal lookbook">
-        <p className="text-4xl font-light leading-tight" style={{ color: '#0f0f0f' }}>
+        <h1 className="text-4xl font-light leading-tight" style={{ color: '#0f0f0f' }}>
           {translations.brandManuelleGuibalTitle}
-        </p>
+        </h1>
         <p className="mt-4 pb-6 text-base leading-relaxed" style={{ color: '#6b6b6b' }}>
           {translations.brandManuelleGuibalSubtitle}
         </p>
@@ -102,7 +102,7 @@ export default function ManuelleGuibalPageContent() {
       <section className="relative hidden w-full h-screen items-center justify-center overflow-hidden lg:flex">
         <Image
           src="/brands/manuelle-lookbook/lookbook-03.seo.webp"
-          alt="Manuelle Guibal summer lookbook cover"
+          alt="Manuelle Guibal — французская дизайнерская женская одежда, lookbook VN13"
           fill
           priority
           sizes="100vw"
