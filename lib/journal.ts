@@ -43,7 +43,7 @@ export const journalArticles: JournalArticle[] = [
     description:
       'Как закупать дизайнерскую женскую одежду оптом для бутика: ассортимент, предзаказ, минимальные партии, маржинальность и работа с европейскими брендами.',
     category: 'Для ритейлеров',
-    imageSrc: '/hero-vn13-showroom.jpg',
+    imageSrc: '/journal/vn13-showroom-hero.webp',
     imageAlt: 'Дизайнерская женская одежда в шоуруме VN13 для оптовых партнеров',
     publishedAt: '2026-09-07',
     readingTime: '6 минут',
@@ -98,7 +98,7 @@ export const journalArticles: JournalArticle[] = [
     description:
       'Как выбрать европейские бренды женской одежды для бутика: оцениваем стиль, цены, минимальный заказ, поставки и коммерческий потенциал коллекции.',
     category: 'Для ритейлеров',
-    imageSrc: '/hero-vn13-showroom.jpg',
+    imageSrc: '/journal/vn13-showroom-hero.webp',
     imageAlt: 'Подборка дизайнерской женской одежды в шоуруме VN13',
     publishedAt: '2026-09-06',
     readingTime: '6 минут',

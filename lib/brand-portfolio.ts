@@ -345,7 +345,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     keywords: ['MJ Watson', 'итальянская женская одежда', 'дизайнерская женская одежда', 'премиум'],
     cardImage: '/brands/mj-watson/mj-watson-01.seo.webp',
     heroImage: {
-      src: '/brands/mj-watson/mj-watson-01.seo.webp',
+      src: '/brands/mj-watson/mj-watson-hero.webp',
       alt: 'MJ Watson Spring Summer 2026 look',
     },
     gallery: [
