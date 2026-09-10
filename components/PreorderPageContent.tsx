@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CTALink } from '@/components/CTALink'
 import { useLanguage } from '@/lib/context/LanguageContext'
+import Link from 'next/link'
 
 export default function PreorderPageContent() {
   const { translations } = useLanguage()
@@ -149,6 +150,23 @@ export default function PreorderPageContent() {
               {translations.preorderCTADesc}
             </p>
             <CTALink href="/#contact">Обсудить предзаказ</CTALink>
+          </div>
+
+          <div className="mt-20 pt-20 border-t" style={{ borderColor: '#e0ddd8' }}>
+            <h2 className="text-2xl md:text-3xl font-light mb-6" style={{ color: '#0f0f0f' }}>
+              {translations.preorderRelatedTitle}
+            </h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link href="/optovaya-zhenskaya-odezhda" className="block p-5 border transition-colors hover:bg-[#faf7f2]" style={{ borderColor: '#e0ddd8' }}>
+                {translations.preorderRelatedWholesale}
+              </Link>
+              <Link href="/zhenskaya-odezhda-dlya-butikov" className="block p-5 border transition-colors hover:bg-[#faf7f2]" style={{ borderColor: '#e0ddd8' }}>
+                {translations.preorderRelatedBoutiques}
+              </Link>
+              <Link href="/evropeyskie-brendy-zhenskoy-odezhdy" className="block p-5 border transition-colors hover:bg-[#faf7f2]" style={{ borderColor: '#e0ddd8' }}>
+                {translations.preorderRelatedBrands}
+              </Link>
+            </div>
           </div>
         </div>
       </section>
