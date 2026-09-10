@@ -38,10 +38,10 @@ export default function Hero() {
 
         <div className="relative min-h-[370px] overflow-hidden rounded-[2px] bg-[#ded6ca] md:min-h-[510px]">
           <Image
-            src="/hero-vn13-showroom-mobile.webp"
+            src="/hero-vn13-showroom-768.webp"
             alt="Коллекция дизайнерской женской одежды VN13"
-            width={960}
-            height={540}
+            width={768}
+            height={432}
             priority
             fetchPriority="high"
             className="h-full w-full object-cover"
