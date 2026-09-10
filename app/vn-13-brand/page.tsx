@@ -305,7 +305,7 @@ export default function VN13BrandPage() {
           </div>
           <div className="relative min-h-[360px] overflow-hidden bg-[#e6ded2] md:min-h-[500px]">
             <Image
-              src="/brands/vn13-catalog/vn13-designer-womenswear-collection.webp"
+              src="/brands/vn13-catalog/vn13-designer-womenswear-collection-hero.webp"
               alt="Коллекция дизайнерской женской одежды собственного бренда VN-13"
               fill
               priority
