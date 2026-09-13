@@ -33,9 +33,44 @@ const cardImages = [
   },
 ]
 
+const responsiveImages = [
+  {
+    input: 'public/brands/vn13-catalog/vn13-designer-womenswear-collection-hero-v20260913-1000.webp',
+    output: 'public/brands/vn13-catalog/vn13-designer-womenswear-collection-hero-v20260913-640.webp',
+    width: 640,
+  },
+  {
+    input: 'public/brands/vn13-catalog/vn13-blue-floral-designer-dress-card-v20260913-800.webp',
+    output: 'public/brands/vn13-catalog/vn13-blue-floral-designer-dress-card-v20260913-400.webp',
+    width: 400,
+  },
+  {
+    input: 'public/brands/vn13-catalog/vn13-black-textured-designer-coat-card-v20260913-800.webp',
+    output: 'public/brands/vn13-catalog/vn13-black-textured-designer-coat-card-v20260913-400.webp',
+    width: 400,
+  },
+  {
+    input: 'public/brands/vn13-catalog/vn13-black-jacket-white-layered-dress-card-v20260913-800.webp',
+    output: 'public/brands/vn13-catalog/vn13-black-jacket-white-layered-dress-card-v20260913-400.webp',
+    width: 400,
+  },
+  {
+    input: 'public/brands/vn13-catalog/vn13-white-oversize-designer-shirt-card-v20260913-800.webp',
+    output: 'public/brands/vn13-catalog/vn13-white-oversize-designer-shirt-card-v20260913-400.webp',
+    width: 400,
+  },
+]
+
 for (const image of cardImages) {
   await sharp(image.input)
     .resize({ width: image.width })
     .webp({ quality: 70, effort: 6 })
+    .toFile(image.output)
+}
+
+for (const image of responsiveImages) {
+  await sharp(image.input)
+    .resize({ width: image.width })
+    .webp({ quality: 80, effort: 6 })
     .toFile(image.output)
 }

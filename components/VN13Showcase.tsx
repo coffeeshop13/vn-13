@@ -3,19 +3,23 @@ import Link from 'next/link'
 
 const featuredLooks = [
   {
-    src: '/brands/vn13-catalog/vn13-black-jacket-white-layered-dress-card.webp',
+    src: '/brands/vn13-catalog/vn13-black-jacket-white-layered-dress-card-v20260913-800.webp',
+    srcSet: '/brands/vn13-catalog/vn13-black-jacket-white-layered-dress-card-v20260913-400.webp 400w, /brands/vn13-catalog/vn13-black-jacket-white-layered-dress-card-v20260913-800.webp 800w',
     alt: 'Чёрный жакет VN-13 с белым многослойным платьем',
   },
   {
-    src: '/brands/vn13-catalog/vn13-blue-floral-designer-dress-card.webp',
+    src: '/brands/vn13-catalog/vn13-blue-floral-designer-dress-card-v20260913-800.webp',
+    srcSet: '/brands/vn13-catalog/vn13-blue-floral-designer-dress-card-v20260913-400.webp 400w, /brands/vn13-catalog/vn13-blue-floral-designer-dress-card-v20260913-800.webp 800w',
     alt: 'Синее дизайнерское платье VN-13 с цветочным принтом',
   },
   {
-    src: '/brands/vn13-catalog/vn13-black-textured-designer-coat-card.webp',
+    src: '/brands/vn13-catalog/vn13-black-textured-designer-coat-card-v20260913-800.webp',
+    srcSet: '/brands/vn13-catalog/vn13-black-textured-designer-coat-card-v20260913-400.webp 400w, /brands/vn13-catalog/vn13-black-textured-designer-coat-card-v20260913-800.webp 800w',
     alt: 'VN13 black textured designer coat',
   },
   {
-    src: '/brands/vn13-catalog/vn13-white-oversize-designer-shirt-card.webp',
+    src: '/brands/vn13-catalog/vn13-white-oversize-designer-shirt-card-v20260913-800.webp',
+    srcSet: '/brands/vn13-catalog/vn13-white-oversize-designer-shirt-card-v20260913-400.webp 400w, /brands/vn13-catalog/vn13-white-oversize-designer-shirt-card-v20260913-800.webp 800w',
     alt: 'Белая объёмная дизайнерская рубашка VN-13',
   },
 ]
@@ -47,28 +51,42 @@ export default function VN13Showcase() {
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <Link href="/vn-13-brand" className="group col-span-2 block">
               <div className="relative overflow-hidden bg-[#f6f2ec]" style={{ aspectRatio: '16 / 9' }}>
-                <Image
-                  src="/brands/vn13-catalog/vn13-designer-womenswear-collection-hero.webp"
-                  alt="Коллекция дизайнерской женской одежды VN-13"
-                  width={1000}
-                  height={667}
-                  sizes="(max-width: 1024px) 100vw, 58vw"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                <picture className="block h-full w-full">
+                  <source
+                    srcSet="/brands/vn13-catalog/vn13-designer-womenswear-collection-hero-v20260913-640.webp 640w, /brands/vn13-catalog/vn13-designer-womenswear-collection-hero-v20260913-1000.webp 1000w"
+                    sizes="(max-width: 1024px) calc(100vw - 3rem), 58vw"
+                    type="image/webp"
+                  />
+                  <Image
+                    src="/brands/vn13-catalog/vn13-designer-womenswear-collection-hero-v20260913-1000.webp"
+                    alt="Коллекция дизайнерской женской одежды VN-13"
+                    width={1000}
+                    height={667}
+                    sizes="(max-width: 1024px) calc(100vw - 3rem), 58vw"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </picture>
               </div>
             </Link>
 
             {featuredLooks.map((look) => (
               <Link key={look.src} href="/vn-13-brand" className="group block">
-                <div className="relative overflow-hidden bg-[#f6f2ec]" style={{ aspectRatio: '3 / 4' }}>
+              <div className="relative overflow-hidden bg-[#f6f2ec]" style={{ aspectRatio: '3 / 4' }}>
+                <picture className="block h-full w-full">
+                  <source
+                    srcSet={look.srcSet}
+                    sizes="(max-width: 640px) calc((100vw - 3.75rem) / 2), (max-width: 1024px) 45vw, 28vw"
+                    type="image/webp"
+                  />
                   <Image
                     src={look.src}
                     alt={look.alt}
                     width={800}
                     height={1200}
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 45vw, 28vw"
+                    sizes="(max-width: 640px) calc((100vw - 3.75rem) / 2), (max-width: 1024px) 45vw, 28vw"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
+                </picture>
                 </div>
               </Link>
             ))}

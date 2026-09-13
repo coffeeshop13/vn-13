@@ -130,6 +130,25 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
               </article>
             ))}
           </div>
+          {page.references?.length ? (
+            <aside className="max-w-5xl mx-auto mt-10 border-t border-[#e0ddd8] pt-5 text-sm text-[#686868]">
+              <p className="mb-2">Первоисточник</p>
+              <ul className="list-disc pl-5">
+                {page.references.map((reference) => (
+                  <li key={reference.url}>
+                    <a
+                      href={reference.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-4"
+                    >
+                      {reference.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          ) : null}
         </div>
       </section>
 
@@ -159,7 +178,7 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
                 Портфолио VN13
               </p>
               <h2 className="text-3xl md:text-4xl font-light text-[#0f0f0f]">
-                Бренды в этой эстетике
+                {brands.length === 1 ? 'Бренд в этом направлении' : 'Бренды в этой эстетике'}
               </h2>
             </div>
             <Link href="/#portfolio" className="hidden md:block text-sm underline underline-offset-4 text-[#565656]">

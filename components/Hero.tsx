@@ -38,7 +38,7 @@ export default function Hero() {
 
         <div className="relative min-h-[370px] overflow-hidden rounded-[2px] bg-[#ded6ca] md:min-h-[510px]">
           <Image
-            src="/hero-vn13-showroom-768.webp"
+            src="/hero-vn13-showroom-768-v20260913.webp"
             alt="Коллекция дизайнерской женской одежды VN13"
             width={768}
             height={432}
