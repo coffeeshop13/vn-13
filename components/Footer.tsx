@@ -19,6 +19,7 @@ export default function Footer() {
             <div className="mt-3 grid gap-2 text-base" style={{ color: '#e7e1d8' }}>
               <Link href="/vn-13-brand">Каталог VN-13</Link>
               <Link href="/brands">Другие бренды</Link>
+              <Link href="/story">О компании VN13</Link>
               <Link href="/zhenskaya-odezhda-dlya-butikov">Для бутиков</Link>
               <Link href="/partnerstvo">Стать партнёром</Link>
               <Link href="/journal">Новости</Link>
