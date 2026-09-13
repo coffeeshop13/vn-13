@@ -40,7 +40,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     ],
     keywords: ['Manuelle Guibal', 'французская женская одежда', 'дизайнерская женская одежда', 'лимитированные серии'],
     officialWebsite: 'https://shop.manuelleguibal.fr/',
-    cardImage: '/brands/real/manuelle-guibal-card-v20260913.webp',
+    cardImage: '/brands/real/manuelle-guibal-card-v20260913-q70.webp',
     heroImage: {
       src: '/brands/real/manuelle-guibal-1.jpg',
       alt: 'Manuelle Guibal in the VN13 portfolio',
@@ -70,7 +70,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     ],
     keywords: ['Hannoh Wessel', 'итальянская женская одежда', 'премиальная женская одежда', 'бутики'],
     officialWebsite: 'https://www.hannoh.net/',
-    cardImage: '/brands/hannoh-lookbook/hannoh-card-v20260913.webp',
+    cardImage: '/brands/hannoh-lookbook/hannoh-card-v20260913-q70.webp',
     heroImage: {
       src: '/brands/hannoh-lookbook/hannoh-07.jpg',
       alt: 'H+ Hannoh Wessel full-length neutral knit look',
@@ -132,7 +132,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'премиальная женская одежда',
     ],
     officialWebsite: 'https://www.moyuru.com/',
-    cardImage: '/brands/moyuru-card-v20260913.webp',
+    cardImage: '/brands/moyuru-card-v20260913-q70.webp',
     heroImage: {
       src: '/brands/moyuru.jpg',
       alt: 'Moyuru sculptural editorial look',
@@ -168,7 +168,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'лимитированные серии',
     ],
     officialWebsite: 'https://shoto.it/',
-    cardImage: '/brands/shoto/shoto-card-v20260913.webp',
+    cardImage: '/brands/shoto/shoto-card-v20260913-q70.webp',
     heroImage: {
       src: '/brands/shoto/shoto-hero.webp',
       alt: 'Shoto white sneaker with gum sole campaign image',
@@ -275,7 +275,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     ],
     keywords: ['Post & Co', 'итальянские аксессуары', 'премиальные аксессуары', 'бутик'],
     officialWebsite: 'https://postandcoshop.com/',
-    cardImage: '/brands/post-and-co/belt-collection-card-v20260913.webp',
+    cardImage: '/brands/post-and-co/belt-collection-card-v20260913-q70.webp',
     heroImage: {
       src: '/brands/post-and-co/black-textured-belt-hero.webp',
       alt: 'Post & Co black textured leather belt',
@@ -311,7 +311,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     ],
     keywords: ['Aequamente', 'итальянская женская одежда', 'премиальная одежда', 'бутики'],
     officialWebsite: 'https://www.aequamente.it/',
-    cardImage: '/brands/aequamente-lookbook/aequamente-card-v20260913.webp',
+    cardImage: '/brands/aequamente-lookbook/aequamente-card-v20260913-q70.webp',
     heroImage: {
       src: '/brands/aequamente-lookbook/aequamente-main-hero.webp',
       alt: 'Aequamente model wearing a white dress outdoors',
