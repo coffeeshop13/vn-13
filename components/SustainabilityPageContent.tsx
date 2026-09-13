@@ -55,17 +55,14 @@ export default function SustainabilityPageContent() {
           <div className="py-16 border-t border-b" style={{ borderColor: '#e0ddd8' }}>
             <div className="grid md:grid-cols-3 gap-12">
               <div>
-                <div className="text-4xl font-light mb-3" style={{ color: '#b8935a' }}>100%</div>
                 <p className="font-medium mb-2" style={{ color: '#0f0f0f' }}>{translations.sustainabilityStatsEthical}</p>
                 <p className="text-sm" style={{ color: '#6b6b6b' }}>{translations.sustainabilityStatsEthicalDesc}</p>
               </div>
               <div>
-                <div className="text-4xl font-light mb-3" style={{ color: '#b8935a' }}>0</div>
                 <p className="font-medium mb-2" style={{ color: '#0f0f0f' }}>{translations.sustainabilityStatsZero}</p>
                 <p className="text-sm" style={{ color: '#6b6b6b' }}>{translations.sustainabilityStatsZeroDesc}</p>
               </div>
               <div>
-                <div className="text-4xl font-light mb-3" style={{ color: '#b8935a' }}>10+</div>
                 <p className="font-medium mb-2" style={{ color: '#0f0f0f' }}>{translations.sustainabilityStatsYears}</p>
                 <p className="text-sm" style={{ color: '#6b6b6b' }}>{translations.sustainabilityStatsYearsDesc}</p>
               </div>
