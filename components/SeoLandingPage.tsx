@@ -109,6 +109,9 @@ export default function SeoLandingPage({
           <p className="text-lg md:text-xl max-w-2xl leading-relaxed" style={{ color: '#6b6b6b' }}>
             {description}
           </p>
+          <div className="mt-8">
+            <CTALink href="/#contact">Обсудить сотрудничество</CTALink>
+          </div>
         </div>
       </section>
 
