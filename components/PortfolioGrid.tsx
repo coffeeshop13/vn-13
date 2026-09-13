@@ -5,6 +5,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { brandPortfolio } from '@/lib/brand-portfolio'
 
+const brandImageDescriptors = {
+  france: 'Французская дизайнерская одежда',
+  italy: 'Итальянская дизайнерская одежда',
+  japan: 'Японская дизайнерская одежда',
+  uk: 'Британская дизайнерская одежда',
+  korea: 'Корейская дизайнерская одежда',
+} satisfies Record<(typeof brandPortfolio)[number]['region'], string>
+
 export default function PortfolioGrid() {
   const [active, setActive] = useState('all')
 
@@ -52,7 +60,7 @@ export default function PortfolioGrid() {
                 <div className="relative overflow-hidden rounded-[16px] mb-3 bg-[#f6f2ec]" style={{ aspectRatio: '3 / 4' }}>
                   <Image
                     src={brand.cardImage}
-                    alt={`${brand.name} — ${brand.country.toLowerCase()} дизайнерская одежда в портфеле VN13`}
+                    alt={`${brand.name} — ${brandImageDescriptors[brand.region]} в портфеле VN13`}
                     width={1200}
                     height={1600}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
