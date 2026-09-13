@@ -123,6 +123,8 @@ jobs:
           AWS_S3_ENDPOINT: https://storage.yandexcloud.net
           AWS_REGION: ru-central1
         run: |
+          aws s3 cp out/ "s3://${AWS_S3_BUCKET}/" --recursive --exclude "*" --include "*.html" --endpoint-url "${AWS_S3_ENDPOINT}" --content-type "text/html" --cache-control 'public,max-age=300,stale-while-revalidate=86400' --no-progress
+
           while IFS= read -r page; do
             key="${page#out/}"
             case "$page" in
@@ -135,7 +137,7 @@ jobs:
               --content-type "${content_type}" \
               --cache-control 'public,max-age=300,stale-while-revalidate=86400' \
               --no-progress
-          done < <(find out -type f \( -name '*.html' -o -name 'robots.txt' -o -name 'sitemap.xml' \) | sort)
+          done < <(find out -type f \( -name 'robots.txt' -o -name 'sitemap.xml' \) | sort)
 
       - name: Publish slashless route objects
         env:
