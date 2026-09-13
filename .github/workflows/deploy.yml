@@ -37,6 +37,20 @@ jobs:
           AWS_REGION: ru-central1
           SOURCE_DIR: out
 
+      - name: Set immutable cache headers for versioned Next.js assets
+        env:
+          AWS_S3_BUCKET: vn-13.com
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_KEY }}
+          AWS_S3_ENDPOINT: https://storage.yandexcloud.net
+          AWS_REGION: ru-central1
+        run: |
+          aws s3 cp out/_next/static/ "s3://${AWS_S3_BUCKET}/_next/static/" \
+            --recursive \
+            --endpoint-url "${AWS_S3_ENDPOINT}" \
+            --cache-control 'public,max-age=31536000,immutable' \
+            --no-progress
+
       - name: Set cache headers for HTML and SEO files
         env:
           AWS_S3_BUCKET: vn-13.com
