@@ -98,7 +98,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-end">
             <div>
               <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>
-                {article.category} · <time dateTime={article.publishedAt}>{formatArticleDate(article.publishedAt)}</time> · {article.readingTime}
+                {article.category} · <time dateTime={article.publishedAt}>{formatArticleDate(article.publishedAt)}</time>
+                {article.updatedAt && article.updatedAt !== article.publishedAt && (
+                  <> · Обновлено <time dateTime={article.updatedAt}>{formatArticleDate(article.updatedAt)}</time></>
+                )}
+                {' · '}{article.readingTime}
               </p>
               <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>
                 {article.title}

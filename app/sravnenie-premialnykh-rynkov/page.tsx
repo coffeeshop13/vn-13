@@ -56,6 +56,7 @@ export default function PremiumMarketsComparisonPage() {
       ]}
       relatedLinks={[
         { href: '/evropeyskie-brendy-zhenskoy-odezhdy', label: 'Европейские бренды' },
+        { href: '/japanese-style', label: 'Японская дизайнерская одежда: стиль и крой' },
         { href: '/brands/manuelle-guibal', label: 'Manuelle Guibal' },
         { href: '/brands/hannoh-wessel', label: 'H+ Hannoh Wessel' },
       ]}
