@@ -41,7 +41,7 @@ const relatedLinksByPath: Record<string, SeoRelatedLink[]> = {
   ],
   '/proizvoditel-zhenskoy-odezhdy': [
     { href: '/poshiv-zhenskoy-odezhdy-dlya-brenda', label: 'Пошив женской одежды для бренда' },
-    { href: '/manufacturing', label: 'Европейское производство одежды' },
+    { href: '/manufacturing', label: 'Маркировка и сведения о производстве одежды' },
     { href: '/distributsiya-zhenskoy-odezhdy', label: 'Дистрибуция женской одежды' },
     { href: '/kapsulnaya-zhenskaya-odezhda', label: 'Капсульная женская одежда' },
   ],
