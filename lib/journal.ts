@@ -1550,7 +1550,6 @@ export const journalArticles: JournalArticle[] = [
     ctaText: 'Обсудить ассортимент и условия поставки с VN13',
   },
   {
-  {
     slug: 'proizvodstvo-zhenskoy-odezhdy-malymi-partiyami',
     seoTitle: 'Производство женской одежды малыми партиями | VN13',
     title: 'Производство женской одежды малыми партиями: этапы и риски',
