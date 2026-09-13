@@ -70,7 +70,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     ],
     keywords: ['Hannoh Wessel', 'итальянская женская одежда', 'премиальная женская одежда', 'бутики'],
     officialWebsite: 'https://www.hannoh.net/',
-    cardImage: '/brands/hannoh-lookbook/hannoh-11.jpg',
+    cardImage: '/brands/hannoh-lookbook/hannoh-card-v20260913.webp',
     heroImage: {
       src: '/brands/hannoh-lookbook/hannoh-07.jpg',
       alt: 'H+ Hannoh Wessel full-length neutral knit look',
@@ -132,7 +132,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'премиальная женская одежда',
     ],
     officialWebsite: 'https://www.moyuru.com/',
-    cardImage: '/brands/moyuru.jpg',
+    cardImage: '/brands/moyuru-card-v20260913.webp',
     heroImage: {
       src: '/brands/moyuru.jpg',
       alt: 'Moyuru sculptural editorial look',
@@ -168,7 +168,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'лимитированные серии',
     ],
     officialWebsite: 'https://shoto.it/',
-    cardImage: '/brands/shoto/659033416_18583709092038082_3052003841669754962_n.jpg',
+    cardImage: '/brands/shoto/shoto-card-v20260913.webp',
     heroImage: {
       src: '/brands/shoto/shoto-hero.webp',
       alt: 'Shoto white sneaker with gum sole campaign image',
@@ -275,7 +275,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     ],
     keywords: ['Post & Co', 'итальянские аксессуары', 'премиальные аксессуары', 'бутик'],
     officialWebsite: 'https://postandcoshop.com/',
-    cardImage: '/brands/post-and-co/belt-collection.seo.webp',
+    cardImage: '/brands/post-and-co/belt-collection-card-v20260913.webp',
     heroImage: {
       src: '/brands/post-and-co/black-textured-belt-hero.webp',
       alt: 'Post & Co black textured leather belt',

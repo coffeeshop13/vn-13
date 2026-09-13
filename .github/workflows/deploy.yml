@@ -89,7 +89,11 @@ jobs:
         run: |
           for asset in \
             'brands/aequamente-lookbook/aequamente-card-v20260913.webp' \
-            'brands/real/manuelle-guibal-card-v20260913.webp'; do
+            'brands/real/manuelle-guibal-card-v20260913.webp' \
+            'brands/shoto/shoto-card-v20260913.webp' \
+            'brands/hannoh-lookbook/hannoh-card-v20260913.webp' \
+            'brands/moyuru-card-v20260913.webp' \
+            'brands/post-and-co/belt-collection-card-v20260913.webp'; do
             aws s3 cp "out/${asset}" "s3://${AWS_S3_BUCKET}/${asset}" \
               --endpoint-url "${AWS_S3_ENDPOINT}" \
               --cache-control 'public,max-age=31536000,immutable' \
