@@ -3,19 +3,19 @@ import Link from 'next/link'
 
 const featuredLooks = [
   {
-    src: '/brands/vn13-catalog/vn13-black-jacket-white-layered-dress.webp',
+    src: '/brands/vn13-catalog/vn13-black-jacket-white-layered-dress-card.webp',
     alt: 'Чёрный жакет VN-13 с белым многослойным платьем',
   },
   {
-    src: '/brands/vn13-catalog/vn13-blue-floral-designer-dress.webp',
+    src: '/brands/vn13-catalog/vn13-blue-floral-designer-dress-card.webp',
     alt: 'Синее дизайнерское платье VN-13 с цветочным принтом',
   },
   {
-    src: '/brands/vn13-catalog/vn13-black-textured-designer-coat.webp',
+    src: '/brands/vn13-catalog/vn13-black-textured-designer-coat-card.webp',
     alt: 'VN13 black textured designer coat',
   },
   {
-    src: '/brands/vn13-catalog/vn13-white-oversize-designer-shirt.webp',
+    src: '/brands/vn13-catalog/vn13-white-oversize-designer-shirt-card.webp',
     alt: 'Белая объёмная дизайнерская рубашка VN-13',
   },
 ]
@@ -48,10 +48,10 @@ export default function VN13Showcase() {
             <Link href="/vn-13-brand" className="group col-span-2 block">
               <div className="relative overflow-hidden bg-[#f6f2ec]" style={{ aspectRatio: '16 / 9' }}>
                 <Image
-                  src="/brands/vn13-catalog/vn13-designer-womenswear-collection.webp"
+                  src="/brands/vn13-catalog/vn13-designer-womenswear-collection-hero.webp"
                   alt="Коллекция дизайнерской женской одежды VN-13"
-                  width={1600}
-                  height={900}
+                  width={1000}
+                  height={667}
                   sizes="(max-width: 1024px) 100vw, 58vw"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -64,8 +64,8 @@ export default function VN13Showcase() {
                   <Image
                     src={look.src}
                     alt={look.alt}
-                    width={1200}
-                    height={1600}
+                    width={800}
+                    height={1200}
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 45vw, 28vw"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
