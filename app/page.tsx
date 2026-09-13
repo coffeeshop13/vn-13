@@ -9,10 +9,15 @@ import LatestNews from '@/components/LatestNews'
 import CategorySeoLinks from '@/components/CategorySeoLinks'
 import ContactForm from '@/components/ContactForm'
 import Footer from '@/components/Footer'
+import { homePageJsonLd } from '@/lib/seo'
 
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLd) }}
+      />
       <Header />
       <Hero />
       <section className="border-b border-[#e0ddd8] bg-white" aria-labelledby="vn13-offer-heading">
