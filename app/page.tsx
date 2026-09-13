@@ -18,7 +18,7 @@ export default function Home() {
       <section className="border-b border-[#e0ddd8] bg-white" aria-labelledby="vn13-offer-heading">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-14 md:grid-cols-[0.8fr_1.2fr] md:items-start md:py-18">
           <div>
-            <p className="mb-3 text-base font-medium text-[#8a6b3f]">VN13 в одном предложении</p>
+            <p className="mb-3 text-base font-medium text-[#76531f]">VN13 в одном предложении</p>
             <h2 id="vn13-offer-heading" className="text-3xl font-light leading-tight text-[#1d1b18] md:text-4xl">
               Премиальная женская одежда для клиентов, бутиков и брендов
             </h2>

@@ -30,7 +30,7 @@ export default function VN13Showcase() {
       <div className="max-w-7xl mx-auto px-6 py-14 md:py-18">
         <div className="grid lg:grid-cols-[0.9fr_1.45fr] gap-8 lg:gap-10 items-start">
           <div className="max-w-xl">
-            <p className="mb-3 text-base" style={{ color: '#9b7541' }}>
+            <p className="mb-3 text-base" style={{ color: '#76531f' }}>
               Собственный бренд VN-13
             </p>
             <h2 className="text-3xl md:text-4xl font-light mb-4 text-balance" style={{ color: '#0f0f0f' }}>
@@ -41,8 +41,8 @@ export default function VN13Showcase() {
             </p>
             <Link
               href="/vn-13-brand"
-              className="inline-flex min-h-[52px] items-center justify-center px-7 text-base font-medium transition-colors duration-200 hover:bg-[#a07e4a]"
-              style={{ backgroundColor: '#9b7541', color: '#fff' }}
+              className="inline-flex min-h-[52px] items-center justify-center px-7 text-base font-medium transition-colors duration-200 hover:bg-[#76531f]"
+              style={{ backgroundColor: '#80602e', color: '#fff' }}
             >
               Смотреть одежду
             </Link>

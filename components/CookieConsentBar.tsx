@@ -82,7 +82,7 @@ export default function CookieConsentBar() {
               <button
                 type="button"
                 onClick={() => setChoice('accepted')}
-                className="inline-flex items-center justify-center bg-[#b8935a] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#a07e4a]"
+                className="inline-flex items-center justify-center bg-[#80602e] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#76531f]"
               >
                 {c.accept}
               </button>

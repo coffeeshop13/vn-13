@@ -15,7 +15,7 @@ export default function Stats() {
   return (
     <section id="story" style={{ borderTop: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
       <div className="max-w-7xl mx-auto px-6 py-14 md:py-18">
-        <p className="text-base font-medium mb-3" style={{ color: '#8a6b3f' }}>{translations.statsAbout}</p>
+        <p className="text-base font-medium mb-3" style={{ color: '#76531f' }}>{translations.statsAbout}</p>
         <h2 className="text-3xl md:text-4xl font-light mb-4 text-balance" style={{ color: '#0f0f0f' }}>
           Опыт, на который можно положиться
         </h2>
@@ -26,7 +26,7 @@ export default function Stats() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat) => (
             <div key={stat.label}>
-              <div className="text-3xl md:text-4xl font-light mb-1" style={{ color: '#b8935a' }}>{stat.value}</div>
+              <div className="text-3xl md:text-4xl font-light mb-1" style={{ color: '#76531f' }}>{stat.value}</div>
               <p className="text-base" style={{ color: '#5d5851' }}>{stat.label}</p>
             </div>
           ))}

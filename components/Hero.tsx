@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="pt-28 pb-10 md:pt-36 md:pb-16" style={{ backgroundColor: '#f7f4ee' }}>
       <div className="max-w-7xl mx-auto px-6 grid gap-9 lg:grid-cols-[1fr_0.95fr] lg:items-center">
         <div className="max-w-2xl">
-          <p className="mb-4 text-base font-medium" style={{ color: '#8a6b3f' }}>
+          <p className="mb-4 text-base font-medium" style={{ color: '#76531f' }}>
             Женская одежда и европейские бренды
           </p>
           <h1 className="text-4xl md:text-6xl font-light leading-[1.08] text-balance" style={{ color: '#1d1b18' }}>
