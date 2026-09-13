@@ -3,12 +3,12 @@ import sharp from 'sharp'
 const cardImages = [
   {
     input: 'public/brands/aequamente-lookbook/aequamente-main.jpg',
-    output: 'public/brands/aequamente-lookbook/aequamente-card.webp',
+    output: 'public/brands/aequamente-lookbook/aequamente-card-v20260913.webp',
     width: 780,
   },
   {
     input: 'public/brands/real/manuelle-guibal-1.jpg',
-    output: 'public/brands/real/manuelle-guibal-card.webp',
+    output: 'public/brands/real/manuelle-guibal-card-v20260913.webp',
     width: 640,
   },
 ]

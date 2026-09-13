@@ -130,6 +130,15 @@ export default function ManuelleGuibalPageContent() {
             <p className="text-base leading-relaxed mb-6" style={{ color: '#6b6b6b', maxWidth: '900px' }}>
               {translations.brandManuelleGuibalHeroDesc}
             </p>
+            <a
+              href="https://shop.manuelleguibal.fr/la-maison"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm underline underline-offset-4"
+              style={{ color: '#6b6b6b' }}
+            >
+              {translations.brandManuelleGuibalOfficialSource}
+            </a>
             <div className="grid md:grid-cols-3 gap-12 mt-12">
               <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>{translations.brandManuelleGuibalAboutDesc1}</p></div>
               <div><p className="text-base leading-relaxed" style={{ color: '#6b6b6b' }}>{translations.brandManuelleGuibalAboutDesc2}</p></div>

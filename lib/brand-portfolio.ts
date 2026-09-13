@@ -40,7 +40,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     ],
     keywords: ['Manuelle Guibal', 'французская женская одежда', 'дизайнерская женская одежда', 'лимитированные серии'],
     officialWebsite: 'https://shop.manuelleguibal.fr/',
-    cardImage: '/brands/real/manuelle-guibal-card.webp',
+    cardImage: '/brands/real/manuelle-guibal-card-v20260913.webp',
     heroImage: {
       src: '/brands/real/manuelle-guibal-1.jpg',
       alt: 'Manuelle Guibal in the VN13 portfolio',
@@ -311,7 +311,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     ],
     keywords: ['Aequamente', 'итальянская женская одежда', 'премиальная одежда', 'бутики'],
     officialWebsite: 'https://www.aequamente.it/',
-    cardImage: '/brands/aequamente-lookbook/aequamente-card.webp',
+    cardImage: '/brands/aequamente-lookbook/aequamente-card-v20260913.webp',
     heroImage: {
       src: '/brands/aequamente-lookbook/aequamente-main-hero.webp',
       alt: 'Aequamente model wearing a white dress outdoors',
