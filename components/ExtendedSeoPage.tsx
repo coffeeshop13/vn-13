@@ -7,6 +7,11 @@ import { brandPortfolio } from '@/lib/brand-portfolio'
 import { extendedSeoPages, type ExtendedSeoPage as ExtendedSeoPageData } from '@/lib/extended-seo-pages'
 import { absoluteUrl, SITE_NAME } from '@/lib/seo'
 
+const preferredRelatedPaths: Record<string, string[]> = {
+  '/japanese-style': ['/рубашки-и-блузы', '/zhenskaya-odezhda'],
+  '/рубашки-и-блузы': ['/japanese-style'],
+}
+
 export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData }) {
   const pageUrl = absoluteUrl(page.path)
   const brands = page.brandSlugs
@@ -83,9 +88,14 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
     ],
   }
 
-  const relatedPages = extendedSeoPages
+  const preferred = (preferredRelatedPaths[page.path] ?? [])
+    .map((path) => extendedSeoPages.find((item) => item.path === path))
+    .filter((item): item is ExtendedSeoPageData => Boolean(item))
     .filter((item) => item.path !== page.path)
+  const fallback = extendedSeoPages
+    .filter((item) => item.path !== page.path && !preferred.some((related) => related.path === item.path))
     .slice(page.category ? 0 : 3, page.category ? 6 : 9)
+  const relatedPages = [...preferred, ...fallback].slice(0, 6)
 
   return (
     <main>
