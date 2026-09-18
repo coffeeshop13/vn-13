@@ -35,7 +35,7 @@ jobs:
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --delete --exclude "_next/static/*"
+          args: --delete
         env:
           AWS_S3_BUCKET: vn-13.com
           AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}

@@ -157,6 +157,7 @@ export const homePageJsonLd = {
   ],
   inLanguage: 'ru',
 }
+
 export const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -218,7 +219,6 @@ export const organizationJsonLd = {
       },
       inLanguage: 'ru',
     },
-
     {
       '@type': 'Service',
       '@id': `${SITE_URL}/#distribution-service`,
