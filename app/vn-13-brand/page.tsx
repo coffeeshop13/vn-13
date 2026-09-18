@@ -439,6 +439,9 @@ export default function VN13BrandPage() {
             <Link href="/платья" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
               Дизайнерские платья
             </Link>
+            <Link href="/рубашки-и-блузы" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
+              Дизайнерские рубашки и блузы
+            </Link>
             <Link href="/lookbook" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
               Lookbook VN-13
             </Link>
