@@ -3,7 +3,7 @@ import SeoLandingPage from '@/components/SeoLandingPage'
 import { createMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Оптовая женская одежда для бутиков | VN13 и VN-13',
+  title: 'Оптовый поставщик женской одежды для бутиков | VN13',
   description:
     'Оптовая женская одежда для бутиков в России и СНГ: европейские бренды, собственный бренд VN-13, предзаказ, ограниченные партии и поддержка ритейлеров.',
   path: '/optovaya-zhenskaya-odezhda',
@@ -106,4 +106,3 @@ export default function WholesaleWomensClothingPage() {
     />
   )
 }
-
