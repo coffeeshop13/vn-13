@@ -31,7 +31,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden xl:flex items-center gap-3">
-          <a href="tel:+79266022089" className="inline-flex min-h-11 items-center rounded-sm bg-[#1d1b18] px-4 text-base font-medium text-white">
+          <a href="tel:+79266022089" className="inline-flex min-h-11 items-center rounded-sm bg-[#1d1b18] px-4 text-base font-medium text-white" style={{ color: '#fff' }}>
             Позвонить
           </a>
           <LanguageSelector />
