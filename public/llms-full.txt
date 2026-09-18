@@ -2,6 +2,8 @@
 
 This file summarizes the website for AI crawlers, LLM retrieval systems, answer engines, and search assistants.
 
+> VN13 combines European designer-brand distribution with the VN-13 womenswear brand, capsule production, wholesale partnerships, and boutique support.
+
 ## Entity
 
 Name: VN13
