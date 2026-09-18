@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { extendedSeoPages } from '@/lib/extended-seo-pages'
 
 export default function CategorySeoLinks() {
-  const categories = extendedSeoPages.filter((page) => page.category).slice(0, 6)
+  const categories = extendedSeoPages.filter((page) => page.category)
 
   return (
     <section className="border-t border-[#e0ddd8] bg-white">
