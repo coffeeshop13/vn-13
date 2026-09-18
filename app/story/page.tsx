@@ -85,6 +85,7 @@ export default function StoryPage() {
             <div className="flex flex-wrap gap-4 text-sm">
               <Link href="/brands" className="underline underline-offset-4">Бренды в портфеле</Link>
               <Link href="/proizvoditel-zhenskoy-odezhdy" className="underline underline-offset-4">Производство VN-13</Link>
+              <Link href="/optovaya-zhenskaya-odezhda" className="underline underline-offset-4">Оптовая одежда для бутиков</Link>
               <Link href="/partnerstvo" className="underline underline-offset-4">Партнёрство</Link>
             </div>
           </div>
