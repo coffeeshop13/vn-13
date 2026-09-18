@@ -5,7 +5,7 @@ import { createMetadata } from '@/lib/seo'
 export const metadata: Metadata = createMetadata({
   title: 'Оптовая женская одежда для бутиков | VN13 и VN-13',
   description:
-    'Оптовая женская одежда и дистрибуция VN13: европейские бренды, собственный бренд VN-13, предзаказ, ограниченные партии и поддержка бутиков.',
+    'Оптовая женская одежда для бутиков в России и СНГ: европейские бренды, собственный бренд VN-13, предзаказ, ограниченные партии и поддержка ритейлеров.',
   path: '/optovaya-zhenskaya-odezhda',
   keywords: [
     'оптовая женская одежда',
@@ -106,3 +106,4 @@ export default function WholesaleWomensClothingPage() {
     />
   )
 }
+
