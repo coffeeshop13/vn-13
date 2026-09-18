@@ -130,14 +130,14 @@ jobs:
             case "$page" in
               *.html) content_type="text/html" ;;
               */robots.txt) content_type="text/plain" ;;
-              */sitemap.xml) content_type="application/xml" ;;
+              */sitemap.xml|*/sitemap_index.xml) content_type="application/xml" ;;
             esac
             aws s3 cp "$page" "s3://${AWS_S3_BUCKET}/${key}" \
               --endpoint-url "${AWS_S3_ENDPOINT}" \
               --content-type "${content_type}" \
               --cache-control 'public,max-age=300,stale-while-revalidate=86400' \
               --no-progress
-          done < <(find out -type f \( -name 'robots.txt' -o -name 'sitemap.xml' \) | sort)
+          done < <(find out -type f \( -name 'robots.txt' -o -name 'sitemap.xml' -o -name 'sitemap_index.xml' \) | sort)
 
       - name: Publish slashless redirects
         env:
