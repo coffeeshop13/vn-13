@@ -35,7 +35,7 @@ export default function MobileMenu({ links }: { links: readonly HeaderNavLink[] 
                 {link.label}
               </Link>
             ))}
-            <a href="tel:+79266022089" className="inline-flex min-h-[52px] items-center justify-center rounded-sm bg-[#1d1b18] px-5 text-base font-medium text-white">
+            <a href="tel:+79266022089" className="inline-flex min-h-[52px] items-center justify-center rounded-sm bg-[#1d1b18] px-5 text-base font-medium text-white" style={{ color: '#fff' }}>
               Позвонить: +7 926 602-20-89
             </a>
             <div className="pt-4 border-t" style={{ borderColor: '#e0ddd8' }}>
