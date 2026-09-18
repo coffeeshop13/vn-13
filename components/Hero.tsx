@@ -10,7 +10,7 @@ export default function Hero() {
             Женская одежда и европейские бренды
           </p>
           <h1 className="text-4xl md:text-6xl font-light leading-[1.08] text-balance" style={{ color: '#1d1b18' }}>
-            Одежда, которую легко выбрать и приятно носить
+            Дизайнерская женская одежда, которую легко выбрать и приятно носить
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed" style={{ color: '#56514a' }}>
             Платья, жакеты, рубашки и другие вещи VN-13. Поможем узнать наличие, размер и состав.
