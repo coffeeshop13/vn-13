@@ -139,7 +139,7 @@ jobs:
               --no-progress
           done < <(find out -type f \( -name 'robots.txt' -o -name 'sitemap.xml' \) | sort)
 
-      - name: Publish slashless route objects
+      - name: Publish slashless redirects
         env:
           AWS_S3_BUCKET: vn-13.com
           AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
@@ -154,7 +154,10 @@ jobs:
               case "$route" in
                 404|_not-found) continue ;;
               esac
-              aws s3 cp "$page" "s3://${AWS_S3_BUCKET}/${route}" \
+              aws s3api put-object \
+                --bucket "${AWS_S3_BUCKET}" \
+                --key "${route}" \
+                --website-redirect-location "/${route}/" \
                 --endpoint-url "${AWS_S3_ENDPOINT}" \
                 --content-type text/html \
                 --cache-control 'public,max-age=300,stale-while-revalidate=86400' \
