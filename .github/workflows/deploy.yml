@@ -33,16 +33,18 @@ jobs:
         run: npm run build
 
       - name: Deploy to S3
-        uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --delete --exclude "_next/static/*"
         env:
           AWS_S3_BUCKET: vn-13.com
           AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_KEY }}
           AWS_S3_ENDPOINT: https://storage.yandexcloud.net
           AWS_REGION: ru-central1
-          SOURCE_DIR: out
+        run: |
+          aws s3 sync out/ "s3://${AWS_S3_BUCKET}/" \
+            --endpoint-url "${AWS_S3_ENDPOINT}" \
+            --delete \
+            --exclude "_next/static/*" \
+            --no-progress
 
       - name: Set immutable cache headers for versioned Next.js assets
         env:
