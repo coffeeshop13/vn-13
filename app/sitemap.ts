@@ -32,7 +32,7 @@ const routes: SitemapRoute[] = [
   { path: '/poshiv-zhenskoy-odezhdy-dlya-brenda', changeFrequency: 'monthly', priority: 0.88 },
   { path: '/zhenskaya-odezhda-dlya-butikov', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/evropeyskie-brendy-zhenskoy-odezhdy', changeFrequency: 'monthly', priority: 0.88 },
-  { path: '/optovaya-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/optovaya-zhenskaya-odezhda', lastModified: latestSeoUpdate, changeFrequency: 'monthly', priority: 0.9 },
   { path: '/distributsiya-zhenskoy-odezhdy', changeFrequency: 'monthly', priority: 0.88 },
   { path: '/journal', lastModified: latestJournalDate, changeFrequency: 'weekly', priority: 0.82 },
   { path: '/sravnenie-premialnykh-rynkov', changeFrequency: 'monthly', priority: 0.76 },
