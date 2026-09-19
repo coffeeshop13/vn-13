@@ -9,8 +9,8 @@ import { absoluteUrl, SITE_NAME } from '@/lib/seo'
 import { canonicalInternalHref } from '@/lib/seo-links'
 
 const preferredRelatedPaths: Record<string, string[]> = {
-  '/quiet-luxury': ['/natural-fabrics', '/жакеты-и-жилеты', '/трикотаж-и-свитеры', '/рубашки-и-блузы'],
-  '/natural-fabrics': ['/quiet-luxury', '/трикотаж-и-свитеры', '/рубашки-и-блузы', '/верхняя-одежда'],
+  '/quiet-luxury': ['/natural-fabrics', '/жакеты-и-жилеты', '/трикотаж-и-свитеры', '/аксессуары'],
+  '/natural-fabrics': ['/quiet-luxury', '/трикотаж-и-свитеры', '/рубашки-и-блузы', '/аксессуары'],
   '/japanese-style': ['/рубашки-и-блузы', '/жакеты-и-жилеты', '/трикотаж-и-свитеры', '/quiet-luxury'],
   '/платья': ['/жакеты-и-жилеты', '/верхняя-одежда', '/natural-fabrics', '/quiet-luxury'],
   '/жакеты-и-жилеты': ['/брюки-и-джинсы', '/рубашки-и-блузы', '/верхняя-одежда', '/quiet-luxury'],
