@@ -160,9 +160,12 @@ jobs:
       - name: Verify live SEO surface
         run: |
           set -euo pipefail
-          homepage="$(curl --fail --silent --show-error --max-time 30 https://vn-13.com/)"
-          sitemap="$(curl --fail --silent --show-error --max-time 30 https://vn-13.com/sitemap.xml)"
-          robots="$(curl --fail --silent --show-error --max-time 30 https://vn-13.com/robots.txt)"
+          fetch() {
+            curl --fail --silent --show-error --max-time 30 --retry 4 --retry-all-errors --retry-delay 2 "$1"
+          }
+          homepage="$(fetch https://vn-13.com/)"
+          sitemap="$(fetch https://vn-13.com/sitemap.xml)"
+          robots="$(fetch https://vn-13.com/robots.txt)"
           grep -F '<link rel="canonical" href="https://vn-13.com/"' <<< "${homepage}"
           grep -F '<title>' <<< "${homepage}"
           grep -F '<loc>https://vn-13.com/' <<< "${sitemap}"
