@@ -38,6 +38,7 @@ export default function WomensClothingDistributionPage() {
           title: 'Рынки и партнеры',
           body: [
             'VN13 фокусируется на России и странах СНГ, работая с бутиками, шоурумами и розничными проектами, которым нужен качественный дизайнерский ассортимент.',
+            'В европейской части портфеля VN13 представлены, в частности, Manuelle Guibal, H+ Hannoh Wessel, Aequamente и MJ Watson. Точный состав доступных коллекций и условия поставки зависят от сезона и конкретного запроса ритейлера.',
             'Мы помогаем брендам выходить на рынок аккуратно: через ограниченные поставки, предзаказ, проверку спроса и постепенное развитие партнерской сети.',
           ],
         },
@@ -110,6 +111,9 @@ export default function WomensClothingDistributionPage() {
         },
       ]}
       relatedLinks={[
+        { href: '/brands/manuelle-guibal', label: 'Manuelle Guibal в портфеле VN13' },
+        { href: '/brands/hannoh-wessel', label: 'H+ Hannoh Wessel в портфеле VN13' },
+        { href: '/brands/aequamente', label: 'Aequamente в портфеле VN13' },
         { href: '/partnerstvo', label: 'Стать партнёром VN13' },
         { href: '/evropeyskie-brendy-zhenskoy-odezhdy', label: 'Европейские бренды' },
         { href: '/optovaya-zhenskaya-odezhda', label: 'Оптовые поставки' },
