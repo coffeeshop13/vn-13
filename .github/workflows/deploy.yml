@@ -136,31 +136,6 @@ jobs:
               --cache-control 'public,max-age=300,stale-while-revalidate=86400'
           done < <(find out -type f \( -name 'robots.txt' -o -name 'sitemap.xml' -o -name 'sitemap_index.xml' \) | sort)
 
-      - name: Publish slashless redirects
-        env:
-          AWS_S3_BUCKET: vn-13.com
-          AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_KEY }}
-          AWS_S3_ENDPOINT: https://storage.yandexcloud.net
-          AWS_REGION: ru-central1
-        run: |
-          while IFS= read -r page; do
-            route="${page#out/}"
-            route="${route%/index.html}"
-            if [ -n "$route" ]; then
-              case "$route" in
-                404|_not-found) continue ;;
-              esac
-              aws s3api put-object \
-                --bucket "${AWS_S3_BUCKET}" \
-                --key "${route}" \
-                --website-redirect-location "/${route}/" \
-                --endpoint-url "${AWS_S3_ENDPOINT}" \
-                --content-type text/html \
-                --cache-control 'public,max-age=300,stale-while-revalidate=86400'
-            fi
-          done < <(find out -mindepth 2 -type f -name index.html | sort)
-
       - name: Notify IndexNow
         env:
           INDEXNOW_KEY: b74b59f1575a383a6a86c059d4e3c9bc
