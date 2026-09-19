@@ -87,6 +87,10 @@ export default function SeoLandingPage({
         isPartOf: {
           '@id': `${absoluteUrl('/')}#website`,
         },
+        publisher: {
+          '@id': `${absoluteUrl('/')}#organization`,
+        },
+        ...(service ? { mainEntity: { '@id': `${pageUrl}#service` } } : {}),
         about: [title, ...bullets.slice(0, 3)].map((name) => ({
           '@type': 'Thing',
           name,

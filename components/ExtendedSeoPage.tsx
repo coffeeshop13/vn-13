@@ -45,6 +45,9 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
         isPartOf: {
           '@id': `${absoluteUrl('/')}#website`,
         },
+        publisher: {
+          '@id': `${absoluteUrl('/')}#organization`,
+        },
         mainEntity: page.category
           ? {
               '@type': 'ItemList',
