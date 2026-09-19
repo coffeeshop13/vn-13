@@ -170,3 +170,9 @@ jobs:
           grep -F '<title>' <<< "${homepage}"
           grep -F '<loc>https://vn-13.com/' <<< "${sitemap}"
           grep -F 'Sitemap: https://vn-13.com/sitemap.xml' <<< "${robots}"
+
+          asset_path="$(grep -oE '/_next/static/[^" ]+\.(css|js)' <<< "${homepage}" | head -n 1)"
+          test -n "${asset_path}"
+          asset_headers="$(curl --fail --silent --show-error --max-time 30 --retry 4 --retry-all-errors --retry-delay 2 -D - -o /dev/null "https://vn-13.com${asset_path}")"
+          grep -Eiq '^HTTP/[^ ]+ 200|^HTTP/[^ ]+ 2[0-9][0-9]' <<< "${asset_headers}"
+          grep -Eiq '^content-type: text/(css|javascript)' <<< "${asset_headers}"
