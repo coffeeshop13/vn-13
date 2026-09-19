@@ -1,0 +1,64 @@
+{
+  "IndexDocument": {
+    "Suffix": "index.html"
+  },
+  "ErrorDocument": {
+    "Key": "404.html"
+  },
+  "RoutingRules": [
+    {
+      "Condition": { "KeyPrefixEquals": "hannoh-wessel" },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "vn-13.com",
+        "ReplaceKeyWith": "brands/hannoh-wessel/",
+        "HttpRedirectCode": "301"
+      }
+    },
+    {
+      "Condition": { "KeyPrefixEquals": "post-co" },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "vn-13.com",
+        "ReplaceKeyWith": "brands/post-and-co/",
+        "HttpRedirectCode": "301"
+      }
+    },
+    {
+      "Condition": { "KeyPrefixEquals": "priveh" },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "vn-13.com",
+        "ReplaceKeyWith": "contact/",
+        "HttpRedirectCode": "301"
+      }
+    },
+    {
+      "Condition": { "KeyPrefixEquals": "sula" },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "vn-13.com",
+        "ReplaceKeyWith": "brands/sula/",
+        "HttpRedirectCode": "301"
+      }
+    },
+    {
+      "Condition": { "KeyPrefixEquals": "vn-13-fashion-agency" },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "vn-13.com",
+        "ReplaceKeyWith": "",
+        "HttpRedirectCode": "301"
+      }
+    },
+    {
+      "Condition": { "KeyPrefixEquals": "2023/12/17/главные-тренды-мировой-индустрии-мод" },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "vn-13.com",
+        "ReplaceKeyWith": "journal/",
+        "HttpRedirectCode": "301"
+      }
+    }
+  ]
+}

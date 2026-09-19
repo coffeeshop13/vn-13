@@ -137,7 +137,7 @@ jobs:
               --cache-control 'public,max-age=300,must-revalidate'
           done < <(find out -type f \( -name 'robots.txt' -o -name 'sitemap.xml' -o -name 'sitemap_index.xml' \) | sort)
 
-      - name: Apply legacy object redirects
+      - name: Configure legacy URL redirects
         env:
           AWS_S3_BUCKET: vn-13.com
           AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
@@ -145,26 +145,10 @@ jobs:
           AWS_S3_ENDPOINT: https://storage.yandexcloud.net
           AWS_REGION: ru-central1
         run: |
-          set -euo pipefail
-          redirect_body="$(mktemp)"
-          trap 'rm -f "${redirect_body}"' EXIT
-          while IFS='|' read -r key destination; do
-            aws s3api put-object \
-              --bucket "${AWS_S3_BUCKET}" \
-              --key "${key}" \
-              --endpoint-url "${AWS_S3_ENDPOINT}" \
-              --body "${redirect_body}" \
-              --content-type 'text/html' \
-              --cache-control 'public,max-age=300,must-revalidate' \
-              --website-redirect-location "https://vn-13.com${destination}"
-          done <<'REDIRECTS'
-          hannoh-wessel/index.html|/brands/hannoh-wessel/
-          post-co/index.html|/brands/post-and-co/
-          priveh/index.html|/contact/
-          sula/index.html|/brands/sula/
-          vn-13-fashion-agency/index.html|/
-          2023/12/17/главные-тренды-мировой-индустрии-мод/index.html|/journal/
-          REDIRECTS
+          aws s3api put-bucket-website \
+            --bucket "${AWS_S3_BUCKET}" \
+            --endpoint-url "${AWS_S3_ENDPOINT}" \
+            --website-configuration file://.github/yandex-website.json
 
       - name: Notify IndexNow
         env:
