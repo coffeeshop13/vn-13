@@ -156,3 +156,14 @@ jobs:
             -X POST 'https://api.indexnow.org/indexnow' \
             -H 'Content-Type: application/json; charset=utf-8' \
             --data-binary @/tmp/vn13-indexnow.json
+
+      - name: Verify live SEO surface
+        run: |
+          set -euo pipefail
+          homepage="$(curl --fail --silent --show-error --max-time 30 https://vn-13.com/)"
+          sitemap="$(curl --fail --silent --show-error --max-time 30 https://vn-13.com/sitemap.xml)"
+          robots="$(curl --fail --silent --show-error --max-time 30 https://vn-13.com/robots.txt)"
+          grep -F '<link rel="canonical" href="https://vn-13.com/"' <<< "${homepage}"
+          grep -F '<title>' <<< "${homepage}"
+          grep -F '<loc>https://vn-13.com/' <<< "${sitemap}"
+          grep -F 'Sitemap: https://vn-13.com/sitemap.xml' <<< "${robots}"
