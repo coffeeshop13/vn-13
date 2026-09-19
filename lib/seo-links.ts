@@ -3,7 +3,7 @@ export type SeoRelatedLink = {
   label: string
 }
 
-function canonicalInternalHref(href: string): string {
+export function canonicalInternalHref(href: string): string {
   if (!href.startsWith('/') || href === '/' || href.endsWith('/')) {
     return href
   }

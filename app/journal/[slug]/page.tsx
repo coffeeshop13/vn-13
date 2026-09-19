@@ -6,6 +6,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { getJournalArticle, journalArticles } from '@/lib/journal'
 import { absoluteUrl, createMetadata } from '@/lib/seo'
+import { canonicalInternalHref } from '@/lib/seo-links'
 
 type ArticlePageProps = {
   params: Promise<{ slug: string }>
@@ -174,7 +175,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                       {section.links.map((link) => (
                         <Link
                           key={link.href}
-                          href={link.href}
+                          href={canonicalInternalHref(link.href)}
                           className="px-4 py-3 text-sm transition-colors duration-200 hover:bg-[#f3efe9]"
                           style={{ border: '1px solid #e0ddd8', color: '#3f3f3f' }}
                         >
@@ -215,7 +216,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
             <div className="mt-16 pt-12 border-t" style={{ borderColor: '#e0ddd8' }}>
               <Link
-                href={article.ctaHref}
+                href={canonicalInternalHref(article.ctaHref)}
                 className="inline-block px-8 py-4 text-sm font-medium tracking-wide transition-colors duration-200"
                 style={{ backgroundColor: '#0f0f0f', color: '#fff' }}
               >
@@ -228,16 +229,16 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 Связанные страницы
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <Link href="/vn-13-brand" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                <Link href="/vn-13-brand/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
                   Каталог VN-13
                 </Link>
-                <Link href="/optovaya-zhenskaya-odezhda" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                <Link href="/optovaya-zhenskaya-odezhda/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
                   Оптовая женская одежда
                 </Link>
-                <Link href="/preorder" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                <Link href="/preorder/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
                   Предзаказ
                 </Link>
-                <Link href="/proizvoditel-zhenskoy-odezhdy" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                <Link href="/proizvoditel-zhenskoy-odezhdy/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
                   Производство
                 </Link>
               </div>
@@ -248,13 +249,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 Кластеры VN13
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <Link href="/sravnenie-premialnykh-rynkov" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                <Link href="/sravnenie-premialnykh-rynkov/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
                   Премиальные рынки женской одежды
                 </Link>
-                <Link href="/kak-vn13-vybirayet-brendy" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                <Link href="/kak-vn13-vybirayet-brendy/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
                   Как VN13 выбирает бренды
                 </Link>
-                <Link href="/limited-series-dlya-butikov" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+                <Link href="/limited-series-dlya-butikov/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
                   Лимитированные серии для бутиков
                 </Link>
               </div>
