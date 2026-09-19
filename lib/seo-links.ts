@@ -3,6 +3,22 @@ export type SeoRelatedLink = {
   label: string
 }
 
+function canonicalInternalHref(href: string): string {
+  if (!href.startsWith('/') || href === '/' || href.endsWith('/')) {
+    return href
+  }
+
+  const hashIndex = href.indexOf('#')
+  const queryIndex = href.indexOf('?')
+  const suffixIndex = [hashIndex, queryIndex].filter((index) => index >= 0).sort((a, b) => a - b)[0]
+
+  if (suffixIndex === undefined) {
+    return `${href}/`
+  }
+
+  return `${href.slice(0, suffixIndex)}/${href.slice(suffixIndex)}`
+}
+
 const relatedLinksByPath: Record<string, SeoRelatedLink[]> = {
   '/zhenskaya-odezhda': [
     { href: '/dizaynerskaya-zhenskaya-odezhda', label: 'Дизайнерская женская одежда' },
@@ -86,10 +102,13 @@ export function mergeSeoRelatedLinks(
   explicitLinks: SeoRelatedLink[] = [],
 ): SeoRelatedLink[] {
   const uniqueLinks = new Map<string, SeoRelatedLink>()
+  const canonicalPath = canonicalInternalHref(path)
 
   for (const link of [...explicitLinks, ...getSeoRelatedLinks(path)]) {
-    if (link.href !== path && !uniqueLinks.has(link.href)) {
-      uniqueLinks.set(link.href, link)
+    const href = canonicalInternalHref(link.href)
+
+    if (href !== canonicalPath && !uniqueLinks.has(href)) {
+      uniqueLinks.set(href, { ...link, href })
     }
   }
 
