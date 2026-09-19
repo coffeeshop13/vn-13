@@ -10,6 +10,7 @@ export const metadata: Metadata = createMetadata({
   description:
     'Партнёрство с VN13 для европейских брендов, бутиков и шоурумов: дистрибуция, оптовые поставки, предзаказ, капсулы и производство малых партий.',
   path: '/partnerstvo',
+  modifiedTime: '2026-09-19',
   keywords: [
     'партнёрство с дистрибьютором одежды',
     'дистрибуция бренда одежды',
@@ -31,6 +32,7 @@ const jsonLd = {
       url: absoluteUrl('/partnerstvo'),
       name: 'Стать партнёром VN13',
       description: 'Партнёрство VN13 с брендами, бутиками и шоурумами.',
+      dateModified: '2026-09-19',
       isPartOf: { '@id': `${absoluteUrl('/')}#website` },
     },
     {
