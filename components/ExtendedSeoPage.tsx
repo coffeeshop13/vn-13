@@ -9,8 +9,19 @@ import { absoluteUrl, SITE_NAME } from '@/lib/seo'
 import { canonicalInternalHref } from '@/lib/seo-links'
 
 const preferredRelatedPaths: Record<string, string[]> = {
-  '/japanese-style': ['/рубашки-и-блузы', '/zhenskaya-odezhda'],
-  '/рубашки-и-блузы': ['/japanese-style'],
+  '/quiet-luxury': ['/natural-fabrics', '/жакеты-и-жилеты', '/трикотаж-и-свитеры', '/рубашки-и-блузы'],
+  '/natural-fabrics': ['/quiet-luxury', '/трикотаж-и-свитеры', '/рубашки-и-блузы', '/верхняя-одежда'],
+  '/japanese-style': ['/рубашки-и-блузы', '/жакеты-и-жилеты', '/трикотаж-и-свитеры', '/quiet-luxury'],
+  '/платья': ['/жакеты-и-жилеты', '/верхняя-одежда', '/natural-fabrics', '/quiet-luxury'],
+  '/жакеты-и-жилеты': ['/брюки-и-джинсы', '/рубашки-и-блузы', '/верхняя-одежда', '/quiet-luxury'],
+  '/брюки-и-джинсы': ['/жакеты-и-жилеты', '/рубашки-и-блузы', '/костюмы-и-комплекты', '/japanese-style'],
+  '/юбки-и-шорты': ['/платья', '/топы,-футболки-и-лонгсливы', '/рубашки-и-блузы', '/natural-fabrics'],
+  '/верхняя-одежда': ['/жакеты-и-жилеты', '/брюки-и-джинсы', '/трикотаж-и-свитеры', '/quiet-luxury'],
+  '/костюмы-и-комплекты': ['/жакеты-и-жилеты', '/брюки-и-джинсы', '/рубашки-и-блузы', '/quiet-luxury'],
+  '/трикотаж-и-свитеры': ['/natural-fabrics', '/quiet-luxury', '/жакеты-и-жилеты', '/топы,-футболки-и-лонгсливы'],
+  '/рубашки-и-блузы': ['/japanese-style', '/жакеты-и-жилеты', '/natural-fabrics', '/quiet-luxury'],
+  '/топы,-футболки-и-лонгсливы': ['/рубашки-и-блузы', '/трикотаж-и-свитеры', '/natural-fabrics', '/japanese-style'],
+  '/аксессуары': ['/quiet-luxury', '/natural-fabrics', '/жакеты-и-жилеты', '/платья'],
 }
 
 export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData }) {
