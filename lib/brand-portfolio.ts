@@ -425,6 +425,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'хорошо связывается с лукбуком и материалами журнала',
     ],
     keywords: ['Sula', 'британская женская одежда', 'дизайнерская женская одежда', 'нишевый бренд одежды'],
+    officialWebsite: 'https://www.sulaclothing.com/',
     cardImage: '/brands/sula.jpg',
     heroImage: {
       src: '/brands/sula.jpg',
