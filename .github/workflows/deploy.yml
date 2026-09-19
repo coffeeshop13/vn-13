@@ -176,3 +176,4 @@ jobs:
           asset_headers="$(curl --fail --silent --show-error --max-time 30 --retry 4 --retry-all-errors --retry-delay 2 -D - -o /dev/null "https://vn-13.com${asset_path}")"
           grep -Eiq '^HTTP/[^ ]+ 200|^HTTP/[^ ]+ 2[0-9][0-9]' <<< "${asset_headers}"
           grep -Eiq '^content-type: text/(css|javascript)' <<< "${asset_headers}"
+          grep -Eiq '^cache-control:.*max-age=31536000' <<< "${asset_headers}"
