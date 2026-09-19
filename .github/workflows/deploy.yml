@@ -43,8 +43,7 @@ jobs:
           aws s3 sync out/ "s3://${AWS_S3_BUCKET}/" \
             --endpoint-url "${AWS_S3_ENDPOINT}" \
             --delete \
-            --exclude "_next/static/*" \
-            --no-progress
+            --exclude "_next/static/*"
 
       - name: Set immutable cache headers for versioned Next.js assets
         env:
@@ -57,8 +56,7 @@ jobs:
           aws s3 cp out/_next/static/ "s3://${AWS_S3_BUCKET}/_next/static/" \
             --recursive \
             --endpoint-url "${AWS_S3_ENDPOINT}" \
-            --cache-control 'public,max-age=31536000,immutable' \
-            --no-progress
+            --cache-control 'public,max-age=31536000,immutable'
 
       - name: Set cache headers for public media assets
         env:
@@ -82,8 +80,7 @@ jobs:
             --include "*.woff" \
             --include "*.woff2" \
             --endpoint-url "${AWS_S3_ENDPOINT}" \
-            --cache-control 'public,max-age=86400,stale-while-revalidate=604800' \
-            --no-progress
+            --cache-control 'public,max-age=86400,stale-while-revalidate=604800'
 
       - name: Set long-lived cache headers for versioned media assets
         env:
@@ -113,8 +110,7 @@ jobs:
             'brands/vn13-catalog/vn13-white-oversize-designer-shirt-card-v20260913-800.webp'; do
             aws s3 cp "out/${asset}" "s3://${AWS_S3_BUCKET}/${asset}" \
               --endpoint-url "${AWS_S3_ENDPOINT}" \
-              --cache-control 'public,max-age=31536000,immutable' \
-              --no-progress
+              --cache-control 'public,max-age=31536000,immutable'
           done
 
       - name: Set cache headers for HTML and SEO files
@@ -125,7 +121,7 @@ jobs:
           AWS_S3_ENDPOINT: https://storage.yandexcloud.net
           AWS_REGION: ru-central1
         run: |
-          aws s3 cp out/ "s3://${AWS_S3_BUCKET}/" --recursive --exclude "*" --include "*.html" --endpoint-url "${AWS_S3_ENDPOINT}" --content-type "text/html" --cache-control 'public,max-age=300,stale-while-revalidate=86400' --no-progress
+          aws s3 cp out/ "s3://${AWS_S3_BUCKET}/" --recursive --exclude "*" --include "*.html" --endpoint-url "${AWS_S3_ENDPOINT}" --content-type "text/html" --cache-control 'public,max-age=300,stale-while-revalidate=86400'
 
           while IFS= read -r page; do
             key="${page#out/}"
@@ -137,8 +133,7 @@ jobs:
             aws s3 cp "$page" "s3://${AWS_S3_BUCKET}/${key}" \
               --endpoint-url "${AWS_S3_ENDPOINT}" \
               --content-type "${content_type}" \
-              --cache-control 'public,max-age=300,stale-while-revalidate=86400' \
-              --no-progress
+              --cache-control 'public,max-age=300,stale-while-revalidate=86400'
           done < <(find out -type f \( -name 'robots.txt' -o -name 'sitemap.xml' -o -name 'sitemap_index.xml' \) | sort)
 
       - name: Publish slashless redirects
@@ -162,8 +157,7 @@ jobs:
                 --website-redirect-location "/${route}/" \
                 --endpoint-url "${AWS_S3_ENDPOINT}" \
                 --content-type text/html \
-                --cache-control 'public,max-age=300,stale-while-revalidate=86400' \
-                --no-progress
+                --cache-control 'public,max-age=300,stale-while-revalidate=86400'
             fi
           done < <(find out -mindepth 2 -type f -name index.html | sort)
 
