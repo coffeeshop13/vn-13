@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { extendedSeoPages } from '@/lib/extended-seo-pages'
+import { canonicalInternalHref } from '@/lib/seo-links'
 
 export default function CategorySeoLinks() {
   const categories = extendedSeoPages.filter((page) => page.category)
@@ -21,7 +22,7 @@ export default function CategorySeoLinks() {
             {categories.map((page) => (
               <Link
                 key={page.path}
-                href={page.path}
+                href={canonicalInternalHref(page.path)}
                 className="flex min-h-15 items-center justify-between gap-4 p-5 bg-[#fafaf8] transition-colors hover:bg-[#f3efe8]"
               >
                 <span className="text-base text-[#262626]">{page.cluster}</span>
