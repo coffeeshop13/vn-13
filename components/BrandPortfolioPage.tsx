@@ -152,9 +152,9 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
               <p className="text-base mb-2 md:mb-4" style={{ color: '#9b7541' }}>
                 Бренд из {brand.country}
               </p>
-              <h1 className="text-4xl md:text-6xl font-light leading-tight mb-3 md:mb-6" style={{ color: '#0f0f0f' }}>
+              <p className="text-4xl md:text-6xl font-light leading-tight mb-3 md:mb-6" style={{ color: '#0f0f0f' }}>
                 {brand.name}
-              </h1>
+              </p>
               <p className="text-base md:text-lg leading-relaxed max-w-2xl mb-5" style={{ color: '#5f5b55' }}>
                 {brand.description}
               </p>

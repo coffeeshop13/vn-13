@@ -114,9 +114,9 @@ export default function ManuelleGuibalPageContent() {
       <section className="hidden pt-32 pb-16 md:pt-48 md:pb-24 px-6 lg:block" style={{ backgroundColor: '#fafaf8' }}>
         <div className="max-w-4xl mx-auto">
           <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>Brand</p>
-          <h1 className="text-5xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>
+          <p className="text-5xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>
             {translations.brandManuelleGuibalTitle}
-          </h1>
+          </p>
           <p className="text-lg md:text-xl max-w-2xl" style={{ color: '#6b6b6b' }}>
             {translations.brandManuelleGuibalSubtitle}
           </p>
