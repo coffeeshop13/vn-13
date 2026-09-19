@@ -4,11 +4,11 @@ import MobileMenu from './MobileMenu'
 
 export default function Header() {
   const navLinks = [
-    { key: 'brand', label: 'Каталог VN-13', href: '/vn-13-brand' },
-    { key: 'brands', label: 'Другие бренды', href: '/brands' },
-    { key: 'boutiques', label: 'Для бутиков', href: '/zhenskaya-odezhda-dlya-butikov' },
-    { key: 'journal', label: 'Новости', href: '/journal' },
-    { key: 'contact', label: 'Контакты', href: '/contact' },
+    { key: 'brand', label: 'Каталог VN-13', href: '/vn-13-brand/' },
+    { key: 'brands', label: 'Другие бренды', href: '/brands/' },
+    { key: 'boutiques', label: 'Для бутиков', href: '/zhenskaya-odezhda-dlya-butikov/' },
+    { key: 'journal', label: 'Новости', href: '/journal/' },
+    { key: 'contact', label: 'Контакты', href: '/contact/' },
   ]
 
   return (
