@@ -16,6 +16,9 @@ export default function CategorySeoLinks() {
             <Link href="/vn-13-brand/" className="inline-block mt-6 text-base font-medium underline underline-offset-4 text-[#1d1b18]">
               Открыть весь каталог
             </Link>
+            <Link href="/japanese-style/" className="block mt-3 text-sm underline underline-offset-4 text-[#5d5851]">
+              Японская дизайнерская одежда: стиль, крой и бренды
+            </Link>
           </div>
 
           <nav aria-label="Категории дизайнерской одежды" className="grid sm:grid-cols-2 gap-px bg-[#e0ddd8] border border-[#e0ddd8]">
