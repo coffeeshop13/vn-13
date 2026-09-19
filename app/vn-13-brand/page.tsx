@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import ProductImageGallery from '@/components/ProductImageGallery'
 import { extendedSeoPages } from '@/lib/extended-seo-pages'
 import { absoluteUrl, createMetadata } from '@/lib/seo'
+import { canonicalInternalHref } from '@/lib/seo-links'
 
 export const metadata: Metadata = createMetadata({
   title: 'Бренд одежды VN-13: дизайнерский каталог | VN13',
@@ -470,7 +471,7 @@ export default function VN13BrandPage() {
             {categoryPages.map((page) => (
               <Link
                 key={page.path}
-                href={page.path}
+                href={canonicalInternalHref(page.path)}
                 className="group flex min-h-20 md:min-h-32 items-end justify-between gap-4 md:gap-6 border border-[#ded9d1] bg-white p-4 md:p-6 transition-colors hover:bg-[#f2ede5]"
               >
                 <span className="text-base md:text-xl font-light text-[#171717]">{page.cluster}</span>
