@@ -8,7 +8,7 @@ import { extendedSeoPages } from '@/lib/extended-seo-pages'
 import { absoluteUrl, createMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createMetadata({
-  title: 'VN-13 — бренд женской одежды и дизайнерский каталог',
+  title: 'Бренд одежды VN-13: дизайнерский каталог | VN13',
   description:
     'VN-13 — собственный бренд женской одежды: дизайнерские платья, жакеты, рубашки, брюки и верхняя одежда ограниченных серий для клиентов и бутиков.',
   path: '/vn-13-brand',
