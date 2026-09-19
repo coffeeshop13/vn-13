@@ -103,7 +103,7 @@ export default function LookbookPage() {
           <div className="flex flex-wrap gap-4 text-sm">
             <Link href="/kapsulnaya-zhenskaya-odezhda" className="underline underline-offset-4">О капсульной одежде</Link>
             <Link href="/vn-13-brand" className="underline underline-offset-4">Каталог VN-13</Link>
-            <Link href="/contact" className="underline underline-offset-4">Запросить условия</Link>
+            <Link href="/contact/" className="underline underline-offset-4">Запросить условия</Link>
           </div>
         </div>
       </section>

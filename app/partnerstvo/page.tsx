@@ -88,7 +88,7 @@ export default function PartnershipPage() {
             ))}
           </div>
           <div className="mt-12 flex flex-wrap gap-6 items-center">
-            <Link href="/contact" className="inline-flex px-7 py-4 text-sm tracking-[0.08em] uppercase" style={{ backgroundColor: '#0f0f0f', color: '#fff' }}>Обсудить партнёрство</Link>
+            <Link href="/contact/" className="inline-flex px-7 py-4 text-sm tracking-[0.08em] uppercase" style={{ backgroundColor: '#0f0f0f', color: '#fff' }}>Обсудить партнёрство</Link>
             <ContactLink href="https://t.me/vn13agency" label="Telegram @vn13agency" />
           </div>
         </div>

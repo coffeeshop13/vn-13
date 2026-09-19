@@ -90,7 +90,7 @@ export const journalArticles: JournalArticle[] = [
         ],
         links: [
           { href: '/evropeyskie-brendy-zhenskoy-odezhdy', label: 'Европейские бренды в портфеле VN13' },
-          { href: '/contact', label: 'Обсудить закупку' },
+          { href: '/contact/', label: 'Обсудить закупку' },
         ],
       },
     ],
@@ -1600,7 +1600,7 @@ export const journalArticles: JournalArticle[] = [
         ],
         links: [
           { href: '/partnerstvo', label: 'Партнёрство с VN13' },
-          { href: '/contact', label: 'Обсудить запуск коллекции' },
+          { href: '/contact/', label: 'Обсудить запуск коллекции' },
         ],
       },
       {
@@ -1667,7 +1667,7 @@ export const journalArticles: JournalArticle[] = [
           'Клиент бутика получает доступ к вещам до массового появления и видит более цельную подборку. Это усиливает ощущение ценности и доверие к магазину.',
           'Для VN-13 предзаказ также помогает проверять спрос и точнее планировать развитие собственных коллекций.',
         ],
-        links: [{ href: '/contact', label: 'Обсудить предзаказ с VN13' }],
+        links: [{ href: '/contact/', label: 'Обсудить предзаказ с VN13' }],
       },
     ],
     ctaHref: '/preorder',
@@ -1723,7 +1723,7 @@ export const journalArticles: JournalArticle[] = [
         ],
         links: [
           { href: '/zhenskaya-odezhda-dlya-butikov', label: 'Одежда для бутиков' },
-          { href: '/contact', label: 'Обсудить ассортимент' },
+          { href: '/contact/', label: 'Обсудить ассортимент' },
         ],
       },
     ],

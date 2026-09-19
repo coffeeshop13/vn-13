@@ -368,7 +368,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                   <p className="text-base leading-8 mb-8" style={{ color: '#5f5b55' }}>
                     Для этих страниц важнее показать один убедительный реальный кадр и связать его с коммерческим предложением, чем имитировать lookbook повтором одной и той же фотографии.
                   </p>
-                  <CTALink href="/contact">Обсудить бренд</CTALink>
+                  <CTALink href="/contact/">Обсудить бренд</CTALink>
                 </div>
               </div>
             )}
@@ -406,7 +406,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
             <p className="text-base mb-8 max-w-2xl mx-auto" style={{ color: '#6b6b6b' }}>
               Свяжитесь с командой VN13, если вам нужен бренд для бутика, шоурума или частной клиентской подборки.
             </p>
-            <CTALink href="/contact">Связаться</CTALink>
+            <CTALink href="/contact/">Связаться</CTALink>
           </div>
         </div>
       </section>

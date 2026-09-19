@@ -100,7 +100,7 @@ export default function BrandsPage() {
             <div className="flex flex-wrap gap-3 text-sm">
               <Link href="/zhenskaya-odezhda-dlya-butikov" className="underline underline-offset-4">Одежда для бутиков</Link>
               <Link href="/partnerstvo" className="underline underline-offset-4">Стать партнёром</Link>
-              <Link href="/contact" className="underline underline-offset-4">Связаться с VN13</Link>
+              <Link href="/contact/" className="underline underline-offset-4">Связаться с VN13</Link>
             </div>
           </div>
         </div>

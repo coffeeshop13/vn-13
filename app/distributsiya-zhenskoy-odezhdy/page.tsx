@@ -114,7 +114,7 @@ export default function WomensClothingDistributionPage() {
         { href: '/evropeyskie-brendy-zhenskoy-odezhdy', label: 'Европейские бренды' },
         { href: '/optovaya-zhenskaya-odezhda', label: 'Оптовые поставки' },
         { href: '/poshiv-zhenskoy-odezhdy-dlya-brenda', label: 'Пошив для бренда' },
-        { href: '/contact', label: 'Связаться с VN13' },
+        { href: '/contact/', label: 'Связаться с VN13' },
       ]}
     />
   )
