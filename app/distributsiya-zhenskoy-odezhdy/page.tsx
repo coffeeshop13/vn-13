@@ -3,9 +3,9 @@ import SeoLandingPage from '@/components/SeoLandingPage'
 import { createMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Дистрибуция женской одежды для бутиков | VN13',
+  title: 'Дистрибуция брендов женской одежды в России | VN13',
   description:
-    'VN13 — дистрибьютор женской одежды для бутиков и шоурумов: европейские бренды, предзаказ, подбор ассортимента и развитие продаж в России и СНГ.',
+    'VN13 — дистрибьютор брендов женской одежды в России и СНГ: представительство, подбор бутиков, предзаказ, продажи и развитие европейских марок.',
   path: '/distributsiya-zhenskoy-odezhdy',
   keywords: [
     'дистрибуция женской одежды',
@@ -23,6 +23,7 @@ export default function WomensClothingDistributionPage() {
   return (
     <SeoLandingPage
       path="/distributsiya-zhenskoy-odezhdy"
+      lastModified="2026-09-19"
       eyebrow="Дистрибуция женской одежды"
       title="Дистрибуция женской одежды для бутиков и развитие дизайнерских брендов"
       description="VN13 соединяет европейские бренды, собственное направление VN-13 и розничных партнеров: от отбора коллекции и предзаказа до коммерческой поддержки и развития продаж в России и странах СНГ."
