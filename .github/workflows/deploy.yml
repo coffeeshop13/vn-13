@@ -147,12 +147,11 @@ jobs:
         run: |
           set -euo pipefail
           while IFS='|' read -r key destination; do
-            aws s3api copy-object \
+            aws s3api put-object \
               --bucket "${AWS_S3_BUCKET}" \
-              --copy-source "${AWS_S3_BUCKET}/${key}" \
               --key "${key}" \
               --endpoint-url "${AWS_S3_ENDPOINT}" \
-              --metadata-directive REPLACE \
+              --body /dev/null \
               --content-type 'text/html' \
               --cache-control 'public,max-age=300,must-revalidate' \
               --website-redirect-location "https://vn-13.com${destination}"
