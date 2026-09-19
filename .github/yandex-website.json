@@ -47,7 +47,7 @@
       "Redirect": {
         "Protocol": "https",
         "HostName": "vn-13.com",
-        "ReplaceKeyWith": "",
+        "ReplaceKeyWith": "story/",
         "HttpRedirectCode": "301"
       }
     },
