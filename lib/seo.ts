@@ -171,7 +171,10 @@ export const organizationJsonLd = {
       email: 'info@vn-13.com',
       telephone: '+79266022089',
       areaServed: ['Europe', 'Russia', 'CIS countries'],
-      sameAs: ['https://t.me/vn13agency'],
+      sameAs: [
+        'https://t.me/vn13agency',
+        'https://www.retail.ru/rbc/company/vn_13/',
+      ],
       knowsAbout: [
         'дистрибуция европейских брендов',
         'представительство дизайнерских брендов',
