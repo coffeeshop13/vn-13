@@ -64,7 +64,6 @@ export default function PortfolioGrid() {
                     width={1200}
                     height={1600}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    priority={brand.slug === 'manuelle-guibal'}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
