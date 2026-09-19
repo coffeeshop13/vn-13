@@ -20,6 +20,7 @@ type LandingPageProps = {
     answer: string
   }>
   path: string
+  lastModified?: string
   relatedLinks?: SeoRelatedLink[]
   service?: {
     name: string
@@ -38,6 +39,7 @@ export default function SeoLandingPage({
   bullets,
   faq,
   path,
+  lastModified,
   relatedLinks = [],
   service,
 }: LandingPageProps) {
@@ -80,6 +82,7 @@ export default function SeoLandingPage({
         url: pageUrl,
         name: title,
         description,
+        ...(lastModified ? { dateModified: lastModified } : {}),
         inLanguage: 'ru',
         isPartOf: {
           '@id': `${absoluteUrl('/')}#website`,

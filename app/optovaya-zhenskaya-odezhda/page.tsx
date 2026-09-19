@@ -23,6 +23,7 @@ export default function WholesaleWomensClothingPage() {
   return (
     <SeoLandingPage
       path="/optovaya-zhenskaya-odezhda"
+      lastModified="2026-09-19"
       eyebrow="Оптовая женская одежда"
       title="Оптовая женская одежда для бутиков, концепт-сторов и шоурумов"
       description="VN13 помогает ритейлерам закупать женскую одежду через дистрибуцию европейских брендов, предзаказ и собственное направление VN-13 с ограниченными коллекциями."
