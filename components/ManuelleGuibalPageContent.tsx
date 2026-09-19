@@ -9,63 +9,63 @@ import { useLanguage } from '@/lib/context/LanguageContext'
 const lookbookImages = [
   {
     src: '/brands/manuelle-lookbook/lookbook-01.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 1',
+    alt: 'Летний образ Manuelle Guibal — кадр 1 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-02.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 2',
+    alt: 'Летний образ Manuelle Guibal — кадр 2 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-03.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 3',
+    alt: 'Летний образ Manuelle Guibal — кадр 3 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-04.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 4',
+    alt: 'Летний образ Manuelle Guibal — кадр 4 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-05.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 5',
+    alt: 'Летний образ Manuelle Guibal — кадр 5 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-06.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 6',
+    alt: 'Летний образ Manuelle Guibal — кадр 6 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-07.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 7',
+    alt: 'Летний образ Manuelle Guibal — кадр 7 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-08.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 8',
+    alt: 'Летний образ Manuelle Guibal — кадр 8 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-09.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 9',
+    alt: 'Летний образ Manuelle Guibal — кадр 9 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-10.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 10',
+    alt: 'Летний образ Manuelle Guibal — кадр 10 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-11.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 11',
+    alt: 'Летний образ Manuelle Guibal — кадр 11 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-12.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 12',
+    alt: 'Летний образ Manuelle Guibal — кадр 12 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-13.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 13',
+    alt: 'Летний образ Manuelle Guibal — кадр 13 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-14.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 14',
+    alt: 'Летний образ Manuelle Guibal — кадр 14 lookbook VN13',
   },
   {
     src: '/brands/manuelle-lookbook/lookbook-15.seo.webp',
-    alt: 'Manuelle Guibal summer lookbook image 15',
+    alt: 'Летний образ Manuelle Guibal — кадр 15 lookbook VN13',
   },
 ]
 
