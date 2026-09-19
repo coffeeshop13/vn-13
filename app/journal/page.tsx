@@ -118,16 +118,16 @@ export default function JournalPage() {
               Полезные разделы
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <Link href="/vn-13-brand" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+              <Link href="/vn-13-brand/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
                 Каталог VN-13
               </Link>
-              <Link href="/optovaya-zhenskaya-odezhda" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+              <Link href="/optovaya-zhenskaya-odezhda/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
                 Оптовая женская одежда
               </Link>
-              <Link href="/preorder" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+              <Link href="/preorder/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
                 Предзаказ
               </Link>
-              <Link href="/manufacturing" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
+              <Link href="/manufacturing/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8' }}>
                 Производство
               </Link>
             </div>

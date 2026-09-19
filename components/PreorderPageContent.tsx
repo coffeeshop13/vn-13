@@ -157,13 +157,13 @@ export default function PreorderPageContent() {
               {translations.preorderRelatedTitle}
             </h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/optovaya-zhenskaya-odezhda" className="block p-5 border transition-colors hover:bg-[#faf7f2]" style={{ borderColor: '#e0ddd8' }}>
+                <Link href="/optovaya-zhenskaya-odezhda/" className="block p-5 border transition-colors hover:bg-[#faf7f2]" style={{ borderColor: '#e0ddd8' }}>
                 {translations.preorderRelatedWholesale}
               </Link>
-              <Link href="/zhenskaya-odezhda-dlya-butikov" className="block p-5 border transition-colors hover:bg-[#faf7f2]" style={{ borderColor: '#e0ddd8' }}>
+                <Link href="/zhenskaya-odezhda-dlya-butikov/" className="block p-5 border transition-colors hover:bg-[#faf7f2]" style={{ borderColor: '#e0ddd8' }}>
                 {translations.preorderRelatedBoutiques}
               </Link>
-              <Link href="/evropeyskie-brendy-zhenskoy-odezhdy" className="block p-5 border transition-colors hover:bg-[#faf7f2]" style={{ borderColor: '#e0ddd8' }}>
+                <Link href="/evropeyskie-brendy-zhenskoy-odezhdy/" className="block p-5 border transition-colors hover:bg-[#faf7f2]" style={{ borderColor: '#e0ddd8' }}>
                 {translations.preorderRelatedBrands}
               </Link>
             </div>

@@ -22,7 +22,7 @@ export default function LatestNews() {
             <p className="text-base font-medium" style={{ color: '#8a6b3f' }}>Журнал VN13</p>
             <h2 className="mt-2 text-3xl md:text-4xl font-light" style={{ color: '#1d1b18' }}>Последние новости</h2>
           </div>
-          <Link href="/journal" className="text-base font-medium underline underline-offset-4" style={{ color: '#1d1b18' }}>
+          <Link href="/journal/" className="text-base font-medium underline underline-offset-4" style={{ color: '#1d1b18' }}>
             Все новости
           </Link>
         </div>

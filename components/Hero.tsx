@@ -17,7 +17,7 @@ export default function Hero() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/vn-13-brand"
+              href="/vn-13-brand/"
               className="inline-flex min-h-[52px] items-center justify-center rounded-sm px-6 text-base font-medium transition-colors hover:bg-[#8a6b3f]"
               style={{ backgroundColor: '#1d1b18', color: '#fff' }}
             >

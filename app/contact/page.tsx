@@ -100,11 +100,11 @@ export default function ContactPage() {
               </ol>
               <p className="mt-7 leading-relaxed" style={{ color: '#555' }}>
                 Если вы пока изучаете направление, начните с материалов о{' '}
-                <Link href="/optovaya-zhenskaya-odezhda" className="underline underline-offset-4" style={{ color: '#0f0f0f' }}>
+                <Link href="/optovaya-zhenskaya-odezhda/" className="underline underline-offset-4" style={{ color: '#0f0f0f' }}>
                   оптовой женской одежде
                 </Link>{' '}
                 или{' '}
-                <Link href="/evropeyskie-brendy-zhenskoy-odezhdy" className="underline underline-offset-4" style={{ color: '#0f0f0f' }}>
+                <Link href="/evropeyskie-brendy-zhenskoy-odezhdy/" className="underline underline-offset-4" style={{ color: '#0f0f0f' }}>
                   европейских брендах для бутика
                 </Link>.
               </p>

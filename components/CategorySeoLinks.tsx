@@ -13,7 +13,7 @@ export default function CategorySeoLinks() {
             <p className="text-base font-medium mb-3 text-[#8a6b3f]">Каталог VN-13</p>
             <h2 className="text-3xl md:text-4xl font-light mb-4 text-balance text-[#1d1b18]">Выберите, что хотите посмотреть</h2>
             <p className="text-base leading-relaxed text-[#5d5851]">Откройте нужную категорию. Если сомневаетесь, мы поможем с выбором.</p>
-            <Link href="/vn-13-brand" className="inline-block mt-6 text-base font-medium underline underline-offset-4 text-[#1d1b18]">
+            <Link href="/vn-13-brand/" className="inline-block mt-6 text-base font-medium underline underline-offset-4 text-[#1d1b18]">
               Открыть весь каталог
             </Link>
           </div>

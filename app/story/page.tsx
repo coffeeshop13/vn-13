@@ -83,10 +83,10 @@ export default function StoryPage() {
               Сегодня VN13 соединяет селекцию брендов, оптовые поставки, предзаказ и производственные проекты. Мы оцениваем не только эстетику, но и качество процесса: сроки, коммуникацию, повторяемость и потенциал развития марки.
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
-              <Link href="/brands" className="underline underline-offset-4">Бренды в портфеле</Link>
-              <Link href="/proizvoditel-zhenskoy-odezhdy" className="underline underline-offset-4">Производство VN-13</Link>
-              <Link href="/optovaya-zhenskaya-odezhda" className="underline underline-offset-4">Оптовая одежда для бутиков</Link>
-              <Link href="/partnerstvo" className="underline underline-offset-4">Партнёрство</Link>
+              <Link href="/brands/" className="underline underline-offset-4">Бренды в портфеле</Link>
+              <Link href="/proizvoditel-zhenskoy-odezhdy/" className="underline underline-offset-4">Производство VN-13</Link>
+              <Link href="/optovaya-zhenskaya-odezhda/" className="underline underline-offset-4">Оптовая одежда для бутиков</Link>
+              <Link href="/partnerstvo/" className="underline underline-offset-4">Партнёрство</Link>
             </div>
           </div>
         </div>

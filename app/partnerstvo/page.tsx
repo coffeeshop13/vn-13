@@ -109,8 +109,8 @@ export default function PartnershipPage() {
               Для ритейлера важны город, аудитория, бюджет закупки, размерная сетка и сроки поставки. VN13 помогает сопоставить эти параметры с коллекцией и выбрать модели, которые можно собрать в коммерческую капсулу.
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
-              <Link href="/optovaya-zhenskaya-odezhda" className="underline underline-offset-4">Оптовые поставки</Link>
-              <Link href="/preorder" className="underline underline-offset-4">Предзаказ коллекций</Link>
+            <Link href="/optovaya-zhenskaya-odezhda/" className="underline underline-offset-4">Оптовые поставки</Link>
+            <Link href="/preorder/" className="underline underline-offset-4">Предзаказ коллекций</Link>
             </div>
           </article>
         </div>

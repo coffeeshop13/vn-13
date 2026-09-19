@@ -40,7 +40,7 @@ export default function VN13Showcase() {
               Жакеты, платья, рубашки и вещи с характером. Если сомневаетесь — просто спросите, мы поможем с выбором.
             </p>
             <Link
-              href="/vn-13-brand"
+              href="/vn-13-brand/"
               className="inline-flex min-h-[52px] items-center justify-center px-7 text-base font-medium transition-colors duration-200 hover:bg-[#76531f]"
               style={{ backgroundColor: '#80602e', color: '#fff' }}
             >
@@ -49,7 +49,7 @@ export default function VN13Showcase() {
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
-            <Link href="/vn-13-brand" className="group col-span-2 block">
+            <Link href="/vn-13-brand/" className="group col-span-2 block">
               <div className="relative overflow-hidden bg-[#f6f2ec]" style={{ aspectRatio: '16 / 9' }}>
                 <picture className="block h-full w-full">
                   <source
@@ -70,7 +70,7 @@ export default function VN13Showcase() {
             </Link>
 
             {featuredLooks.map((look) => (
-              <Link key={look.src} href="/vn-13-brand" className="group block">
+              <Link key={look.src} href="/vn-13-brand/" className="group block">
               <div className="relative overflow-hidden bg-[#f6f2ec]" style={{ aspectRatio: '3 / 4' }}>
                 <picture className="block h-full w-full">
                   <source

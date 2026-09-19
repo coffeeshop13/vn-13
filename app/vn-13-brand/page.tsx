@@ -437,16 +437,16 @@ export default function VN13BrandPage() {
             Связанные страницы
           </h2>
           <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/платья" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
+            <Link href="/платья/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
               Дизайнерские платья
             </Link>
-            <Link href="/рубашки-и-блузы" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
+            <Link href="/рубашки-и-блузы/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
               Дизайнерские рубашки и блузы
             </Link>
-            <Link href="/lookbook" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
+            <Link href="/lookbook/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
               Lookbook VN-13
             </Link>
-            <Link href="/proizvoditel-zhenskoy-odezhdy" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
+            <Link href="/proizvoditel-zhenskoy-odezhdy/" className="p-4" style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}>
               Производство VN-13
             </Link>
           </div>
