@@ -8,9 +8,9 @@ import { extendedSeoPages } from '@/lib/extended-seo-pages'
 import { absoluteUrl, createMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Бренд одежды VN13 — дизайнерский каталог | VN13',
+  title: 'VN-13 — бренд женской одежды и дизайнерский каталог',
   description:
-    'Каталог собственного бренда VN-13: дизайнерские платья, жакеты, рубашки, брюки и верхняя одежда ограниченных серий для клиентов и бутиков России и СНГ.',
+    'VN-13 — собственный бренд женской одежды: дизайнерские платья, жакеты, рубашки, брюки и верхняя одежда ограниченных серий для клиентов и бутиков.',
   path: '/vn-13-brand',
   image: '/brands/vn13-catalog/vn13-sand-textured-jacket-front.seo.webp',
   keywords: [
