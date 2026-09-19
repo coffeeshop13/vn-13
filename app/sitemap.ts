@@ -17,15 +17,16 @@ const latestJournalDate = new Date(
     ...journalArticles.map((article) => new Date(article.updatedAt ?? article.publishedAt).getTime()),
   ),
 )
+const latestSeoUpdate = new Date('2026-09-19')
 
 const routes: SitemapRoute[] = [
-  { path: '/', changeFrequency: 'weekly', priority: 1 },
+  { path: '/', lastModified: latestSeoUpdate, changeFrequency: 'weekly', priority: 1 },
   { path: '/zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.95 },
   { path: '/dizaynerskaya-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.92 },
   { path: '/premium-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.92 },
   { path: '/eksklyuzivnaya-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/kapsulnaya-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.9 },
-  { path: '/vn-13-brand', changeFrequency: 'weekly', priority: 0.95 },
+  { path: '/vn-13-brand', lastModified: latestSeoUpdate, changeFrequency: 'weekly', priority: 0.95 },
   { path: '/lookbook', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/proizvoditel-zhenskoy-odezhdy', changeFrequency: 'monthly', priority: 0.88 },
   { path: '/poshiv-zhenskoy-odezhdy-dlya-brenda', changeFrequency: 'monthly', priority: 0.88 },
@@ -41,7 +42,7 @@ const routes: SitemapRoute[] = [
   { path: '/sustainability', changeFrequency: 'monthly', priority: 0.6 },
   { path: '/preorder', changeFrequency: 'monthly', priority: 0.76 },
   { path: '/manufacturing', changeFrequency: 'monthly', priority: 0.76 },
-  { path: '/brands', changeFrequency: 'weekly', priority: 0.85 },
+  { path: '/brands', lastModified: latestSeoUpdate, changeFrequency: 'weekly', priority: 0.85 },
   { path: '/brands/manuelle-guibal', changeFrequency: 'monthly', priority: 0.78 },
   { path: '/brands/hannoh-wessel', changeFrequency: 'monthly', priority: 0.78 },
   { path: '/brands/moyuru', changeFrequency: 'monthly', priority: 0.78 },
