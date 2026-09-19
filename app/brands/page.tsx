@@ -98,8 +98,8 @@ export default function BrandsPage() {
               Бутики и шоурумы могут подобрать ассортимент под свой город, аудиторию и ценовой сегмент. Для брендов VN13 предлагает представительство, дистрибуцию, предзаказ и развитие розничных партнёрств.
             </p>
             <div className="flex flex-wrap gap-3 text-sm">
-              <Link href="/zhenskaya-odezhda-dlya-butikov" className="underline underline-offset-4">Одежда для бутиков</Link>
-              <Link href="/partnerstvo" className="underline underline-offset-4">Стать партнёром</Link>
+              <Link href="/zhenskaya-odezhda-dlya-butikov/" className="underline underline-offset-4">Одежда для бутиков</Link>
+              <Link href="/partnerstvo/" className="underline underline-offset-4">Стать партнёром</Link>
               <Link href="/contact/" className="underline underline-offset-4">Связаться с VN13</Link>
             </div>
           </div>

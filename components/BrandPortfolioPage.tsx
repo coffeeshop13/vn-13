@@ -273,27 +273,27 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                   Связанные страницы VN13
                 </h3>
                 <div className="flex flex-wrap gap-3">
-                  <Link href="/vn-13-brand" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                  <Link href="/vn-13-brand/" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
                     Каталог VN-13
                   </Link>
                   {brand.slug === 'moyuru' ? (
-                    <Link href="/japanese-style" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                    <Link href="/japanese-style/" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
                       Японский стиль в одежде
                     </Link>
                   ) : null}
-                  <Link href="/premium-zhenskaya-odezhda" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                  <Link href="/premium-zhenskaya-odezhda/" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
                     Премиальная женская одежда
                   </Link>
-                  <Link href="/eksklyuzivnaya-zhenskaya-odezhda" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                  <Link href="/eksklyuzivnaya-zhenskaya-odezhda/" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
                     Эксклюзивная одежда
                   </Link>
-                  <Link href="/optovaya-zhenskaya-odezhda" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                  <Link href="/optovaya-zhenskaya-odezhda/" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
                     Опт
                   </Link>
-                  <Link href="/preorder" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                  <Link href="/preorder/" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
                     Предзаказ
                   </Link>
-                  <Link href="/distributsiya-zhenskoy-odezhdy" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
+                  <Link href="/distributsiya-zhenskoy-odezhdy/" className="rounded-full border px-4 py-2 text-sm" style={{ borderColor: '#d7d1c7', color: '#0f0f0f' }}>
                     Дистрибуция
                   </Link>
                 </div>
