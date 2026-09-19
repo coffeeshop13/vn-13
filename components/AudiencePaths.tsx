@@ -4,19 +4,19 @@ const paths = [
   {
     title: 'Хочу выбрать одежду',
     text: 'Посмотрите коллекцию VN-13 и уточните размер или наличие.',
-    href: '/vn-13-brand',
+    href: '/vn-13-brand/',
     label: 'Перейти в каталог',
   },
   {
     title: 'У меня есть бутик',
     text: 'Подберём дизайнерские бренды и расскажем об условиях сотрудничества.',
-    href: '/zhenskaya-odezhda-dlya-butikov',
+    href: '/zhenskaya-odezhda-dlya-butikov/',
     label: 'Для бутиков',
   },
   {
     title: 'Я представляю бренд',
     text: 'Обсудим дистрибуцию и выход на рынок России и СНГ.',
-    href: '/distributsiya-zhenskoy-odezhdy',
+    href: '/distributsiya-zhenskoy-odezhdy/',
     label: 'Предложить бренд',
   },
 ]
