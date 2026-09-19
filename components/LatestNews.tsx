@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { journalArticles } from '@/lib/journal'
+import { canonicalInternalHref } from '@/lib/seo-links'
 
 function formatDate(date: string) {
   return new Intl.DateTimeFormat('ru-RU', {
@@ -28,7 +29,7 @@ export default function LatestNews() {
         </div>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {articles.map((article) => (
-            <Link key={article.slug} href={`/journal/${article.slug}`} className="group block">
+            <Link key={article.slug} href={canonicalInternalHref(`/journal/${article.slug}`)} className="group block">
               <div className="relative aspect-[16/10] overflow-hidden bg-[#eee8de]">
                 <Image
                   src={article.imageSrc}

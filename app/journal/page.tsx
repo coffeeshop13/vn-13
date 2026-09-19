@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { journalArticles } from '@/lib/journal'
 import { createMetadata } from '@/lib/seo'
+import { canonicalInternalHref } from '@/lib/seo-links'
 
 function formatArticleDate(date: string) {
   return new Intl.DateTimeFormat('ru-RU', {
@@ -42,7 +43,7 @@ export default function JournalPage() {
               </p>
             </div>
 
-            <Link href={`/journal/${featuredArticle.slug}`} className="group block">
+            <Link href={canonicalInternalHref(`/journal/${featuredArticle.slug}`)} className="group block">
               <article className="grid sm:grid-cols-[0.9fr_1fr] bg-white" style={{ border: '1px solid #e0ddd8' }}>
                 <div className="relative overflow-hidden bg-[#f6f2ec] min-h-[280px] sm:min-h-[360px]">
                   <Image
@@ -85,7 +86,7 @@ export default function JournalPage() {
             {articles.map((article) => (
               <Link
                 key={article.slug}
-                href={`/journal/${article.slug}`}
+                href={canonicalInternalHref(`/journal/${article.slug}`)}
                 className="group block overflow-hidden transition-colors duration-200"
                 style={{ border: '1px solid #e0ddd8', backgroundColor: '#fff' }}
               >
