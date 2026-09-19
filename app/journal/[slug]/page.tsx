@@ -127,6 +127,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <section className="pt-28 pb-12 md:pt-40 md:pb-16 px-6" style={{ backgroundColor: '#fafaf8' }}>
           <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-end">
             <div>
+              <nav aria-label="Хлебные крошки" className="mb-7 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm" style={{ color: '#6b6b6b' }}>
+                <Link href={canonicalInternalHref('/')} className="underline underline-offset-4">Главная</Link>
+                <span aria-hidden="true">/</span>
+                <Link href={canonicalInternalHref('/journal')} className="underline underline-offset-4">Журнал VN13</Link>
+                <span aria-hidden="true">/</span>
+                <span aria-current="page">{article.title}</span>
+              </nav>
               <p className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: '#b8935a' }}>
                 {article.category} · <time dateTime={article.publishedAt}>{formatArticleDate(article.publishedAt)}</time>
                 {article.updatedAt && article.updatedAt !== article.publishedAt && (
