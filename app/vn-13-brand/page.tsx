@@ -11,7 +11,7 @@ import { canonicalInternalHref } from '@/lib/seo-links'
 export const metadata: Metadata = createMetadata({
   title: 'VN-13 — бренд дизайнерской женской одежды | Каталог',
   description:
-    'Каталог VN-13: дизайнерская женская одежда ограниченных серий — платья, жакеты, рубашки, брюки и верхняя одежда. Уточнить наличие и размеры.',
+    'Собственный бренд одежды VN-13: дизайнерская женская одежда ограниченных серий — платья, жакеты, рубашки, брюки и верхняя одежда. Уточнить наличие и размеры.',
   path: '/vn-13-brand',
   image: '/brands/vn13-catalog/vn13-sand-textured-jacket-front.seo.webp',
   keywords: [
@@ -293,7 +293,7 @@ export default function VN13BrandPage() {
             <p className="text-base font-medium" style={{ color: '#8a6b3f' }}>Собственный бренд VN13</p>
             <h1 className="mt-3 text-4xl md:text-6xl font-light leading-[1.08]" style={{ color: '#1d1b18' }}>VN-13 — бренд дизайнерской женской одежды</h1>
             <p className="mt-5 text-lg leading-relaxed" style={{ color: '#5d5851' }}>
-              Платья, жакеты, рубашки, брюки и верхняя одежда ограниченных коллекций.
+              Собственный бренд одежды VN-13: платья, жакеты, рубашки, брюки и верхняя одежда ограниченных коллекций.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href="#collection" className="inline-flex min-h-[52px] items-center justify-center rounded-sm px-6 text-base font-medium" style={{ backgroundColor: '#1d1b18', color: '#fff' }}>
