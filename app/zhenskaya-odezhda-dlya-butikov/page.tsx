@@ -30,6 +30,7 @@ export default function WomenswearForBoutiquesPage() {
           body: [
             'В портфеле VN13 есть европейские дизайнерские бренды и собственное направление VN-13. Это дает бутику более широкий выбор: от готовых марок до ограниченных капсульных коллекций.',
             'Мы помогаем выстраивать закупку через предзаказ, рекомендации по ассортименту и контролируемую дистрибуцию. Базовый сценарий — выбрать ядро коллекции, согласовать сроки и объем, получить материалы для презентации и затем повторить сильные позиции, если это предусмотрено поставкой.',
+            'Среди направлений портфеля можно обсудить Manuelle Guibal (Франция), H+ Hannoh Wessel, Aequamente и MJ Watson (Италия). Конкретные коллекции, размеры и наличие зависят от сезона и уточняются до согласования закупки.',
           ],
         },
         {
@@ -58,7 +59,9 @@ export default function WomenswearForBoutiquesPage() {
         { href: '/optovaya-zhenskaya-odezhda', label: 'Оптовая женская одежда' },
         { href: '/evropeyskie-brendy-zhenskoy-odezhdy', label: 'Европейские бренды' },
         { href: '/partnerstvo', label: 'Стать партнёром VN13' },
-        { href: '/journal', label: 'Гиды для байеров' },
+        { href: '/brands/manuelle-guibal', label: 'Manuelle Guibal для бутиков' },
+        { href: '/brands/hannoh-wessel', label: 'H+ Hannoh Wessel для закупки' },
+        { href: '/brands/aequamente', label: 'Aequamente в портфеле VN13' },
       ]}
       bulletsTitle="Что важно для бутика"
       bullets={[
