@@ -60,6 +60,31 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   }
 
   const url = absoluteUrl(`/journal/${article.slug}`)
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    '@id': `${url}#breadcrumb`,
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Главная',
+        item: absoluteUrl('/'),
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Журнал VN13',
+        item: absoluteUrl('/journal'),
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: article.title,
+        item: url,
+      },
+    ],
+  }
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -91,6 +116,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Header />
 
