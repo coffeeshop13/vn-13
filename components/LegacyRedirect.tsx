@@ -14,6 +14,7 @@ export default function LegacyRedirect({ destination, label }: LegacyRedirectPro
 
   return (
     <main className="min-h-screen px-6 py-32">
+      <meta httpEquiv="refresh" content={`0;url=${destination}`} />
       <p className="text-base">Страница перенесена: {label}</p>
       <p className="mt-4 text-base">
         <a className="underline" href={destination}>Перейти на актуальную страницу</a>
