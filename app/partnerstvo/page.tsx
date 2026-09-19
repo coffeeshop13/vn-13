@@ -40,6 +40,16 @@ const jsonLd = {
         { '@type': 'ListItem', position: 2, name: 'Стать партнёром VN13', item: absoluteUrl('/partnerstvo') },
       ],
     },
+    {
+      '@type': 'Service',
+      '@id': `${absoluteUrl('/partnerstvo')}#service`,
+      name: 'Партнёрство VN13 для брендов и бутиков',
+      serviceType: 'Дистрибуция, оптовые поставки и предзаказ женской одежды',
+      description: 'VN13 помогает европейским брендам, бутикам и шоурумам запускать коллекции, планировать предзаказ, подбирать ассортимент и развивать розничные партнёрства.',
+      url: absoluteUrl('/partnerstvo'),
+      provider: { '@id': `${absoluteUrl('/')}#organization` },
+      areaServed: ['Россия', 'Страны СНГ'],
+    },
   ],
 }
 
