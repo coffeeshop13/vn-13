@@ -39,6 +39,7 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
         url: pageUrl,
         name: page.h1,
         description: page.description,
+        ...(page.lastModified ? { dateModified: page.lastModified } : {}),
         keywords: page.keywords.join(', '),
         inLanguage: 'ru',
         isPartOf: {
