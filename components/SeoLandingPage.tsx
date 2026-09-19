@@ -21,6 +21,12 @@ type LandingPageProps = {
   }>
   path: string
   relatedLinks?: SeoRelatedLink[]
+  service?: {
+    name: string
+    serviceType: string
+    description: string
+    areaServed: string[]
+  }
 }
 
 export default function SeoLandingPage({
@@ -33,6 +39,7 @@ export default function SeoLandingPage({
   faq,
   path,
   relatedLinks = [],
+  service,
 }: LandingPageProps) {
   const pageUrl = absoluteUrl(path)
   const visibleRelatedLinks = mergeSeoRelatedLinks(path, relatedLinks)
@@ -82,6 +89,18 @@ export default function SeoLandingPage({
           name,
         })),
       },
+      ...(service
+        ? [{
+            '@type': 'Service',
+            '@id': `${pageUrl}#service`,
+            name: service.name,
+            serviceType: service.serviceType,
+            description: service.description,
+            url: pageUrl,
+            provider: { '@id': `${absoluteUrl('/')}#organization` },
+            areaServed: service.areaServed,
+          }]
+        : []),
     ],
   }
 
