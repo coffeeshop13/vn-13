@@ -24,12 +24,23 @@ export const metadata: Metadata = createMetadata({
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'ContactPage',
-  '@id': `${absoluteUrl('/partnerstvo')}#contact-page`,
-  url: absoluteUrl('/partnerstvo'),
-  name: 'Стать партнёром VN13',
-  description: 'Партнёрство VN13 с брендами, бутиками и шоурумами.',
-  isPartOf: { '@id': `${absoluteUrl('/')}#website` },
+  '@graph': [
+    {
+      '@type': 'ContactPage',
+      '@id': `${absoluteUrl('/partnerstvo')}#contact-page`,
+      url: absoluteUrl('/partnerstvo'),
+      name: 'Стать партнёром VN13',
+      description: 'Партнёрство VN13 с брендами, бутиками и шоурумами.',
+      isPartOf: { '@id': `${absoluteUrl('/')}#website` },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'VN13', item: absoluteUrl('/') },
+        { '@type': 'ListItem', position: 2, name: 'Стать партнёром VN13', item: absoluteUrl('/partnerstvo') },
+      ],
+    },
+  ],
 }
 
 export default function PartnershipPage() {
@@ -39,6 +50,11 @@ export default function PartnershipPage() {
       <Header />
       <section className="pt-32 pb-20 md:pt-48 md:pb-28 px-6" style={{ backgroundColor: '#fafaf8' }}>
         <div className="max-w-5xl mx-auto">
+          <nav aria-label="Хлебные крошки" className="mb-8 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm" style={{ color: '#6b6b6b' }}>
+            <Link href="/" className="underline underline-offset-4">Главная</Link>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Стать партнёром VN13</span>
+          </nav>
           <p className="text-xs tracking-[0.2em] uppercase mb-5" style={{ color: '#b8935a' }}>Партнёрство VN13</p>
           <h1 className="text-5xl md:text-7xl font-light leading-[1.05] mb-8" style={{ color: '#0f0f0f' }}>
             Брендам — дистрибуция. Бутикам — сильный ассортимент.
