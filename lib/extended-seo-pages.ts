@@ -169,6 +169,7 @@ export const extendedSeoPages: ExtendedSeoPage[] = [
   {
     slug: 'japanese-style',
     path: '/japanese-style',
+    lastModified: '2026-09-19',
     cluster: 'Японская эстетика',
     title: 'Одежда японских дизайнеров: Moyuru и японский стиль | VN13',
     description:
