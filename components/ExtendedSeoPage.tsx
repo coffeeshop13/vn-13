@@ -6,6 +6,7 @@ import { CTALink } from '@/components/CTALink'
 import { brandPortfolio } from '@/lib/brand-portfolio'
 import { extendedSeoPages, type ExtendedSeoPage as ExtendedSeoPageData } from '@/lib/extended-seo-pages'
 import { absoluteUrl, SITE_NAME } from '@/lib/seo'
+import { canonicalInternalHref } from '@/lib/seo-links'
 
 const preferredRelatedPaths: Record<string, string[]> = {
   '/japanese-style': ['/рубашки-и-блузы', '/zhenskaya-odezhda'],
@@ -198,7 +199,7 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
 
           <div className="grid md:grid-cols-3 gap-7">
             {brands.map((brand) => (
-              <Link key={brand.slug} href={`/brands/${brand.slug}`} className="group">
+              <Link key={brand.slug} href={canonicalInternalHref(`/brands/${brand.slug}`)} className="group">
                 <article>
                   <div className="relative aspect-[3/4] overflow-hidden rounded-[22px] bg-[#f3efe8]">
                     <Image
@@ -252,7 +253,7 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
               {relatedPages.map((item) => (
                 <Link
                   key={item.path}
-                  href={item.path}
+                  href={canonicalInternalHref(item.path)}
                   className="p-5 border border-[#e0ddd8] bg-white transition-colors hover:bg-[#f3efe8]"
                 >
                   {item.cluster}
