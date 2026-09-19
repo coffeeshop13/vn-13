@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { createMetadata } from '@/lib/seo'
+import { absoluteUrl, createMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createMetadata({
   title: 'Lookbook VN-13 | Капсульная женская одежда',
@@ -31,9 +31,45 @@ const looks = [
   },
 ]
 
+const lookbookJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${absoluteUrl('/lookbook')}#webpage`,
+      url: absoluteUrl('/lookbook'),
+      name: 'Lookbook VN-13 | Капсульная женская одежда',
+      description: 'Визуальное направление VN-13: капсульные силуэты, фактуры и дизайнерская женская одежда для клиентов и бутиков.',
+      inLanguage: 'ru',
+      isPartOf: { '@id': `${absoluteUrl('/')}#website` },
+    },
+    {
+      '@type': 'ImageGallery',
+      '@id': `${absoluteUrl('/lookbook')}#gallery`,
+      name: 'Lookbook VN-13',
+      description: 'Образы и визуальные коды капсульной женской одежды VN-13.',
+      url: absoluteUrl('/lookbook'),
+      associatedMedia: looks.map((look) => ({
+        '@type': 'ImageObject',
+        contentUrl: absoluteUrl(look.image),
+        name: look.title,
+        caption: look.text,
+      })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'VN13', item: absoluteUrl('/') },
+        { '@type': 'ListItem', position: 2, name: 'Lookbook VN-13', item: absoluteUrl('/lookbook') },
+      ],
+    },
+  ],
+}
+
 export default function LookbookPage() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(lookbookJsonLd) }} />
       <Header />
       <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-6" style={{ backgroundColor: '#fafaf8' }}>
         <div className="max-w-4xl mx-auto">
