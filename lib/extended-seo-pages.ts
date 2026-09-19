@@ -1,6 +1,7 @@
 export type ExtendedSeoPage = {
   slug: string
   path: string
+  lastModified?: string
   cluster: string
   title: string
   description: string
@@ -29,6 +30,7 @@ export const extendedSeoPages: ExtendedSeoPage[] = [
   {
     slug: 'quiet-luxury',
     path: '/quiet-luxury',
+    lastModified: '2026-09-19',
     cluster: 'Тихая роскошь',
     title: 'Quiet luxury: стиль женской одежды и тихая роскошь | VN13',
     description:

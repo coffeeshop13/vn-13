@@ -59,6 +59,7 @@ const routes: SitemapRoute[] = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const extendedRoutes: SitemapRoute[] = extendedSeoPages.map((page) => ({
     path: page.path,
+    ...(page.lastModified ? { lastModified: new Date(page.lastModified) } : {}),
     changeFrequency: 'monthly',
     priority: page.category ? 0.82 : 0.74,
   }))
