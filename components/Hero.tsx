@@ -21,7 +21,7 @@ export default function Hero() {
               className="inline-flex min-h-[52px] items-center justify-center rounded-sm px-6 text-base font-medium transition-colors hover:bg-[#8a6b3f]"
               style={{ backgroundColor: '#1d1b18', color: '#fff' }}
             >
-              Смотреть одежду
+              Каталог женской одежды VN-13
             </Link>
             <a
               href="tel:+79266022089"

@@ -15,7 +15,7 @@ const featuredLooks = [
   {
     src: '/brands/vn13-catalog/vn13-black-textured-designer-coat-card-v20260913-800.webp',
     srcSet: '/brands/vn13-catalog/vn13-black-textured-designer-coat-card-v20260913-400.webp 400w, /brands/vn13-catalog/vn13-black-textured-designer-coat-card-v20260913-800.webp 800w',
-    alt: 'VN13 black textured designer coat',
+    alt: 'Чёрное фактурное дизайнерское пальто VN-13',
   },
   {
     src: '/brands/vn13-catalog/vn13-white-oversize-designer-shirt-card-v20260913-800.webp',
@@ -44,7 +44,7 @@ export default function VN13Showcase() {
               className="inline-flex min-h-[52px] items-center justify-center px-7 text-base font-medium transition-colors duration-200 hover:bg-[#76531f]"
               style={{ backgroundColor: '#80602e', color: '#fff' }}
             >
-              Смотреть одежду
+              Смотреть каталог VN-13
             </Link>
           </div>
 
