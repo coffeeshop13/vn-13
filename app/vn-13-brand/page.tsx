@@ -263,6 +263,13 @@ export default function VN13BrandPage() {
         },
       },
       {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'VN13', item: absoluteUrl('/') },
+          { '@type': 'ListItem', position: 2, name: 'Каталог VN-13', item: absoluteUrl('/vn-13-brand') },
+        ],
+      },
+      {
         '@type': 'FAQPage',
         mainEntity: faq.map((item) => ({
           '@type': 'Question',
@@ -290,6 +297,11 @@ export default function VN13BrandPage() {
       <section className="border-b border-[#e3ddd3] bg-[#f7f4ee] pt-28 pb-10 md:pt-36 md:pb-16">
         <div className="max-w-7xl mx-auto grid gap-9 px-6 lg:grid-cols-[1fr_0.95fr] lg:items-center">
           <div className="max-w-2xl">
+            <nav aria-label="Хлебные крошки" className="mb-5 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm" style={{ color: '#6b6b6b' }}>
+              <Link href="/" className="underline underline-offset-4">Главная</Link>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Каталог VN-13</span>
+            </nav>
             <p className="text-base font-medium" style={{ color: '#8a6b3f' }}>Собственный бренд VN13</p>
             <h1 className="mt-3 text-4xl md:text-6xl font-light leading-[1.08]" style={{ color: '#1d1b18' }}>VN-13 — бренд дизайнерской женской одежды</h1>
             <p className="mt-5 text-lg leading-relaxed" style={{ color: '#5d5851' }}>
