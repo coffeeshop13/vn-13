@@ -77,7 +77,7 @@ export default function LookbookPage() {
             Lookbook
           </p>
           <h1 className="text-5xl md:text-6xl font-light leading-tight mb-6 text-balance" style={{ color: '#0f0f0f' }}>
-            Визуальное направление VN-13
+            Lookbook VN-13: капсульная женская одежда
           </h1>
           <p className="text-lg md:text-xl max-w-2xl leading-relaxed" style={{ color: '#6b6b6b' }}>
             Первый lookbook фиксирует направление бренда: капсульная женская одежда, спокойная цветовая логика, фактура, свободный силуэт и вещи для бутиков, которым важна не массовость, а характер.
