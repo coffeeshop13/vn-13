@@ -22,6 +22,7 @@ export default function Footer() {
               <Link href="/story/">О компании VN13</Link>
               <Link href="/zhenskaya-odezhda-dlya-butikov/">Для бутиков</Link>
               <Link href="/partnerstvo/">Стать партнёром</Link>
+              <Link href="/lookbook/">Lookbook VN-13</Link>
               <Link href="/journal/">Новости</Link>
             </div>
           </div>
