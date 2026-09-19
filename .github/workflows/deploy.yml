@@ -121,7 +121,7 @@ jobs:
           AWS_S3_ENDPOINT: https://storage.yandexcloud.net
           AWS_REGION: ru-central1
         run: |
-          aws s3 cp out/ "s3://${AWS_S3_BUCKET}/" --recursive --exclude "*" --include "*.html" --endpoint-url "${AWS_S3_ENDPOINT}" --content-type "text/html" --cache-control 'public,max-age=300,stale-while-revalidate=86400'
+          aws s3 cp out/ "s3://${AWS_S3_BUCKET}/" --recursive --exclude "*" --include "*.html" --endpoint-url "${AWS_S3_ENDPOINT}" --content-type "text/html" --cache-control 'public,max-age=300,must-revalidate'
 
           while IFS= read -r page; do
             key="${page#out/}"
@@ -133,7 +133,7 @@ jobs:
             aws s3 cp "$page" "s3://${AWS_S3_BUCKET}/${key}" \
               --endpoint-url "${AWS_S3_ENDPOINT}" \
               --content-type "${content_type}" \
-              --cache-control 'public,max-age=300,stale-while-revalidate=86400'
+              --cache-control 'public,max-age=300,must-revalidate'
           done < <(find out -type f \( -name 'robots.txt' -o -name 'sitemap.xml' -o -name 'sitemap_index.xml' \) | sort)
 
       - name: Notify IndexNow
