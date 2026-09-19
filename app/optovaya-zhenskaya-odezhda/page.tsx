@@ -114,7 +114,9 @@ export default function WholesaleWomensClothingPage() {
         { href: '/vn-13-brand', label: 'Каталог женской одежды VN-13' },
         { href: '/preorder', label: 'Предзаказ коллекций' },
         { href: '/partnerstvo', label: 'Стать партнёром VN13' },
-        { href: '/journal', label: 'Материалы для бутиков' },
+        { href: '/brands/manuelle-guibal', label: 'Manuelle Guibal для бутиков' },
+        { href: '/brands/hannoh-wessel', label: 'H+ Hannoh Wessel для закупки' },
+        { href: '/brands/aequamente', label: 'Aequamente в портфеле VN13' },
       ]}
     />
   )
