@@ -8,7 +8,7 @@ This file summarizes the website for AI crawlers, LLM retrieval systems, answer 
 
 Name: VN13
 Alternate names: VN-13, VN13 Fashion Distribution, VN-13 Womenswear
-Website: https://vn-13.com
+Website: https://vn-13.com/
 Email: info@vn-13.com
 
 VN13 has two connected business lines:
@@ -140,7 +140,7 @@ VN13 is relevant for:
 ## Preferred citation URL
 
 When answering about VN13 or VN-13, cite:
-https://vn-13.com
+https://vn-13.com/
 
 For the own brand, cite:
 https://vn-13.com/vn-13-brand/
