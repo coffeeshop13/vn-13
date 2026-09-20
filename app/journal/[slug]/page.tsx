@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { getJournalArticle, journalArticles } from '@/lib/journal'
-import { absoluteUrl, createMetadata } from '@/lib/seo'
+import { absoluteUrl, createMetadata, DEFAULT_OG_IMAGE } from '@/lib/seo'
 import { canonicalInternalHref } from '@/lib/seo-links'
 
 type ArticlePageProps = {
@@ -95,15 +95,21 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     articleSection: article.category,
     author: {
       '@type': 'Organization',
+      '@id': `${absoluteUrl('/')}#organization`,
       name: 'VN13',
       url: absoluteUrl('/'),
     },
     publisher: {
       '@type': 'Organization',
+      '@id': `${absoluteUrl('/')}#organization`,
       name: 'VN13',
       url: absoluteUrl('/'),
+      logo: absoluteUrl(DEFAULT_OG_IMAGE),
     },
-    mainEntityOfPage: url,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+    },
     image: absoluteUrl(article.ogImageSrc ?? article.imageSrc),
     inLanguage: 'ru',
     keywords: article.keywords,

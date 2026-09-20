@@ -164,7 +164,7 @@ export const organizationJsonLd = {
       name: SITE_NAME,
       alternateName: 'VN-13',
       url: SITE_URL,
-      logo: `${SITE_URL}/favicon.ico`,
+      logo: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
       image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
       description:
         'VN13 занимается дистрибуцией европейских дизайнерских брендов и развивает собственный бренд женской одежды VN-13: капсульные коллекции, ограниченные серии, производство и партнёрства с бутиками.',
