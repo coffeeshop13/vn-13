@@ -268,6 +268,27 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                   ))}
                 </div>
               </div>
+              {brand.slug === 'moyuru' ? (
+                <div className="rounded-[24px] p-6 md:col-span-2" style={{ backgroundColor: '#1d1b18', color: '#fff' }}>
+                  <p className="text-xs uppercase tracking-[0.2em] mb-3" style={{ color: '#d8b77c' }}>
+                    Для кого подходит Moyuru
+                  </p>
+                  <h3 className="text-xl font-medium mb-3">
+                    Японская дизайнерская одежда для выразительной селекции
+                  </h3>
+                  <p className="text-base leading-7 text-white/80">
+                    Moyuru стоит рассматривать бутикам и шоурумам, которым нужна узнаваемая форма, многослойность и заметный авторский характер — не отдельная базовая вещь, а самостоятельная история внутри ассортимента. Напишите VN13, чтобы запросить актуальную коллекцию, размеры и условия поставки.
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-4 text-sm">
+                    <Link href="/partnerstvo/" className="underline underline-offset-4">
+                      Обсудить коллекцию для бутика
+                    </Link>
+                    <Link href="/japanese-style/" className="underline underline-offset-4 text-white/80">
+                      Читать о японском стиле
+                    </Link>
+                  </div>
+                </div>
+              ) : null}
               <div className="rounded-[24px] p-6 md:col-span-2" style={{ backgroundColor: '#f3f3f0' }}>
                 <h3 className="text-xl font-medium mb-4" style={{ color: '#0f0f0f' }}>
                   Связанные страницы VN13
