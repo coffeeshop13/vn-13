@@ -1826,6 +1826,7 @@ export const journalArticles: JournalArticle[] = [
         ],
         links: [
           { href: '/brands/moyuru', label: 'Японский бренд Moyuru' },
+          { href: '/japanese-style', label: 'Японский стиль в одежде' },
           { href: '/brands/soh', label: 'Корейский бренд SOH' },
           { href: '/brands', label: 'Весь портфель брендов' },
         ],
