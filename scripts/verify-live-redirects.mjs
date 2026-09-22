@@ -16,6 +16,21 @@ const legacyRedirects = {
 const canonicalPaths = ['/optovaya-zhenskaya-odezhda', '/vn-13-brand', '/journal', '/contact']
 const issues = []
 
+async function checkWwwRedirect() {
+  const response = await fetch('https://www.vn-13.com/', { redirect: 'manual' })
+  const location = response.headers.get('location')
+
+  if (response.status !== 301 || !location) {
+    issues.push(`www host: expected 301, got ${response.status}`)
+    return
+  }
+
+  const target = new URL(location)
+  if (target.origin !== baseUrl || target.pathname !== '/' || target.search || target.hash) {
+    issues.push(`www host: unexpected Location ${location}`)
+  }
+}
+
 async function checkRedirect(path, expectedPath, label) {
   const response = await fetch(`${baseUrl}${path}`, { redirect: 'manual' })
   const location = response.headers.get('location')
@@ -39,10 +54,12 @@ for (const path of canonicalPaths) {
   await checkRedirect(path, path === '/' ? '/' : `${path}/`, `slashless ${path}`)
 }
 
+await checkWwwRedirect()
+
 if (issues.length > 0) {
   console.error(`Live redirect audit failed for ${issues.length} check(s):`)
   for (const issue of issues) console.error(`- ${issue}`)
   process.exit(1)
 }
 
-console.log(`Live redirect audit passed: ${Object.keys(legacyRedirects).length} legacy and ${canonicalPaths.length} canonical redirect(s).`)
+console.log(`Live redirect audit passed: ${Object.keys(legacyRedirects).length} legacy, ${canonicalPaths.length} canonical, and www-host redirect(s).`)
