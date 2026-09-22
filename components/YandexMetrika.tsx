@@ -15,6 +15,8 @@ export default function YandexMetrika() {
         ym(${COUNTER_ID}, 'init', {
           webvisor: true,
           clickmap: true,
+          referrer: document.referrer,
+          url: location.href,
           accurateTrackBounce: true,
           trackLinks: true
         });
