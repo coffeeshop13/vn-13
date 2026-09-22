@@ -46,6 +46,7 @@ async function worker() {
       if (!title) issues.push(`${url}: missing title`)
       if (!description) issues.push(`${url}: missing description`)
       if (!canonical) issues.push(`${url}: missing canonical`)
+      if (canonical && canonical !== url) issues.push(`${url}: canonical mismatch, got ${canonical}`)
       if (robots.toLowerCase().includes('noindex')) issues.push(`${url}: sitemap URL is noindex`)
       if (h1Count !== 1) issues.push(`${url}: expected one H1, got ${h1Count}`)
     } catch (error) {
