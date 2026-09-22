@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
-import CookieConsentBar from '@/components/CookieConsentBar'
 import DeferredAhrefsAnalytics from '@/components/DeferredAhrefsAnalytics'
+import YandexMetrika from '@/components/YandexMetrika'
 import { LanguageProvider } from '@/lib/context/LanguageContext'
 import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL, createMetadata, organizationJsonLd } from '@/lib/seo'
 import './globals.css'
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     },
   },
   ...createMetadata({
-    title: 'VN13 — бренд женской одежды и дизайнерские европейские марки',
+    title: 'VN13 / VN-13 — бренд женской одежды и дизайнерские европейские марки',
     description:
       'VN13 — бренд женской одежды и дизайнерские европейские марки. Лимитированные коллекции, опт и подбор одежды для клиентов, бутиков и шоурумов.',
     path: '/',
@@ -68,6 +68,7 @@ export default function RootLayout({
     <html lang="ru" suppressHydrationWarning data-scroll-behavior="smooth">
       <body className="antialiased">
         <DeferredAhrefsAnalytics />
+        <YandexMetrika />
         <noscript>
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element -- Yandex.Metrica noscript beacon must remain a plain image. */}
@@ -84,7 +85,6 @@ export default function RootLayout({
         />
         <LanguageProvider>
           {children}
-          <CookieConsentBar />
         </LanguageProvider>
       </body>
     </html>
