@@ -17,7 +17,7 @@ const latestJournalDate = new Date(
     ...journalArticles.map((article) => new Date(article.updatedAt ?? article.publishedAt).getTime()),
   ),
 )
-const latestSeoUpdate = new Date('2026-09-19')
+const latestSeoUpdate = new Date('2026-09-22')
 
 const routes: SitemapRoute[] = [
   { path: '/', lastModified: latestSeoUpdate, changeFrequency: 'weekly', priority: 1 },

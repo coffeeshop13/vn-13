@@ -30,7 +30,7 @@ export const extendedSeoPages: ExtendedSeoPage[] = [
   {
     slug: 'quiet-luxury',
     path: '/quiet-luxury',
-    lastModified: '2026-09-19',
+    lastModified: '2026-09-22',
     cluster: 'Тихая роскошь',
     title: 'Quiet luxury: стиль женской одежды и тихая роскошь | VN13',
     description:
@@ -169,7 +169,7 @@ export const extendedSeoPages: ExtendedSeoPage[] = [
   {
     slug: 'japanese-style',
     path: '/japanese-style',
-    lastModified: '2026-09-19',
+    lastModified: '2026-09-22',
     cluster: 'Японская эстетика',
     title: 'Одежда японских дизайнеров Moyuru | Японский стиль — VN13',
     description:
@@ -732,7 +732,7 @@ export const extendedSeoPages: ExtendedSeoPage[] = [
     slug: 'рубашки-и-блузы',
     path: '/рубашки-и-блузы',
     cluster: 'Рубашки и блузы',
-    lastModified: '2026-09-19',
+    lastModified: '2026-09-22',
     title: 'Дизайнерская рубашка и женские блузы | VN13',
     description:
       'Дизайнерская рубашка и женские блузы VN13: лен, шелк, свободный и архитектурный крой, белые и асимметричные модели премиум-класса. Подбор для клиентов и бутиков.',
