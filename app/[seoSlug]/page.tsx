@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: page.description,
     path: page.path,
     keywords: page.keywords,
+    modifiedTime: page.lastModified,
   })
 }
 
