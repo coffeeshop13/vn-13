@@ -179,6 +179,7 @@ jobs:
           homepage="$(fetch https://vn-13.com/)"
           sitemap="$(fetch https://vn-13.com/sitemap.xml)"
           robots="$(fetch https://vn-13.com/robots.txt)"
+          test "$(curl --silent --show-error --max-time 30 -o /dev/null -w '%{http_code}' https://vn-13.com/sitemap_index.xml)" = "404"
           grep -F '<link rel="canonical" href="https://vn-13.com/"' <<< "${homepage}"
           grep -F '<title>' <<< "${homepage}"
           grep -F '<loc>https://vn-13.com/' <<< "${sitemap}"
