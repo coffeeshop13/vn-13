@@ -12,6 +12,7 @@ export const metadata: Metadata = createPageMetadata({
   keywords: brand.keywords,
   image: brand.heroImage.src,
   imageAlt: brand.heroImage.alt,
+  modifiedTime: brand.lastModified,
 })
 
 export default function MoyuruPage() {

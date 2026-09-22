@@ -115,10 +115,11 @@ type PageMetadataOptions = {
   keywords?: string[]
   image?: string
   imageAlt?: string
+  modifiedTime?: string
 }
 
-export function createPageMetadata({ title, description, path = '/', keywords = [], image, imageAlt }: PageMetadataOptions): Metadata {
-  return createMetadata({ title, description, path, keywords, image, imageAlt })
+export function createPageMetadata({ title, description, path = '/', keywords = [], image, imageAlt, modifiedTime }: PageMetadataOptions): Metadata {
+  return createMetadata({ title, description, path, keywords, image, imageAlt, modifiedTime })
 }
 
 export const siteConfig = {

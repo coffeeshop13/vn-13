@@ -4,6 +4,7 @@ export type BrandImage = {
 }
 
 export type BrandPortfolioItem = {
+  lastModified?: string
   name: string
   slug: string
   country: string
@@ -109,6 +110,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
   {
     name: 'Moyuru',
     slug: 'moyuru',
+    lastModified: '2026-09-22',
     country: 'Япония',
     region: 'japan',
     title: 'Moyuru | Японская дизайнерская женская одежда в VN13',

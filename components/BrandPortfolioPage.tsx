@@ -41,6 +41,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
         url: pageUrl,
         name: brand.title,
         description: brand.description,
+        ...(brand.lastModified ? { dateModified: brand.lastModified } : {}),
         about: { '@id': `${pageUrl}#brand` },
       },
       {
