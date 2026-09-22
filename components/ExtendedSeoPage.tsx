@@ -112,6 +112,7 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
     .filter((item) => item.path !== page.path && !preferred.some((related) => related.path === item.path))
     .slice(page.category ? 0 : 3, page.category ? 6 : 9)
   const relatedPages = [...preferred, ...fallback].slice(0, 6)
+  const ctaLabel = page.path === '/japanese-style' ? 'Уточнить наличие Moyuru' : 'Telegram @vn13agency'
 
   return (
     <main>
@@ -259,7 +260,7 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
             <p className="max-w-2xl mx-auto mb-8 leading-relaxed text-[#686868]">
               Напишите VN13, чтобы уточнить доступные бренды, размеры, составы и условия сотрудничества для частных клиентов или бутиков.
             </p>
-            <CTALink href="https://t.me/vn13agency">Telegram @vn13agency</CTALink>
+            <CTALink href="https://t.me/vn13agency">{ctaLabel}</CTALink>
           </div>
 
           <div className="mt-20 pt-16 border-t border-[#e0ddd8]">
