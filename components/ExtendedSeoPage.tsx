@@ -112,7 +112,11 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
     .filter((item) => item.path !== page.path && !preferred.some((related) => related.path === item.path))
     .slice(page.category ? 0 : 3, page.category ? 6 : 9)
   const relatedPages = [...preferred, ...fallback].slice(0, 6)
-  const ctaLabel = page.path === '/japanese-style' ? 'Уточнить наличие Moyuru' : 'Telegram @vn13agency'
+  const ctaLabel = page.path === '/japanese-style'
+    ? 'Уточнить наличие Moyuru'
+    : page.path === '/рубашки-и-блузы'
+      ? 'Уточнить наличие рубашки'
+      : 'Telegram @vn13agency'
 
   return (
     <main>
