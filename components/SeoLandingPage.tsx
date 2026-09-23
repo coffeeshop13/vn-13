@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import { CTALink } from '@/components/CTALink'
 import { absoluteUrl, SITE_NAME } from '@/lib/seo'
-import { mergeSeoRelatedLinks, type SeoRelatedLink } from '@/lib/seo-links'
+import { canonicalInternalHref, mergeSeoRelatedLinks, type SeoRelatedLink } from '@/lib/seo-links'
 
 type LandingPageProps = {
   eyebrow: string
@@ -211,7 +211,7 @@ export default function SeoLandingPage({
                 {visibleRelatedLinks.map((link) => (
                   <a
                     key={link.href}
-                    href={link.href}
+                    href={canonicalInternalHref(link.href)}
                     className="block p-5 transition-colors duration-200"
                     style={{ border: '1px solid #e0ddd8', backgroundColor: '#fafaf8', color: '#0f0f0f' }}
                   >
