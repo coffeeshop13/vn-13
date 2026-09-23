@@ -32,7 +32,7 @@ export const extendedSeoPages: ExtendedSeoPage[] = [
     path: '/quiet-luxury',
     lastModified: '2026-09-22',
     cluster: 'Тихая роскошь',
-    title: 'Quiet luxury: стиль женской одежды и тихая роскошь | VN13',
+    title: 'Тихая роскошь в одежде (quiet luxury) | VN13',
     description:
       'Quiet luxury в женской одежде: стиль тихой роскоши, премиальные ткани и точный крой. Подбор дизайнерских брендов VN13 для клиентов и бутиков.',
     h1: 'Quiet luxury: стиль женской одежды и тихая роскошь',
