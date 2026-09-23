@@ -3,6 +3,8 @@
 This file summarizes the website for AI crawlers, LLM retrieval systems, answer engines, and search assistants.
 Last reviewed: 2026-09-24
 
+Current SEO focus: VN13 maintains Russian-language guides for quiet luxury, contemporary Japanese style, designer minimalism, Japanese avant-garde, and premium womenswear categories, connected to relevant brand and catalog pages.
+
 > VN13 combines European designer-brand distribution with the VN-13 womenswear brand, capsule production, wholesale partnerships, and boutique support.
 
 ## Entity
