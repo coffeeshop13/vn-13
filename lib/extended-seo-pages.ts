@@ -30,7 +30,7 @@ export const extendedSeoPages: ExtendedSeoPage[] = [
   {
     slug: 'quiet-luxury',
     path: '/quiet-luxury',
-    lastModified: '2026-09-22',
+    lastModified: '2026-09-24',
     cluster: 'Тихая роскошь',
     title: 'Тихая роскошь в одежде (quiet luxury) | VN13',
     description:
