@@ -33,7 +33,7 @@ const routes: SitemapRoute[] = [
   { path: '/zhenskaya-odezhda-dlya-butikov', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/evropeyskie-brendy-zhenskoy-odezhdy', changeFrequency: 'monthly', priority: 0.88 },
   { path: '/optovaya-zhenskaya-odezhda', lastModified: latestSeoUpdate, changeFrequency: 'monthly', priority: 0.9 },
-  { path: '/distributsiya-zhenskoy-odezhdy', lastModified: latestSeoUpdate, changeFrequency: 'monthly', priority: 0.88 },
+  { path: '/distributsiya-zhenskoy-odezhdy', lastModified: new Date('2026-09-19'), changeFrequency: 'monthly', priority: 0.88 },
   { path: '/journal', lastModified: latestJournalDate, changeFrequency: 'weekly', priority: 0.82 },
   { path: '/sravnenie-premialnykh-rynkov', changeFrequency: 'monthly', priority: 0.76 },
   { path: '/kak-vn13-vybirayet-brendy', changeFrequency: 'monthly', priority: 0.76 },
