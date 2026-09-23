@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import Image from 'next/image'
-import Script from 'next/script'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -93,7 +92,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
 
   return (
     <main>
-      <Script
+      <script
         id={`brand-jsonld-${brand.slug}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(brandJsonLd) }}
