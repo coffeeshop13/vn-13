@@ -18,9 +18,10 @@ const latestJournalDate = new Date(
   ),
 )
 const latestSeoUpdate = new Date('2026-09-22')
+const homepageSeoUpdate = new Date('2026-09-24')
 
 const routes: SitemapRoute[] = [
-  { path: '/', lastModified: latestSeoUpdate, changeFrequency: 'weekly', priority: 1 },
+  { path: '/', lastModified: homepageSeoUpdate, changeFrequency: 'weekly', priority: 1 },
   { path: '/zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.95 },
   { path: '/dizaynerskaya-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.92 },
   { path: '/premium-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.92 },
