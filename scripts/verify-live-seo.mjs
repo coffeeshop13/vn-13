@@ -26,6 +26,7 @@ const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]
 if (urls.length === 0) throw new Error('Sitemap contains no URLs')
 
 const issues = []
+const metadataRows = []
 let cursor = 0
 
 async function worker() {
@@ -41,6 +42,7 @@ async function worker() {
       const canonical = body.match(/<link rel="canonical" href="([^"]*)/)?.[1]?.trim() ?? ''
       const robots = body.match(/<meta name="robots" content="([^"]*)/)?.[1]?.trim() ?? ''
       const h1Count = (body.match(/<h1[ >]/g) ?? []).length
+      metadataRows.push({ url, title, description })
       const jsonLdBlocks = [...body.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)]
       const jsonLdTypes = jsonLdBlocks.flatMap((match) => {
         try {
@@ -74,6 +76,18 @@ async function worker() {
 }
 
 await Promise.all(Array.from({ length: Math.min(concurrency, urls.length) }, worker))
+
+for (const field of ['title', 'description']) {
+  const pagesByValue = new Map()
+  for (const row of metadataRows) {
+    const value = row[field]
+    if (!pagesByValue.has(value)) pagesByValue.set(value, [])
+    pagesByValue.get(value).push(row.url)
+  }
+  for (const [value, pages] of pagesByValue) {
+    if (value && pages.length > 1) issues.push(`duplicate ${field} across ${pages.length} URLs: ${pages.join(', ')}`)
+  }
+}
 
 if (issues.length > 0) {
   console.error(`Live SEO audit failed for ${issues.length} check(s):`)
