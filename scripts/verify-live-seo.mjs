@@ -22,6 +22,12 @@ async function fetchWithRetry(url) {
 const sitemapResponse = await fetchWithRetry(sitemapUrl)
 const sitemap = await sitemapResponse.text()
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1])
+const sitemapLastModified = new Map()
+for (const match of sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
+  const loc = match[1].match(/<loc>(.*?)<\/loc>/)?.[1]
+  const lastmod = match[1].match(/<lastmod>(.*?)<\/lastmod>/)?.[1]
+  if (loc && lastmod) sitemapLastModified.set(loc, lastmod.slice(0, 10))
+}
 
 if (urls.length === 0) throw new Error('Sitemap contains no URLs')
 
@@ -53,6 +59,17 @@ async function worker() {
           return []
         }
       })
+      const jsonLdDates = jsonLdBlocks.flatMap((match) => {
+        try {
+          const payload = JSON.parse(match[1])
+          return (payload['@graph'] ?? [payload])
+            .map((item) => item.dateModified)
+            .filter((date) => typeof date === 'string')
+            .map((date) => date.slice(0, 10))
+        } catch {
+          return []
+        }
+      })
 
       if (response.status !== 200) issues.push(`${url}: expected 200, got ${response.status}`)
       if (!title) issues.push(`${url}: missing title`)
@@ -62,6 +79,10 @@ async function worker() {
       if (robots.toLowerCase().includes('noindex')) issues.push(`${url}: sitemap URL is noindex`)
       if (h1Count !== 1) issues.push(`${url}: expected one H1, got ${h1Count}`)
       if (jsonLdBlocks.length === 0) issues.push(`${url}: missing server-rendered JSON-LD`)
+      const sitemapDate = sitemapLastModified.get(url)
+      if (sitemapDate && (!jsonLdDates.length || !jsonLdDates.includes(sitemapDate))) {
+        issues.push(`${url}: sitemap lastmod ${sitemapDate} does not match JSON-LD dateModified`)
+      }
       const pathname = new URL(url).pathname
       const isBrandDetailPage = /^\/brands\/[^/]+\/$/.test(pathname)
       if (isBrandDetailPage) {

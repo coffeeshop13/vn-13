@@ -12,11 +12,6 @@ type SitemapRoute = {
   priority?: number
 }
 
-const latestJournalDate = new Date(
-  Math.max(
-    ...journalArticles.map((article) => new Date(article.updatedAt ?? article.publishedAt).getTime()),
-  ),
-)
 const latestSeoUpdate = new Date('2026-09-22')
 const homepageSeoUpdate = new Date('2026-09-24')
 
@@ -33,9 +28,9 @@ const routes: SitemapRoute[] = [
   { path: '/poshiv-zhenskoy-odezhdy-dlya-brenda', changeFrequency: 'monthly', priority: 0.88 },
   { path: '/zhenskaya-odezhda-dlya-butikov', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/evropeyskie-brendy-zhenskoy-odezhdy', changeFrequency: 'monthly', priority: 0.88 },
-  { path: '/optovaya-zhenskaya-odezhda', lastModified: latestSeoUpdate, changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/optovaya-zhenskaya-odezhda', lastModified: new Date('2026-09-19'), changeFrequency: 'monthly', priority: 0.9 },
   { path: '/distributsiya-zhenskoy-odezhdy', lastModified: new Date('2026-09-19'), changeFrequency: 'monthly', priority: 0.88 },
-  { path: '/journal', lastModified: latestJournalDate, changeFrequency: 'weekly', priority: 0.82 },
+  { path: '/journal', changeFrequency: 'weekly', priority: 0.82 },
   { path: '/sravnenie-premialnykh-rynkov', changeFrequency: 'monthly', priority: 0.76 },
   { path: '/kak-vn13-vybirayet-brendy', changeFrequency: 'monthly', priority: 0.76 },
   { path: '/limited-series-dlya-butikov', changeFrequency: 'monthly', priority: 0.76 },
@@ -43,7 +38,7 @@ const routes: SitemapRoute[] = [
   { path: '/sustainability', changeFrequency: 'monthly', priority: 0.6 },
   { path: '/preorder', changeFrequency: 'monthly', priority: 0.76 },
   { path: '/manufacturing', changeFrequency: 'monthly', priority: 0.76 },
-  { path: '/brands', lastModified: latestSeoUpdate, changeFrequency: 'weekly', priority: 0.85 },
+  { path: '/brands', changeFrequency: 'weekly', priority: 0.85 },
   { path: '/brands/manuelle-guibal', changeFrequency: 'monthly', priority: 0.78 },
   { path: '/brands/hannoh-wessel', changeFrequency: 'monthly', priority: 0.78 },
   { path: '/brands/moyuru', lastModified: latestSeoUpdate, changeFrequency: 'monthly', priority: 0.78 },
@@ -55,7 +50,7 @@ const routes: SitemapRoute[] = [
   { path: '/brands/sula', changeFrequency: 'monthly', priority: 0.74 },
   { path: '/brands/soh', changeFrequency: 'monthly', priority: 0.74 },
   { path: '/contact', changeFrequency: 'yearly', priority: 0.6 },
-  { path: '/partnerstvo', lastModified: latestSeoUpdate, changeFrequency: 'monthly', priority: 0.92 },
+  { path: '/partnerstvo', lastModified: new Date('2026-09-19'), changeFrequency: 'monthly', priority: 0.92 },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
