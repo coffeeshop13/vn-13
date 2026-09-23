@@ -33,6 +33,7 @@ if (urls.length === 0) throw new Error('Sitemap contains no URLs')
 
 const issues = []
 const metadataRows = []
+const internalPaths = new Set()
 let cursor = 0
 
 async function worker() {
@@ -59,6 +60,12 @@ async function worker() {
           return []
         }
       })
+      for (const match of body.matchAll(/href=["']([^"']+)["']/gi)) {
+        const href = match[1]
+        if (!href.startsWith('/') || href.startsWith('/_next') || href.startsWith('/api')) continue
+        if (/\.(?:webp|jpg|jpeg|png|svg|ico|webmanifest|xml|txt|css|js|woff2?)$/i.test(new URL(href, url).pathname)) continue
+        internalPaths.add(new URL(href, url).pathname)
+      }
       const jsonLdDates = jsonLdBlocks.flatMap((match) => {
         try {
           const payload = JSON.parse(match[1])
@@ -97,6 +104,15 @@ async function worker() {
 }
 
 await Promise.all(Array.from({ length: Math.min(concurrency, urls.length) }, worker))
+
+await Promise.all([...internalPaths].map(async (path) => {
+  try {
+    const response = await fetchWithRetry(new URL(path, sitemapUrl).toString())
+    if (response.status !== 200) issues.push(`internal link ${path}: expected 200, got ${response.status}`)
+  } catch (error) {
+    issues.push(`internal link ${path}: ${error.message}`)
+  }
+}))
 
 for (const field of ['title', 'description']) {
   const pagesByValue = new Map()
