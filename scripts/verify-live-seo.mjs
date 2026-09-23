@@ -21,6 +21,13 @@ async function fetchWithRetry(url) {
 
 const sitemapResponse = await fetchWithRetry(sitemapUrl)
 const sitemap = await sitemapResponse.text()
+const issues = []
+for (const path of ['/llms.txt', '/llms-full.txt']) {
+  const response = await fetchWithRetry(new URL(path, sitemapUrl).toString())
+  const body = await response.text()
+  if (response.status !== 200) issues.push(`${path}: expected 200, got ${response.status}`)
+  if (!body.includes('https://vn-13.com/')) issues.push(`${path}: missing canonical domain reference`)
+}
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1])
 const sitemapLastModified = new Map()
 for (const match of sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
@@ -31,7 +38,6 @@ for (const match of sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
 
 if (urls.length === 0) throw new Error('Sitemap contains no URLs')
 
-const issues = []
 const metadataRows = []
 const internalPaths = new Set()
 let cursor = 0
