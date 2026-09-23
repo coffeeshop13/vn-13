@@ -57,7 +57,9 @@ async function worker() {
       if (canonical && canonical !== url) issues.push(`${url}: canonical mismatch, got ${canonical}`)
       if (robots.toLowerCase().includes('noindex')) issues.push(`${url}: sitemap URL is noindex`)
       if (h1Count !== 1) issues.push(`${url}: expected one H1, got ${h1Count}`)
-      if (new URL(url).pathname.startsWith('/brands/')) {
+      const pathname = new URL(url).pathname
+      const isBrandDetailPage = /^\/brands\/[^/]+\/$/.test(pathname)
+      if (isBrandDetailPage) {
         for (const type of ['Brand', 'WebPage', 'BreadcrumbList']) {
           if (!jsonLdTypes.includes(type)) issues.push(`${url}: missing server-rendered ${type} JSON-LD`)
         }
