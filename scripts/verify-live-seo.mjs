@@ -41,11 +41,13 @@ async function worker() {
       const canonical = body.match(/<link rel="canonical" href="([^"]*)/)?.[1]?.trim() ?? ''
       const robots = body.match(/<meta name="robots" content="([^"]*)/)?.[1]?.trim() ?? ''
       const h1Count = (body.match(/<h1[ >]/g) ?? []).length
-      const jsonLdTypes = [...body.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap((match) => {
+      const jsonLdBlocks = [...body.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)]
+      const jsonLdTypes = jsonLdBlocks.flatMap((match) => {
         try {
           const payload = JSON.parse(match[1])
           return (payload['@graph'] ?? [payload]).map((item) => item['@type']).filter(Boolean)
         } catch {
+          issues.push(`${url}: invalid JSON-LD syntax`)
           return []
         }
       })
@@ -57,6 +59,7 @@ async function worker() {
       if (canonical && canonical !== url) issues.push(`${url}: canonical mismatch, got ${canonical}`)
       if (robots.toLowerCase().includes('noindex')) issues.push(`${url}: sitemap URL is noindex`)
       if (h1Count !== 1) issues.push(`${url}: expected one H1, got ${h1Count}`)
+      if (jsonLdBlocks.length === 0) issues.push(`${url}: missing server-rendered JSON-LD`)
       const pathname = new URL(url).pathname
       const isBrandDetailPage = /^\/brands\/[^/]+\/$/.test(pathname)
       if (isBrandDetailPage) {
@@ -78,4 +81,4 @@ if (issues.length > 0) {
   process.exit(1)
 }
 
-console.log(`Live SEO audit passed: ${urls.length} sitemap URL(s), title/description/canonical/robots/H1 checks clear.`)
+console.log(`Live SEO audit passed: ${urls.length} sitemap URL(s), title/description/canonical/robots/H1/JSON-LD checks clear.`)
