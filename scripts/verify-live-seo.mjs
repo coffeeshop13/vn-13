@@ -41,6 +41,14 @@ async function worker() {
       const canonical = body.match(/<link rel="canonical" href="([^"]*)/)?.[1]?.trim() ?? ''
       const robots = body.match(/<meta name="robots" content="([^"]*)/)?.[1]?.trim() ?? ''
       const h1Count = (body.match(/<h1[ >]/g) ?? []).length
+      const jsonLdTypes = [...body.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap((match) => {
+        try {
+          const payload = JSON.parse(match[1])
+          return (payload['@graph'] ?? [payload]).map((item) => item['@type']).filter(Boolean)
+        } catch {
+          return []
+        }
+      })
 
       if (response.status !== 200) issues.push(`${url}: expected 200, got ${response.status}`)
       if (!title) issues.push(`${url}: missing title`)
@@ -49,6 +57,11 @@ async function worker() {
       if (canonical && canonical !== url) issues.push(`${url}: canonical mismatch, got ${canonical}`)
       if (robots.toLowerCase().includes('noindex')) issues.push(`${url}: sitemap URL is noindex`)
       if (h1Count !== 1) issues.push(`${url}: expected one H1, got ${h1Count}`)
+      if (new URL(url).pathname.startsWith('/brands/')) {
+        for (const type of ['Brand', 'WebPage', 'BreadcrumbList']) {
+          if (!jsonLdTypes.includes(type)) issues.push(`${url}: missing server-rendered ${type} JSON-LD`)
+        }
+      }
     } catch (error) {
       issues.push(`${url}: ${error.message}`)
     }
