@@ -9,9 +9,9 @@ import { absoluteUrl, createMetadata } from '@/lib/seo'
 import { canonicalInternalHref } from '@/lib/seo-links'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Бренд одежды VN13: каталог женской одежды | VN13',
+  title: 'Бренд одежды 13 (VN13): каталог женской одежды | VN13',
   description:
-    'VN13 — бренд одежды с дизайнерской женской коллекцией ограниченных серий: платья, жакеты, рубашки и брюки. Каталог, наличие и размеры — по запросу.',
+    'Бренд одежды 13 — VN13: дизайнерская женская коллекция ограниченных серий, платья, жакеты, рубашки и брюки. Каталог, наличие и размеры — по запросу.',
   path: '/vn-13-brand',
   image: '/brands/vn13-catalog/vn13-sand-textured-jacket-front.seo.webp',
   keywords: [
