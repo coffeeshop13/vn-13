@@ -312,7 +312,7 @@ export default function VN13BrandPage() {
               <span aria-current="page">Каталог VN-13</span>
             </nav>
             <p className="text-base font-medium" style={{ color: '#8a6b3f' }}>Собственный бренд VN13</p>
-            <h1 className="mt-3 text-4xl md:text-6xl font-light leading-[1.08]" style={{ color: '#1d1b18' }}>VN13 — бренд одежды и дизайнерская женская коллекция</h1>
+            <h1 className="mt-3 text-4xl md:text-6xl font-light leading-[1.08]" style={{ color: '#1d1b18' }}>Бренд одежды 13 (VN13) — дизайнерская женская коллекция</h1>
             <p className="mt-5 text-lg leading-relaxed" style={{ color: '#5d5851' }}>
               VN13 — собственный бренд одежды: платья, жакеты, рубашки, брюки и верхняя одежда ограниченных коллекций.
             </p>
