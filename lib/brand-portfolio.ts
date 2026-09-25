@@ -55,6 +55,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
   {
     name: 'H+ Hannoh Wessel',
     slug: 'hannoh-wessel',
+    lastModified: '2026-09-25',
     country: 'Италия',
     region: 'italy',
     title: 'Hannoh Wessel: итальянская дизайнерская одежда | VN13',
@@ -110,7 +111,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
   {
     name: 'Moyuru',
     slug: 'moyuru',
-    lastModified: '2026-09-25',
+    lastModified: '2026-09-22',
     country: 'Япония',
     region: 'japan',
     title: 'Moyuru: японская дизайнерская одежда | VN13',
