@@ -111,6 +111,7 @@ export default function EuropeanWomenswearBrandsPage() {
         },
       ]}
       relatedLinks={[
+        { href: '/journal/evropeyskie-brendy-zhenskoy-odezhdy-dlya-butikov', label: 'Как выбрать европейские бренды для бутика' },
         { href: '/brands/manuelle-guibal', label: 'Manuelle Guibal — французский бренд' },
         { href: '/brands/hannoh-wessel', label: 'H+ Hannoh Wessel — итальянский бренд' },
         { href: '/brands/aequamente', label: 'Aequamente — итальянский бренд' },
