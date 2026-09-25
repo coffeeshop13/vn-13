@@ -30,7 +30,6 @@ export const extendedSeoPages: ExtendedSeoPage[] = [
   {
     slug: 'quiet-luxury',
     path: '/quiet-luxury',
-    lastModified: '2026-09-25',
     cluster: 'Тихая роскошь',
     title: 'Тихая роскошь в одежде (quiet luxury) | VN13',
     description:
@@ -169,7 +168,6 @@ export const extendedSeoPages: ExtendedSeoPage[] = [
   {
     slug: 'japanese-style',
     path: '/japanese-style',
-    lastModified: '2026-09-25',
     cluster: 'Японская эстетика',
     title: 'Одежда японских дизайнеров и японский стиль одежды | VN13',
     description:
