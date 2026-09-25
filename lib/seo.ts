@@ -175,6 +175,7 @@ export const organizationJsonLd = {
       sameAs: [
         'https://t.me/vn13agency',
         'https://www.retail.ru/rbc/company/vn_13/',
+        'https://yandex.com/sprav/216846858762',
       ],
       knowsAbout: [
         'дистрибуция европейских брендов',
