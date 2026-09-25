@@ -15,14 +15,15 @@ type SitemapRoute = {
 const latestSeoUpdate = new Date('2026-09-22')
 const homepageSeoUpdate = new Date('2026-09-25')
 const vn13BrandSeoUpdate = new Date('2026-09-25')
+const commercialSeoUpdate = new Date('2026-09-25')
 
 const routes: SitemapRoute[] = [
   { path: '/', lastModified: homepageSeoUpdate, changeFrequency: 'weekly', priority: 1 },
   { path: '/zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.95 },
   { path: '/dizaynerskaya-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.92 },
-  { path: '/premium-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.92 },
+  { path: '/premium-zhenskaya-odezhda', lastModified: commercialSeoUpdate, changeFrequency: 'monthly', priority: 0.92 },
   { path: '/eksklyuzivnaya-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.9 },
-  { path: '/kapsulnaya-zhenskaya-odezhda', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/kapsulnaya-zhenskaya-odezhda', lastModified: commercialSeoUpdate, changeFrequency: 'monthly', priority: 0.9 },
   { path: '/vn-13-brand', lastModified: vn13BrandSeoUpdate, changeFrequency: 'weekly', priority: 0.95 },
   { path: '/lookbook', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/proizvoditel-zhenskoy-odezhdy', changeFrequency: 'monthly', priority: 0.88 },
