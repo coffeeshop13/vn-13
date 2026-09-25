@@ -62,6 +62,8 @@ export default function WomenswearForBoutiquesPage() {
         },
       ]}
       relatedLinks={[
+        { href: '/journal/zhenskaya-odezhda-optom-dlya-butikov-kak-zakupat', label: 'Как закупать женскую одежду оптом для бутика' },
+        { href: '/journal/predzakaz-kollektsiy-odezhdy-dlya-riteylerov', label: 'Предзаказ коллекций одежды для ритейлеров' },
         { href: '/optovaya-zhenskaya-odezhda', label: 'Оптовая женская одежда' },
         { href: '/evropeyskie-brendy-zhenskoy-odezhdy', label: 'Европейские бренды' },
         { href: '/partnerstvo', label: 'Стать партнёром VN13' },
