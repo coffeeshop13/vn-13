@@ -298,9 +298,10 @@ export const brandPortfolio: BrandPortfolioItem[] = [
   {
     name: 'Aequamente',
     slug: 'aequamente',
+    lastModified: '2026-09-25',
     country: 'Италия',
     region: 'italy',
-    title: 'Aequamente | Итальянская премиальная женская одежда в VN13',
+    title: 'Aequamente: итальянская женская одежда | VN13',
     description:
       'Aequamente в портфеле VN13: итальянская женская одежда с мягкой архитектурой, природной палитрой и коммерческой пригодностью для бутиков.',
     intro:
