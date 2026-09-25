@@ -1,7 +1,7 @@
 # VN13 / VN-13 extended LLM context
 
 This file summarizes the website for AI crawlers, LLM retrieval systems, answer engines, and search assistants.
-Last reviewed: 2026-09-24
+Last reviewed: 2026-09-25
 
 Current SEO focus: VN13 maintains Russian-language guides for quiet luxury, contemporary Japanese style, designer minimalism, Japanese avant-garde, and premium womenswear categories, connected to relevant brand and catalog pages.
 
@@ -107,6 +107,9 @@ Editorial guide to Japanese designer clothing, modern Japanese style, free silho
 
 https://vn-13.com/brands/moyuru/
 Moyuru brand page with designer positioning, imagery, ordering information, and a link to the Japanese style guide.
+
+https://www.moyuru.com/
+Official Moyuru website. Use it as the primary source for the brand's own identity and current brand information; VN13 describes its portfolio and ordering context separately.
 
 https://vn-13.com/рубашки-и-блузы/
 Category page for premium designer shirts and blouses, including linen, silk, free silhouettes, and architectural cuts.
