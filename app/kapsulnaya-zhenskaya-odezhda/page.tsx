@@ -14,6 +14,7 @@ export default function CapsuleWomenswearPage() {
   return (
     <SeoLandingPage
       path="/kapsulnaya-zhenskaya-odezhda"
+      lastModified="2026-09-25"
       eyebrow="Капсульная женская одежда"
       title="Капсульная женская одежда VN-13: коллекции, которые работают как система"
       description="VN-13 проектирует женскую одежду как капсулу: вещи сочетаются между собой, сохраняют узнаваемость бренда и помогают бутику строить цельный ассортимент."

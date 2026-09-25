@@ -14,6 +14,7 @@ export default function PremiumWomenswearPage() {
   return (
     <SeoLandingPage
       path="/premium-zhenskaya-odezhda"
+      lastModified="2026-09-25"
       eyebrow="Премиальная женская одежда"
       title="Премиальная женская одежда VN-13: качество, редкость и спокойная эстетика"
       description="VN-13 развивает премиальную женскую одежду через капсульный подход, ограниченные партии и подбор ассортимента для бутиков."
