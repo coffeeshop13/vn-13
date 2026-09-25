@@ -142,7 +142,7 @@ export const homePageJsonLd = {
   '@type': 'WebPage',
   '@id': `${SITE_URL}/#webpage`,
   url: `${SITE_URL}/`,
-  name: 'VN13 — бренд женской одежды и дизайнерские европейские марки',
+  name: siteConfig.title,
   description:
     'VN13 — бренд одежды, женская дизайнерская одежда и европейские марки. Лимитированные коллекции, опт и сотрудничество с бутиками и шоурумами.',
   dateModified: '2026-09-25',
