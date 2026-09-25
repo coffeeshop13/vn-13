@@ -2,12 +2,15 @@ const sitemapUrl = 'https://vn-13.com/sitemap.xml'
 const maxAttempts = 4
 const concurrency = 8
 
-async function fetchWithRetry(url) {
+async function fetchWithRetry(url, { cacheBust = false } = {}) {
   let lastError
+  const requestUrl = cacheBust
+    ? `${url}${url.includes('?') ? '&' : '?'}__seo_audit=${Date.now()}`
+    : url
 
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
     try {
-      const response = await fetch(url, { redirect: 'manual' })
+      const response = await fetch(requestUrl, { redirect: 'manual' })
       if (response.ok || (response.status >= 300 && response.status < 400)) return response
       throw new Error(`HTTP ${response.status}`)
     } catch (error) {
@@ -59,7 +62,7 @@ async function worker() {
     cursor += 1
 
     try {
-      const response = await fetchWithRetry(url)
+      const response = await fetchWithRetry(url, { cacheBust: true })
       const body = await response.text()
       const title = body.match(/<title>([^<]*)<\/title>/)?.[1]?.trim() ?? ''
       const description = body.match(/<meta name="description" content="([^"]*)/)?.[1]?.trim() ?? ''
@@ -128,7 +131,7 @@ await Promise.all(Array.from({ length: Math.min(concurrency, urls.length) }, wor
 
 await Promise.all([...internalPaths].map(async (path) => {
   try {
-    const response = await fetchWithRetry(new URL(path, sitemapUrl).toString())
+    const response = await fetchWithRetry(new URL(path, sitemapUrl).toString(), { cacheBust: true })
     if (response.status !== 200) issues.push(`internal link ${path}: expected 200, got ${response.status}`)
   } catch (error) {
     issues.push(`internal link ${path}: ${error.message}`)
