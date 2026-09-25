@@ -265,6 +265,14 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
               Напишите VN13, чтобы уточнить доступные бренды, размеры, составы и условия сотрудничества для частных клиентов или бутиков.
             </p>
             <CTALink href="https://t.me/vn13agency">{ctaLabel}</CTALink>
+            {page.path === '/japanese-style' && (
+              <Link
+                href="/brands/moyuru/"
+                className="block mt-4 text-sm underline underline-offset-4 text-[#5d5851]"
+              >
+                Открыть страницу бренда Moyuru
+              </Link>
+            )}
           </div>
 
           <div className="mt-20 pt-16 border-t border-[#e0ddd8]">
