@@ -137,6 +137,21 @@ jobs:
               --cache-control 'public,max-age=300,must-revalidate'
           done < <(find out -type f \( -name 'robots.txt' -o -name 'sitemap.xml' -o -name 'sitemap_index.xml' \) | sort)
 
+      - name: Set revalidation headers for GEO context files
+        env:
+          AWS_S3_BUCKET: vn-13.com
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_KEY }}
+          AWS_S3_ENDPOINT: https://storage.yandexcloud.net
+          AWS_REGION: ru-central1
+        run: |
+          for asset in llms.txt llms-full.txt; do
+            aws s3 cp "out/${asset}" "s3://${AWS_S3_BUCKET}/${asset}" \
+              --endpoint-url "${AWS_S3_ENDPOINT}" \
+              --content-type 'text/plain; charset=utf-8' \
+              --cache-control 'no-cache,must-revalidate'
+          done
+
       - name: Configure legacy URL redirects
         env:
           AWS_S3_BUCKET: vn-13.com
