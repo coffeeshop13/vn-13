@@ -40,7 +40,7 @@ const routes: SitemapRoute[] = [
   { path: '/manufacturing', changeFrequency: 'monthly', priority: 0.76 },
   { path: '/brands', changeFrequency: 'weekly', priority: 0.85 },
   { path: '/brands/manuelle-guibal', changeFrequency: 'monthly', priority: 0.78 },
-  { path: '/brands/hannoh-wessel', changeFrequency: 'monthly', priority: 0.78 },
+  { path: '/brands/hannoh-wessel', lastModified: new Date('2026-09-25'), changeFrequency: 'monthly', priority: 0.78 },
   { path: '/brands/moyuru', lastModified: latestSeoUpdate, changeFrequency: 'monthly', priority: 0.78 },
   { path: '/brands/shoto', changeFrequency: 'monthly', priority: 0.72 },
   { path: '/brands/post-and-co', changeFrequency: 'monthly', priority: 0.72 },

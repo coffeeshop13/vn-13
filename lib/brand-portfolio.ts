@@ -110,7 +110,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
   {
     name: 'Moyuru',
     slug: 'moyuru',
-    lastModified: '2026-09-22',
+    lastModified: '2026-09-25',
     country: 'Япония',
     region: 'japan',
     title: 'Moyuru: японская дизайнерская одежда | VN13',
