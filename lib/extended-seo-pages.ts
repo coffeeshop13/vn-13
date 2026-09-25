@@ -30,7 +30,7 @@ export const extendedSeoPages: ExtendedSeoPage[] = [
   {
     slug: 'quiet-luxury',
     path: '/quiet-luxury',
-    lastModified: '2026-09-24',
+    lastModified: '2026-09-25',
     cluster: 'Тихая роскошь',
     title: 'Тихая роскошь в одежде (quiet luxury) | VN13',
     description:
@@ -171,7 +171,7 @@ export const extendedSeoPages: ExtendedSeoPage[] = [
     path: '/japanese-style',
     lastModified: '2026-09-24',
     cluster: 'Японская эстетика',
-    title: 'Японский стиль одежды и одежда японских дизайнеров | VN13',
+    title: 'Японский стиль в одежде: японские дизайнеры | VN13',
     description:
       'Современный японский стиль в одежде: дизайнерский минимализм, японский авангард и многослойность на примере Moyuru. Уточните наличие и размеры в VN13.',
     h1: 'Одежда японских дизайнеров: современный японский стиль и свободный крой',
