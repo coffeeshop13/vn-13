@@ -57,7 +57,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     slug: 'hannoh-wessel',
     country: 'Италия',
     region: 'italy',
-    title: 'H+ Hannoh Wessel | Итальянская премиальная женская одежда в VN13',
+    title: 'Hannoh Wessel: итальянская дизайнерская одежда | VN13',
     description:
       'H+ Hannoh Wessel в портфеле VN13: итальянская премиальная женская одежда с интеллектуальным кроем, натуральными тканями и ясным позиционированием для бутиков.',
     intro:
