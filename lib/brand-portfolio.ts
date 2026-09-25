@@ -113,7 +113,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     lastModified: '2026-09-22',
     country: 'Япония',
     region: 'japan',
-    title: 'Moyuru | Японская дизайнерская женская одежда в VN13',
+    title: 'Moyuru: японская дизайнерская одежда | VN13',
     description:
       'Moyuru в портфеле VN13: японская дизайнерская женская одежда с объемом, фактурой и выразительной архитектурой силуэта. Уточните коллекции, размеры и наличие.',
     intro:
