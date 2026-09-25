@@ -53,15 +53,15 @@ export default function VN13Showcase() {
               <div className="relative overflow-hidden bg-[#f6f2ec]" style={{ aspectRatio: '16 / 9' }}>
                 <picture className="block h-full w-full">
                   <source
-                    srcSet="/brands/vn13-catalog/vn13-designer-womenswear-collection-hero-v20260913-640.webp 640w, /brands/vn13-catalog/vn13-designer-womenswear-collection-hero-v20260913-1000.webp 1000w"
+                    srcSet="/brands/vn13-catalog/vn13-designer-womenswear-collection-hero-v20260913-640.webp 640w, /brands/vn13-catalog/vn13-designer-womenswear-collection-hero-v20260913-800.webp 800w, /brands/vn13-catalog/vn13-designer-womenswear-collection-hero-v20260913-1000.webp 1000w"
                     sizes="(max-width: 1024px) calc(100vw - 3rem), 58vw"
                     type="image/webp"
                   />
                   <Image
-                    src="/brands/vn13-catalog/vn13-designer-womenswear-collection-hero-v20260913-1000.webp"
+                    src="/brands/vn13-catalog/vn13-designer-womenswear-collection-hero-v20260913-800.webp"
                     alt="Коллекция дизайнерской женской одежды VN-13"
-                    width={1000}
-                    height={667}
+                    width={800}
+                    height={534}
                     sizes="(max-width: 1024px) calc(100vw - 3rem), 58vw"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />

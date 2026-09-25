@@ -13,6 +13,12 @@ const brandImageDescriptors = {
   korea: 'Корейская дизайнерская одежда',
 } satisfies Record<(typeof brandPortfolio)[number]['region'], string>
 
+const responsiveCardImages: Record<string, string> = {
+  'manuelle-guibal': '/brands/real/manuelle-guibal-card-v20260913-q70-480.webp',
+  'hannoh-wessel': '/brands/hannoh-lookbook/hannoh-card-v20260913-q70-480.webp',
+  moyuru: '/brands/moyuru-card-v20260913-q70-560.webp',
+}
+
 export default function PortfolioGrid() {
   const [active, setActive] = useState('all')
 
@@ -59,7 +65,7 @@ export default function PortfolioGrid() {
               <article>
                 <div className="relative overflow-hidden rounded-[16px] mb-3 bg-[#f6f2ec]" style={{ aspectRatio: '3 / 4' }}>
                   <Image
-                    src={brand.cardImage}
+                    src={responsiveCardImages[brand.slug] ?? brand.cardImage}
                     alt={`${brand.name} — ${brandImageDescriptors[brand.region]} в портфеле VN13`}
                     width={1200}
                     height={1600}
