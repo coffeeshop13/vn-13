@@ -64,6 +64,14 @@ export default function DesignerWomenswearPage() {
             'В приоритете капсульная женская одежда: платья, жакеты, трикотаж, верхние слои и выразительные фактуры.',
         },
       ]}
+      relatedLinks={[
+        { href: '/vn-13-brand', label: 'Каталог дизайнерской одежды VN-13' },
+        { href: '/zhenskaya-odezhda-dlya-butikov', label: 'Дизайнерская одежда для бутиков' },
+        { href: '/kapsulnaya-zhenskaya-odezhda', label: 'Капсульная женская одежда' },
+        { href: '/платья', label: 'Дизайнерские платья' },
+        { href: '/жакеты-и-жилеты', label: 'Дизайнерские жакеты и жилеты' },
+        { href: '/proizvoditel-zhenskoy-odezhdy', label: 'Производитель женской одежды' },
+      ]}
     />
   )
 }
