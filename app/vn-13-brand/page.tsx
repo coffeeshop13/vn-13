@@ -23,7 +23,7 @@ export const metadata: Metadata = createMetadata({
     'дизайнерская женская одежда',
     'каталог женской одежды VN-13',
   ],
-  modifiedTime: '2026-09-22',
+  modifiedTime: '2026-09-25',
 })
 
 const values = [
@@ -250,7 +250,7 @@ export default function VN13BrandPage() {
         '@type': 'CollectionPage',
         '@id': `${absoluteUrl('/vn-13-brand')}#collection`,
         url: absoluteUrl('/vn-13-brand'),
-        dateModified: '2026-09-22',
+        dateModified: '2026-09-25',
         name: 'Каталог дизайнерской женской одежды VN-13',
         description:
           'Каталог собственного бренда VN-13: дизайнерские платья, жакеты, рубашки, брюки, жилеты и верхняя одежда ограниченных серий.',
