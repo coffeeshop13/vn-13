@@ -9,7 +9,7 @@ import { absoluteUrl, createMetadata } from '@/lib/seo'
 import { canonicalInternalHref } from '@/lib/seo-links'
 
 export const metadata: Metadata = createMetadata({
-  title: 'Бренд женской одежды VN-13 | Каталог VN13',
+  title: 'Бренд одежды VN13: каталог женской одежды | VN13',
   description:
     'VN13 — бренд одежды с дизайнерской женской коллекцией ограниченных серий: платья, жакеты, рубашки, брюки и верхняя одежда. Уточнить наличие и размеры.',
   path: '/vn-13-brand',
