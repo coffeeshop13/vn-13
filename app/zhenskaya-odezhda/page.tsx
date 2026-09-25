@@ -75,6 +75,7 @@ export default function WomensClothingPage() {
         { href: '/dizaynerskaya-zhenskaya-odezhda', label: 'Дизайнерская женская одежда' },
         { href: '/premium-zhenskaya-odezhda', label: 'Премиальная женская одежда' },
         { href: '/kapsulnaya-zhenskaya-odezhda', label: 'Капсульная женская одежда' },
+        { href: '/japanese-style', label: 'Японский стиль и одежда дизайнеров' },
         { href: '/платья', label: 'Дизайнерские платья' },
         { href: '/жакеты-и-жилеты', label: 'Жакеты и жилеты' },
         { href: '/брюки-и-джинсы', label: 'Брюки и джинсы' },
