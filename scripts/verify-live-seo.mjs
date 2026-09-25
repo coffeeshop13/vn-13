@@ -40,6 +40,7 @@ if (urls.length === 0) throw new Error('Sitemap contains no URLs')
 
 const metadataRows = []
 const internalPaths = new Set()
+const nonCanonicalInternalPaths = new Set()
 let cursor = 0
 
 async function worker() {
@@ -69,8 +70,12 @@ async function worker() {
       for (const match of body.matchAll(/href=["']([^"']+)["']/gi)) {
         const href = match[1]
         if (!href.startsWith('/') || href.startsWith('/_next') || href.startsWith('/api')) continue
-        if (/\.(?:webp|jpg|jpeg|png|svg|ico|webmanifest|xml|txt|css|js|woff2?)$/i.test(new URL(href, url).pathname)) continue
-        internalPaths.add(new URL(href, url).pathname)
+        const internalUrl = new URL(href, url)
+        if (/\.(?:webp|jpg|jpeg|png|svg|ico|webmanifest|xml|txt|css|js|woff2?)$/i.test(internalUrl.pathname)) continue
+        internalPaths.add(internalUrl.pathname)
+        if (internalUrl.pathname !== '/' && !internalUrl.pathname.endsWith('/')) {
+          nonCanonicalInternalPaths.add(internalUrl.pathname)
+        }
       }
       const jsonLdDates = jsonLdBlocks.flatMap((match) => {
         try {
@@ -119,6 +124,10 @@ await Promise.all([...internalPaths].map(async (path) => {
     issues.push(`internal link ${path}: ${error.message}`)
   }
 }))
+
+for (const path of nonCanonicalInternalPaths) {
+  issues.push(`internal link ${path}: expected canonical trailing slash`)
+}
 
 for (const field of ['title', 'description']) {
   const pagesByValue = new Map()
