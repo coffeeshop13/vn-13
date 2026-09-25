@@ -329,6 +329,7 @@ export const extendedSeoPages: ExtendedSeoPage[] = [
   {
     slug: 'жакеты-и-жилеты',
     path: '/жакеты-и-жилеты',
+    lastModified: '2026-09-25',
     cluster: 'Жакеты и жилеты',
     title: 'Дизайнерские жакеты и жилеты для женщин | VN13',
     description:
@@ -398,6 +399,7 @@ export const extendedSeoPages: ExtendedSeoPage[] = [
   {
     slug: 'брюки-и-джинсы',
     path: '/брюки-и-джинсы',
+    lastModified: '2026-09-25',
     cluster: 'Брюки и джинсы',
     title: 'Дизайнерские брюки и джинсы премиум | VN13',
     description:
