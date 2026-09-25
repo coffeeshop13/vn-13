@@ -29,7 +29,7 @@ const relatedLinksByPath: Record<string, SeoRelatedLink[]> = {
   '/dizaynerskaya-zhenskaya-odezhda': [
     { href: '/zhenskaya-odezhda', label: 'Женская одежда VN-13' },
     { href: '/vn-13-brand', label: 'Каталог дизайнерской одежды VN-13' },
-    { href: '/brands', label: 'Бренды женской одежды' },
+    { href: '/brands/', label: 'Бренды женской одежды' },
     { href: '/платья', label: 'Дизайнерские платья' },
     { href: '/жакеты-и-жилеты', label: 'Дизайнерские жакеты и жилеты' },
   ],
@@ -71,7 +71,7 @@ const relatedLinksByPath: Record<string, SeoRelatedLink[]> = {
     { href: '/optovaya-zhenskaya-odezhda', label: 'Оптовая женская одежда' },
     { href: '/evropeyskie-brendy-zhenskoy-odezhdy', label: 'Европейские бренды женской одежды' },
     { href: '/preorder', label: 'Предзаказ коллекций для бутиков' },
-    { href: '/brands', label: 'Портфель брендов VN13' },
+    { href: '/brands/', label: 'Портфель брендов VN13' },
   ],
   '/optovaya-zhenskaya-odezhda': [
     { href: '/zhenskaya-odezhda-dlya-butikov', label: 'Женская одежда для бутиков' },
@@ -83,10 +83,10 @@ const relatedLinksByPath: Record<string, SeoRelatedLink[]> = {
     { href: '/evropeyskie-brendy-zhenskoy-odezhdy', label: 'Европейские бренды женской одежды' },
     { href: '/zhenskaya-odezhda-dlya-butikov', label: 'Женская одежда для бутиков' },
     { href: '/optovaya-zhenskaya-odezhda', label: 'Оптовая женская одежда' },
-    { href: '/brands', label: 'Бренды в портфеле VN13' },
+    { href: '/brands/', label: 'Бренды в портфеле VN13' },
   ],
   '/evropeyskie-brendy-zhenskoy-odezhdy': [
-    { href: '/brands', label: 'Все бренды женской одежды VN13' },
+    { href: '/brands/', label: 'Все бренды женской одежды VN13' },
     { href: '/distributsiya-zhenskoy-odezhdy', label: 'Дистрибуция европейских брендов' },
     { href: '/zhenskaya-odezhda-dlya-butikov', label: 'Ассортимент для бутиков' },
     { href: '/sravnenie-premialnykh-rynkov', label: 'Премиальные рынки женской одежды' },
