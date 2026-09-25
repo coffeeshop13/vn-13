@@ -5,7 +5,7 @@ import { absoluteUrl, createPageMetadata, SITE_NAME } from '@/lib/seo'
 export const metadata: Metadata = createPageMetadata({
   title: 'Manuelle Guibal | Французская одежда для бутиков | VN13',
   description:
-    'Manuelle Guibal в портфеле VN13: французский бренд женской одежды с дизайном в Париже; кашемировый трикотаж производят в Китае, остальные вещи — французские мастера.',
+    'Manuelle Guibal в портфеле VN13: французская женская одежда с дизайном в Париже, кашемировым трикотажем и производством у французских мастеров.',
   path: '/brands/manuelle-guibal',
   keywords: ['Manuelle Guibal', 'французская женская одежда', 'дизайнерская женская одежда', 'одежда для бутиков', 'европейские бренды одежды'],
   image: '/brands/manuelle-guibal.jpg',
