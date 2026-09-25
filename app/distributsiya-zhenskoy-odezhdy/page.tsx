@@ -118,6 +118,8 @@ export default function WomensClothingDistributionPage() {
         },
       ]}
       relatedLinks={[
+        { href: '/journal/evropeyskie-brendy-zhenskoy-odezhdy-dlya-butikov', label: 'Европейские бренды для бутиков: как выбирать' },
+        { href: '/journal/predzakaz-kollektsiy-odezhdy-dlya-riteylerov', label: 'Предзаказ коллекций для ритейлеров' },
         { href: '/brands/manuelle-guibal', label: 'Manuelle Guibal в портфеле VN13' },
         { href: '/brands/hannoh-wessel', label: 'H+ Hannoh Wessel в портфеле VN13' },
         { href: '/brands/aequamente', label: 'Aequamente в портфеле VN13' },
