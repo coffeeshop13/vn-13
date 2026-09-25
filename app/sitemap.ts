@@ -13,7 +13,7 @@ type SitemapRoute = {
 }
 
 const latestSeoUpdate = new Date('2026-09-22')
-const homepageSeoUpdate = new Date('2026-09-24')
+const homepageSeoUpdate = new Date('2026-09-25')
 const vn13BrandSeoUpdate = new Date('2026-09-25')
 
 const routes: SitemapRoute[] = [
