@@ -7,6 +7,42 @@
   },
   "RoutingRules": [
     {
+      "Condition": { "KeyPrefixEquals": "about" },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "vn-13.com",
+        "ReplaceKeyWith": "story/",
+        "HttpRedirectCode": "301"
+      }
+    },
+    {
+      "Condition": { "KeyPrefixEquals": "blog" },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "vn-13.com",
+        "ReplaceKeyWith": "journal/",
+        "HttpRedirectCode": "301"
+      }
+    },
+    {
+      "Condition": { "KeyPrefixEquals": "de" },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "vn-13.com",
+        "ReplaceKeyWith": "",
+        "HttpRedirectCode": "301"
+      }
+    },
+    {
+      "Condition": { "KeyPrefixEquals": "en" },
+      "Redirect": {
+        "Protocol": "https",
+        "HostName": "vn-13.com",
+        "ReplaceKeyWith": "",
+        "HttpRedirectCode": "301"
+      }
+    },
+    {
       "Condition": { "KeyPrefixEquals": "hannoh-wessel" },
       "Redirect": {
         "Protocol": "https",
