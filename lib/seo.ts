@@ -125,7 +125,7 @@ export function createPageMetadata({ title, description, path = '/', keywords = 
 export const siteConfig = {
   name: SITE_NAME,
   url: SITE_URL,
-  title: 'VN13 — бренд женской одежды и европейские дизайнерские марки',
+  title: 'VN13 — бренд женской одежды и европейские дизайнеры',
   description:
     'VN13 — бренд одежды и премиальная женская одежда: европейские дизайнеры, коллекция VN-13 и работа с бутиками, шоурумами и клиентами.',
   ogImage: DEFAULT_OG_IMAGE,
