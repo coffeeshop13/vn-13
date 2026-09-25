@@ -22,6 +22,16 @@ async function fetchWithRetry(url) {
 const sitemapResponse = await fetchWithRetry(sitemapUrl)
 const sitemap = await sitemapResponse.text()
 const issues = []
+if (sitemapResponse.status !== 200) issues.push(`sitemap.xml: expected 200, got ${sitemapResponse.status}`)
+const robotsResponse = await fetchWithRetry('https://vn-13.com/robots.txt')
+const robots = await robotsResponse.text()
+if (robotsResponse.status !== 200) issues.push(`robots.txt: expected 200, got ${robotsResponse.status}`)
+if (!/sitemap:\s*https:\/\/vn-13\.com\/sitemap\.xml/i.test(robots)) {
+  issues.push('robots.txt: missing canonical sitemap declaration')
+}
+if (/^\s*disallow:\s*\/\s*$/im.test(robots)) {
+  issues.push('robots.txt: site-wide disallow blocks crawling')
+}
 for (const path of ['/llms.txt', '/llms-full.txt']) {
   const response = await fetchWithRetry(new URL(path, sitemapUrl).toString())
   const body = await response.text()
