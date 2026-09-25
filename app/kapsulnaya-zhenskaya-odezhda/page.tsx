@@ -42,6 +42,16 @@ export default function CapsuleWomenswearPage() {
         'Размерная логика, подходящая под аудиторию магазина.',
         'Возможность развития капсулы в следующих сезонах.',
       ]}
+      relatedLinks={[
+        {
+          href: '/journal/kapsulnaya-kollektsiya-zhenskoy-odezhdy',
+          label: 'Как собрать сильную капсульную коллекцию',
+        },
+        {
+          href: '/proizvoditel-zhenskoy-odezhdy',
+          label: 'Производство женской одежды малыми партиями',
+        },
+      ]}
       faq={[
         {
           question: 'Кому подходит капсульная женская одежда?',
