@@ -22,12 +22,14 @@ export function canonicalInternalHref(href: string): string {
 const relatedLinksByPath: Record<string, SeoRelatedLink[]> = {
   '/zhenskaya-odezhda': [
     { href: '/dizaynerskaya-zhenskaya-odezhda', label: 'Дизайнерская женская одежда' },
+    { href: '/рубашки-и-блузы', label: 'Женские дизайнерские рубашки и блузы' },
     { href: '/premium-zhenskaya-odezhda', label: 'Премиальная женская одежда' },
     { href: '/kapsulnaya-zhenskaya-odezhda', label: 'Капсульная женская одежда' },
     { href: '/vn-13-brand', label: 'Каталог бренда VN-13' },
   ],
   '/dizaynerskaya-zhenskaya-odezhda': [
     { href: '/zhenskaya-odezhda', label: 'Женская одежда VN-13' },
+    { href: '/рубашки-и-блузы', label: 'Женские дизайнерские рубашки и блузы' },
     { href: '/vn-13-brand', label: 'Каталог дизайнерской одежды VN-13' },
     { href: '/brands/', label: 'Бренды женской одежды' },
     { href: '/платья', label: 'Дизайнерские платья' },
@@ -35,6 +37,7 @@ const relatedLinksByPath: Record<string, SeoRelatedLink[]> = {
   ],
   '/premium-zhenskaya-odezhda': [
     { href: '/dizaynerskaya-zhenskaya-odezhda', label: 'Дизайнерская женская одежда' },
+    { href: '/рубашки-и-блузы', label: 'Дизайнерские рубашки и блузы' },
     { href: '/eksklyuzivnaya-zhenskaya-odezhda', label: 'Эксклюзивная женская одежда' },
     { href: '/quiet-luxury', label: 'Одежда в стиле тихой роскоши' },
     { href: '/natural-fabrics', label: 'Одежда из натуральных тканей' },
@@ -49,6 +52,7 @@ const relatedLinksByPath: Record<string, SeoRelatedLink[]> = {
   ],
   '/kapsulnaya-zhenskaya-odezhda': [
     { href: '/zhenskaya-odezhda', label: 'Женская одежда VN-13' },
+    { href: '/рубашки-и-блузы', label: 'Рубашки и блузы для капсульного гардероба' },
     { href: '/платья', label: 'Платья для капсульного гардероба' },
     { href: '/жакеты-и-жилеты', label: 'Жакеты и жилеты' },
     { href: '/брюки-и-джинсы', label: 'Брюки и джинсы' },
