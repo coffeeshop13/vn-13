@@ -46,6 +46,13 @@ export default function VN13Showcase() {
             >
               Смотреть каталог VN-13
             </Link>
+            <Link
+              href="/vn-13-brand/"
+              className="block mt-4 text-sm underline underline-offset-4"
+              style={{ color: '#5d5851' }}
+            >
+              Бренд одежды 13 (VN13)
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
