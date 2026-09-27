@@ -221,7 +221,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
               {brand.officialWebsite ? (
                 <div className="mt-6 rounded-[24px] p-6" style={{ backgroundColor: '#faf8f4' }}>
                   <h3 className="text-xl font-medium mb-3" style={{ color: '#0f0f0f' }}>
-                    Официальный сайт бренда
+                    Официальный сайт {brand.name}
                   </h3>
                   <p className="text-base leading-7 mb-4" style={{ color: '#5f5b55' }}>
                     Мы связываем страницу VN13 с официальным источником бренда, чтобы упростить проверку коллекций, ассортимента и визуального языка.

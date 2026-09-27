@@ -58,9 +58,9 @@ export const brandPortfolio: BrandPortfolioItem[] = [
     lastModified: '2026-09-25',
     country: 'Италия',
     region: 'italy',
-    title: 'Hannoh Wessel: итальянская дизайнерская одежда | VN13',
+    title: 'Hannoh Wessel: официальный сайт и итальянская одежда | VN13',
     description:
-      'H+ Hannoh Wessel в портфеле VN13: итальянская премиальная женская одежда с интеллектуальным кроем, натуральными тканями и ясным позиционированием для бутиков.',
+      'H+ Hannoh Wessel в портфеле VN13: итальянская премиальная женская одежда с интеллектуальным кроем, натуральными тканями и ссылкой на официальный сайт бренда для проверки коллекций.',
     intro:
       'H+ Hannoh Wessel работает в той зоне, где премиальная одежда выглядит интеллектуально, носится долго и заметно отличается от массового рынка.',
     positioning:
@@ -70,7 +70,7 @@ export const brandPortfolio: BrandPortfolioItem[] = [
       'подходит для контролируемой дистрибуции в бутиках',
       'естественно связывается с лимитированными сериями и предзаказом',
     ],
-    keywords: ['Hannoh Wessel', 'итальянская женская одежда', 'премиальная женская одежда', 'бутики'],
+    keywords: ['Hannoh Wessel', 'Hannoh Wessel официальный сайт', 'итальянская женская одежда', 'премиальная женская одежда', 'бутики'],
     officialWebsite: 'https://www.hannoh.net/',
     cardImage: '/brands/hannoh-lookbook/hannoh-card-v20260913-q70.webp',
     heroImage: {
