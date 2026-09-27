@@ -270,7 +270,7 @@ export default function ExtendedSeoPage({ page }: { page: ExtendedSeoPageData })
                 href="/brands/moyuru/"
                 className="block mt-4 text-sm underline underline-offset-4 text-[#5d5851]"
               >
-                Открыть страницу бренда Moyuru
+                Moyuru — японский бренд в портфеле VN13
               </Link>
             )}
           </div>
