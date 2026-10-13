@@ -37,7 +37,7 @@ export default function Hero() {
         </div>
 
         <div className="relative min-h-[370px] overflow-hidden rounded-[2px] bg-[#ded6ca] md:min-h-[510px]">
-          <picture className="block h-full w-full">
+          <picture className="absolute inset-0">
             <source
               media="(max-width: 700px)"
               srcSet="/hero-vn13-showroom-640-v20260913.webp"
@@ -46,11 +46,10 @@ export default function Hero() {
             <Image
               src="/hero-vn13-showroom-768-v20260913.webp"
               alt="Коллекция дизайнерской женской одежды VN13"
-              width={768}
-              height={432}
+              fill
               priority
               fetchPriority="high"
-              className="h-full w-full object-cover"
+              className="object-cover"
               sizes="(max-width: 1024px) 100vw, 45vw"
             />
           </picture>
