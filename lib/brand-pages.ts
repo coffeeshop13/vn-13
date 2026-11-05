@@ -3,8 +3,8 @@ import { brandPortfolio, type BrandPortfolioItem } from '@/lib/brand-portfolio'
 /**
  * Brand page additions: what the brand sells (for "где купить" copy and FAQ)
  * and which site sections to link to. Only facts that already appear in
- * lib/brand-portfolio.ts; do not add claims such as "официальный дистрибьютор"
- * without the owner's confirmation.
+ * lib/brand-portfolio.ts and CLAUDE.md. The owner confirmed (Nov 2026) that VN13
+ * has contracts with every brand in the portfolio: "официальный дистрибьютор" is a fact.
  */
 type BrandPageExtras = {
   /** Product noun used in sentences: "обувь и аксессуары Shoto" */
@@ -105,6 +105,10 @@ export type BrandFaqItem = { question: string; answer: string }
 export function getBrandFaq(brand: BrandPortfolioItem): BrandFaqItem[] {
   const { product } = getBrandPageExtras(brand)
   return [
+    {
+      question: `Кто официальный дистрибьютор ${brand.name} в России?`,
+      answer: `VN13 — официальный дистрибьютор ${brand.name} в России и работает с маркой по договору. Через VN13 ${brand.name} заказывают бутики, шоурумы и частные клиенты.`,
+    },
     {
       question: `Где купить ${brand.name} в Москве?`,
       answer: `Заказать ${product} ${brand.name} можно через VN13: напишите в Telegram @vn13agency, позвоните по телефону +7 926 602-20-89 или на почту info@vn-13.com. Шоурум и офис VN13 находятся в Москве, на Большой Дмитровке, 32с1.`,

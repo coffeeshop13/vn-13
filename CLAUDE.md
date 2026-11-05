@@ -25,6 +25,7 @@ Read `docs/handoff-2026-11.md` first: it records the current state, decisions, m
   and internal links ending with `/` (the live verifier fails otherwise).
 - Brand detail pages need `Brand`, `WebPage` and `BreadcrumbList` JSON-LD.
 - Do not invent facts. Company facts confirmed by the owner: founded 2013, 45+ retail partners, 22+ cities,
+  official distributor in Russia of every brand in the portfolio (contracts confirmed Nov 2026),
   showroom/office in Moscow (Bolshaya Dmitrovka, 32с1), phone +7 926 602-20-89, info@vn-13.com, Telegram @vn13agency.
 
 ## Design system (rolled out on the homepage, Nov 2026)

@@ -120,6 +120,10 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
             <p className="mt-5 max-w-xl text-base leading-relaxed text-[var(--ink-soft)] md:text-[1.0625rem]">{brand.description}</p>
 
             <dl className="mt-7 grid grid-cols-2 border-t border-[var(--rule)] text-sm">
+              <div className="col-span-2 border-b border-[var(--rule)] py-3">
+                <dt className="text-[var(--muted)]">VN13</dt>
+                <dd className="mt-1 text-[var(--ink)]">Официальный дистрибьютор {brand.name} в России</dd>
+              </div>
               <div className="border-b border-[var(--rule)] py-3 pr-4">
                 <dt className="text-[var(--muted)]">Страна</dt>
                 <dd className="mt-1 text-[var(--ink)]">{brand.country}</dd>
@@ -230,7 +234,7 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
           <p className="rubric">Заказ</p>
           <h2 className="font-display mt-4 text-3xl leading-tight md:text-4xl">Где купить {brand.name} в Москве</h2>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--ink-soft)]">
-            {product.charAt(0).toUpperCase() + product.slice(1)} {brand.name} можно заказать через VN13. Команда проверит актуальную коллекцию, размеры и условия заказа и предложит удобный формат.
+            VN13 — официальный дистрибьютор {brand.name} в России. {product.charAt(0).toUpperCase() + product.slice(1)} {brand.name} можно заказать напрямую через VN13. Команда проверит актуальную коллекцию, размеры и условия заказа и предложит удобный формат.
           </p>
           <ol className="mt-8 grid border-t border-[var(--rule)] md:grid-cols-3">
             <li className="border-b border-[var(--rule)] py-5 md:border-b-0 md:border-r md:pr-6">
