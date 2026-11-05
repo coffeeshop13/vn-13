@@ -68,7 +68,12 @@ export default function MobileMenu({ links }: { links: readonly HeaderNavLink[] 
       if (!items.length) return
       const first = items[0]
       const last = items[items.length - 1]
-      if (e.shiftKey && document.activeElement === first) {
+      // Focus can drop out of the panel when an element inside it unmounts (e.g. the
+      // language dropdown closing); bring it back instead of letting Tab reach the page.
+      if (!panel.current.contains(document.activeElement)) {
+        e.preventDefault()
+        ;(e.shiftKey ? last : first).focus()
+      } else if (e.shiftKey && document.activeElement === first) {
         e.preventDefault()
         last.focus()
       } else if (!e.shiftKey && document.activeElement === last) {
