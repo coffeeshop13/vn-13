@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import PortfolioGrid from '@/components/PortfolioGrid'
 import { absoluteUrl, createMetadata, SITE_NAME } from '@/lib/seo'
 import { brandPortfolio } from '@/lib/brand-portfolio'
+import '../home.css'
 
 export const metadata: Metadata = createMetadata({
   title: 'Бренды женской одежды | Европейские и японские дизайнеры VN13',
@@ -58,52 +59,46 @@ export default function BrandsPage() {
   }
 
   return (
-    <main>
+    <main className="home-editorial bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
-      <section className="border-b" style={{ backgroundColor: '#f8f5ef', borderColor: '#e0ddd8' }}>
-        <div className="max-w-7xl mx-auto px-4 pt-24 pb-8 md:px-6 md:pt-44 md:pb-20">
-          <nav aria-label="Хлебные крошки" className="mb-7 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm" style={{ color: '#6b6b6b' }}>
-            <Link href="/" className="underline underline-offset-4">Главная</Link>
+      <section className="bg-[var(--cream)]">
+        <div className="mx-auto max-w-7xl px-5 pb-10 pt-24 md:px-8 lg:pb-12 lg:pt-32">
+          <nav aria-label="Хлебные крошки" className="mb-6 flex flex-wrap items-center gap-x-2 text-sm text-[var(--muted)]">
+            <Link href="/" className="hover:text-[var(--bronze)]">Главная</Link>
             <span aria-hidden="true">/</span>
-            <span aria-current="page">Бренды женской одежды</span>
+            <span aria-current="page" className="text-[var(--ink)]">Бренды женской одежды</span>
           </nav>
-          <h1 className="text-4xl md:text-6xl font-light leading-tight mb-3 md:mb-5" style={{ color: '#0f0f0f' }}>
-            Дизайнерские бренды женской одежды
-          </h1>
-          <p className="text-base md:text-lg leading-7 md:leading-relaxed max-w-2xl" style={{ color: '#6b6b6b' }}>
+          <p className="rubric">{brandPortfolio.length} марок · {new Set(brandPortfolio.map((brand) => brand.country)).size} стран</p>
+          <h1 className="font-display mt-4 max-w-4xl text-4xl leading-[1.08] md:text-6xl">Дизайнерские бренды женской одежды</h1>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-[var(--ink-soft)] md:text-[1.0625rem]">
             Европейские и японские дизайнерские бренды VN13 для бутиков, шоурумов и клиентов.
           </p>
         </div>
       </section>
       <PortfolioGrid />
-      <section className="border-t px-6 py-16 md:py-24" style={{ backgroundColor: '#faf8f4', borderColor: '#e0ddd8' }}>
-        <div className="mx-auto max-w-5xl">
-          <p className="mb-4 text-xs uppercase tracking-[0.2em]" style={{ color: '#b8935a' }}>Селекция VN13</p>
-          <h2 className="mb-5 text-3xl font-light md:text-4xl" style={{ color: '#0f0f0f' }}>Дизайнерские бренды женской одежды с разным характером</h2>
-          <p className="max-w-4xl leading-relaxed" style={{ color: '#5f5b55' }}>
-            В каталоге VN13 собраны французские, итальянские, японские, британские и корейские марки. Их объединяют качество, самостоятельный дизайн и возможность работать в селективной рознице, но каждая марка занимает собственную нишу: от мягкого минимализма и натуральных тканей до архитектурного кроя, обуви и аксессуаров. Такое сочетание помогает бутику формировать узнаваемый ассортимент, а не повторять готовую матрицу массового рынка.
-          </p>
-        </div>
-      </section>
-      <section className="border-t px-6 py-16 md:py-24" style={{ backgroundColor: '#fff', borderColor: '#e0ddd8' }}>
-        <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-2">
-          <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.2em]" style={{ color: '#b8935a' }}>Как устроен портфель</p>
-            <h2 className="mb-5 text-3xl font-light md:text-4xl" style={{ color: '#0f0f0f' }}>Европейские бренды для бутиков и шоурумов</h2>
-            <p className="leading-relaxed" style={{ color: '#5f5b55' }}>
-              VN13 отбирает бренды женской одежды не по количеству моделей, а по цельности коллекции, качеству материалов и коммерческой роли в магазине. В портфеле есть французские и итальянские марки, <Link href="/japanese-style/" className="underline underline-offset-4">японская дизайнерская одежда</Link>, аксессуары и независимые направления для селективной розницы.
+      <section className="border-t border-[var(--rule)] bg-[var(--cream)]">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 md:px-8 lg:grid-cols-12 lg:gap-12 lg:py-16">
+          <div className="lg:col-span-6">
+            <p className="rubric">Селекция VN13</p>
+            <h2 className="font-display mt-4 text-3xl leading-tight md:text-4xl">Дизайнерские бренды женской одежды с разным характером</h2>
+            <p className="mt-5 text-base leading-relaxed text-[var(--ink-soft)]">
+              В каталоге VN13 собраны французские, итальянские, японские, британские и корейские марки. Их объединяют качество, самостоятельный дизайн и возможность работать в селективной рознице, но каждая марка занимает собственную нишу: от мягкого минимализма и натуральных тканей до архитектурного кроя, обуви и аксессуаров. Такое сочетание помогает бутику формировать узнаваемый ассортимент, а не повторять готовую матрицу массового рынка.
             </p>
           </div>
-          <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.2em]" style={{ color: '#b8935a' }}>Для партнёров</p>
-            <p className="mb-5 leading-relaxed" style={{ color: '#5f5b55' }}>
+          <div className="lg:col-span-5 lg:col-start-8">
+            <p className="rubric">Как устроен портфель</p>
+            <h2 className="font-display mt-4 text-3xl leading-tight md:text-4xl">Европейские бренды для бутиков и шоурумов</h2>
+            <p className="mt-5 text-base leading-relaxed text-[var(--ink-soft)]">
+              VN13 отбирает бренды женской одежды не по количеству моделей, а по цельности коллекции, качеству материалов и коммерческой роли в магазине. В портфеле есть французские и итальянские марки, <Link href="/japanese-style/" className="underline underline-offset-4 hover:text-[var(--bronze)]">японская дизайнерская одежда</Link>, аксессуары и независимые направления для селективной розницы.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-[var(--ink-soft)]">
               Бутики и шоурумы могут подобрать ассортимент под свой город, аудиторию и ценовой сегмент. Для брендов VN13 предлагает представительство, дистрибуцию, предзаказ и развитие розничных партнёрств.
             </p>
-            <div className="flex flex-wrap gap-3 text-sm">
-              <Link href="/zhenskaya-odezhda-dlya-butikov/" className="underline underline-offset-4">Одежда для бутиков</Link>
-              <Link href="/partnerstvo/" className="underline underline-offset-4">Стать партнёром</Link>
-              <Link href="/contact/" className="underline underline-offset-4">Связаться с VN13</Link>
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
+              <Link href="/zhenskaya-odezhda-dlya-butikov/" className="text-link">Одежда для бутиков</Link>
+              <Link href="/partnerstvo/" className="text-link">Стать партнёром</Link>
+              <Link href="/contact/" className="text-link">Связаться с VN13</Link>
             </div>
           </div>
         </div>
