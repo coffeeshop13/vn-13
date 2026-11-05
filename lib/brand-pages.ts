@@ -21,6 +21,13 @@ const commonLinks = [
 ]
 
 const extras: Record<string, BrandPageExtras> = {
+  'manuelle-guibal': {
+    product: 'женскую одежду',
+    related: [
+      { href: '/natural-fabrics/', label: 'Одежда из натуральных тканей' },
+      { href: '/evropeyskie-brendy-zhenskoy-odezhdy/', label: 'Европейские бренды женской одежды' },
+    ],
+  },
   'hannoh-wessel': {
     product: 'женскую одежду',
     related: [
