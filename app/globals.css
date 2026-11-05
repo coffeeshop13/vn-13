@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import "@fontsource/cormorant-garamond/400.css";
+@import "@fontsource/cormorant-garamond/400-italic.css";
+@import "@fontsource/cormorant-garamond/500.css";
+@import "@fontsource-variable/montserrat/wght.css";
 
 @theme inline {
   --color-background: #fafaf8;
@@ -16,7 +20,7 @@ html {
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat Variable", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -27,12 +31,28 @@ body {
   box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* In the base layer so Tailwind utilities such as text-white can override it
+   (an unlayered rule here beat every utility and hid text on dark buttons). */
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
+/* Site typography: serif headings, regular-weight body text. Cormorant ships
+   400/500 only, so `font-light` headings render at 400; body text marked
+   `font-light` is bumped to 400 because thin Montserrat reads poorly. */
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-variant-numeric: lining-nums;
+  letter-spacing: -0.005em;
+}
+.font-light:not(h1):not(h2):not(h3) {
+  font-weight: 400;
 }

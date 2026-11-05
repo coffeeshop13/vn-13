@@ -1,9 +1,4 @@
-/* Editorial homepage styles. Scoped to `.home-editorial` so other pages keep
-   their current look until they are moved to the same system. */
-@import "@fontsource/cormorant-garamond/400.css";
-@import "@fontsource/cormorant-garamond/400-italic.css";
-@import "@fontsource/cormorant-garamond/500.css";
-@import "@fontsource-variable/montserrat/wght.css";
+/* Editorial homepage components. Fonts and base typography are in globals.css. */
 
 .home-editorial {
   --ink: #1d1b18;
