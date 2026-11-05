@@ -1,0 +1,127 @@
+/* Editorial homepage styles. Scoped to `.home-editorial` so other pages keep
+   their current look until they are moved to the same system. */
+@import "@fontsource/cormorant-garamond/400.css";
+@import "@fontsource/cormorant-garamond/400-italic.css";
+@import "@fontsource/cormorant-garamond/500.css";
+@import "@fontsource-variable/montserrat/wght.css";
+
+.home-editorial {
+  --ink: #1d1b18;
+  --ink-soft: #3a3631;
+  --muted: #5d5851;
+  --bronze: #76531f;
+  --cream: #f7f4ee;
+  --rule: #e3ddd3;
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Montserrat Variable", Arial, Helvetica, sans-serif;
+  font-family: var(--sans);
+  color: var(--ink);
+}
+
+.home-editorial .font-display {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  /* Cormorant defaults to old-style figures; keep numbers on one height */
+  font-variant-numeric: lining-nums;
+}
+
+/* Small uppercase rubric with a hairline, used above section titles */
+.home-editorial .rubric {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--bronze);
+}
+.home-editorial .rubric::before {
+  content: "";
+  width: 2.25rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* Text link with an underline that fills on hover */
+.home-editorial .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 0.25rem;
+  transition: color 0.2s;
+}
+.home-editorial .text-link:hover {
+  color: var(--bronze);
+}
+
+.home-editorial .btn {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0 1.75rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+.home-editorial .btn-dark {
+  background: var(--ink);
+  color: #fff;
+}
+.home-editorial .btn-dark:hover {
+  background: var(--bronze);
+}
+.home-editorial .btn-outline {
+  border: 1px solid #b8ad9c;
+  color: var(--ink);
+}
+.home-editorial .btn-outline:hover {
+  border-color: var(--ink);
+  background: #fff;
+}
+
+.home-editorial :focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 3px;
+}
+
+/* Brand index: floating preview only where a real pointer can hover */
+.home-editorial .brand-preview {
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  .home-editorial .brand-preview {
+    display: block;
+  }
+  .home-editorial .brand-index:hover .brand-row {
+    opacity: 0.4;
+  }
+  .home-editorial .brand-index .brand-row:hover {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-editorial *,
+  .home-editorial *::before,
+  .home-editorial *::after {
+    transition: none !important;
+  }
+}
