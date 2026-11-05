@@ -190,6 +190,16 @@ export default function BrandPortfolioPage({ brand }: BrandPortfolioPageProps) {
                 <Link href="/japanese-style/" className="underline underline-offset-4 hover:text-[var(--bronze)]">о японском стиле</Link>.
               </p>
             ) : null}
+            {brand.details ? (
+              <dl className="!mt-6 border-t border-[var(--rule)]">
+                {brand.details.map((item) => (
+                  <div key={item.title} className="grid gap-1 border-b border-[var(--rule)] py-4 md:grid-cols-[11rem_1fr] md:gap-6">
+                    <dt className="text-sm font-medium text-[var(--ink)]">{item.title}</dt>
+                    <dd className="text-[0.9375rem] leading-relaxed">{item.text}</dd>
+                  </div>
+                ))}
+              </dl>
+            ) : null}
           </div>
         </div>
       </section>
